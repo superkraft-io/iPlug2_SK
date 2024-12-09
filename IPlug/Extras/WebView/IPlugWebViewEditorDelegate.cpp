@@ -37,6 +37,10 @@ WebViewEditorDelegate::WebViewEditorDelegate(int nParams)
   : IEditorDelegate(nParams)
   , IWebView()
 {
+  sk.ipc.onSendToFrontend = [this](std::string data) {
+    std::string str = "SK_iPlug2.ipc.handleIncoming(" + data + ")";
+    EvaluateJavaScript(str.c_str());
+  };
 }
 
 WebViewEditorDelegate::~WebViewEditorDelegate()

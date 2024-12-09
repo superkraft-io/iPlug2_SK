@@ -36,6 +36,8 @@
 #include <functional>
 #include <filesystem>
 
+#include "./sk/backend/sk_core.h"
+
 /**
  * @file
  * @copydoc WebViewEditorDelegate
@@ -51,6 +53,8 @@ class WebViewEditorDelegate : public IEditorDelegate
   static constexpr int kDefaultMaxJSStringLength = 8192;
   
 public:
+  SK::SK_Core sk;
+
   WebViewEditorDelegate(int nParams);
   virtual ~WebViewEditorDelegate();
   
@@ -120,7 +124,27 @@ public:
   void OnMessageFromWebView(const char* jsonStr) override
   {
     auto json = nlohmann::json::parse(jsonStr, nullptr, false);
-    
+
+
+
+     /*********************/
+
+    if (json["msg_type"] == "SK_iPlug2_IPC")
+    {
+      auto payload = json["payload"];
+
+
+      nlohmann::json res = sk.ipc.handle_IPC_Msg(payload);
+
+      std::string str = "SK_iPlug2.ipc.handleIncoming(" + res.dump() + ")";
+      EvaluateJavaScript(str.c_str());
+
+      return;
+    }
+
+    /*********************/
+
+
     if (json["msg"] == "SPVFUI")
     {
       assert(json["paramIdx"] > -1);
