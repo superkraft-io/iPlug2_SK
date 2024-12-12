@@ -38,6 +38,14 @@
 
 #include "./sk/backend/sk_core.h"
 
+
+#if defined OS_WIN
+#include "WebView2.h"
+#else
+#include "WWebKitWebView.h" //or whatever
+#endif
+
+
 /**
  * @file
  * @copydoc WebViewEditorDelegate
@@ -250,6 +258,12 @@ public:
     LoadFile("index.html", bundleid); // TODO: make this work for windows
 #endif
   }
+
+  #if defined OS_WIN
+  void onResourceRequested(ICoreWebView2* sender, ICoreWebView2WebResourceRequestedEventArgs* args);
+  #else
+  void onResourceRequested(sender, args);
+  #endif
 
 protected:
   int mMaxJSStringLength = kDefaultMaxJSStringLength;

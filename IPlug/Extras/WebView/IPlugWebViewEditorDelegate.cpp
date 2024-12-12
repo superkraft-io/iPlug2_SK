@@ -64,3 +64,14 @@ void WebViewEditorDelegate::OnParentWindowResize(int width, int height)
   SetWebViewBounds(0, 0, static_cast<float>(width), static_cast<float>(height));
   EditorResizeFromUI(width, height, false);
 }
+
+
+
+
+#if defined OS_WIN
+void WebViewEditorDelegate::onResourceRequested(ICoreWebView2* sender, ICoreWebView2WebResourceRequestedEventArgs* args){
+};
+#else
+void WebViewEditorDelegate::onResourceRequested(sender, args){
+};
+#endif
