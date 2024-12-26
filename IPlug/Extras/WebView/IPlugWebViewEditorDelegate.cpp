@@ -31,6 +31,8 @@
 
 #include "IPlugWebViewEditorDelegate.h"
 
+#include "../../../superkraft/sk_cpp/sk_cpp/superkraft.hxx"
+
 using namespace iplug;
 
 WebViewEditorDelegate::WebViewEditorDelegate(int nParams)

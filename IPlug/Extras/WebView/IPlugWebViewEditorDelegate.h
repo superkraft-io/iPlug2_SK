@@ -125,7 +125,26 @@ public:
   void OnMessageFromWebView(const char* jsonStr) override
   {
     auto json = nlohmann::json::parse(jsonStr, nullptr, false);
-    
+
+    /**** SK START ****/
+
+
+    if (json["msg_type"] == "SK_IPC")
+    {
+      auto payload = json["payload"];
+
+
+      /* nlohmann::json res = SK::sk.ipc.handle_IPC_Msg(payload);
+
+       std::string str = "SK_iPlug2.ipc.handleIncoming(" + res.dump() + ")";
+       EvaluateJavaScript(str.c_str());
+       */
+      return;
+    }
+
+    /**** SK END ****/
+
+
     if (json["msg"] == "SPVFUI")
     {
       assert(json["paramIdx"] > -1);

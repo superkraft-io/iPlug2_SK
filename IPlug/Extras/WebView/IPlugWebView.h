@@ -35,6 +35,8 @@
 #include <functional>
 #include <memory>
 
+#include "../../../superkraft/sk_cpp/sk_cpp/superkraft.hxx"
+
 BEGIN_IPLUG_NAMESPACE
 
 class IWebViewImpl;
@@ -44,6 +46,10 @@ class IWebView
 {
 public:
   using completionHandlerFunc = std::function<void(const char* result)>;
+
+  
+  virtual SK::Superkraft* sk() { return nullptr; };
+
 
   /** Constructs an IWebView
   * @param opaque. Is the WebView opaque or does it have a transparent background

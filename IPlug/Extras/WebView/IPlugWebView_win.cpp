@@ -158,6 +158,27 @@ void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
             Settings->put_AreDefaultContextMenusEnabled(enableDevTools);
             Settings->put_AreDevToolsEnabled(enableDevTools);
 
+
+            /**** SK START ****/
+
+            mCoreWebView->AddWebResourceRequestedFilter(L"*", COREWEBVIEW2_WEB_RESOURCE_CONTEXT_ALL);
+
+            mCoreWebView->add_WebResourceRequested(Callback<ICoreWebView2WebResourceRequestedEventHandler>([&](ICoreWebView2* sender, ICoreWebView2WebResourceRequestedEventArgs* args) -> HRESULT {
+              SK_WebViewResource_Request requestObject(args);
+
+              SK_WebViewResource_Response responseObject;
+              responseObject.webviewEnvironment = mWebViewEnvironment;
+
+              mIWebView->sk()->wvrh.handleRequest(requestObject, responseObject);
+
+              args->put_Response(responseObject.get().get());
+
+              return S_OK;
+            }).Get(),
+            nullptr);
+
+            /**** SK END ****/
+
             // this script adds a function IPlugSendMsg that is used to communicate from the WebView to the C++ side
             mCoreWebView->AddScriptToExecuteOnDocumentCreated(
               L"function IPlugSendMsg(m) {window.chrome.webview.postMessage(m)};",
@@ -429,8 +450,8 @@ void IWebViewImpl::LoadFile(const char* fileName, const char* bundleID)
       std::vector<WCHAR> webFolderWide(bufSize);
       UTF8ToUTF16(webFolderWide.data(), webFolder.Get(), bufSize);
 
-      webView3->SetVirtualHostNameToFolderMapping(
-        L"iplug.example", webFolderWide.data(), COREWEBVIEW2_HOST_RESOURCE_ACCESS_KIND_DENY_CORS);
+      //webView3->SetVirtualHostNameToFolderMapping(
+        //L"iplug.example", webFolderWide.data(), COREWEBVIEW2_HOST_RESOURCE_ACCESS_KIND_DENY_CORS);
     }
 
     WDL_String baseName{fileName};
