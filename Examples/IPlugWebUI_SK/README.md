@@ -1,8 +1,9 @@
 # IPlugWebUI_SK
-A basic volume control effect plug-in which uses a platform web view to host an HTML/CSS GUI
+A Superkraft compatible iPlug2 WebView project.
 
-The UI for this example can be found in `resources/web`. On macOS and iOS, it will be copied to the bundle resources folder. On Windows, you currently need to manually package and put the files somewhere.
+This example uses the [sk_cpp library](https://github.com/superkraft-io?tab=repositories) to extend iPlug2 WebView features such as
 
-You need to be careful if you edit `index.html`, to make sure you are editing the right version.
-
-You can read more about using WebViews [here](https://github.com/iPlug2/iPlug2/wiki/Using-WebViews)
+- Capture web request and conduct custom handling
+- Improved IPC workflow
+- Improved default content loading
+- Define the resource folder
