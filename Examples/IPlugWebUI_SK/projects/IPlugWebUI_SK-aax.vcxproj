@@ -426,6 +426,12 @@
     </CustomBuildStep>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\general\choc\choc_StringUtilities.h" />
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\sk_cpp\sk_common.hxx" />
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\sk_cpp\sk_webview\sk_webview_resourceHandler\sk_webview_resourceHandler.hxx" />
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\sk_cpp\sk_webview\sk_webview_resourceHandler\sk_webview_resourceHandler_windows.hxx" />
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\sk_cpp\superkraft.hxx" />
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\sk_cpp\utils\sk_str_utils.hxx" />
     <ClInclude Include="..\..\..\IPlug\AAX\IPlugAAX_Parameters.h" />
     <ClInclude Include="..\..\..\IPlug\AAX\IPlugAAX_TaperDelegate.h" />
     <ClInclude Include="..\..\..\IPlug\AAX\IPlugAAX.h" />

@@ -2,6 +2,8 @@
 #include "IPlug_include_in_plug_src.h"
 #include "IPlugPaths.h"
 
+using namespace SK;
+
 IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
 : Plugin(info, MakeConfig(kNumParams, kNumPresets))
 {
@@ -15,7 +17,7 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
   };
 
 
-  sk()->ipc.on("valid_event_id", [](nlohmann::json data, std::string& responseData) {
+  sk()->ipc.on("valid_event_id", [](nlohmann::json data, SK_String& responseData) {
     nlohmann::json json;
 
     std::string frontend_message = std::string(data["key"]);
@@ -24,10 +26,10 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
     responseData = json.dump();
   });
 
-  sk()->ipc.once("valid_event_id_once", [](nlohmann::json data, std::string& responseData) {
+  sk()->ipc.once("valid_event_id_once", [](nlohmann::json data, SK_String& responseData) {
     nlohmann::json json;
 
-    std::string frontend_message = std::string(data["key"]);
+    std::string frontend_message = SK_String(data["key"]);
 
     json["backend_said"] = "hello frontend :) deleting this event now";
     responseData = json.dump();
