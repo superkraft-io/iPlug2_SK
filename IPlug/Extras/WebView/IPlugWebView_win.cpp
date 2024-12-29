@@ -169,7 +169,7 @@ void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
               SK_WebViewResource_Response responseObject;
               responseObject.webviewEnvironment = mWebViewEnvironment;
 
-              mIWebView->sk()->wvrh.handleRequest(requestObject, responseObject);
+              mIWebView->sk()->wvrh->handleRequest(requestObject, responseObject);
 
               args->put_Response(responseObject.get().get());
 
@@ -439,6 +439,14 @@ void IWebViewImpl::LoadURL(const char* url)
 
 void IWebViewImpl::LoadFile(const char* fileName, const char* bundleID)
 {
+  WDL_String baseName{fileName};
+  int bufSize = UTF8ToUTF16Len(baseName.Get());
+  std::vector<WCHAR> fileUrlWide(bufSize);
+  UTF8ToUTF16(fileUrlWide.data(), baseName.Get(), bufSize);
+  mCoreWebView->Navigate(fileUrlWide.data());
+
+  return;
+
   if (mCoreWebView)
   {
     wil::com_ptr<ICoreWebView2_3> webView3 = mCoreWebView.try_query<ICoreWebView2_3>();
@@ -451,7 +459,7 @@ void IWebViewImpl::LoadFile(const char* fileName, const char* bundleID)
       UTF8ToUTF16(webFolderWide.data(), webFolder.Get(), bufSize);
 
       //webView3->SetVirtualHostNameToFolderMapping(
-        //L"iplug.example", webFolderWide.data(), COREWEBVIEW2_HOST_RESOURCE_ACCESS_KIND_DENY_CORS);
+      //L"iplug.example", webFolderWide.data(), COREWEBVIEW2_HOST_RESOURCE_ACCESS_KIND_DENY_CORS);
     }
 
     WDL_String baseName{fileName};

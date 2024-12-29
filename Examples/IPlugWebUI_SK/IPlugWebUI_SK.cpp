@@ -68,13 +68,14 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
 
   GetParam(kGain)->InitGain("Gain", -70., -70, 0.);
   
-#ifdef DEBUG
+#if defined DEBUG || defined _DEBUG
   SetEnableDevTools(true);
 #endif
   
   mEditorInitFunc = [&]()
   {
-    LoadIndexHtml(__FILE__, GetBundleID());
+    //LoadIndexHtml(__FILE__, GetBundleID());
+    LoadFile("https://superkraft.io/soft_backend/web/sk_sb.html");
     EnableScroll(false);
   };
   

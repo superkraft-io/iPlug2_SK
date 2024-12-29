@@ -115,24 +115,6 @@
       <Filter>IPlug\Extras\WebView</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\IPlug\ISender.h" />
-    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\sk_cpp\sk_common.hxx">
-      <Filter>superkraft\sk_cpp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\sk_cpp\superkraft.hxx">
-      <Filter>superkraft\sk_cpp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\sk_cpp\utils\sk_str_utils.hxx">
-      <Filter>superkraft\sk_cpp\utils</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\sk_cpp\sk_webview\sk_webview_resourceHandler\sk_webview_resourceHandler.hxx">
-      <Filter>superkraft\sk_cpp\sk_webview\sk_webview_resourceHandler</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\sk_cpp\sk_webview\sk_webview_resourceHandler\sk_webview_resourceHandler_windows.hxx">
-      <Filter>superkraft\sk_cpp\sk_webview\sk_webview_resourceHandler</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\general\choc\choc_StringUtilities.h">
-      <Filter>superkraft\sk_cpp\libs\general\choc</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="resources">
@@ -152,30 +134,6 @@
     </Filter>
     <Filter Include="IPlug\Extras\WebView">
       <UniqueIdentifier>{abdec6a8-36a1-4bdf-886a-455571770c64}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="superkraft">
-      <UniqueIdentifier>{3ea387c4-c2bc-4bb6-b913-f2002b0a2a4e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="superkraft\sk_cpp">
-      <UniqueIdentifier>{09c5b254-996a-4b03-b939-e4a1198949e0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="superkraft\sk_cpp\utils">
-      <UniqueIdentifier>{75e2a7c2-c062-40ec-8882-7335b0606ebe}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="superkraft\sk_cpp\sk_webview">
-      <UniqueIdentifier>{a2487093-ede9-41c6-ba01-094f8ba9162e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="superkraft\sk_cpp\sk_webview\sk_webview_resourceHandler">
-      <UniqueIdentifier>{4dd94f7f-7f07-4874-899a-ab6f27a976a3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="superkraft\sk_cpp\libs">
-      <UniqueIdentifier>{0b15feae-3c58-44db-a5b4-7d6ef8b1db92}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="superkraft\sk_cpp\libs\general">
-      <UniqueIdentifier>{2a66d93d-825f-4847-8e95-874c2a19a339}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="superkraft\sk_cpp\libs\general\choc">
-      <UniqueIdentifier>{b0e367bb-2108-4682-98b6-e1cbe2891550}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
