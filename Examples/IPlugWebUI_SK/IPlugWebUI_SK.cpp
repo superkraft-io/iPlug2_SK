@@ -7,12 +7,14 @@ using namespace SK;
 IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
 : Plugin(info, MakeConfig(kNumParams, kNumPresets))
 {
-
-  
   /**** SK START ****/
 
+  onWebViewReady = [&](void* webview) {
+    sk()->wvinit.init(webview);
+  };
+
   sk()->ipc.onSendToFrontend = [this](std::string data) {
-    std::string str = "SK_iPlug2.ipc.handleIncoming(" + data + ")";
+    std::string str = "sk_api.ipc.handleIncoming(" + data + ")";
     EvaluateJavaScript(str.c_str());
   };
 
@@ -75,7 +77,7 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
   mEditorInitFunc = [&]()
   {
     //LoadIndexHtml(__FILE__, GetBundleID());
-    LoadFile("https://superkraft.io/soft_backend/web/sk_sb.html");
+    LoadFile("https://sk.sb/sk_sb.html");
     EnableScroll(false);
   };
   

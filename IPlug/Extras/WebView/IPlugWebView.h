@@ -50,6 +50,8 @@ public:
   
   virtual SK::Superkraft* sk() { return nullptr; };
 
+  using SK_WebView_OnReady = std::function<void(void* webview)>;
+  SK_WebView_OnReady onWebViewReady;
 
   /** Constructs an IWebView
   * @param opaque. Is the WebView opaque or does it have a transparent background

@@ -51,6 +51,8 @@ class WebViewEditorDelegate : public IEditorDelegate
   static constexpr int kDefaultMaxJSStringLength = 8192;
   
 public:
+
+
   WebViewEditorDelegate(int nParams);
   virtual ~WebViewEditorDelegate();
   
@@ -134,11 +136,11 @@ public:
       auto payload = json["payload"];
 
 
-      /* nlohmann::json res = SK::sk.ipc.handle_IPC_Msg(payload);
+       nlohmann::json res = sk()->ipc.handle_IPC_Msg(payload);
 
-       std::string str = "SK_iPlug2.ipc.handleIncoming(" + res.dump() + ")";
+       std::string str = "sk_api.ipc.handleIncoming(" + res.dump() + ")";
        EvaluateJavaScript(str.c_str());
-       */
+       
       return;
     }
 
