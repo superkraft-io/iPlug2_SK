@@ -46,8 +46,9 @@ IPlugAPPHost::~IPlugAPPHost()
 }
 
 //static
-IPlugAPPHost* IPlugAPPHost::Create()
+IPlugAPPHost* IPlugAPPHost::Create(std::vector<std::string> _argv)
 {
+  argv = _argv;
   sInstance = std::make_unique<IPlugAPPHost>();
   return sInstance.get();
 }

@@ -81,6 +81,7 @@ class IPlugAPP;
 class IPlugAPPHost
 {
 public:
+  static inline std::vector<std::string> argv;
   
   /** Used to manage changes to app i/o */
   struct AppState
@@ -157,7 +158,7 @@ public:
     bool operator!=(const AppState& rhs) const { return !operator==(rhs); }
   };
   
-  static IPlugAPPHost* Create();
+  static IPlugAPPHost* Create(std::vector<std::string> _argv);
   static std::unique_ptr<IPlugAPPHost> sInstance;
   
   void PopulateSampleRateList(HWND hwndDlg, RtAudio::DeviceInfo* pInputDevInfo, RtAudio::DeviceInfo* pOutputDevInfo);

@@ -25,6 +25,20 @@ using namespace iplug;
 #include <windows.h>
 #include <commctrl.h>
 
+std::vector<std::string> parseArguments(const std::string& args)
+{
+  std::vector<std::string> result;
+  std::istringstream stream(args);
+  std::string token;
+
+  while (stream >> std::quoted(token))
+  {
+    result.push_back(token);
+  }
+
+  return result;
+}
+
 extern WDL_DLGRET MainDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam);
 
 HWND gHWND;
@@ -33,6 +47,8 @@ UINT gScrollMessage;
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdParam, int nShowCmd)
 {
+  std::string args(lpszCmdParam);
+
   try
   {
 #ifndef APP_ALLOW_MULTIPLE_INSTANCES
@@ -52,7 +68,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
     InitCommonControls();
     gScrollMessage = RegisterWindowMessage("MSWHEEL_ROLLMSG");
 
-    IPlugAPPHost* pAppHost = IPlugAPPHost::Create();
+    IPlugAPPHost* pAppHost = IPlugAPPHost::Create(parseArguments(args));
     pAppHost->Init();
     pAppHost->TryToChangeAudio();
 

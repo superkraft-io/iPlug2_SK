@@ -1,6 +1,9 @@
 #include "IPlugWebUI_SK.h"
 #include "IPlug_include_in_plug_src.h"
 #include "IPlugPaths.h"
+#include "../APP/IPlugAPP_host.h"
+
+#include "../../superkraft/sk_cpp/core/sk_common.hxx"
 
 using namespace SK;
 
@@ -8,6 +11,7 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
 : Plugin(info, MakeConfig(kNumParams, kNumPresets))
 {
   /**** SK START ****/
+  //SK_Superkraft_App::app_argv.fromStringVector(static_cast<IPlugAPPHost*>(info.pAppHost)->argv); //ignoring this for now
 
   onWebViewReady = [&](void* webview) {
     sk()->wvinit.init(webview);
