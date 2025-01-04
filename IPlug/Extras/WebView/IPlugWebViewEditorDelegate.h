@@ -133,13 +133,30 @@ public:
 
     if (json["msg_type"] == "SK_IPC")
     {
-      auto payload = json["payload"];
+      nlohmann::json payload = json["payload"];
+
+      SK_String str;
+
+      SK_WebViewResource_Request requestObject;
+      requestObject.fromIPCEvent(payload);
+
+      SK_WebViewResource_Response responseObject;
+      if (sk()->wvrh->handleRequest(requestObject, responseObject))
+      {
+        // Attempt to treat the IPC call as an SK Module System Operation call
+        if (responseObject.handledAsynchronously) return;
+        nlohmann::json responseJSON = SK_IPC::createResponseJSON(payload, std::string(responseObject.data.begin(), responseObject.data.end()));
+        str = "sk_api.ipc.handleIncoming(" + responseJSON.dump() + ")";
+      }
+      else
+      {
+        // ...else treat it as a normal IPC call
+        nlohmann::json res = sk()->ipc.handle_IPC_Msg(payload);
+        str = "sk_api.ipc.handleIncoming(" + res.dump() + ")";
+      }
 
 
-       nlohmann::json res = sk()->ipc.handle_IPC_Msg(payload);
-
-       std::string str = "sk_api.ipc.handleIncoming(" + res.dump() + ")";
-       EvaluateJavaScript(str.c_str());
+      EvaluateJavaScript(str.c_str());
        
       return;
     }

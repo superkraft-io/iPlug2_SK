@@ -18,12 +18,15 @@
 #include "config.h"
 #include "resource.h"
 
+#include "../../superkraft/sk_cpp/core/utils/sk_machine.hxx"
+
 using namespace iplug;
 
 #pragma mark - WINDOWS
 #if defined OS_WIN
 #include <windows.h>
 #include <commctrl.h>
+
 
 std::vector<std::string> parseArguments(const std::string& args)
 {
@@ -48,6 +51,8 @@ UINT gScrollMessage;
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdParam, int nShowCmd)
 {
   std::string args(lpszCmdParam);
+
+  SK::SK_Machine::cpuInfo = SK::SK_Machine::getCPUInformation();
 
   try
   {

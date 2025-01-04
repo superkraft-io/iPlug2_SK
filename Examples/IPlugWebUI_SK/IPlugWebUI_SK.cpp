@@ -17,8 +17,8 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
     sk()->wvinit.init(webview);
   };
 
-  sk()->ipc.onSendToFrontend = [this](std::string data) {
-    std::string str = "sk_api.ipc.handleIncoming(" + data + ")";
+  SK_IPC::onSendToFrontend = [this](nlohmann::json data) {
+    std::string str = "sk_api.ipc.handleIncoming(" + data.dump() + ")";
     EvaluateJavaScript(str.c_str());
   };
 
