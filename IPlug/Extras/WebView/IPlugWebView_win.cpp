@@ -171,7 +171,7 @@ void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
               SK_WebViewResource_Response responseObject;
               responseObject.webviewEnvironment = mWebViewEnvironment;
 
-              mIWebView->sk()->wvrh->handleRequest(requestObject, responseObject);
+              mIWebView->sk()->wvrh.handleRequest(requestObject, responseObject);
 
               args->put_Response(responseObject.get().get());
               

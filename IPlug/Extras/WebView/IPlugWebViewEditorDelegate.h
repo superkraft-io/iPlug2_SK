@@ -141,7 +141,7 @@ public:
       requestObject.fromIPCEvent(payload);
 
       SK_WebViewResource_Response responseObject;
-      if (sk()->wvrh->handleRequest(requestObject, responseObject))
+      if (sk()->wvrh.handleRequest(requestObject, responseObject))
       {
         // Attempt to treat the IPC call as an SK Module System Operation call
         if (responseObject.handledAsynchronously) return;

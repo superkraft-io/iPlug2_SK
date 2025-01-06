@@ -18,6 +18,7 @@
 #include "config.h"
 #include "resource.h"
 
+#include "../../superkraft/sk_cpp/core/sk_common.hxx"
 #include "../../superkraft/sk_cpp/core/utils/sk_machine.hxx"
 
 using namespace iplug;
@@ -54,6 +55,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
 
   SK::SK_Machine::cpuInfo = SK::SK_Machine::getCPUInformation();
 
+
   try
   {
 #ifndef APP_ALLOW_MULTIPLE_INSTANCES
@@ -72,6 +74,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
     
     InitCommonControls();
     gScrollMessage = RegisterWindowMessage("MSWHEEL_ROLLMSG");
+
 
     IPlugAPPHost* pAppHost = IPlugAPPHost::Create(parseArguments(args));
     pAppHost->Init();
@@ -95,7 +98,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
 
     CreateDialog(gHINSTANCE, MAKEINTRESOURCE(IDD_DIALOG_MAIN), GetDesktopWindow(), IPlugAPPHost::MainDlgProc);
 
-#if !defined _DEBUG || defined NO_IGRAPHICS
+    SK_Common::mainWindowHWND = gHWND;
+
+  #if !defined _DEBUG || defined NO_IGRAPHICS
     HMENU menu = GetMenu(gHWND);
     RemoveMenu(menu, 1, MF_BYPOSITION);
     DrawMenuBar(gHWND);
