@@ -1,3 +1,5 @@
+#pragma once
+
 #define PLUG_NAME "IPlugWebUI_SK"
 #define PLUG_MFR "superkraft-io"
 #define PLUG_VERSION_HEX 0x00010000

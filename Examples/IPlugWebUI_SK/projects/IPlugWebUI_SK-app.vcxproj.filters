@@ -56,6 +56,9 @@
     <ClCompile Include="..\..\..\IPlug\Extras\WebView\IPlugWebView_win.cpp">
       <Filter>IPlug\Extras\WebView</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\superkraft\sk_cpp\core\sk_web\sk_curl.cpp">
+      <Filter>superkraft\sk_cpp\core\sk_web</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\IPlugWebUI_SK.h" />
@@ -160,6 +163,252 @@
       <Filter>IPlug\Extras\WebView</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\IPlug\ISender.h" />
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_common.hxx">
+      <Filter>superkraft\sk_cpp\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_var.hxx">
+      <Filter>superkraft\sk_cpp\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\superkraft.hxx">
+      <Filter>superkraft\sk_cpp\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_ipc\sk_ipc.hxx">
+      <Filter>superkraft\sk_cpp\core\sk_ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_web\sk_curl.hxx">
+      <Filter>superkraft\sk_cpp\core\sk_web</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_web\sk_web_utils.hxx">
+      <Filter>superkraft\sk_cpp\core\sk_web</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview\sk_webview.h">
+      <Filter>superkraft\sk_cpp\core\sk_webview</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview\windows\sk_webview_windows.hxx">
+      <Filter>superkraft\sk_cpp\core\sk_webview\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_initializer\sk_webview_initializer.hxx">
+      <Filter>superkraft\sk_cpp\core\sk_webview_initializer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_initializer\os\sk_webview_initializer_windows.hxx">
+      <Filter>superkraft\sk_cpp\core\sk_webview_initializer\os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_resourceHandler\sk_webview_resourceHandler.hxx">
+      <Filter>superkraft\sk_cpp\core\sk_webview_resourceHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_resourceHandler\os\sk_webview_resourceHandler_response_windows.hxx">
+      <Filter>superkraft\sk_cpp\core\sk_webview_resourceHandler\os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_resourceHandler\os\sk_webview_resourceHandler_windows.hxx">
+      <Filter>superkraft\sk_cpp\core\sk_webview_resourceHandler\os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_window_mngr\sk_window_mngr.hxx">
+      <Filter>superkraft\sk_cpp\core\sk_window_mngr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_window_mngr\root\sk_window_root.hxx">
+      <Filter>superkraft\sk_cpp\core\sk_window_mngr\root</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_window_mngr\windows\sk_window_windows.hxx">
+      <Filter>superkraft\sk_cpp\core\sk_window_mngr\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\utils\sk_array.hxx">
+      <Filter>superkraft\sk_cpp\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\utils\sk_datetime.hxx">
+      <Filter>superkraft\sk_cpp\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\utils\sk_file.hxx">
+      <Filter>superkraft\sk_cpp\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\utils\sk_json.hxx">
+      <Filter>superkraft\sk_cpp\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\utils\sk_machine.hxx">
+      <Filter>superkraft\sk_cpp\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\utils\sk_path_utils.hxx">
+      <Filter>superkraft\sk_cpp\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\utils\sk_str_utils.hxx">
+      <Filter>superkraft\sk_cpp\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\utils\sk_string.hxx">
+      <Filter>superkraft\sk_cpp\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\sk_module_system.hxx">
+      <Filter>superkraft\sk_cpp\module_system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\cpp\sk_module_base_class.hxx">
+      <Filter>superkraft\sk_cpp\module_system\cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\cpp\modules\nodejs\fs\sk_ms_nodejs_fs.hxx">
+      <Filter>superkraft\sk_cpp\module_system\cpp\modules\nodejs\fs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\cpp\modules\nodejs\os\sk_ms_nodejs_os.hxx">
+      <Filter>superkraft\sk_cpp\module_system\cpp\modules\nodejs\os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\cpp\modules\sk\application\sk_ms_application.hxx">
+      <Filter>superkraft\sk_cpp\module_system\cpp\modules\sk\application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\cpp\modules\sk\bdfs\sk_ms_bdfs.hxx">
+      <Filter>superkraft\sk_cpp\module_system\cpp\modules\sk\bdfs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\cpp\modules\sk\vfs\sk_ms_vfs.hxx">
+      <Filter>superkraft\sk_cpp\module_system\cpp\modules\sk\vfs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\cpp\modules\sk\vfs\sk_ms_vfs_file.hxx">
+      <Filter>superkraft\sk_cpp\module_system\cpp\modules\sk\vfs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\cpp\modules\sk\viewMngr\sk_ms_viewMngr.hxx">
+      <Filter>superkraft\sk_cpp\module_system\cpp\modules\sk\viewMngr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\cpp\modules\sk\viewMngr\sk_ms_view\sk_ms_view.hxx">
+      <Filter>superkraft\sk_cpp\module_system\cpp\modules\sk\viewMngr\sk_ms_view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\cpp\modules\sk\web\sk_ms_web.hxx">
+      <Filter>superkraft\sk_cpp\module_system\cpp\modules\sk\web</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\general\curl\curl.h">
+      <Filter>superkraft\sk_cpp\libs\general\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\general\curl\curlver.h">
+      <Filter>superkraft\sk_cpp\libs\general\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\general\curl\easy.h">
+      <Filter>superkraft\sk_cpp\libs\general\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\general\curl\header.h">
+      <Filter>superkraft\sk_cpp\libs\general\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\general\curl\mprintf.h">
+      <Filter>superkraft\sk_cpp\libs\general\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\general\curl\multi.h">
+      <Filter>superkraft\sk_cpp\libs\general\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\general\curl\options.h">
+      <Filter>superkraft\sk_cpp\libs\general\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\general\curl\stdcheaders.h">
+      <Filter>superkraft\sk_cpp\libs\general\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\general\curl\system.h">
+      <Filter>superkraft\sk_cpp\libs\general\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\general\curl\typecheck-gcc.h">
+      <Filter>superkraft\sk_cpp\libs\general\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\general\curl\urlapi.h">
+      <Filter>superkraft\sk_cpp\libs\general\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\general\curl\websockets.h">
+      <Filter>superkraft\sk_cpp\libs\general\curl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\registry.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\registry_helpers.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\resource.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\result.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\result_macros.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\result_originate.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\rpc_helpers.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\safecast.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\stl.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\token_helpers.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\Tracelogging.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\traceloggingconfig.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\win32_helpers.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\win32_result_macros.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\windowing.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\winrt.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\wistd_config.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\wistd_functional.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\wistd_memory.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\wistd_type_traits.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\wrl.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\com.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\com_apartment_variable.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\common.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\coroutine.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\cppwinrt.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\cppwinrt_authoring.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\cppwinrt_helpers.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\cppwinrt_notifiable_module_lock.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\cppwinrt_register_com_server.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\cppwinrt_wrl.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\filesystem.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\libs\windows\wil\include\wil\nt_result_macros.h">
+      <Filter>superkraft\sk_cpp\libs\windows\wil\include\wil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\sk_project\sk_project_binarydata.hxx">
+      <Filter>superkraft\sk_project</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_include.hxx">
+      <Filter>superkraft\sk_cpp\core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="resources">
@@ -186,6 +435,135 @@
     <Filter Include="IPlug\Extras\WebView">
       <UniqueIdentifier>{e6e2b8b9-5c3a-49f8-9588-0e9f32686cbe}</UniqueIdentifier>
     </Filter>
+    <Filter Include="superkraft">
+      <UniqueIdentifier>{9cde3274-934b-407f-a7a1-7debc8bb4bcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp">
+      <UniqueIdentifier>{a7636144-2a02-4ebb-bae6-83301e3f531a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\core">
+      <UniqueIdentifier>{1f967fd3-528c-4095-b026-891f6470042d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\core\sk_ipc">
+      <UniqueIdentifier>{2ae7d106-75f9-4f2f-b436-cf5a04fab2dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\core\sk_web">
+      <UniqueIdentifier>{546c62af-d452-4574-bd38-144461061ece}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\core\sk_webview">
+      <UniqueIdentifier>{76203663-f1ca-447f-92f2-56aed9e3fdd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\core\sk_webview\windows">
+      <UniqueIdentifier>{c8fcb8aa-86f2-40ab-8f56-ec9d4a0563f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\core\sk_webview_initializer">
+      <UniqueIdentifier>{a3121763-b4cc-49e5-a07d-534979f32105}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\core\sk_webview_initializer\os">
+      <UniqueIdentifier>{43eee5e5-6599-412b-9ced-9a86d3153c43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\core\sk_webview_resourceHandler">
+      <UniqueIdentifier>{6e0281bc-f976-43e3-bc07-0b9439b1a11b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\core\sk_webview_resourceHandler\os">
+      <UniqueIdentifier>{3de0c02b-38c8-4f18-aef6-fb747245bf23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\core\sk_window_mngr">
+      <UniqueIdentifier>{025f8539-be17-48de-af39-597ff639df0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\core\sk_window_mngr\root">
+      <UniqueIdentifier>{bbdc1f03-bbef-4899-9c29-e8e8099acc9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\core\sk_window_mngr\windows">
+      <UniqueIdentifier>{ea0de25e-af77-4aa1-b838-cbde902b9bc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\core\utils">
+      <UniqueIdentifier>{884f6be7-02f0-474b-a314-d18ce008b389}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\module_system">
+      <UniqueIdentifier>{d1506c5d-a82d-4863-a892-b1ec0b5c321b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\module_system\cpp">
+      <UniqueIdentifier>{e1c73144-1bad-4fbb-96d5-74fdf48d63e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\module_system\cpp\modules">
+      <UniqueIdentifier>{22ec4d70-b85b-4abb-83c4-171d8e26743a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\module_system\cpp\modules\nodejs">
+      <UniqueIdentifier>{80eb86cb-7d46-4a62-94b0-fd1b0e6bf6f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\module_system\cpp\modules\nodejs\fs">
+      <UniqueIdentifier>{93b09040-97b8-4d77-9578-6668af37b5df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\module_system\cpp\modules\nodejs\os">
+      <UniqueIdentifier>{a5e1e55e-6abb-4556-b67e-cf67cec37a70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\module_system\cpp\modules\sk">
+      <UniqueIdentifier>{87d269ea-1503-485d-bc49-683f36e45fce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\module_system\cpp\modules\sk\bdfs">
+      <UniqueIdentifier>{269763c9-f01d-4e73-b7ae-ff2f76be6226}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\module_system\cpp\modules\sk\application">
+      <UniqueIdentifier>{61d94181-0009-4fea-b5c6-a1b6c1db4a60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\module_system\cpp\modules\sk\viewMngr">
+      <UniqueIdentifier>{47f96f94-c5ed-4946-bbd0-4e741e81016d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\module_system\cpp\modules\sk\viewMngr\sk_ms_view">
+      <UniqueIdentifier>{6a9142b6-c90b-4f58-ae20-ad689039efd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\module_system\cpp\modules\sk\vfs">
+      <UniqueIdentifier>{e7953fa9-67c4-41d2-a29d-76e94639266e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\module_system\cpp\modules\sk\web">
+      <UniqueIdentifier>{308be081-8679-49f3-9996-aa55f7fcec82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\module_system\web">
+      <UniqueIdentifier>{3e51e747-007f-4e2f-96a7-135f0b44666e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\module_system\web\node">
+      <UniqueIdentifier>{0a181a97-6d6d-4afa-a43d-7a8d96366a61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\module_system\web\npm">
+      <UniqueIdentifier>{1f821e6b-9f82-42d4-bbc9-504ed2511086}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\module_system\web\sk">
+      <UniqueIdentifier>{01e4a93f-5fe8-4c58-a3ee-097c1dd7ae44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\libs">
+      <UniqueIdentifier>{556755a1-cc72-43f0-8ae9-5cf1e843a4e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\libs\general">
+      <UniqueIdentifier>{6be37978-45ec-48ee-9237-8261000cbdaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\libs\general\curl">
+      <UniqueIdentifier>{1c6a3639-2b8d-40c2-a7f8-f2e9604a1d8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\libs\windows">
+      <UniqueIdentifier>{aff694af-497d-4081-a5e0-80ec80e3f6aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\libs\windows\wil">
+      <UniqueIdentifier>{9338411b-4629-451b-bda4-924e42f53802}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\libs\windows\wil\include">
+      <UniqueIdentifier>{f9d5b932-ccb0-47b9-af6d-614a059825b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\libs\windows\wil\include\wil">
+      <UniqueIdentifier>{ef5ff215-d9d3-41c0-8d82-5c22b2aac524}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\web">
+      <UniqueIdentifier>{717e42f0-db87-4435-ac3f-09e7f283bbf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\web\global_js_core">
+      <UniqueIdentifier>{ed272307-bbc6-406b-9e2f-5c21ebc6d140}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\web\soft_backend">
+      <UniqueIdentifier>{6ae8f611-d450-401b-af43-08a107995965}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_project">
+      <UniqueIdentifier>{28f6f266-fb15-4ffd-a72b-99d45afdd484}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\resources\main.rc">
@@ -206,6 +584,63 @@
       <Filter>config</Filter>
     </None>
     <None Include="packages.config" />
+    <None Include="..\..\..\..\superkraft\sk_cpp\module_system\web\sk_module.js">
+      <Filter>superkraft\sk_cpp\module_system\web</Filter>
+    </None>
+    <None Include="..\..\..\..\superkraft\sk_cpp\module_system\web\sk_module_root.js">
+      <Filter>superkraft\sk_cpp\module_system\web</Filter>
+    </None>
+    <None Include="..\..\..\..\superkraft\sk_cpp\module_system\web\node\child_process.js">
+      <Filter>superkraft\sk_cpp\module_system\web\node</Filter>
+    </None>
+    <None Include="..\..\..\..\superkraft\sk_cpp\module_system\web\node\fs.js">
+      <Filter>superkraft\sk_cpp\module_system\web\node</Filter>
+    </None>
+    <None Include="..\..\..\..\superkraft\sk_cpp\module_system\web\node\os.js">
+      <Filter>superkraft\sk_cpp\module_system\web\node</Filter>
+    </None>
+    <None Include="..\..\..\..\superkraft\sk_cpp\module_system\web\node\path.js">
+      <Filter>superkraft\sk_cpp\module_system\web\node</Filter>
+    </None>
+    <None Include="..\..\..\..\superkraft\sk_cpp\module_system\web\node\process.js">
+      <Filter>superkraft\sk_cpp\module_system\web\node</Filter>
+    </None>
+    <None Include="..\..\..\..\superkraft\sk_cpp\module_system\web\npm\electron.js">
+      <Filter>superkraft\sk_cpp\module_system\web\npm</Filter>
+    </None>
+    <None Include="..\..\..\..\superkraft\sk_cpp\module_system\web\npm\fs-extra.js">
+      <Filter>superkraft\sk_cpp\module_system\web\npm</Filter>
+    </None>
+    <None Include="..\..\..\..\superkraft\sk_cpp\module_system\web\sk\application.js">
+      <Filter>superkraft\sk_cpp\module_system\web\sk</Filter>
+    </None>
+    <None Include="..\..\..\..\superkraft\sk_cpp\module_system\web\sk\vfs.js">
+      <Filter>superkraft\sk_cpp\module_system\web\sk</Filter>
+    </None>
+    <None Include="..\..\..\..\superkraft\sk_cpp\module_system\web\sk\viewMngr.js">
+      <Filter>superkraft\sk_cpp\module_system\web\sk</Filter>
+    </None>
+    <None Include="..\..\..\..\superkraft\sk_cpp\module_system\web\sk\web.js">
+      <Filter>superkraft\sk_cpp\module_system\web\sk</Filter>
+    </None>
+    <None Include="..\..\..\..\superkraft\sk_cpp\web\README.md">
+      <Filter>superkraft\sk_cpp\web</Filter>
+    </None>
+    <None Include="..\..\..\..\superkraft\sk_cpp\web\global_js_core\sk_global_js_core.js">
+      <Filter>superkraft\sk_cpp\web\global_js_core</Filter>
+    </None>
+    <None Include="..\..\..\..\superkraft\sk_cpp\web\global_js_core\sk_ipc.js">
+      <Filter>superkraft\sk_cpp\web\global_js_core</Filter>
+    </None>
+    <None Include="..\..\..\..\superkraft\sk_cpp\web\soft_backend\sk_sb.html">
+      <Filter>superkraft\sk_cpp\web\soft_backend</Filter>
+    </None>
+    <None Include="..\..\..\..\superkraft\sk_cpp\web\soft_backend\sk_sb.js">
+      <Filter>superkraft\sk_cpp\web\soft_backend</Filter>
+    </None>
+    <None Include="..\..\..\..\superkraft\sk_cpp\module_system\README.md">
+      <Filter>superkraft\sk_cpp\module_system</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\resources\IPlugWebUI_SK.ico">
