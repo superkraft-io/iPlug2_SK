@@ -272,9 +272,11 @@
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview\windows\sk_webview_windows.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_initializer\os\sk_webview_initializer_windows.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_initializer\sk_webview_initializer.hxx" />
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_resourceHandler\os\sk_webview_resourceHandler_request_windows.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_resourceHandler\os\sk_webview_resourceHandler_response_windows.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_resourceHandler\os\sk_webview_resourceHandler_windows.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_resourceHandler\sk_webview_resourceHandler.hxx" />
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_resourceHandler\sk_webview_resourceHandler_callback.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_web\sk_curl.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_web\sk_web_utils.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_window_mngr\root\sk_window_root.hxx" />

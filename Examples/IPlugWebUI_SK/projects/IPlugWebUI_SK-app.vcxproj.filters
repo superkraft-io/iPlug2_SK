@@ -409,6 +409,12 @@
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_include.hxx">
       <Filter>superkraft\sk_cpp\core</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_resourceHandler\sk_webview_resourceHandler_callback.hxx">
+      <Filter>superkraft\sk_cpp\core\sk_webview_resourceHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_resourceHandler\os\sk_webview_resourceHandler_request_windows.hxx">
+      <Filter>superkraft\sk_cpp\core\sk_webview_resourceHandler\os</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="resources">

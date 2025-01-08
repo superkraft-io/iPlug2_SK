@@ -36,6 +36,8 @@
 #include <functional>
 #include <filesystem>
 
+using namespace SK;
+
 /**
  * @file
  * @copydoc WebViewEditorDelegate

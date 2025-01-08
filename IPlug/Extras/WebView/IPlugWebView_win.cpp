@@ -41,7 +41,9 @@
 #include "WebView2EnvironmentOptions.h"
 #include "wdlstring.h"
 
-#include "../../../../superkraft/sk_cpp/core/sk_webview_resourceHandler/os/sk_webview_resourceHandler_response_windows.hxx"
+#include "../../../../superkraft/sk_cpp/core/sk_common.hxx"
+
+using namespace SK;
 
 extern float GetScaleForHWND(HWND hWnd);
 
@@ -171,10 +173,10 @@ void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
               SK_WebViewResource_Response responseObject;
               responseObject.webviewEnvironment = mWebViewEnvironment;
 
-              mIWebView->sk()->wvrh.handleRequest(requestObject, responseObject);
-
-              args->put_Response(responseObject.get().get());
+              SK_Common::onWebResourceRequested(requestObject, responseObject);
               
+              args->put_Response(responseObject.get().get());
+
               return S_OK;
             }).Get(),
             nullptr);
