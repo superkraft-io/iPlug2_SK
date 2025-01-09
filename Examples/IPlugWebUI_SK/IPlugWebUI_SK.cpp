@@ -12,6 +12,15 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
 {
   /**** SK START ****/
   //SK_Superkraft_App::app_argv.fromStringVector(static_cast<IPlugAPPHost*>(info.pAppHost)->argv); //ignoring this for now
+  SK_Common::onMainWindowHWNDAcquired = [&](HWND hwnd) {
+    SK_Window* wnd = sk()->wndMngr.newWindow([&](SK_Window* wnd) {
+      wnd->visible = true;
+      wnd->hwnd = SK_Common::mainWindowHWND;
+      SK_Common::onUpdateWebViewHWNDListForView(wnd->windowClassName);
+      //wnd->createWebView();
+    });
+  };
+
 
   onWebViewReady = [&](void* webview) {
     sk()->wvinit.init(webview);

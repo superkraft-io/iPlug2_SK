@@ -12,6 +12,8 @@
 #include "config.h"
 #include "resource.h"
 
+#include "../../superkraft/sk_cpp/core/sk_common.hxx"
+
 #ifdef OS_WIN
 #include "asio.h"
 extern float GetScaleForHWND(HWND hWnd);
@@ -787,6 +789,18 @@ WDL_DLGRET IPlugAPPHost::MainDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPA
         return 0;
       }
     }
-  }
+
+
+    case WM_ACTIVATE:
+      if (wParam == WA_INACTIVE)
+      {
+        SK_Common::onWindowFocusChanged(nullptr, false);
+      }
+      else
+      {
+        SK_Common::onWindowFocusChanged(nullptr, true);
+      }
+      return 0;
+    }
   return 0;
 }

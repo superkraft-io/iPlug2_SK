@@ -99,6 +99,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
     CreateDialog(gHINSTANCE, MAKEINTRESOURCE(IDD_DIALOG_MAIN), GetDesktopWindow(), IPlugAPPHost::MainDlgProc);
 
     SK_Common::mainWindowHWND = gHWND;
+    SK_Common::onMainWindowHWNDAcquired(gHWND);
 
   #if !defined _DEBUG || defined NO_IGRAPHICS
     HMENU menu = GetMenu(gHWND);

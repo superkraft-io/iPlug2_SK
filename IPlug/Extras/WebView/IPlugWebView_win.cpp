@@ -384,6 +384,7 @@ void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
 
             mWebViewCtrlr->put_Bounds(mWebViewBounds);
 
+
             mIWebView->onWebViewReady(static_cast<void*>(mCoreWebView.get()));
             mIWebView->OnWebViewReady();
             return S_OK;
@@ -526,8 +527,15 @@ void IWebViewImpl::EnableInteraction(bool enable)
 
 void IWebViewImpl::SetWebViewBounds(float x, float y, float w, float h, float scale)
 {
+
+  #if defined(SK_MODE_DEBUG)
+  mWebViewBounds = GetScaledRect(0, 0, 128, 128, GetScaleForHWND(mParentWnd));
+  #elif
   mWebViewBounds = GetScaledRect(x, y, w, h, GetScaleForHWND(mParentWnd));
 
+
+  #endif
+ 
   if (mWebViewCtrlr)
   {
     mWebViewCtrlr->SetBoundsAndZoomFactor(mWebViewBounds, scale);
