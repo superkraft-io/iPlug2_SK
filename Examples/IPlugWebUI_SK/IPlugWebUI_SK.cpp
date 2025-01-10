@@ -21,8 +21,8 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
   };
 
 
-  onWebViewReady = [&](void* webview) {
-    sk()->wvinit.init(webview);
+  SK_Common::onWebViewReady = [&](void* webview, bool isHardBackend) {
+    sk()->wvinit.init(webview, isHardBackend);
   };
 
   SK_IPC::onSendToFrontend = [this](nlohmann::json data) {

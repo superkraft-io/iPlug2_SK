@@ -385,7 +385,7 @@ void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
             mWebViewCtrlr->put_Bounds(mWebViewBounds);
 
 
-            mIWebView->onWebViewReady(static_cast<void*>(mCoreWebView.get()));
+            SK_Common::onWebViewReady(static_cast<void*>(mCoreWebView.get()), true);
             mIWebView->OnWebViewReady();
             return S_OK;
           })
