@@ -415,6 +415,9 @@
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_resourceHandler\os\sk_webview_resourceHandler_request_windows.hxx">
       <Filter>superkraft\sk_cpp\core\sk_webview_resourceHandler\os</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_ums\sk_ums.hxx">
+      <Filter>superkraft\sk_cpp\core\sk_ums</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="resources">
@@ -569,6 +572,9 @@
     </Filter>
     <Filter Include="superkraft\sk_project">
       <UniqueIdentifier>{28f6f266-fb15-4ffd-a72b-99d45afdd484}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\core\sk_ums">
+      <UniqueIdentifier>{18252411-4899-4835-b56a-43d3de67ee6d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

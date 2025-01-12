@@ -128,32 +128,31 @@ public:
 
   void OnMessageFromWebView(const char* jsonStr) override
   {
-    auto json = nlohmann::json::parse(jsonStr, nullptr, false);
+    nlohmann::json json = nlohmann::json::parse(jsonStr, nullptr, false);
 
     /**** SK START ****/
 
-
-    if (json["msg_type"] == "SK_IPC")
+    bool isSK_IPC_call = json.contains("isSK_IPC_call");
+    if (isSK_IPC_call)
     {
-      nlohmann::json payload = json["payload"];
 
       SK_String str;
 
       SK_WebViewResource_Request requestObject;
-      requestObject.fromIPCEvent(payload);
+      requestObject.fromIPCEvent(json);
 
       SK_WebViewResource_Response responseObject;
       if (sk()->wvrh.handleRequest(requestObject, responseObject))
       {
         // Attempt to treat the IPC call as an SK Module System Operation call
         if (responseObject.handledAsynchronously) return;
-        nlohmann::json responseJSON = SK_IPC::createResponseJSON(payload, std::string(responseObject.data.begin(), responseObject.data.end()));
+        nlohmann::json responseJSON = SK_IPC::createResponseJSON(json, std::string(responseObject.data.begin(), responseObject.data.end()));
         str = "sk_api.ipc.handleIncoming(" + responseJSON.dump() + ")";
       }
       else
       {
         // ...else treat it as a normal IPC call
-        nlohmann::json res = sk()->ipc.handle_IPC_Msg(payload);
+        nlohmann::json res = sk()->ipc.handle_IPC_Msg(json);
         str = "sk_api.ipc.handleIncoming(" + res.dump() + ")";
       }
 
