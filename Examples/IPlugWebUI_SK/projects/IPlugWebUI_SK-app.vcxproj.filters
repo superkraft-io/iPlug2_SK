@@ -172,9 +172,6 @@
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\superkraft.hxx">
       <Filter>superkraft\sk_cpp\core</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_ipc\sk_ipc.hxx">
-      <Filter>superkraft\sk_cpp\core\sk_ipc</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_web\sk_curl.hxx">
       <Filter>superkraft\sk_cpp\core\sk_web</Filter>
     </ClInclude>
@@ -418,6 +415,18 @@
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_ums\sk_ums.hxx">
       <Filter>superkraft\sk_cpp\core\sk_ums</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_communication\sk_communication.hxx">
+      <Filter>superkraft\sk_cpp\core\sk_communication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_communication\sk_communication_response.hxx">
+      <Filter>superkraft\sk_cpp\core\sk_communication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_ipc\sk_ipc_v2.hxx">
+      <Filter>superkraft\sk_cpp\core\sk_ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_communication\sk_communication_packet.hxx">
+      <Filter>superkraft\sk_cpp\core\sk_communication</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="resources">
@@ -576,6 +585,9 @@
     <Filter Include="superkraft\sk_cpp\core\sk_ums">
       <UniqueIdentifier>{18252411-4899-4835-b56a-43d3de67ee6d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="superkraft\sk_cpp\core\sk_communication">
+      <UniqueIdentifier>{f3de1142-8c53-4b99-a011-94300b37b8f6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\resources\main.rc">
@@ -641,9 +653,6 @@
     <None Include="..\..\..\..\superkraft\sk_cpp\web\global_js_core\sk_global_js_core.js">
       <Filter>superkraft\sk_cpp\web\global_js_core</Filter>
     </None>
-    <None Include="..\..\..\..\superkraft\sk_cpp\web\global_js_core\sk_ipc.js">
-      <Filter>superkraft\sk_cpp\web\global_js_core</Filter>
-    </None>
     <None Include="..\..\..\..\superkraft\sk_cpp\web\soft_backend\sk_sb.html">
       <Filter>superkraft\sk_cpp\web\soft_backend</Filter>
     </None>
@@ -652,6 +661,12 @@
     </None>
     <None Include="..\..\..\..\superkraft\sk_cpp\module_system\README.md">
       <Filter>superkraft\sk_cpp\module_system</Filter>
+    </None>
+    <None Include="..\..\..\..\superkraft\sk_cpp\web\global_js_core\sk_ipc.js">
+      <Filter>superkraft\sk_cpp\web\global_js_core</Filter>
+    </None>
+    <None Include="..\..\..\..\superkraft\sk_cpp\core\sk_communication\README.md">
+      <Filter>superkraft\sk_cpp\core\sk_communication</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

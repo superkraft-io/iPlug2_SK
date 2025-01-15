@@ -135,7 +135,17 @@ public:
     bool isSK_IPC_call = json.contains("isSK_IPC_call");
     if (isSK_IPC_call)
     {
+      SK_Communication_Config config { "sk.sb", "ipc", &json };
+      SK_Common::onCommunicationRequest(&config, [&](const SK_String& ipcResponseData) {
+        SK_String data = "sk_api.ipc.handleIncoming(" + ipcResponseData + ")";
+        if (data.indexOf("\"data\":null") > - 1)
+        {
+          int x = 0;
+        }
+        EvaluateJavaScript(data.c_str());
+      });
 
+      /*
       SK_String str;
 
       SK_WebViewResource_Request requestObject;
@@ -158,7 +168,7 @@ public:
 
 
       EvaluateJavaScript(str.c_str());
-       
+       */
       return;
     }
 

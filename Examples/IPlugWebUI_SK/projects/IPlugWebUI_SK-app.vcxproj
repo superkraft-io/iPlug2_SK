@@ -265,8 +265,11 @@
     <ClInclude Include="../config.h" />
     <ClInclude Include="..\..\..\..\sk_project\sk_project_binarydata.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_common.hxx" />
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_communication\sk_communication.hxx" />
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_communication\sk_communication_packet.hxx" />
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_communication\sk_communication_response.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_include.hxx" />
-    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_ipc\sk_ipc.hxx" />
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_ipc\sk_ipc_v2.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_ums\sk_ums.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_var.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview\sk_webview.h" />
@@ -413,6 +416,7 @@
     <Image Include="..\resources\IPlugWebUI_SK.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\..\..\superkraft\sk_cpp\core\sk_communication\README.md" />
     <None Include="..\..\..\..\superkraft\sk_cpp\module_system\README.md" />
     <None Include="..\..\..\..\superkraft\sk_cpp\module_system\web\node\child_process.js" />
     <None Include="..\..\..\..\superkraft\sk_cpp\module_system\web\node\fs.js" />

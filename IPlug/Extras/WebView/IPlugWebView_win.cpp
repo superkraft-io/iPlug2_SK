@@ -168,6 +168,12 @@ void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
             mCoreWebView->AddWebResourceRequestedFilter(L"*", COREWEBVIEW2_WEB_RESOURCE_CONTEXT_ALL);
 
             mCoreWebView->add_WebResourceRequested(Callback<ICoreWebView2WebResourceRequestedEventHandler>([&](ICoreWebView2* sender, ICoreWebView2WebResourceRequestedEventArgs* args) -> HRESULT {
+
+
+              SK_Communication_Config config { "sk.sb", "web", args, mWebViewEnvironment };
+              SK_Common::onCommunicationRequest(&config, NULL);
+
+              /*
               SK_WebViewResource_Request requestObject(args);
 
               SK_WebViewResource_Response responseObject;
@@ -176,7 +182,7 @@ void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
               SK_Common::onWebResourceRequested(requestObject, responseObject);
               
               args->put_Response(responseObject.get().get());
-
+              */
               return S_OK;
             }).Get(),
             nullptr);

@@ -17,62 +17,79 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
       wnd->visible = true;
       wnd->hwnd = SK_Common::mainWindowHWND;
       SK_Common::updateWebViewHWNDListForView(wnd->windowClassName);
+      SK_Common::sb_ipc = &wnd->ipc;
+
+      sk()->comm.sb_ipc = &wnd->ipc;
+
+      SK_Common::sb_ipc->on("valid_event_id", [](nlohmann::json data, SK_Communication_Packet* packet) {
+        nlohmann::json json;
+
+        std::string frontend_message = std::string(data["key"]);
+
+        json["backend_said"] = "hello frontend :)";
+        packet->response()->JSON(json);
+      });
+
+      SK_Common::sb_ipc->once("valid_event_id_once", [](nlohmann::json data, SK_Communication_Packet* packet) {
+        nlohmann::json json;
+
+        std::string frontend_message = SK_String(data["key"]);
+
+        json["backend_said"] = "hello frontend :) deleting this event now";
+        packet->response()->JSON(json);
+      });
+
+
+      SK_Common::sb_ipc->onMessage = [this](const SK_String& sender, SK_Communication_Packet* packet) {
+        std::string action = packet->data["action"];
+
+        if (action == "reqFromBE")
+        {
+          nlohmann::json be_data;
+          be_data["this_is"] = "a backend request :)";
+
+          SK_Common::sb_ipc->request("sk.hb", "sk.sb", "requestFromBackend", be_data, [](const SK_String& sender, SK_Communication_Packet* packet) {
+            std::string key = std::string(packet->data["key"]);
+            DBGMSG("key = %s\n", key.c_str());
+          });
+        }
+        else if (action == "msgFromBE")
+        {
+          nlohmann::json be_data;
+          be_data["this_is"] = "a message from backend :)";
+
+          SK_Common::sb_ipc->message(be_data);
+        }
+        else
+        {
+          DBGMSG("data = %s\n", packet->data.dump().c_str());
+        }
+      };
     });
   };
+
+    
+    
+    
+    
 
 
   SK_Common::onWebViewReady = [&](void* webview, bool isHardBackend) {
     sk()->wvinit.init(webview, isHardBackend);
   };
 
-  SK_IPC::onSendToFrontend = [this](nlohmann::json data) {
-    std::string str = "sk_api.ipc.handleIncoming(" + data.dump() + ")";
-    EvaluateJavaScript(str.c_str());
-  };
 
+  SK_IPC_v2::onSendToFrontend = [&](const SK_String& target, const SK_String& data) {
+    SK_String str = "sk_api.ipc.handleIncoming(" + data + ")";
 
-  sk()->ipc.on("valid_event_id", [](nlohmann::json data, SK_String& responseData) {
-    nlohmann::json json;
-
-    std::string frontend_message = std::string(data["key"]);
-
-    json["backend_said"] = "hello frontend :)";
-    responseData = json.dump();
-  });
-
-  sk()->ipc.once("valid_event_id_once", [](nlohmann::json data, SK_String& responseData) {
-    nlohmann::json json;
-
-    std::string frontend_message = SK_String(data["key"]);
-
-    json["backend_said"] = "hello frontend :) deleting this event now";
-    responseData = json.dump();
-  });
-
-
-  sk()->ipc.onMessage = [this](nlohmann::json data) {
-    std::string action = data["action"];
-
-    if (action == "reqFromBE")
+    if (target == "sk.sb")
     {
-      nlohmann::json be_data;
-      be_data["this_is"] = "a backend request :)";
-
-      sk()->ipc.request("requestFromBackend", be_data, [](nlohmann::json data) {
-        std::string key = std::string(data["key"]);
-        DBGMSG("key = %s\n", key.c_str());
-      });
-    }
-    else if (action == "msgFromBE")
-    {
-      nlohmann::json be_data;
-      be_data["this_is"] = "a message from backend :)";
-
-      sk()->ipc.message(be_data);
+      EvaluateJavaScript(str.c_str());
     }
     else
     {
-      DBGMSG("data = %s\n", data.dump().c_str());
+      SK_Window* view = sk()->wndMngr.findByTag(target);
+      view->webview.evaluateScript(str, NULL);
     }
   };
 
