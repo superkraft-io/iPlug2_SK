@@ -190,15 +190,6 @@
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_initializer\os\sk_webview_initializer_windows.hxx">
       <Filter>superkraft\sk_cpp\core\sk_webview_initializer\os</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_resourceHandler\sk_webview_resourceHandler.hxx">
-      <Filter>superkraft\sk_cpp\core\sk_webview_resourceHandler</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_resourceHandler\os\sk_webview_resourceHandler_response_windows.hxx">
-      <Filter>superkraft\sk_cpp\core\sk_webview_resourceHandler\os</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_resourceHandler\os\sk_webview_resourceHandler_windows.hxx">
-      <Filter>superkraft\sk_cpp\core\sk_webview_resourceHandler\os</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_window_mngr\sk_window_mngr.hxx">
       <Filter>superkraft\sk_cpp\core\sk_window_mngr</Filter>
     </ClInclude>
@@ -406,12 +397,6 @@
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_include.hxx">
       <Filter>superkraft\sk_cpp\core</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_resourceHandler\sk_webview_resourceHandler_callback.hxx">
-      <Filter>superkraft\sk_cpp\core\sk_webview_resourceHandler</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_resourceHandler\os\sk_webview_resourceHandler_request_windows.hxx">
-      <Filter>superkraft\sk_cpp\core\sk_webview_resourceHandler\os</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_ums\sk_ums.hxx">
       <Filter>superkraft\sk_cpp\core\sk_ums</Filter>
     </ClInclude>
@@ -426,6 +411,21 @@
     </ClInclude>
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_communication\sk_communication_packet.hxx">
       <Filter>superkraft\sk_cpp\core\sk_communication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_json\sk_json.hxx">
+      <Filter>superkraft\sk_cpp\core\sk_json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_callbacks.hxx">
+      <Filter>superkraft\sk_cpp\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\cpp\modules\sk\nativeActions\sk_ms_nativeActions.hxx">
+      <Filter>superkraft\sk_cpp\module_system\cpp\modules\sk\nativeActions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\cpp\modules\sk\nativeActions\sk_nativeAction_root.hxx">
+      <Filter>superkraft\sk_cpp\module_system\cpp\modules\sk\nativeActions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\cpp\modules\sk\nativeActions\core\sk_ms_cNA_handleParamMouseEvent.hxx">
+      <Filter>superkraft\sk_cpp\module_system\cpp\modules\sk\nativeActions\core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -479,12 +479,6 @@
     </Filter>
     <Filter Include="superkraft\sk_cpp\core\sk_webview_initializer\os">
       <UniqueIdentifier>{43eee5e5-6599-412b-9ced-9a86d3153c43}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="superkraft\sk_cpp\core\sk_webview_resourceHandler">
-      <UniqueIdentifier>{6e0281bc-f976-43e3-bc07-0b9439b1a11b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="superkraft\sk_cpp\core\sk_webview_resourceHandler\os">
-      <UniqueIdentifier>{3de0c02b-38c8-4f18-aef6-fb747245bf23}</UniqueIdentifier>
     </Filter>
     <Filter Include="superkraft\sk_cpp\core\sk_window_mngr">
       <UniqueIdentifier>{025f8539-be17-48de-af39-597ff639df0e}</UniqueIdentifier>
@@ -588,6 +582,15 @@
     <Filter Include="superkraft\sk_cpp\core\sk_communication">
       <UniqueIdentifier>{f3de1142-8c53-4b99-a011-94300b37b8f6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="superkraft\sk_cpp\core\sk_json">
+      <UniqueIdentifier>{0d093853-4f1d-4b30-8338-bbb74ddfc569}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\module_system\cpp\modules\sk\nativeActions">
+      <UniqueIdentifier>{3c967fc1-0a36-4e73-84c8-94ceae91a8f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\module_system\cpp\modules\sk\nativeActions\core">
+      <UniqueIdentifier>{9e3099da-cd29-4abd-a866-fad746285ae3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\resources\main.rc">
@@ -667,6 +670,9 @@
     </None>
     <None Include="..\..\..\..\superkraft\sk_cpp\core\sk_communication\README.md">
       <Filter>superkraft\sk_cpp\core\sk_communication</Filter>
+    </None>
+    <None Include="..\..\..\..\superkraft\sk_cpp\module_system\web\sk\nativeActions.js">
+      <Filter>superkraft\sk_cpp\module_system\web\sk</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

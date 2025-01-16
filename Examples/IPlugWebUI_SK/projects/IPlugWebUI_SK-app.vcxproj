@@ -264,23 +264,20 @@
   <ItemGroup>
     <ClInclude Include="../config.h" />
     <ClInclude Include="..\..\..\..\sk_project\sk_project_binarydata.hxx" />
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_callbacks.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_common.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_communication\sk_communication.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_communication\sk_communication_packet.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_communication\sk_communication_response.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_include.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_ipc\sk_ipc_v2.hxx" />
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_json\sk_json.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_ums\sk_ums.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_var.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview\sk_webview.h" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview\windows\sk_webview_windows.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_initializer\os\sk_webview_initializer_windows.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_initializer\sk_webview_initializer.hxx" />
-    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_resourceHandler\os\sk_webview_resourceHandler_request_windows.hxx" />
-    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_resourceHandler\os\sk_webview_resourceHandler_response_windows.hxx" />
-    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_resourceHandler\os\sk_webview_resourceHandler_windows.hxx" />
-    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_resourceHandler\sk_webview_resourceHandler.hxx" />
-    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview_resourceHandler\sk_webview_resourceHandler_callback.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_web\sk_curl.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_web\sk_web_utils.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_window_mngr\root\sk_window_root.hxx" />
@@ -344,6 +341,9 @@
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\cpp\modules\nodejs\os\sk_ms_nodejs_os.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\cpp\modules\sk\application\sk_ms_application.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\cpp\modules\sk\bdfs\sk_ms_bdfs.hxx" />
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\cpp\modules\sk\nativeActions\core\sk_ms_cNA_handleParamMouseEvent.hxx" />
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\cpp\modules\sk\nativeActions\sk_ms_nativeActions.hxx" />
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\cpp\modules\sk\nativeActions\sk_nativeAction_root.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\cpp\modules\sk\vfs\sk_ms_vfs.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\cpp\modules\sk\vfs\sk_ms_vfs_file.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\cpp\modules\sk\viewMngr\sk_ms_viewMngr.hxx" />
@@ -426,6 +426,7 @@
     <None Include="..\..\..\..\superkraft\sk_cpp\module_system\web\npm\electron.js" />
     <None Include="..\..\..\..\superkraft\sk_cpp\module_system\web\npm\fs-extra.js" />
     <None Include="..\..\..\..\superkraft\sk_cpp\module_system\web\sk\application.js" />
+    <None Include="..\..\..\..\superkraft\sk_cpp\module_system\web\sk\nativeActions.js" />
     <None Include="..\..\..\..\superkraft\sk_cpp\module_system\web\sk\vfs.js" />
     <None Include="..\..\..\..\superkraft\sk_cpp\module_system\web\sk\viewMngr.js" />
     <None Include="..\..\..\..\superkraft\sk_cpp\module_system\web\sk\web.js" />
