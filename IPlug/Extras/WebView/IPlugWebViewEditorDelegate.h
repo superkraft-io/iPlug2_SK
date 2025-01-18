@@ -135,40 +135,13 @@ public:
     bool isSK_IPC_call = json.contains("isSK_IPC_call");
     if (isSK_IPC_call)
     {
-      SK_Communication_Config config { "sk.sb", "ipc", &json };
+      SK_Communication_Config config{"sk.sb", "ipc", &json};
+
       SK_Common::onCommunicationRequest(&config, [&](const SK_String& ipcResponseData) {
         SK_String data = "sk_api.ipc.handleIncoming(" + ipcResponseData + ")";
-        if (data.indexOf("\"data\":null") > - 1)
-        {
-          int x = 0;
-        }
         EvaluateJavaScript(data.c_str());
       });
 
-      /*
-      SK_String str;
-
-      SK_WebViewResource_Request requestObject;
-      requestObject.fromIPCEvent(json);
-
-      SK_WebViewResource_Response responseObject;
-      if (sk()->wvrh.handleRequest(requestObject, responseObject))
-      {
-        // Attempt to treat the IPC call as an SK Module System Operation call
-        if (responseObject.handledAsynchronously) return;
-        nlohmann::json responseJSON = SK_IPC::createResponseJSON(json, std::string(responseObject.data.begin(), responseObject.data.end()));
-        str = "sk_api.ipc.handleIncoming(" + responseJSON.dump() + ")";
-      }
-      else
-      {
-        // ...else treat it as a normal IPC call
-        nlohmann::json res = sk()->ipc.handle_IPC_Msg(json);
-        str = "sk_api.ipc.handleIncoming(" + res.dump() + ")";
-      }
-
-
-      EvaluateJavaScript(str.c_str());
-       */
       return;
     }
 

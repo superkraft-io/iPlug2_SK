@@ -56,9 +56,6 @@
     <ClCompile Include="..\..\..\IPlug\Extras\WebView\IPlugWebView_win.cpp">
       <Filter>IPlug\Extras\WebView</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\superkraft\sk_cpp\core\sk_web\sk_curl.cpp">
-      <Filter>superkraft\sk_cpp\core\sk_web</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\IPlugWebUI_SK.h" />
@@ -427,6 +424,12 @@
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\cpp\modules\sk\nativeActions\core\sk_ms_cNA_handleParamMouseEvent.hxx">
       <Filter>superkraft\sk_cpp\module_system\cpp\modules\sk\nativeActions\core</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_threads\sk_thread.hxx">
+      <Filter>superkraft\sk_cpp\core\sk_threads</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_threads\sk_thread_pool.hxx">
+      <Filter>superkraft\sk_cpp\core\sk_threads</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="resources">
@@ -590,6 +593,9 @@
     </Filter>
     <Filter Include="superkraft\sk_cpp\module_system\cpp\modules\sk\nativeActions\core">
       <UniqueIdentifier>{9e3099da-cd29-4abd-a866-fad746285ae3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\core\sk_threads">
+      <UniqueIdentifier>{83f87c5d-86ea-4ba5-ac50-73ddd99598c2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

@@ -272,6 +272,8 @@
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_include.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_ipc\sk_ipc_v2.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_json\sk_json.hxx" />
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_threads\sk_thread.hxx" />
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_threads\sk_thread_pool.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_ums\sk_ums.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_var.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_webview\sk_webview.h" />
@@ -388,7 +390,6 @@
     <ClInclude Include="..\resources\resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\superkraft\sk_cpp\core\sk_web\sk_curl.cpp" />
     <ClCompile Include="..\..\..\Dependencies\IPlug\RTAudio\include\asio.cpp" />
     <ClCompile Include="..\..\..\Dependencies\IPlug\RTAudio\include\asiodrivers.cpp" />
     <ClCompile Include="..\..\..\Dependencies\IPlug\RTAudio\include\asiolist.cpp" />
