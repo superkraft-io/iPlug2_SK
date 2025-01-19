@@ -8,7 +8,7 @@
 using namespace SK;
 
 IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
-: Plugin(info, MakeConfig(kNumParams, kNumPresets))
+  : Plugin(info, MakeConfig(kNumParams, kNumPresets))
 {
   /**** SK START ****/
 

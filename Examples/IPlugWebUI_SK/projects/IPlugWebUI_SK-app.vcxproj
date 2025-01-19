@@ -272,7 +272,6 @@
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_include.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_ipc\sk_ipc_v2.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_json\sk_json.hxx" />
-    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_threads\sk_thread.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_threads\sk_thread_pool.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_ums\sk_ums.hxx" />
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_var.hxx" />

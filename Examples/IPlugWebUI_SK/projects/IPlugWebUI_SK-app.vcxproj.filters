@@ -424,9 +424,6 @@
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\module_system\cpp\modules\sk\nativeActions\core\sk_ms_cNA_handleParamMouseEvent.hxx">
       <Filter>superkraft\sk_cpp\module_system\cpp\modules\sk\nativeActions\core</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_threads\sk_thread.hxx">
-      <Filter>superkraft\sk_cpp\core\sk_threads</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_threads\sk_thread_pool.hxx">
       <Filter>superkraft\sk_cpp\core\sk_threads</Filter>
     </ClInclude>
