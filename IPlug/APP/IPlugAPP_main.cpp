@@ -109,6 +109,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
 
     for(;;)
     {
+      SK_Common::threadPool_processMainThreadTasks();
+
       MSG msg= {0,};
       int vvv = GetMessage(&msg, NULL, 0, 0);
       

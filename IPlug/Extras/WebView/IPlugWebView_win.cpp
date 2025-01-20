@@ -170,7 +170,7 @@ void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
             mCoreWebView->add_WebResourceRequested(Callback<ICoreWebView2WebResourceRequestedEventHandler>([&](ICoreWebView2* sender, ICoreWebView2WebResourceRequestedEventArgs* args) -> HRESULT {
 
 
-              SK_Communication_Config config { "sk.sb", "web", args, mWebViewEnvironment };
+              SK_Communication_Config config{"sk.sb", SK_Communication_Packet_Type::sk_comm_pt_web, args, mWebViewEnvironment};
               SK_Common::onCommunicationRequest(&config, NULL);
 
               /*
