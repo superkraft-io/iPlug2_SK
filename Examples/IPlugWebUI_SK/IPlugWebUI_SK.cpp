@@ -3,7 +3,7 @@
 #include "IPlugPaths.h"
 #include "../APP/IPlugAPP_host.h"
 
-#include "../../superkraft/sk_cpp/core/sk_common.hxx"
+#include "../../skxx/core/sk_common.hxx"
 
 using namespace SK;
 

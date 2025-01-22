@@ -12,7 +12,7 @@
 #include "config.h"
 #include "resource.h"
 
-#include "../../superkraft/sk_cpp/core/sk_common.hxx"
+#include "../../skxx/core/sk_common.hxx"
 
 #ifdef OS_WIN
 #include "asio.h"

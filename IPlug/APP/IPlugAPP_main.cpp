@@ -18,8 +18,8 @@
 #include "config.h"
 #include "resource.h"
 
-#include "../../superkraft/sk_cpp/core/sk_common.hxx"
-#include "../../superkraft/sk_cpp/core/utils/sk_machine.hxx"
+#include "../../skxx/core/sk_common.hxx"
+#include "../../skxx/core/utils/sk_machine.hxx"
 
 using namespace iplug;
 

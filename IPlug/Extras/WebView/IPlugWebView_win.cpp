@@ -41,7 +41,7 @@
 #include "WebView2EnvironmentOptions.h"
 #include "wdlstring.h"
 
-#include "../../../../superkraft/sk_cpp/core/sk_common.hxx"
+#include "../../../../skxx/core/sk_common.hxx"
 
 using namespace SK;
 
@@ -168,21 +168,8 @@ void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
             mCoreWebView->AddWebResourceRequestedFilter(L"*", COREWEBVIEW2_WEB_RESOURCE_CONTEXT_ALL);
 
             mCoreWebView->add_WebResourceRequested(Callback<ICoreWebView2WebResourceRequestedEventHandler>([&](ICoreWebView2* sender, ICoreWebView2WebResourceRequestedEventArgs* args) -> HRESULT {
-
-
               SK_Communication_Config config{"sk.sb", SK_Communication_Packet_Type::sk_comm_pt_web, args, mWebViewEnvironment};
               SK_Common::onCommunicationRequest(&config, NULL);
-
-              /*
-              SK_WebViewResource_Request requestObject(args);
-
-              SK_WebViewResource_Response responseObject;
-              responseObject.webviewEnvironment = mWebViewEnvironment;
-
-              SK_Common::onWebResourceRequested(requestObject, responseObject);
-              
-              args->put_Response(responseObject.get().get());
-              */
               return S_OK;
             }).Get(),
             nullptr);
@@ -552,11 +539,9 @@ void IWebViewImpl::SetWebViewBounds(float x, float y, float w, float h, float sc
 {
 
   #if defined(SK_MODE_DEBUG)
-  mWebViewBounds = GetScaledRect(0, 0, 128, 128, GetScaleForHWND(mParentWnd));
+    mWebViewBounds = GetScaledRect(0, 0, 128, 128, GetScaleForHWND(mParentWnd));
   #elif
-  mWebViewBounds = GetScaledRect(x, y, w, h, GetScaleForHWND(mParentWnd));
-
-
+    mWebViewBounds = GetScaledRect(x, y, w, h, GetScaleForHWND(mParentWnd));
   #endif
  
   if (mWebViewCtrlr)

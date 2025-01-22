@@ -4,7 +4,7 @@
 #include "Oscillator.h"
 #include "Smoothers.h"
 
-#include "../../../superkraft/sk_cpp/core/superkraft.hxx"
+#include "../../../skxx/core/superkraft.hxx"
 
 using namespace iplug;
 
