@@ -427,6 +427,9 @@
     <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_threads\sk_thread_pool.hxx">
       <Filter>superkraft\sk_cpp\core\sk_threads</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\superkraft\sk_cpp\core\sk_profiler\sk_profiler.hxx">
+      <Filter>superkraft\sk_cpp\core\sk_profiler</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="resources">
@@ -593,6 +596,9 @@
     </Filter>
     <Filter Include="superkraft\sk_cpp\core\sk_threads">
       <UniqueIdentifier>{83f87c5d-86ea-4ba5-ac50-73ddd99598c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\sk_cpp\core\sk_profiler">
+      <UniqueIdentifier>{bea714aa-3e3d-4133-8966-12143576717e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

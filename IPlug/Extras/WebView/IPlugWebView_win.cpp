@@ -62,7 +62,7 @@ public:
   void LoadURL(const char* url);
   void LoadFile(const char* fileName, const char* bundleID);
   void ReloadPageContent();
-  void EvaluateJavaScript(const char* scriptStr, IWebView::completionHandlerFunc func);
+  void EvaluateJavaScript(const SK_String& scriptStr, IWebView::completionHandlerFunc func);
   void EnableScroll(bool enable);
   void EnableInteraction(bool enable);
   void SetWebViewBounds(float x, float y, float w, float h, float scale);
@@ -499,26 +499,43 @@ void IWebViewImpl::ReloadPageContent()
   }
 }
 
-void IWebViewImpl::EvaluateJavaScript(const char* scriptStr, IWebView::completionHandlerFunc func)
+
+
+
+void evaluateScript_mainThread(wil::com_ptr<ICoreWebView2> mCoreWebView, const SK_String& scriptStr, IWebView::completionHandlerFunc func)
 {
   if (mCoreWebView)
   {
-    int bufSize = UTF8ToUTF16Len(scriptStr);
+    /* int bufSize = UTF8ToUTF16Len(scriptStr);
     std::vector<WCHAR> scriptWide(bufSize);
     UTF8ToUTF16(scriptWide.data(), scriptStr, bufSize);
+    */
 
-    mCoreWebView->ExecuteScript(
-      scriptWide.data(), Callback<ICoreWebView2ExecuteScriptCompletedHandler>([func](HRESULT errorCode,
-                                                                              LPCWSTR resultObjectAsJson) -> HRESULT {
-                    if (func && resultObjectAsJson)
-                    {
-                      WDL_String str;
-                      UTF16ToUTF8(str, resultObjectAsJson);
-                      func(str.Get());
-                    }
-                    return S_OK;
-                  }).Get());
+    mCoreWebView->ExecuteScript(scriptStr, Callback<ICoreWebView2ExecuteScriptCompletedHandler>([func](HRESULT errorCode, LPCWSTR resultObjectAsJson) -> HRESULT {
+      if (func && resultObjectAsJson)
+      {
+        WDL_String str;
+        UTF16ToUTF8(str, resultObjectAsJson);
+        func(str.Get());
+      }
+      return S_OK;
+    }).Get());
   }
+};
+
+void IWebViewImpl::EvaluateJavaScript(const SK_String& scriptStr, IWebView::completionHandlerFunc func)
+{
+  if (SK_Thread_Pool::thisFunctionRunningInMainThread())
+  {
+    evaluateScript_mainThread(mCoreWebView, scriptStr, func);
+    return;
+  }
+
+  wil::com_ptr<ICoreWebView2> _webview = mCoreWebView;
+
+  SK_Common::threadPool->queueOnMainThread([this, scriptStr, func, _webview]() mutable {
+    evaluateScript_mainThread(_webview, scriptStr, func);
+  });
 }
 
 void IWebViewImpl::EnableScroll(bool enable)
