@@ -344,6 +344,7 @@
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\sk_nativeAction_root.hxx" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_application.hxx" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_bdfs.hxx" />
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_debugMngr.hxx" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_web.hxx" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\vfs\sk_ms_vfs.hxx" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\vfs\sk_ms_vfs_file.hxx" />
@@ -425,12 +426,14 @@
     <None Include="..\..\..\..\skxx\module_system\web\npm\electron.js" />
     <None Include="..\..\..\..\skxx\module_system\web\npm\fs-extra.js" />
     <None Include="..\..\..\..\skxx\module_system\web\sk\application.js" />
+    <None Include="..\..\..\..\skxx\module_system\web\sk\debugMngr.js" />
     <None Include="..\..\..\..\skxx\module_system\web\sk\nativeActions.js" />
     <None Include="..\..\..\..\skxx\module_system\web\sk\vfs.js" />
     <None Include="..\..\..\..\skxx\module_system\web\sk\viewMngr.js" />
     <None Include="..\..\..\..\skxx\module_system\web\sk\web.js" />
     <None Include="..\..\..\..\skxx\module_system\web\sk_module.js" />
     <None Include="..\..\..\..\skxx\module_system\web\sk_module_root.js" />
+    <None Include="..\..\..\..\skxx\README.md" />
     <None Include="..\..\..\..\skxx\web\global_js_core\sk_global_js_core.js" />
     <None Include="..\..\..\..\skxx\web\global_js_core\sk_ipc.js" />
     <None Include="..\..\..\..\skxx\web\README.md" />

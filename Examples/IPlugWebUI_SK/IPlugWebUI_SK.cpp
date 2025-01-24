@@ -14,6 +14,7 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
 
   SK_Common::onMainWindowHWNDAcquired = [&](HWND hwnd) {
     SK_Window* wnd = sk()->wndMngr.newWindow([&](SK_Window* wnd) {
+      wnd->tag = "sb";
       wnd->visible = true;
       wnd->hwnd = SK_Common::mainWindowHWND;
       SK_Common::updateWebViewHWNDListForView(wnd->windowClassName);
@@ -88,7 +89,7 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
     }
     else
     {
-      SK_Window* view = sk()->wndMngr.findByTag(target);
+      SK_Window* view = sk()->wndMngr.findWindowByTag(target);
       view->webview.evaluateScript(str, NULL);
     }
   };

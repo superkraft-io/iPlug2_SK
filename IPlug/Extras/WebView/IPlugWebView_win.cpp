@@ -150,6 +150,10 @@ void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
               return S_OK;
             }
 
+            SK_Common::showSoftBackendDevTools = [&]() {
+              mCoreWebView->OpenDevToolsWindow();
+            };
+
             mWebViewCtrlr->put_IsVisible(mShowOnLoad);
 
             const auto enableDevTools = mIWebView->GetEnableDevTools();
@@ -539,7 +543,7 @@ void IWebViewImpl::SetWebViewBounds(float x, float y, float w, float h, float sc
 {
 
   #if defined(SK_MODE_DEBUG)
-    mWebViewBounds = GetScaledRect(0, 0, 128, 128, GetScaleForHWND(mParentWnd));
+    mWebViewBounds = GetScaledRect(0, 0, 64, 64, GetScaleForHWND(mParentWnd));
   #elif
     mWebViewBounds = GetScaledRect(x, y, w, h, GetScaleForHWND(mParentWnd));
   #endif
