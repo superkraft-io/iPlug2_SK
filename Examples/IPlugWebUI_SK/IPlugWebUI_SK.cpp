@@ -11,9 +11,30 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
   : Plugin(info, MakeConfig(kNumParams, kNumPresets))
 {
   /**** SK START ****/
+  SK_Common::getMainWindowSize = [&]() {
+    SK_Point size{GetEditorWidth(), GetEditorHeight()};
+    return size;
+  };
+
+  SK_Common::setMainWindowSize = [&](int w, int h) {
+    SetEditorSize(w, h);
+    OnParentWindowResize(w, h);
+
+
+    SK_Common::resizeAllMianWindowView(0, 0, w, h, 1);
+
+    #if defined(SK_OS_windows)
+      float scale = getHWNDScale(SK_Common::mainWindowHWND);
+      SetWindowPos(SK_Common::mainWindowHWND, NULL, 0, 0, w * scale, h * scale, SWP_NOMOVE | SWP_NOZORDER);
+      SendMessage(SK_Common::mainWindowHWND, WM_SIZE, SIZE_RESTORED, MAKELPARAM(w * scale, h * scale));
+  #endif
+  };
 
   SK_Common::onMainWindowHWNDAcquired = [&](HWND hwnd) {
     SK_Window* wnd = sk()->wndMngr.newWindow([&](SK_Window* wnd) {
+      wnd->width = GetEditorWidth();
+      wnd->height = GetEditorHeight();
+
       wnd->tag = "sb";
       wnd->visible = true;
       wnd->hwnd = SK_Common::mainWindowHWND;

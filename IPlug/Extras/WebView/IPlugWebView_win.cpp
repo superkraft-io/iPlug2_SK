@@ -547,8 +547,6 @@ void IWebViewImpl::SetWebViewBounds(float x, float y, float w, float h, float sc
     mWebViewCtrlr->SetBoundsAndZoomFactor(soft_backend_rect, scale);
   }
 
-  
-
   SK_Common::resizeAllMianWindowView(x, y, w, h, scale);
 }
 
