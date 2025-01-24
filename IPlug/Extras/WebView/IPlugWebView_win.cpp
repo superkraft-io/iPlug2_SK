@@ -541,17 +541,15 @@ void IWebViewImpl::EnableInteraction(bool enable)
 
 void IWebViewImpl::SetWebViewBounds(float x, float y, float w, float h, float scale)
 {
-
-  #if defined(SK_MODE_DEBUG)
-    mWebViewBounds = GetScaledRect(0, 0, 64, 64, GetScaleForHWND(mParentWnd));
-  #elif
-    mWebViewBounds = GetScaledRect(x, y, w, h, GetScaleForHWND(mParentWnd));
-  #endif
- 
+  RECT soft_backend_rect = GetScaledRect(0, 0, 0, 0, GetScaleForHWND(mParentWnd));
   if (mWebViewCtrlr)
   {
-    mWebViewCtrlr->SetBoundsAndZoomFactor(mWebViewBounds, scale);
+    mWebViewCtrlr->SetBoundsAndZoomFactor(soft_backend_rect, scale);
   }
+
+  
+
+  SK_Common::resizeAllMianWindowView(x, y, w, h, scale);
 }
 
 void IWebViewImpl::GetLocalDownloadPathForFile(const char* fileName, WDL_String& downloadPath)
