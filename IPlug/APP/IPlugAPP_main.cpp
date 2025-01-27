@@ -55,7 +55,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
 
   SK::SK_Machine::cpuInfo = SK::SK_Machine::getCPUInformation();
 
-
   try
   {
 #ifndef APP_ALLOW_MULTIPLE_INSTANCES
@@ -154,7 +153,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
       TranslateMessage(&msg);
       DispatchMessage(&msg);
     }
-    
+
+
+
     // in case gHWND didnt get destroyed -- this corresponds to SWELLAPP_DESTROY roughly
     if (gHWND)
       DestroyWindow(gHWND);

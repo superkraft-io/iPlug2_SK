@@ -289,6 +289,7 @@
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_file.hxx" />
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_json.hxx" />
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_machine.hxx" />
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_number.hxx" />
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_path_utils.hxx" />
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_string.hxx" />
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_str_utils.hxx" />

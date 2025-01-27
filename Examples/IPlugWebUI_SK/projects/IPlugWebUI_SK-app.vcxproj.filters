@@ -427,6 +427,9 @@
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_debugMngr.hxx">
       <Filter>superkraft\skxx\module_system\cpp\modules\sk</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_number.hxx">
+      <Filter>superkraft\skxx\core\utils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="resources">
@@ -670,5 +673,8 @@
     <Image Include="..\resources\IPlugWebUI_SK.ico">
       <Filter>resources</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
   </ItemGroup>
 </Project>

@@ -27,16 +27,16 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
       float scale = getHWNDScale(SK_Common::mainWindowHWND);
       SetWindowPos(SK_Common::mainWindowHWND, NULL, 0, 0, w * scale, h * scale, SWP_NOMOVE | SWP_NOZORDER);
       SendMessage(SK_Common::mainWindowHWND, WM_SIZE, SIZE_RESTORED, MAKELPARAM(w * scale, h * scale));
-  #endif
+    #endif
   };
 
   SK_Common::onMainWindowHWNDAcquired = [&](HWND hwnd) {
     SK_Window* wnd = sk()->wndMngr.newWindow([&](SK_Window* wnd) {
-      wnd->width = GetEditorWidth();
-      wnd->height = GetEditorHeight();
+      wnd->info["width"] = GetEditorWidth();
+      wnd->info["height"] = GetEditorHeight();
 
       wnd->tag = "sb";
-      wnd->visible = true;
+      wnd->info["visible"] = true;
       wnd->hwnd = SK_Common::mainWindowHWND;
       SK_Common::updateWebViewHWNDListForView(wnd->windowClassName);
       SK_Common::sb_ipc = &wnd->ipc;

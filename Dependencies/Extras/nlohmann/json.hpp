@@ -20410,6 +20410,7 @@ class basic_json // NOLINT(cppcoreguidelines-special-member-functions,hicpp-spec
 
         set_parents();
         assert_invariant();
+
         return *this;
     }
 
