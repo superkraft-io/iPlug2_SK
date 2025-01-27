@@ -668,6 +668,9 @@
     <None Include="..\..\..\..\skxx\module_system\web\sk\debugMngr.js">
       <Filter>superkraft\skxx\module_system\web\sk</Filter>
     </None>
+    <None Include="..\..\..\..\skxx\module_system\web\sk\proton.js">
+      <Filter>superkraft\skxx\module_system\web\sk</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\resources\IPlugWebUI_SK.ico">

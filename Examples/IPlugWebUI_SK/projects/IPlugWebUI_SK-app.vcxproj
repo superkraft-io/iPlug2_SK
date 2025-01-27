@@ -429,6 +429,7 @@
     <None Include="..\..\..\..\skxx\module_system\web\sk\application.js" />
     <None Include="..\..\..\..\skxx\module_system\web\sk\debugMngr.js" />
     <None Include="..\..\..\..\skxx\module_system\web\sk\nativeActions.js" />
+    <None Include="..\..\..\..\skxx\module_system\web\sk\proton.js" />
     <None Include="..\..\..\..\skxx\module_system\web\sk\vfs.js" />
     <None Include="..\..\..\..\skxx\module_system\web\sk\viewMngr.js" />
     <None Include="..\..\..\..\skxx\module_system\web\sk\web.js" />
