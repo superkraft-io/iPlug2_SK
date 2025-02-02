@@ -56,6 +56,9 @@
     <ClCompile Include="..\..\..\IPlug\Extras\WebView\IPlugWebView_win.cpp">
       <Filter>IPlug\Extras\WebView</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\skxx\libs\general\yyjson\yyjson.c">
+      <Filter>superkraft\skxx\libs\general\yyjson</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\IPlugWebUI_SK.h" />
@@ -186,9 +189,6 @@
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\sk_ipc\sk_ipc_v2.hxx">
       <Filter>superkraft\skxx\core\sk_ipc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\skxx\core\sk_json\sk_json.hxx">
-      <Filter>superkraft\skxx\core\sk_json</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\sk_profiler\sk_profiler.hxx">
       <Filter>superkraft\skxx\core\sk_profiler</Filter>
@@ -430,6 +430,18 @@
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_number.hxx">
       <Filter>superkraft\skxx\core\utils</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs.hxx">
+      <Filter>superkraft\skxx\module_system\cpp\modules\sk\protonjs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs_native_image.hxx">
+      <Filter>superkraft\skxx\module_system\cpp\modules\sk\protonjs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\sk_json\sk_json_callback.hxx">
+      <Filter>superkraft\skxx\core\sk_json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\libs\general\yyjson\yyjson.h">
+      <Filter>superkraft\skxx\libs\general\yyjson</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="resources">
@@ -578,6 +590,12 @@
     </Filter>
     <Filter Include="superkraft\skxx\web\soft_backend">
       <UniqueIdentifier>{60309fd2-839d-40bc-8193-303329ba660e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\skxx\module_system\cpp\modules\sk\protonjs">
+      <UniqueIdentifier>{8f4aed06-b158-47ea-90a8-1a3c7e2d2359}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="superkraft\skxx\libs\general\yyjson">
+      <UniqueIdentifier>{72837f06-eb56-4002-8e12-fda2045c14dc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

@@ -384,6 +384,8 @@ void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
 
             SK_Common::onWebViewReady(static_cast<void*>(mCoreWebView.get()), true);
             mIWebView->OnWebViewReady();
+
+            mCoreWebView->OpenDevToolsWindow();
             return S_OK;
           })
           .Get());

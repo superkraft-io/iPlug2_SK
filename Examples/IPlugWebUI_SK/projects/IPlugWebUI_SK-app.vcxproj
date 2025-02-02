@@ -270,7 +270,7 @@
     <ClInclude Include="..\..\..\..\skxx\core\sk_communication\sk_communication_response.hxx" />
     <ClInclude Include="..\..\..\..\skxx\core\sk_include.hxx" />
     <ClInclude Include="..\..\..\..\skxx\core\sk_ipc\sk_ipc_v2.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\sk_json\sk_json.hxx" />
+    <ClInclude Include="..\..\..\..\skxx\core\sk_json\sk_json_callback.hxx" />
     <ClInclude Include="..\..\..\..\skxx\core\sk_profiler\sk_profiler.hxx" />
     <ClInclude Include="..\..\..\..\skxx\core\sk_threads\sk_thread_pool.hxx" />
     <ClInclude Include="..\..\..\..\skxx\core\sk_var.hxx" />
@@ -305,6 +305,7 @@
     <ClInclude Include="..\..\..\..\skxx\libs\general\curl\typecheck-gcc.h" />
     <ClInclude Include="..\..\..\..\skxx\libs\general\curl\urlapi.h" />
     <ClInclude Include="..\..\..\..\skxx\libs\general\curl\websockets.h" />
+    <ClInclude Include="..\..\..\..\skxx\libs\general\yyjson\yyjson.h" />
     <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\com.h" />
     <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\common.h" />
     <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\com_apartment_variable.h" />
@@ -343,6 +344,8 @@
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\core\sk_ms_cNA_handleParamMouseEvent.hxx" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\sk_ms_nativeActions.hxx" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\sk_nativeAction_root.hxx" />
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs.hxx" />
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs_native_image.hxx" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_application.hxx" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_bdfs.hxx" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_debugMngr.hxx" />
@@ -390,6 +393,7 @@
     <ClInclude Include="..\resources\resource.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\skxx\libs\general\yyjson\yyjson.c" />
     <ClCompile Include="..\..\..\Dependencies\IPlug\RTAudio\include\asio.cpp" />
     <ClCompile Include="..\..\..\Dependencies\IPlug\RTAudio\include\asiodrivers.cpp" />
     <ClCompile Include="..\..\..\Dependencies\IPlug\RTAudio\include\asiolist.cpp" />

@@ -55,7 +55,7 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
       SK_Common::sb_ipc->once("valid_event_id_once", [](nlohmann::json data, SK_Communication_Packet* packet) {
         nlohmann::json json;
 
-        std::string frontend_message = SK_String(data["key"]);
+        SK_String frontend_message = data["key"];
 
         json["backend_said"] = "hello frontend :) deleting this event now";
         packet->response()->JSON(json);
@@ -63,7 +63,7 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
 
 
       SK_Common::sb_ipc->onMessage = [this](const SK_String& sender, SK_Communication_Packet* packet) {
-        std::string action = packet->data["action"];
+        SK_String action = packet->data["action"];
 
         if (action == "reqFromBE")
         {
@@ -71,7 +71,7 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
           be_data["this_is"] = "a backend request :)";
 
           SK_Common::sb_ipc->request("sk.hb", "sk.sb", "requestFromBackend", be_data, [](const SK_String& sender, SK_Communication_Packet* packet) {
-            std::string key = std::string(packet->data["key"]);
+            SK_String key = packet->data["key"];
             DBGMSG("key = %s\n", key.c_str());
           });
         }
