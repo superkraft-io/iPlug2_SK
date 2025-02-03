@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 47;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440B46352D4F9D1300433C8A /* debugbreak.h in Headers */ = {isa = PBXBuildFile; fileRef = 440B46342D4F9D1300433C8A /* debugbreak.h */; };
+		440B463A2D4FEBE800433C8A /* test.hxx in Headers */ = {isa = PBXBuildFile; fileRef = 440B46362D4FEBE800433C8A /* test.hxx */; };
+		440B463B2D4FEBE800433C8A /* sk_app_nativeActions.hxx in Headers */ = {isa = PBXBuildFile; fileRef = 440B46382D4FEBE800433C8A /* sk_app_nativeActions.hxx */; };
+		440B463D2D4FEDDC00433C8A /* sk_webview_macos.h in Headers */ = {isa = PBXBuildFile; fileRef = 440B463C2D4FEDDC00433C8A /* sk_webview_macos.h */; };
+		440B46402D51343F00433C8A /* sk_webview_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = 440B463F2D51343F00433C8A /* sk_webview_macos.mm */; };
 		4F0D965B23099F5A00BFDED0 /* IPlugProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF103420A0E55900D3092F /* IPlugProcessor.cpp */; };
 		4F10E7C020B17EDB00F5B09B /* IPlugWebUI_SK-iOS-MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F10E7BF20B17EDB00F5B09B /* IPlugWebUI_SK-iOS-MainInterface.storyboard */; };
 		4F1115CF2296DA95000CFCBF /* IPlugWebUI_SK-iOS-MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F10E7BF20B17EDB00F5B09B /* IPlugWebUI_SK-iOS-MainInterface.storyboard */; };
@@ -38,7 +43,7 @@
 		4FDF6D7B2267CE540007B686 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDF6D752267CE540007B686 /* AppDelegate.m */; };
 		4FDF6D7F2267CEBA0007B686 /* IPlugAUPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4FDF6D7D2267CEBA0007B686 /* IPlugAUPlayer.mm */; };
 		4FF8974C24782DE9004845AC /* IPlugWebUI_SK.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FF8974B24782DE9004845AC /* IPlugWebUI_SK.cpp */; };
-		91236D811B08F59300734C5E /* IPlugWebUI_SKAppExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 91236D771B08F59300734C5E /* IPlugWebUI_SKAppExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		91236D811B08F59300734C5E /* IPlugWebUI_SKAppExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 91236D771B08F59300734C5E /* IPlugWebUI_SKAppExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,20 +75,117 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		91236D851B08F59300734C5E /* Embed App Extensions */ = {
+		91236D851B08F59300734C5E /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				91236D811B08F59300734C5E /* IPlugWebUI_SKAppExtension.appex in Embed App Extensions */,
+				91236D811B08F59300734C5E /* IPlugWebUI_SKAppExtension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		440B44692D4F6F0200433C8A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		440B446A2D4F6F0200433C8A /* sk_communication_packet.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_communication_packet.hxx; sourceTree = "<group>"; };
+		440B446B2D4F6F0200433C8A /* sk_communication_response.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_communication_response.hxx; sourceTree = "<group>"; };
+		440B446C2D4F6F0200433C8A /* sk_communication.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_communication.hxx; sourceTree = "<group>"; };
+		440B446E2D4F6F0200433C8A /* sk_ipc_v2.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_ipc_v2.hxx; sourceTree = "<group>"; };
+		440B44702D4F6F0200433C8A /* sk_json_callback.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_json_callback.hxx; sourceTree = "<group>"; };
+		440B44732D4F6F0200433C8A /* sk_profiler.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_profiler.hxx; sourceTree = "<group>"; };
+		440B44752D4F6F0200433C8A /* sk_thread_pool.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_thread_pool.hxx; sourceTree = "<group>"; };
+		440B44772D4F6F0200433C8A /* sk_curl.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_curl.hxx; sourceTree = "<group>"; };
+		440B44782D4F6F0200433C8A /* sk_web_utils.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_web_utils.hxx; sourceTree = "<group>"; };
+		440B44862D4F6F0200433C8A /* sk_webview_windows.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_webview_windows.hxx; sourceTree = "<group>"; };
+		440B44882D4F6F0200433C8A /* sk_webview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sk_webview.h; sourceTree = "<group>"; };
+		440B44902D4F6F0200433C8A /* sk_webview_initializer.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_webview_initializer.hxx; sourceTree = "<group>"; };
+		440B449B2D4F6F0200433C8A /* sk_window_macos.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_window_macos.hxx; sourceTree = "<group>"; };
+		440B449E2D4F6F0200433C8A /* sk_window_root.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_window_root.hxx; sourceTree = "<group>"; };
+		440B44A02D4F6F0200433C8A /* sk_window_windows.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_window_windows.hxx; sourceTree = "<group>"; };
+		440B44A22D4F6F0200433C8A /* sk_window_mngr.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_window_mngr.hxx; sourceTree = "<group>"; };
+		440B44A42D4F6F0200433C8A /* sk_array.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_array.hxx; sourceTree = "<group>"; };
+		440B44A52D4F6F0200433C8A /* sk_color.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_color.hxx; sourceTree = "<group>"; };
+		440B44A62D4F6F0200433C8A /* sk_datetime.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_datetime.hxx; sourceTree = "<group>"; };
+		440B44A72D4F6F0200433C8A /* sk_file.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_file.hxx; sourceTree = "<group>"; };
+		440B44A82D4F6F0200433C8A /* sk_json.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_json.hxx; sourceTree = "<group>"; };
+		440B44A92D4F6F0200433C8A /* sk_machine.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_machine.hxx; sourceTree = "<group>"; };
+		440B44AA2D4F6F0200433C8A /* sk_number.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_number.hxx; sourceTree = "<group>"; };
+		440B44AB2D4F6F0200433C8A /* sk_path_utils.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_path_utils.hxx; sourceTree = "<group>"; };
+		440B44AC2D4F6F0200433C8A /* sk_point.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_point.hxx; sourceTree = "<group>"; };
+		440B44AD2D4F6F0200433C8A /* sk_str_utils.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_str_utils.hxx; sourceTree = "<group>"; };
+		440B44AE2D4F6F0200433C8A /* sk_string.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_string.hxx; sourceTree = "<group>"; };
+		440B44B02D4F6F0200433C8A /* sk_callbacks.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_callbacks.hxx; sourceTree = "<group>"; };
+		440B44B12D4F6F0200433C8A /* sk_common.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_common.hxx; sourceTree = "<group>"; };
+		440B44B22D4F6F0200433C8A /* sk_include.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_include.hxx; sourceTree = "<group>"; };
+		440B44B32D4F6F0200433C8A /* sk_var.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_var.hxx; sourceTree = "<group>"; };
+		440B44B42D4F6F0200433C8A /* superkraft.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = superkraft.hxx; sourceTree = "<group>"; };
+		440B44B62D4F6F0200433C8A /* curl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = curl.h; sourceTree = "<group>"; };
+		440B44B72D4F6F0200433C8A /* curlu.lib */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = curlu.lib; sourceTree = "<group>"; };
+		440B44B82D4F6F0200433C8A /* curlver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = curlver.h; sourceTree = "<group>"; };
+		440B44B92D4F6F0200433C8A /* easy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = easy.h; sourceTree = "<group>"; };
+		440B44BA2D4F6F0200433C8A /* header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = header.h; sourceTree = "<group>"; };
+		440B44BB2D4F6F0200433C8A /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcurl.a; sourceTree = "<group>"; };
+		440B44BC2D4F6F0200433C8A /* libcurl.lib */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcurl.lib; sourceTree = "<group>"; };
+		440B44BD2D4F6F0200433C8A /* mprintf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mprintf.h; sourceTree = "<group>"; };
+		440B44BE2D4F6F0200433C8A /* multi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = multi.h; sourceTree = "<group>"; };
+		440B44BF2D4F6F0200433C8A /* options.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = options.h; sourceTree = "<group>"; };
+		440B44C02D4F6F0200433C8A /* stdcheaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stdcheaders.h; sourceTree = "<group>"; };
+		440B44C12D4F6F0200433C8A /* system.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = system.h; sourceTree = "<group>"; };
+		440B44C22D4F6F0200433C8A /* typecheck-gcc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "typecheck-gcc.h"; sourceTree = "<group>"; };
+		440B44C32D4F6F0200433C8A /* urlapi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = urlapi.h; sourceTree = "<group>"; };
+		440B44C42D4F6F0200433C8A /* websockets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = websockets.h; sourceTree = "<group>"; };
+		440B456B2D4F6F0200433C8A /* yyjson.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = yyjson.c; sourceTree = "<group>"; };
+		440B456C2D4F6F0200433C8A /* yyjson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = yyjson.h; sourceTree = "<group>"; };
+		440B45F82D4F6F0200433C8A /* sk_ms_nodejs_fs.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_nodejs_fs.hxx; sourceTree = "<group>"; };
+		440B45F92D4F6F0200433C8A /* sk_ms_nodejs_os.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_nodejs_os.hxx; sourceTree = "<group>"; };
+		440B45FB2D4F6F0200433C8A /* sk_ms_cNA_handleParamMouseEvent.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_cNA_handleParamMouseEvent.hxx; sourceTree = "<group>"; };
+		440B45FD2D4F6F0200433C8A /* sk_ms_nativeActions.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_nativeActions.hxx; sourceTree = "<group>"; };
+		440B45FE2D4F6F0200433C8A /* sk_nativeAction_root.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_nativeAction_root.hxx; sourceTree = "<group>"; };
+		440B46002D4F6F0200433C8A /* sk_ms_protonjs_native_image.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_protonjs_native_image.hxx; sourceTree = "<group>"; };
+		440B46012D4F6F0200433C8A /* sk_ms_protonjs.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_protonjs.hxx; sourceTree = "<group>"; };
+		440B46032D4F6F0200433C8A /* sk_ms_vfs_file.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_vfs_file.hxx; sourceTree = "<group>"; };
+		440B46042D4F6F0200433C8A /* sk_ms_vfs.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_vfs.hxx; sourceTree = "<group>"; };
+		440B46062D4F6F0200433C8A /* sk_ms_view.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_view.hxx; sourceTree = "<group>"; };
+		440B46072D4F6F0200433C8A /* sk_ms_viewMngr.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_viewMngr.hxx; sourceTree = "<group>"; };
+		440B46092D4F6F0200433C8A /* sk_ms_application.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_application.hxx; sourceTree = "<group>"; };
+		440B460A2D4F6F0200433C8A /* sk_ms_bdfs.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_bdfs.hxx; sourceTree = "<group>"; };
+		440B460B2D4F6F0200433C8A /* sk_ms_debugMngr.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_debugMngr.hxx; sourceTree = "<group>"; };
+		440B460C2D4F6F0200433C8A /* sk_ms_web.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_web.hxx; sourceTree = "<group>"; };
+		440B460F2D4F6F0200433C8A /* sk_module_base_class.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_module_base_class.hxx; sourceTree = "<group>"; };
+		440B46112D4F6F0200433C8A /* child_process.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = child_process.js; sourceTree = "<group>"; };
+		440B46122D4F6F0200433C8A /* fs.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = fs.js; sourceTree = "<group>"; };
+		440B46132D4F6F0200433C8A /* os.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = os.js; sourceTree = "<group>"; };
+		440B46142D4F6F0200433C8A /* path.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = path.js; sourceTree = "<group>"; };
+		440B46152D4F6F0200433C8A /* process.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = process.js; sourceTree = "<group>"; };
+		440B46172D4F6F0200433C8A /* electron.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = electron.js; sourceTree = "<group>"; };
+		440B46182D4F6F0200433C8A /* fs-extra.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "fs-extra.js"; sourceTree = "<group>"; };
+		440B461A2D4F6F0200433C8A /* application.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = application.js; sourceTree = "<group>"; };
+		440B461B2D4F6F0200433C8A /* debugMngr.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = debugMngr.js; sourceTree = "<group>"; };
+		440B461C2D4F6F0200433C8A /* nativeActions.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = nativeActions.js; sourceTree = "<group>"; };
+		440B461D2D4F6F0200433C8A /* proton.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = proton.js; sourceTree = "<group>"; };
+		440B461E2D4F6F0200433C8A /* vfs.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = vfs.js; sourceTree = "<group>"; };
+		440B461F2D4F6F0200433C8A /* viewMngr.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = viewMngr.js; sourceTree = "<group>"; };
+		440B46202D4F6F0200433C8A /* web.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = web.js; sourceTree = "<group>"; };
+		440B46222D4F6F0200433C8A /* sk_module_root.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = sk_module_root.js; sourceTree = "<group>"; };
+		440B46232D4F6F0200433C8A /* sk_module.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = sk_module.js; sourceTree = "<group>"; };
+		440B46252D4F6F0200433C8A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		440B46262D4F6F0200433C8A /* sk_module_system.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_module_system.hxx; sourceTree = "<group>"; };
+		440B46282D4F6F0200433C8A /* sk_global_js_core.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = sk_global_js_core.js; sourceTree = "<group>"; };
+		440B46292D4F6F0200433C8A /* sk_ipc.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = sk_ipc.js; sourceTree = "<group>"; };
+		440B462B2D4F6F0200433C8A /* sk_sb.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = sk_sb.html; sourceTree = "<group>"; };
+		440B462C2D4F6F0200433C8A /* sk_sb.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = sk_sb.js; sourceTree = "<group>"; };
+		440B462E2D4F6F0200433C8A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		440B46302D4F6F0200433C8A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		440B46312D4F6F0200433C8A /* .gitmodules */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitmodules; sourceTree = "<group>"; };
+		440B46322D4F6F0200433C8A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		440B46342D4F9D1300433C8A /* debugbreak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debugbreak.h; sourceTree = "<group>"; };
+		440B46362D4FEBE800433C8A /* test.hxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = test.hxx; sourceTree = "<group>"; };
+		440B46382D4FEBE800433C8A /* sk_app_nativeActions.hxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_app_nativeActions.hxx; sourceTree = "<group>"; };
+		440B463C2D4FEDDC00433C8A /* sk_webview_macos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_webview_macos.h; sourceTree = "<group>"; };
+		440B463F2D51343F00433C8A /* sk_webview_macos.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = sk_webview_macos.mm; sourceTree = "<group>"; };
 		4F10E7BF20B17EDB00F5B09B /* IPlugWebUI_SK-iOS-MainInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "IPlugWebUI_SK-iOS-MainInterface.storyboard"; path = "../resources/IPlugWebUI_SK-iOS-MainInterface.storyboard"; sourceTree = "<group>"; };
 		4F10E7C520B189DD00F5B09B /* IPlugWebUI_SK-iOS.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "IPlugWebUI_SK-iOS.entitlements"; sourceTree = "<group>"; };
 		4F2020F620A1B2B500F22200 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = scripts; path = ../scripts; sourceTree = "<group>"; };
@@ -212,6 +314,423 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		440B446D2D4F6F0200433C8A /* sk_communication */ = {
+			isa = PBXGroup;
+			children = (
+				440B44692D4F6F0200433C8A /* README.md */,
+				440B446A2D4F6F0200433C8A /* sk_communication_packet.hxx */,
+				440B446B2D4F6F0200433C8A /* sk_communication_response.hxx */,
+				440B446C2D4F6F0200433C8A /* sk_communication.hxx */,
+			);
+			path = sk_communication;
+			sourceTree = "<group>";
+		};
+		440B446F2D4F6F0200433C8A /* sk_ipc */ = {
+			isa = PBXGroup;
+			children = (
+				440B446E2D4F6F0200433C8A /* sk_ipc_v2.hxx */,
+			);
+			path = sk_ipc;
+			sourceTree = "<group>";
+		};
+		440B44722D4F6F0200433C8A /* sk_json */ = {
+			isa = PBXGroup;
+			children = (
+				440B44702D4F6F0200433C8A /* sk_json_callback.hxx */,
+			);
+			path = sk_json;
+			sourceTree = "<group>";
+		};
+		440B44742D4F6F0200433C8A /* sk_profiler */ = {
+			isa = PBXGroup;
+			children = (
+				440B44732D4F6F0200433C8A /* sk_profiler.hxx */,
+			);
+			path = sk_profiler;
+			sourceTree = "<group>";
+		};
+		440B44762D4F6F0200433C8A /* sk_threads */ = {
+			isa = PBXGroup;
+			children = (
+				440B44752D4F6F0200433C8A /* sk_thread_pool.hxx */,
+			);
+			path = sk_threads;
+			sourceTree = "<group>";
+		};
+		440B44792D4F6F0200433C8A /* sk_web */ = {
+			isa = PBXGroup;
+			children = (
+				440B44772D4F6F0200433C8A /* sk_curl.hxx */,
+				440B44782D4F6F0200433C8A /* sk_web_utils.hxx */,
+			);
+			path = sk_web;
+			sourceTree = "<group>";
+		};
+		440B44852D4F6F0200433C8A /* macos */ = {
+			isa = PBXGroup;
+			children = (
+				440B463C2D4FEDDC00433C8A /* sk_webview_macos.h */,
+				440B463F2D51343F00433C8A /* sk_webview_macos.mm */,
+			);
+			path = macos;
+			sourceTree = "<group>";
+		};
+		440B44872D4F6F0200433C8A /* windows */ = {
+			isa = PBXGroup;
+			children = (
+				440B44862D4F6F0200433C8A /* sk_webview_windows.hxx */,
+			);
+			path = windows;
+			sourceTree = "<group>";
+		};
+		440B44892D4F6F0200433C8A /* sk_webview */ = {
+			isa = PBXGroup;
+			children = (
+				440B44852D4F6F0200433C8A /* macos */,
+				440B44872D4F6F0200433C8A /* windows */,
+				440B44882D4F6F0200433C8A /* sk_webview.h */,
+			);
+			path = sk_webview;
+			sourceTree = "<group>";
+		};
+		440B44912D4F6F0200433C8A /* sk_webview_initializer */ = {
+			isa = PBXGroup;
+			children = (
+				440B44902D4F6F0200433C8A /* sk_webview_initializer.hxx */,
+			);
+			path = sk_webview_initializer;
+			sourceTree = "<group>";
+		};
+		440B449D2D4F6F0200433C8A /* macos */ = {
+			isa = PBXGroup;
+			children = (
+				440B449B2D4F6F0200433C8A /* sk_window_macos.hxx */,
+			);
+			path = macos;
+			sourceTree = "<group>";
+		};
+		440B449F2D4F6F0200433C8A /* root */ = {
+			isa = PBXGroup;
+			children = (
+				440B449E2D4F6F0200433C8A /* sk_window_root.hxx */,
+			);
+			path = root;
+			sourceTree = "<group>";
+		};
+		440B44A12D4F6F0200433C8A /* windows */ = {
+			isa = PBXGroup;
+			children = (
+				440B44A02D4F6F0200433C8A /* sk_window_windows.hxx */,
+			);
+			path = windows;
+			sourceTree = "<group>";
+		};
+		440B44A32D4F6F0200433C8A /* sk_window_mngr */ = {
+			isa = PBXGroup;
+			children = (
+				440B449D2D4F6F0200433C8A /* macos */,
+				440B449F2D4F6F0200433C8A /* root */,
+				440B44A12D4F6F0200433C8A /* windows */,
+				440B44A22D4F6F0200433C8A /* sk_window_mngr.hxx */,
+			);
+			path = sk_window_mngr;
+			sourceTree = "<group>";
+		};
+		440B44AF2D4F6F0200433C8A /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				440B44A42D4F6F0200433C8A /* sk_array.hxx */,
+				440B44A52D4F6F0200433C8A /* sk_color.hxx */,
+				440B44A62D4F6F0200433C8A /* sk_datetime.hxx */,
+				440B44A72D4F6F0200433C8A /* sk_file.hxx */,
+				440B44A82D4F6F0200433C8A /* sk_json.hxx */,
+				440B44A92D4F6F0200433C8A /* sk_machine.hxx */,
+				440B44AA2D4F6F0200433C8A /* sk_number.hxx */,
+				440B44AB2D4F6F0200433C8A /* sk_path_utils.hxx */,
+				440B44AC2D4F6F0200433C8A /* sk_point.hxx */,
+				440B44AD2D4F6F0200433C8A /* sk_str_utils.hxx */,
+				440B44AE2D4F6F0200433C8A /* sk_string.hxx */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		440B44B52D4F6F0200433C8A /* core */ = {
+			isa = PBXGroup;
+			children = (
+				440B446D2D4F6F0200433C8A /* sk_communication */,
+				440B446F2D4F6F0200433C8A /* sk_ipc */,
+				440B44722D4F6F0200433C8A /* sk_json */,
+				440B44742D4F6F0200433C8A /* sk_profiler */,
+				440B44762D4F6F0200433C8A /* sk_threads */,
+				440B44792D4F6F0200433C8A /* sk_web */,
+				440B44892D4F6F0200433C8A /* sk_webview */,
+				440B44912D4F6F0200433C8A /* sk_webview_initializer */,
+				440B44A32D4F6F0200433C8A /* sk_window_mngr */,
+				440B44AF2D4F6F0200433C8A /* utils */,
+				440B44B02D4F6F0200433C8A /* sk_callbacks.hxx */,
+				440B44B12D4F6F0200433C8A /* sk_common.hxx */,
+				440B44B22D4F6F0200433C8A /* sk_include.hxx */,
+				440B44B32D4F6F0200433C8A /* sk_var.hxx */,
+				440B44B42D4F6F0200433C8A /* superkraft.hxx */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		440B44C52D4F6F0200433C8A /* curl */ = {
+			isa = PBXGroup;
+			children = (
+				440B44B62D4F6F0200433C8A /* curl.h */,
+				440B44B72D4F6F0200433C8A /* curlu.lib */,
+				440B44B82D4F6F0200433C8A /* curlver.h */,
+				440B44B92D4F6F0200433C8A /* easy.h */,
+				440B44BA2D4F6F0200433C8A /* header.h */,
+				440B44BB2D4F6F0200433C8A /* libcurl.a */,
+				440B44BC2D4F6F0200433C8A /* libcurl.lib */,
+				440B44BD2D4F6F0200433C8A /* mprintf.h */,
+				440B44BE2D4F6F0200433C8A /* multi.h */,
+				440B44BF2D4F6F0200433C8A /* options.h */,
+				440B44C02D4F6F0200433C8A /* stdcheaders.h */,
+				440B44C12D4F6F0200433C8A /* system.h */,
+				440B44C22D4F6F0200433C8A /* typecheck-gcc.h */,
+				440B44C32D4F6F0200433C8A /* urlapi.h */,
+				440B44C42D4F6F0200433C8A /* websockets.h */,
+			);
+			path = curl;
+			sourceTree = "<group>";
+		};
+		440B456D2D4F6F0200433C8A /* yyjson */ = {
+			isa = PBXGroup;
+			children = (
+				440B456B2D4F6F0200433C8A /* yyjson.c */,
+				440B456C2D4F6F0200433C8A /* yyjson.h */,
+			);
+			path = yyjson;
+			sourceTree = "<group>";
+		};
+		440B456E2D4F6F0200433C8A /* general */ = {
+			isa = PBXGroup;
+			children = (
+				440B46342D4F9D1300433C8A /* debugbreak.h */,
+				440B44C52D4F6F0200433C8A /* curl */,
+				440B456D2D4F6F0200433C8A /* yyjson */,
+			);
+			path = general;
+			sourceTree = "<group>";
+		};
+		440B45F72D4F6F0200433C8A /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				440B456E2D4F6F0200433C8A /* general */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		440B45FA2D4F6F0200433C8A /* nodejs */ = {
+			isa = PBXGroup;
+			children = (
+				440B45F82D4F6F0200433C8A /* sk_ms_nodejs_fs.hxx */,
+				440B45F92D4F6F0200433C8A /* sk_ms_nodejs_os.hxx */,
+			);
+			path = nodejs;
+			sourceTree = "<group>";
+		};
+		440B45FC2D4F6F0200433C8A /* core */ = {
+			isa = PBXGroup;
+			children = (
+				440B45FB2D4F6F0200433C8A /* sk_ms_cNA_handleParamMouseEvent.hxx */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		440B45FF2D4F6F0200433C8A /* nativeActions */ = {
+			isa = PBXGroup;
+			children = (
+				440B45FC2D4F6F0200433C8A /* core */,
+				440B45FD2D4F6F0200433C8A /* sk_ms_nativeActions.hxx */,
+				440B45FE2D4F6F0200433C8A /* sk_nativeAction_root.hxx */,
+			);
+			path = nativeActions;
+			sourceTree = "<group>";
+		};
+		440B46022D4F6F0200433C8A /* protonjs */ = {
+			isa = PBXGroup;
+			children = (
+				440B46002D4F6F0200433C8A /* sk_ms_protonjs_native_image.hxx */,
+				440B46012D4F6F0200433C8A /* sk_ms_protonjs.hxx */,
+			);
+			path = protonjs;
+			sourceTree = "<group>";
+		};
+		440B46052D4F6F0200433C8A /* vfs */ = {
+			isa = PBXGroup;
+			children = (
+				440B46032D4F6F0200433C8A /* sk_ms_vfs_file.hxx */,
+				440B46042D4F6F0200433C8A /* sk_ms_vfs.hxx */,
+			);
+			path = vfs;
+			sourceTree = "<group>";
+		};
+		440B46082D4F6F0200433C8A /* viewMngr */ = {
+			isa = PBXGroup;
+			children = (
+				440B46062D4F6F0200433C8A /* sk_ms_view.hxx */,
+				440B46072D4F6F0200433C8A /* sk_ms_viewMngr.hxx */,
+			);
+			path = viewMngr;
+			sourceTree = "<group>";
+		};
+		440B460D2D4F6F0200433C8A /* sk */ = {
+			isa = PBXGroup;
+			children = (
+				440B45FF2D4F6F0200433C8A /* nativeActions */,
+				440B46022D4F6F0200433C8A /* protonjs */,
+				440B46052D4F6F0200433C8A /* vfs */,
+				440B46082D4F6F0200433C8A /* viewMngr */,
+				440B46092D4F6F0200433C8A /* sk_ms_application.hxx */,
+				440B460A2D4F6F0200433C8A /* sk_ms_bdfs.hxx */,
+				440B460B2D4F6F0200433C8A /* sk_ms_debugMngr.hxx */,
+				440B460C2D4F6F0200433C8A /* sk_ms_web.hxx */,
+			);
+			path = sk;
+			sourceTree = "<group>";
+		};
+		440B460E2D4F6F0200433C8A /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				440B45FA2D4F6F0200433C8A /* nodejs */,
+				440B460D2D4F6F0200433C8A /* sk */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		440B46102D4F6F0200433C8A /* cpp */ = {
+			isa = PBXGroup;
+			children = (
+				440B460E2D4F6F0200433C8A /* modules */,
+				440B460F2D4F6F0200433C8A /* sk_module_base_class.hxx */,
+			);
+			path = cpp;
+			sourceTree = "<group>";
+		};
+		440B46162D4F6F0200433C8A /* node */ = {
+			isa = PBXGroup;
+			children = (
+				440B46112D4F6F0200433C8A /* child_process.js */,
+				440B46122D4F6F0200433C8A /* fs.js */,
+				440B46132D4F6F0200433C8A /* os.js */,
+				440B46142D4F6F0200433C8A /* path.js */,
+				440B46152D4F6F0200433C8A /* process.js */,
+			);
+			path = node;
+			sourceTree = "<group>";
+		};
+		440B46192D4F6F0200433C8A /* npm */ = {
+			isa = PBXGroup;
+			children = (
+				440B46172D4F6F0200433C8A /* electron.js */,
+				440B46182D4F6F0200433C8A /* fs-extra.js */,
+			);
+			path = npm;
+			sourceTree = "<group>";
+		};
+		440B46212D4F6F0200433C8A /* sk */ = {
+			isa = PBXGroup;
+			children = (
+				440B461A2D4F6F0200433C8A /* application.js */,
+				440B461B2D4F6F0200433C8A /* debugMngr.js */,
+				440B461C2D4F6F0200433C8A /* nativeActions.js */,
+				440B461D2D4F6F0200433C8A /* proton.js */,
+				440B461E2D4F6F0200433C8A /* vfs.js */,
+				440B461F2D4F6F0200433C8A /* viewMngr.js */,
+				440B46202D4F6F0200433C8A /* web.js */,
+			);
+			path = sk;
+			sourceTree = "<group>";
+		};
+		440B46242D4F6F0200433C8A /* web */ = {
+			isa = PBXGroup;
+			children = (
+				440B46162D4F6F0200433C8A /* node */,
+				440B46192D4F6F0200433C8A /* npm */,
+				440B46212D4F6F0200433C8A /* sk */,
+				440B46222D4F6F0200433C8A /* sk_module_root.js */,
+				440B46232D4F6F0200433C8A /* sk_module.js */,
+			);
+			path = web;
+			sourceTree = "<group>";
+		};
+		440B46272D4F6F0200433C8A /* module_system */ = {
+			isa = PBXGroup;
+			children = (
+				440B46102D4F6F0200433C8A /* cpp */,
+				440B46242D4F6F0200433C8A /* web */,
+				440B46252D4F6F0200433C8A /* README.md */,
+				440B46262D4F6F0200433C8A /* sk_module_system.hxx */,
+			);
+			path = module_system;
+			sourceTree = "<group>";
+		};
+		440B462A2D4F6F0200433C8A /* global_js_core */ = {
+			isa = PBXGroup;
+			children = (
+				440B46282D4F6F0200433C8A /* sk_global_js_core.js */,
+				440B46292D4F6F0200433C8A /* sk_ipc.js */,
+			);
+			path = global_js_core;
+			sourceTree = "<group>";
+		};
+		440B462D2D4F6F0200433C8A /* soft_backend */ = {
+			isa = PBXGroup;
+			children = (
+				440B462B2D4F6F0200433C8A /* sk_sb.html */,
+				440B462C2D4F6F0200433C8A /* sk_sb.js */,
+			);
+			path = soft_backend;
+			sourceTree = "<group>";
+		};
+		440B462F2D4F6F0200433C8A /* web */ = {
+			isa = PBXGroup;
+			children = (
+				440B462A2D4F6F0200433C8A /* global_js_core */,
+				440B462D2D4F6F0200433C8A /* soft_backend */,
+				440B462E2D4F6F0200433C8A /* README.md */,
+			);
+			path = web;
+			sourceTree = "<group>";
+		};
+		440B46332D4F6F0200433C8A /* skxx */ = {
+			isa = PBXGroup;
+			children = (
+				440B44B52D4F6F0200433C8A /* core */,
+				440B45F72D4F6F0200433C8A /* libs */,
+				440B46272D4F6F0200433C8A /* module_system */,
+				440B462F2D4F6F0200433C8A /* web */,
+				440B46302D4F6F0200433C8A /* .gitignore */,
+				440B46312D4F6F0200433C8A /* .gitmodules */,
+				440B46322D4F6F0200433C8A /* README.md */,
+			);
+			name = skxx;
+			path = ../../../../skxx;
+			sourceTree = "<group>";
+		};
+		440B46372D4FEBE800433C8A /* test */ = {
+			isa = PBXGroup;
+			children = (
+				440B46362D4FEBE800433C8A /* test.hxx */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		440B46392D4FEBE800433C8A /* sk_app_nativeActions */ = {
+			isa = PBXGroup;
+			children = (
+				440B46372D4FEBE800433C8A /* test */,
+				440B46382D4FEBE800433C8A /* sk_app_nativeActions.hxx */,
+			);
+			name = sk_app_nativeActions;
+			path = ../../../../sk_app_nativeActions;
+			sourceTree = "<group>";
+		};
 		4F3E0F9B20A0C64100A9C2BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +921,8 @@
 		91D3DA0B1B023C03008FFFBB = {
 			isa = PBXGroup;
 			children = (
+				440B46332D4F6F0200433C8A /* skxx */,
+				440B46392D4FEBE800433C8A /* sk_app_nativeActions */,
 				4FFF108420A1036200D3092F /* config.h */,
 				4FFF108820A1036200D3092F /* IPlugWebUI_SK.h */,
 				4FF8974B24782DE9004845AC /* IPlugWebUI_SK.cpp */,
@@ -431,8 +952,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F7DB9D3247895C200ACF64B /* IPlugWebView.h in Headers */,
+				440B463A2D4FEBE800433C8A /* test.hxx in Headers */,
 				4FA61F7C22E89A5900A92C58 /* AUv3Framework.h in Headers */,
+				440B46352D4F9D1300433C8A /* debugbreak.h in Headers */,
 				4F7DB9D4247895C200ACF64B /* IPlugWebViewEditorDelegate.h in Headers */,
+				440B463D2D4FEDDC00433C8A /* sk_webview_macos.h in Headers */,
+				440B463B2D4FEBE800433C8A /* sk_app_nativeActions.hxx in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,7 +991,7 @@
 				4F33163621C53DD500612805 /* Run Script - prepare_resources-ios.py */,
 				91236D0B1B08F42B00734C5E /* Resources */,
 				91236D6F1B08F52E00734C5E /* Embed Frameworks */,
-				91236D851B08F59300734C5E /* Embed App Extensions */,
+				91236D851B08F59300734C5E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -502,8 +1027,9 @@
 		91D3DA0C1B023C03008FFFBB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					4FA61F6D22E899B500A92C58 = {
 						DevelopmentTeam = 686EDA2T8T;
@@ -624,6 +1150,7 @@
 				4FA61F8122E89AFF00A92C58 /* IPlugParameter.cpp in Sources */,
 				4FA0FB22247D4E5600E25C73 /* IPlugWebViewEditorDelegate.mm in Sources */,
 				4F0D965B23099F5A00BFDED0 /* IPlugProcessor.cpp in Sources */,
+				440B46402D51343F00433C8A /* sk_webview_macos.mm in Sources */,
 				4FA61F7F22E89AFF00A92C58 /* IPlugAPIBase.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -687,6 +1214,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -701,10 +1229,15 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/../resources/IPlugWebUI_SK-iOS-AUv3Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 c++17";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.superkraft-io.IPlugWebUI_SK.AUv3Framework;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.superkraft-io.IPlugWebUI_SK.AUv3Framework";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -736,6 +1269,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -751,10 +1285,15 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/../resources/IPlugWebUI_SK-iOS-AUv3Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 c++17";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.superkraft-io.IPlugWebUI_SK.AUv3Framework;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.superkraft-io.IPlugWebUI_SK.AUv3Framework";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -770,6 +1309,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = IPlugWebUI_SKiOSAppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -802,10 +1342,14 @@
 				GCC_WARN_UNUSED_FUNCTION = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/../resources/IPlugWebUI_SK-iOS-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.superkraft-io.IPlugWebUI_SK;
+				OTHER_CFLAGS = "-ferror-limit=0";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.superkraft-io.IPlugWebUI_SK";
 				PRODUCT_NAME = IPlugWebUI_SK;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -819,6 +1363,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = IPlugWebUI_SKiOSAppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -849,12 +1394,17 @@
 				GCC_WARN_UNUSED_FUNCTION = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/../resources/IPlugWebUI_SK-iOS-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.superkraft-io.IPlugWebUI_SK;
+				OTHER_CFLAGS = "-ferror-limit=0";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.superkraft-io.IPlugWebUI_SK";
 				PRODUCT_NAME = IPlugWebUI_SK;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -897,10 +1447,14 @@
 				GCC_WARN_UNUSED_FUNCTION = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/../resources/IPlugWebUI_SK-iOS-AUv3-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.superkraft-io.IPlugWebUI_SK.AUv3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.superkraft-io.IPlugWebUI_SK.AUv3";
 				PRODUCT_NAME = IPlugWebUI_SKAppExtension;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -943,13 +1497,18 @@
 				GCC_WARN_UNUSED_FUNCTION = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/../resources/IPlugWebUI_SK-iOS-AUv3-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.superkraft-io.IPlugWebUI_SK.AUv3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.superkraft-io.IPlugWebUI_SK.AUv3";
 				PRODUCT_NAME = IPlugWebUI_SKAppExtension;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -961,6 +1520,7 @@
 			buildSettings = {
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -970,15 +1530,18 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_ENTITLEMENTS = "IPlugWebUI_SK-iOS.entitlements";
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = $IPLUG_PATH/IPlugOBJCPrefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1015,6 +1578,7 @@
 			buildSettings = {
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1024,14 +1588,17 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_ENTITLEMENTS = "IPlugWebUI_SK-iOS.entitlements";
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = $IPLUG_PATH/IPlugOBJCPrefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1055,7 +1622,8 @@
 					$AUv3_FRAMEWORKS,
 					"$(EXTRA_LNK_FLAGS)",
 				);
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.0;
 				SYMROOT = "../build-ios";
 				TARGETED_DEVICE_FAMILY = "1,2";

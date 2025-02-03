@@ -180,8 +180,25 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
 HWND gHWND;
 extern HMENU SWELL_app_stocksysmenu;
 
+
+std::vector<std::string> parseArguments(int argc, char *argv[])
+{
+  std::vector<std::string> result;
+
+  for (int i = 0; i < argc; i++){
+    result.push_back(argv[i]);
+  }
+
+  return result;
+}
+
+static inline std::vector<std::string> args{};
+
 int main(int argc, char *argv[])
 {
+  
+  args = parseArguments(argc, argv);
+  
 #if APP_COPY_AUV3
   //if invoked with an argument registerauv3 use plug-in kit to explicitly register auv3 app extension (doesn't happen from debugger)
   if(strcmp(argv[2], "registerauv3"))
@@ -208,7 +225,7 @@ INT_PTR SWELLAppMain(int msg, INT_PTR parm1, INT_PTR parm2)
   switch (msg)
   {
     case SWELLAPP_ONLOAD:
-      pAppHost = IPlugAPPHost::Create();
+      pAppHost = IPlugAPPHost::Create(args);
       pAppHost->Init();
       pAppHost->TryToChangeAudio();
       break;
