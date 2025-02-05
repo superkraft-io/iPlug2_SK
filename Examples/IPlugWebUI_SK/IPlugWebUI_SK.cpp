@@ -3,15 +3,15 @@
 #include "IPlugPaths.h"
 #include "../APP/IPlugAPP_host.h"
 
-#include "../../skxx/core/sk_common.hxx"
+//#include "../../skxx/core/sk_common.hpp"
 
-using namespace SK;
+//using namespace SK;
 
 IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
   : Plugin(info, MakeConfig(kNumParams, kNumPresets))
 {
   /**** SK START ****/
-  SK_Common::getMainWindowSize = [&]() {
+  /*SK_Common::getMainWindowSize = [&]() {
     SK_Point size{GetEditorWidth(), GetEditorHeight()};
     return size;
   };

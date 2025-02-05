@@ -18,8 +18,17 @@
 #include "config.h"
 #include "resource.h"
 
-#include "../../skxx/core/sk_common.hxx"
-#include "../../skxx/core/utils/sk_machine.hxx"
+#if defined(__cplusplus)
+#warning "C++ is enabled"
+#endif
+
+#if defined(__OBJC__)
+#warning "Objective-C++ is enabled"
+#endif
+
+
+#include "../../skxx/core/sk_common.hpp"
+#include "../../skxx/core/utils/sk_machine.hpp"
 
 using namespace iplug;
 

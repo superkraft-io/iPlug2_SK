@@ -12,7 +12,7 @@
 #include "config.h"
 #include "resource.h"
 
-#include "../../skxx/core/sk_common.hxx"
+//#include "../../skxx/core/sk_common.hpp"
 
 #ifdef OS_WIN
 #include "asio.h"
@@ -794,11 +794,11 @@ WDL_DLGRET IPlugAPPHost::MainDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPA
     case WM_ACTIVATE:
       if (wParam == WA_INACTIVE)
       {
-        SK_Common::onWindowFocusChanged(nullptr, false);
+        //SK_Common::onWindowFocusChanged(nullptr, false);
       }
       else
       {
-        SK_Common::onWindowFocusChanged(nullptr, true);
+        //SK_Common::onWindowFocusChanged(nullptr, true);
       }
       return 0;
     }
