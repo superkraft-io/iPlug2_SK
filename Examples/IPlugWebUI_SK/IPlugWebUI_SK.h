@@ -4,7 +4,7 @@
 #include "Oscillator.h"
 #include "Smoothers.h"
 
-//#include "../../../skxx/core/superkraft.hpp"
+#include "../../../skxx/core/superkraft.hpp"
 
 using namespace iplug;
 
@@ -27,8 +27,8 @@ enum EMsgTags
 class IPlugWebUI_SK final : public Plugin
 {
 public:
-  //SK::Superkraft _sk;
-  //SK::Superkraft* sk() override { return &_sk; }
+  SK::Superkraft _sk;
+  SK::Superkraft* sk() override { return &_sk; }
 
 
   IPlugWebUI_SK(const InstanceInfo& info);

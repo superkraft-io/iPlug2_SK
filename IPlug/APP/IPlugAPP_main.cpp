@@ -18,14 +18,6 @@
 #include "config.h"
 #include "resource.h"
 
-#if defined(__cplusplus)
-#warning "C++ is enabled"
-#endif
-
-#if defined(__OBJC__)
-#warning "Objective-C++ is enabled"
-#endif
-
 
 #include "../../skxx/core/sk_common.hpp"
 #include "../../skxx/core/utils/sk_machine.hpp"
@@ -189,7 +181,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
 HWND gHWND;
 extern HMENU SWELL_app_stocksysmenu;
 
-
 std::vector<std::string> parseArguments(int argc, char *argv[])
 {
   std::vector<std::string> result;
@@ -207,6 +198,9 @@ int main(int argc, char *argv[])
 {
   
   args = parseArguments(argc, argv);
+  
+  SK::SK_Machine::cpuInfo = SK::SK_Machine::getCPUInformation();
+
   
 #if APP_COPY_AUV3
   //if invoked with an argument registerauv3 use plug-in kit to explicitly register auv3 app extension (doesn't happen from debugger)
@@ -306,6 +300,9 @@ INT_PTR SWELLAppMain(int msg, INT_PTR parm1, INT_PTR parm2)
 #endif
 
       HWND hwnd = CreateDialog(gHINST, MAKEINTRESOURCE(IDD_DIALOG_MAIN), NULL, IPlugAPPHost::MainDlgProc);
+
+      SK_Common::mainWindowHWND = gHWND;
+      SK_Common::onMainWindowHWNDAcquired(gHWND);
 
       if (menu)
       {

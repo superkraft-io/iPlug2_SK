@@ -63,6 +63,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)webView:(WKWebView*)webView decidePolicyForNavigationAction:(WKNavigationAction*)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
 {
+    
+    NSURLRequest *request = navigationAction.request;
+   NSURL *url = request.URL;
+
+   // Log the URL being loaded
+   NSLog(@"Request URL: %@", url.absoluteString);
+
+   // Example of incorporating C++ code
+   // Assuming you have a C++ function declared as:
+   // bool isCustomScheme(const std::string& scheme);
+   std::string scheme = [url.scheme UTF8String];
+   
+
+
   bool allow = mIWebView->OnCanNavigateToURL([[[[navigationAction request] URL] absoluteString] UTF8String]);
   
   if (allow)

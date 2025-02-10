@@ -226,6 +226,11 @@ void IWebViewImpl::LoadURL(const char* url)
 
 void IWebViewImpl::LoadFile(const char* fileName, const char* _Nullable bundleID)
 {
+    SK::SK_String urlToLoad(fileName);
+    NSURLRequest *request = [NSURLRequest requestWithURL:urlToLoad];
+    [mWKWebView loadRequest:request];
+    return;
+    
   WDL_String fullPath;
   
   if (bundleID != nullptr && strlen(bundleID) != 0)
@@ -257,7 +262,7 @@ void IWebViewImpl::LoadFile(const char* fileName, const char* _Nullable bundleID
   
   NSString* webroot = [urlScheme stringByAppendingString:[pPath stringByReplacingOccurrencesOfString:[NSString stringWithUTF8String:fileName] withString:@""]];
 
-  NSURL* pageUrl = [NSURL URLWithString:[webroot stringByAppendingString:[NSString stringWithUTF8String:fileName]] relativeToURL:nil];
+  NSURL* pageUrl = SK::SK_String(fileName);
 
   if (useCustomUrlScheme)
   {
@@ -279,7 +284,8 @@ void IWebViewImpl::LoadFile(const char* fileName, const char* _Nullable bundleID
   else
   {
     NSURL* rootUrl = [NSURL URLWithString:webroot relativeToURL:nil];
-    [mWKWebView loadFileURL:pageUrl allowingReadAccessToURL:rootUrl];
+      NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"sk_sb" withExtension:@"html"];
+    [mWKWebView loadFileURL:fileURL allowingReadAccessToURL:fileURL];
   }
 }
 

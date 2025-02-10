@@ -30,11 +30,14 @@
 #import "IPlugWKWebViewScriptMessageHandler.h"
 #include "IPlugWebView.h"
 
+#include "../../../../skxx/core/sk_common.hpp"
+
 #if !__has_feature(objc_arc)
 #error This file must be compiled with Arc. Use -fobjc-arc flag
 #endif
 
 using namespace iplug;
+using namespace SK;
 
 @implementation IPLUG_WKSCRIPTMESSAGEHANDLER
 
@@ -85,6 +88,13 @@ using namespace iplug;
   
   if (useCustomUrlScheme && [urlSchemeTask.request.URL.absoluteString containsString: urlScheme])
   {
+      SK_Communication_Config config{"sk.sb", SK_Communication_Packet_Type::sk_comm_pt_web, (__bridge void *)urlSchemeTask.request};
+      SK_Common::onCommunicationRequest(&config, NULL);
+      
+      [urlSchemeTask didFinish];
+      
+      return;
+      
     NSURL* customFileURL = urlSchemeTask.request.URL;
     NSURL* fileURL = [self changeURLScheme:customFileURL toScheme:@"file"];
     NSHTTPURLResponse* response = NULL;

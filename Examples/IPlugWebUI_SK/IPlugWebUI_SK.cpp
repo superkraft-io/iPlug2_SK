@@ -3,7 +3,7 @@
 #include "IPlugPaths.h"
 #include "../APP/IPlugAPP_host.h"
 
-//#include "../../skxx/core/sk_common.hpp"
+#include "../../skxx/core/sk_common.hpp"
 
 //using namespace SK;
 
@@ -11,7 +11,7 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
   : Plugin(info, MakeConfig(kNumParams, kNumPresets))
 {
   /**** SK START ****/
-  /*SK_Common::getMainWindowSize = [&]() {
+  SK_Common::getMainWindowSize = [&]() {
     SK_Point size{GetEditorWidth(), GetEditorHeight()};
     return size;
   };
@@ -30,7 +30,12 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
     #endif
   };
 
-  SK_Common::onMainWindowHWNDAcquired = [&](HWND hwnd) {
+    
+#if defined(SK_OS_windows)
+    SK_Common::onMainWindowHWNDAcquired = [&](HWND hwnd) {
+#elif defined(SK_OS_macos) || defined(SK_OS_ios)
+    SK_Common::onMainWindowHWNDAcquired = [&](HWND hwnd) {
+#endif
     SK_Window* wnd = sk()->wndMngr.newWindow([&](SK_Window* wnd) {
       wnd->config["width"] = GetEditorWidth();
       wnd->config["height"] = GetEditorHeight();
@@ -38,7 +43,10 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
       wnd->tag = "sb";
       wnd->config["visible"] = true;
       wnd->hwnd = SK_Common::mainWindowHWND;
-      SK_Common::updateWebViewHWNDListForView(wnd->windowClassName);
+      #if defined(SK_OS_windows)
+        SK_Common::updateWebViewHWNDListForView(wnd->windowClassName);
+      #endif
+        
       SK_Common::sb_ipc = &wnd->ipc;
 
       sk()->comm.sb_ipc = &wnd->ipc;
@@ -111,7 +119,7 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
     else
     {
       SK_Window* view = sk()->wndMngr.findWindowByTag(target);
-      view->webview.evaluateScript(str, NULL);
+      //view->webview.evaluateScript(str, NULL);
     }
   };
 

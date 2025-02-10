@@ -36,7 +36,7 @@
 #include <functional>
 #include <filesystem>
 
-//using namespace SK;
+using namespace SK;
 
 /**
  * @file
@@ -132,7 +132,7 @@ public:
 
     /**** SK START ****/
 
-    /*bool isSK_IPC_call = json.contains("isSK_IPC_call");
+    bool isSK_IPC_call = json.contains("isSK_IPC_call");
     if (isSK_IPC_call)
     {
       SK_Communication_Config config{"sk.sb", SK_Communication_Packet_Type::sk_comm_pt_ipc, &json};
@@ -143,7 +143,7 @@ public:
       });
 
       return;
-    }*/
+    }
 
     /**** SK END ****/
 

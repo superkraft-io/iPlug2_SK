@@ -25,9 +25,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		44F8BA172D5559A3003B9C09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F8BA162D5559A3003B9C09 /* Foundation.framework */; };
+		44F8BA1D2D567F54003B9C09 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FF9DE62D5361EB003B1A0C /* libcurl.a */; };
+		44F8BA202D567F8D003B9C09 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F8BA1F2D567F8D003B9C09 /* WebKit.framework */; };
 		44FF9B3E2D5229B4003B1A0C /* sk_project_binarydata.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 44FF9B3D2D5229B4003B1A0C /* sk_project_binarydata.hpp */; };
-		44FF9DDD2D524D03003B1A0C /* sk_webview_macos_v2.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44FF9DDC2D524D03003B1A0C /* sk_webview_macos_v2.mm */; };
-		44FF9DE02D524D85003B1A0C /* sk_webview_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44FF9DDE2D524D85003B1A0C /* sk_webview_macos.mm */; };
 		44FF9F9F2D536223003B1A0C /* child_process.js in Resources */ = {isa = PBXBuildFile; fileRef = 44FF9F882D536223003B1A0C /* child_process.js */; };
 		44FF9FA02D536223003B1A0C /* fs.js in Resources */ = {isa = PBXBuildFile; fileRef = 44FF9F892D536223003B1A0C /* fs.js */; };
 		44FF9FA12D536223003B1A0C /* os.js in Resources */ = {isa = PBXBuildFile; fileRef = 44FF9F8A2D536223003B1A0C /* os.js */; };
@@ -368,6 +369,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		442CAE0C2D57F94A001BB2C6 /* sk_project_includes.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = sk_project_includes.hpp; path = ../../../../sk_project_includes.hpp; sourceTree = "<group>"; };
+		442CAE0F2D58A626001BB2C6 /* sk_common.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_common.hpp; sourceTree = "<group>"; };
+		44F8BA162D5559A3003B9C09 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		44F8BA1B2D566D9A003B9C09 /* sk_string_base.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_string_base.hpp; sourceTree = "<group>"; };
+		44F8BA1F2D567F8D003B9C09 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		44FF9B392D5229A6003B1A0C /* test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = test.hpp; sourceTree = "<group>"; };
 		44FF9B3B2D5229A6003B1A0C /* sk_app_nativeActions.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_app_nativeActions.hpp; sourceTree = "<group>"; };
 		44FF9B3D2D5229B4003B1A0C /* sk_project_binarydata.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sk_project_binarydata.hpp; path = ../../../../sk_project_binarydata.hpp; sourceTree = "<group>"; };
@@ -377,7 +383,6 @@
 		44FF9D062D5229C7003B1A0C /* .gitmodules */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitmodules; sourceTree = "<group>"; };
 		44FF9D072D5229C7003B1A0C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		44FF9D762D522A04003B1A0C /* sk_callbacks.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_callbacks.hpp; sourceTree = "<group>"; };
-		44FF9D772D522A16003B1A0C /* sk_common.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_common.hpp; sourceTree = "<group>"; };
 		44FF9D782D522A16003B1A0C /* superkraft.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = superkraft.hpp; sourceTree = "<group>"; };
 		44FF9D792D522A22003B1A0C /* sk_array.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_array.hpp; sourceTree = "<group>"; };
 		44FF9D7A2D522A22003B1A0C /* sk_color.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_color.hpp; sourceTree = "<group>"; };
@@ -401,13 +406,8 @@
 		44FF9DB92D522AE4003B1A0C /* sk_ipc_v2.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ipc_v2.hpp; sourceTree = "<group>"; };
 		44FF9DBB2D522AF9003B1A0C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		44FF9DBC2D522AF9003B1A0C /* sk_communication_packet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_communication_packet.hpp; sourceTree = "<group>"; };
-		44FF9DBE2D522AF9003B1A0C /* sk_communication_response.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_communication_response.hpp; sourceTree = "<group>"; };
 		44FF9DBF2D522AF9003B1A0C /* sk_communication.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_communication.hpp; sourceTree = "<group>"; };
 		44FF9DD12D522DCC003B1A0C /* sk_webview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_webview.h; sourceTree = "<group>"; };
-		44FF9DDB2D524C9F003B1A0C /* sk_webview_macos_v2.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_webview_macos_v2.hpp; sourceTree = "<group>"; };
-		44FF9DDC2D524D03003B1A0C /* sk_webview_macos_v2.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = sk_webview_macos_v2.mm; sourceTree = "<group>"; };
-		44FF9DDE2D524D85003B1A0C /* sk_webview_macos.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = sk_webview_macos.mm; sourceTree = "<group>"; };
-		44FF9DDF2D524D85003B1A0C /* sk_webview_macos.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_webview_macos.hpp; sourceTree = "<group>"; };
 		44FF9DE12D5361EB003B1A0C /* curl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curl.h; sourceTree = "<group>"; };
 		44FF9DE22D5361EB003B1A0C /* curlu.lib */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = curlu.lib; sourceTree = "<group>"; };
 		44FF9DE32D5361EB003B1A0C /* curlver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curlver.h; sourceTree = "<group>"; };
@@ -463,7 +463,7 @@
 		44FF9FB32D536248003B1A0C /* sk_sb.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sk_sb.html; sourceTree = "<group>"; };
 		44FF9FB42D536248003B1A0C /* sk_sb.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sk_sb.js; sourceTree = "<group>"; };
 		44FF9FB62D536248003B1A0C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		44FF9FBF2D53D67B003B1A0C /* sk_string_apple.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_string_apple.hpp; sourceTree = "<group>"; };
+		44FF9FBF2D53D67B003B1A0C /* sk_string_apple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_string_apple.h; sourceTree = "<group>"; };
 		44FF9FC12D53D67B003B1A0C /* sk_string.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_string.h; sourceTree = "<group>"; };
 		44FF9FC32D53D718003B1A0C /* sk_string_apple.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = sk_string_apple.mm; sourceTree = "<group>"; };
 		4F05C5A82082424400DD1621 /* IPlugWAM.h */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = IPlugWAM.h; path = ../../../IPlug/WEB/IPlugWAM.h; sourceTree = "<group>"; tabWidth = 2; };
@@ -779,6 +779,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		44F8BA152D55598E003B9C09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44F8BA172D5559A3003B9C09 /* Foundation.framework in Frameworks */,
+				44F8BA202D567F8D003B9C09 /* WebKit.framework in Frameworks */,
+				44F8BA1D2D567F54003B9C09 /* libcurl.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4F20EF2C132C69FE0030E34C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -853,6 +863,7 @@
 			isa = PBXGroup;
 			children = (
 				44FF9B3D2D5229B4003B1A0C /* sk_project_binarydata.hpp */,
+				442CAE0C2D57F94A001BB2C6 /* sk_project_includes.hpp */,
 				44FF9B3C2D5229A6003B1A0C /* sk_app_nativeActions */,
 				44FF9D082D5229C7003B1A0C /* skxx */,
 				52FBBED30D0CF143001C8B8A /* config.h */,
@@ -870,6 +881,8 @@
 		089C1671FE841209C02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				44F8BA1F2D567F8D003B9C09 /* WebKit.framework */,
+				44F8BA162D5559A3003B9C09 /* Foundation.framework */,
 				4F78D8D013B63B390032E0F3 /* IPlug */,
 				4FF01613134E0BCD001447BA /* WDL */,
 			);
@@ -963,9 +976,9 @@
 				44FF9D952D522A30003B1A0C /* sk_window_mngr */,
 				44FF9D842D522A22003B1A0C /* utils */,
 				44FF9D762D522A04003B1A0C /* sk_callbacks.hpp */,
+				442CAE0F2D58A626001BB2C6 /* sk_common.hpp */,
 				44FF9B822D5229C7003B1A0C /* sk_include.h */,
 				44FF9B832D5229C7003B1A0C /* sk_var.hpp */,
-				44FF9D772D522A16003B1A0C /* sk_common.hpp */,
 				44FF9D782D522A16003B1A0C /* superkraft.hpp */,
 			);
 			path = core;
@@ -1084,7 +1097,6 @@
 			children = (
 				44FF9DBB2D522AF9003B1A0C /* README.md */,
 				44FF9DBC2D522AF9003B1A0C /* sk_communication_packet.hpp */,
-				44FF9DBE2D522AF9003B1A0C /* sk_communication_response.hpp */,
 				44FF9DBF2D522AF9003B1A0C /* sk_communication.hpp */,
 			);
 			path = sk_communication;
@@ -1102,10 +1114,6 @@
 		44FF9DD92D522E09003B1A0C /* macos */ = {
 			isa = PBXGroup;
 			children = (
-				44FF9DDB2D524C9F003B1A0C /* sk_webview_macos_v2.hpp */,
-				44FF9DDC2D524D03003B1A0C /* sk_webview_macos_v2.mm */,
-				44FF9DDF2D524D85003B1A0C /* sk_webview_macos.hpp */,
-				44FF9DDE2D524D85003B1A0C /* sk_webview_macos.mm */,
 			);
 			path = macos;
 			sourceTree = "<group>";
@@ -1325,7 +1333,8 @@
 		44FF9FC22D53D67B003B1A0C /* sk_string */ = {
 			isa = PBXGroup;
 			children = (
-				44FF9FBF2D53D67B003B1A0C /* sk_string_apple.hpp */,
+				44F8BA1B2D566D9A003B9C09 /* sk_string_base.hpp */,
+				44FF9FBF2D53D67B003B1A0C /* sk_string_apple.h */,
 				44FF9FC32D53D718003B1A0C /* sk_string_apple.mm */,
 				44FF9FC12D53D67B003B1A0C /* sk_string.h */,
 			);
@@ -2114,6 +2123,7 @@
 				4FBCC1B21FD5AE8500EFE550 /* Run Script - prepare_resources-mac.py */,
 				4FD16A0513B63081001D0217 /* Resources */,
 				4FD16A0613B63081001D0217 /* Sources */,
+				44F8BA152D55598E003B9C09 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2733,13 +2743,11 @@
 				44FF9FC42D53D718003B1A0C /* sk_string_apple.mm in Sources */,
 				4F690C9B203A345100A4A13E /* IPlugAPP_main.cpp in Sources */,
 				4F3862EF2014BBEC0009F402 /* IPlugWebUI_SK.cpp in Sources */,
-				44FF9DDD2D524D03003B1A0C /* sk_webview_macos_v2.mm in Sources */,
 				4F78D90B13B63BA50032E0F3 /* IPlugAPIBase.cpp in Sources */,
 				4F35DEAD207E5C5A00867D8F /* IPlugPluginBase.cpp in Sources */,
 				4FF0A83221BE708700B2C9D1 /* swell-gdi.mm in Sources */,
 				4F78D91813B63BA50032E0F3 /* IPlugParameter.cpp in Sources */,
 				4FDAC0EA207D76C600299363 /* IPlugTimer.cpp in Sources */,
-				44FF9DE02D524D85003B1A0C /* sk_webview_macos.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3961,6 +3969,7 @@
 				DEVELOPMENT_TEAM = XV39LJXCG7;
 				DSTROOT = "$(APP_PATH)";
 				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(EXTRA_APP_DEFS)",
 					"$(APP_DEFS)",
@@ -3993,6 +4002,7 @@
 				DEVELOPMENT_TEAM = XV39LJXCG7;
 				DSTROOT = "$(APP_PATH)";
 				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(EXTRA_APP_DEFS)",
 					"$(APP_DEFS)",
@@ -4025,6 +4035,7 @@
 				DEVELOPMENT_TEAM = XV39LJXCG7;
 				DSTROOT = "$(APP_PATH)";
 				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(EXTRA_APP_DEFS)",
 					"$(APP_DEFS)",
