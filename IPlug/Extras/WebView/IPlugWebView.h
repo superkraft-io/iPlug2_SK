@@ -47,8 +47,7 @@ class IWebView
 public:
   using completionHandlerFunc = std::function<void(const char* result)>;
 
-  
-  virtual SK::Superkraft* sk() { return nullptr; };
+  //SK::Superkraft* sk();
 
   /** Constructs an IWebView
   * @param opaque. Is the WebView opaque or does it have a transparent background

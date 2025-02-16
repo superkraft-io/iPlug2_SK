@@ -25,6 +25,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		44F0E05E2D60A4C000D5CC4B /* sk_webview_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44F0E05D2D60A4C000D5CC4B /* sk_webview_macos.mm */; };
 		44F8BA172D5559A3003B9C09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F8BA162D5559A3003B9C09 /* Foundation.framework */; };
 		44F8BA1D2D567F54003B9C09 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FF9DE62D5361EB003B1A0C /* libcurl.a */; };
 		44F8BA202D567F8D003B9C09 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F8BA1F2D567F8D003B9C09 /* WebKit.framework */; };
@@ -49,7 +50,6 @@
 		44FF9FB92D536248003B1A0C /* sk_ipc.js in Resources */ = {isa = PBXBuildFile; fileRef = 44FF9FB12D536248003B1A0C /* sk_ipc.js */; };
 		44FF9FBA2D536248003B1A0C /* sk_sb.html in Resources */ = {isa = PBXBuildFile; fileRef = 44FF9FB32D536248003B1A0C /* sk_sb.html */; };
 		44FF9FBB2D536248003B1A0C /* sk_sb.js in Resources */ = {isa = PBXBuildFile; fileRef = 44FF9FB42D536248003B1A0C /* sk_sb.js */; };
-		44FF9FC42D53D718003B1A0C /* sk_string_apple.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44FF9FC32D53D718003B1A0C /* sk_string_apple.mm */; };
 		4F0848292015129A00F9E881 /* IPlugAAX_Parameters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0848252015129300F9E881 /* IPlugAAX_Parameters.cpp */; };
 		4F0AB11B259C04BB00653315 /* web in Resources */ = {isa = PBXBuildFile; fileRef = 4FC46E57231440B4000045E7 /* web */; };
 		4F0AB11C259C050300653315 /* web in Resources */ = {isa = PBXBuildFile; fileRef = 4FC46E57231440B4000045E7 /* web */; };
@@ -371,13 +371,16 @@
 /* Begin PBXFileReference section */
 		442CAE0C2D57F94A001BB2C6 /* sk_project_includes.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = sk_project_includes.hpp; path = ../../../../sk_project_includes.hpp; sourceTree = "<group>"; };
 		442CAE0F2D58A626001BB2C6 /* sk_common.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_common.hpp; sourceTree = "<group>"; };
+		44F0E05B2D609D6500D5CC4B /* sk_include_core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sk_include_core.h; sourceTree = "<group>"; };
+		44F0E05C2D60A4C000D5CC4B /* sk_webview_macos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_webview_macos.h; sourceTree = "<group>"; };
+		44F0E05D2D60A4C000D5CC4B /* sk_webview_macos.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = sk_webview_macos.mm; sourceTree = "<group>"; };
+		44F0E05F2D6132C900D5CC4B /* sk_communication_response.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_communication_response.hpp; sourceTree = "<group>"; };
 		44F8BA162D5559A3003B9C09 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		44F8BA1B2D566D9A003B9C09 /* sk_string_base.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_string_base.hpp; sourceTree = "<group>"; };
 		44F8BA1F2D567F8D003B9C09 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		44FF9B392D5229A6003B1A0C /* test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = test.hpp; sourceTree = "<group>"; };
 		44FF9B3B2D5229A6003B1A0C /* sk_app_nativeActions.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_app_nativeActions.hpp; sourceTree = "<group>"; };
 		44FF9B3D2D5229B4003B1A0C /* sk_project_binarydata.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sk_project_binarydata.hpp; path = ../../../../sk_project_binarydata.hpp; sourceTree = "<group>"; };
-		44FF9B822D5229C7003B1A0C /* sk_include.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_include.h; sourceTree = "<group>"; };
+		44FF9B822D5229C7003B1A0C /* sk_include.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = sk_include.h; sourceTree = "<group>"; };
 		44FF9B832D5229C7003B1A0C /* sk_var.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_var.hpp; sourceTree = "<group>"; };
 		44FF9D052D5229C7003B1A0C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		44FF9D062D5229C7003B1A0C /* .gitmodules */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitmodules; sourceTree = "<group>"; };
@@ -463,9 +466,7 @@
 		44FF9FB32D536248003B1A0C /* sk_sb.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sk_sb.html; sourceTree = "<group>"; };
 		44FF9FB42D536248003B1A0C /* sk_sb.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sk_sb.js; sourceTree = "<group>"; };
 		44FF9FB62D536248003B1A0C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		44FF9FBF2D53D67B003B1A0C /* sk_string_apple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_string_apple.h; sourceTree = "<group>"; };
 		44FF9FC12D53D67B003B1A0C /* sk_string.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_string.h; sourceTree = "<group>"; };
-		44FF9FC32D53D718003B1A0C /* sk_string_apple.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = sk_string_apple.mm; sourceTree = "<group>"; };
 		4F05C5A82082424400DD1621 /* IPlugWAM.h */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = IPlugWAM.h; path = ../../../IPlug/WEB/IPlugWAM.h; sourceTree = "<group>"; tabWidth = 2; };
 		4F05C5A92082424400DD1621 /* IPlugWAM.cpp */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugWAM.cpp; path = ../../../IPlug/WEB/IPlugWAM.cpp; sourceTree = "<group>"; tabWidth = 2; };
 		4F0848252015129300F9E881 /* IPlugAAX_Parameters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugAAX_Parameters.cpp; path = ../../../IPlug/AAX/IPlugAAX_Parameters.cpp; sourceTree = "<group>"; tabWidth = 2; };
@@ -977,6 +978,7 @@
 				44FF9D842D522A22003B1A0C /* utils */,
 				44FF9D762D522A04003B1A0C /* sk_callbacks.hpp */,
 				442CAE0F2D58A626001BB2C6 /* sk_common.hpp */,
+				44F0E05B2D609D6500D5CC4B /* sk_include_core.h */,
 				44FF9B822D5229C7003B1A0C /* sk_include.h */,
 				44FF9B832D5229C7003B1A0C /* sk_var.hpp */,
 				44FF9D782D522A16003B1A0C /* superkraft.hpp */,
@@ -1096,6 +1098,7 @@
 			isa = PBXGroup;
 			children = (
 				44FF9DBB2D522AF9003B1A0C /* README.md */,
+				44F0E05F2D6132C900D5CC4B /* sk_communication_response.hpp */,
 				44FF9DBC2D522AF9003B1A0C /* sk_communication_packet.hpp */,
 				44FF9DBF2D522AF9003B1A0C /* sk_communication.hpp */,
 			);
@@ -1114,6 +1117,8 @@
 		44FF9DD92D522E09003B1A0C /* macos */ = {
 			isa = PBXGroup;
 			children = (
+				44F0E05C2D60A4C000D5CC4B /* sk_webview_macos.h */,
+				44F0E05D2D60A4C000D5CC4B /* sk_webview_macos.mm */,
 			);
 			path = macos;
 			sourceTree = "<group>";
@@ -1333,9 +1338,6 @@
 		44FF9FC22D53D67B003B1A0C /* sk_string */ = {
 			isa = PBXGroup;
 			children = (
-				44F8BA1B2D566D9A003B9C09 /* sk_string_base.hpp */,
-				44FF9FBF2D53D67B003B1A0C /* sk_string_apple.h */,
-				44FF9FC32D53D718003B1A0C /* sk_string_apple.mm */,
 				44FF9FC12D53D67B003B1A0C /* sk_string.h */,
 			);
 			path = sk_string;
@@ -2740,10 +2742,10 @@
 				4F1A5282205D913300CF2908 /* IPlugAPP.cpp in Sources */,
 				4F2EA978203A50EA008E4850 /* IPlugAPP_dialog.cpp in Sources */,
 				4FAFFE5821495A4800A6E72D /* RtAudio.cpp in Sources */,
-				44FF9FC42D53D718003B1A0C /* sk_string_apple.mm in Sources */,
 				4F690C9B203A345100A4A13E /* IPlugAPP_main.cpp in Sources */,
 				4F3862EF2014BBEC0009F402 /* IPlugWebUI_SK.cpp in Sources */,
 				4F78D90B13B63BA50032E0F3 /* IPlugAPIBase.cpp in Sources */,
+				44F0E05E2D60A4C000D5CC4B /* sk_webview_macos.mm in Sources */,
 				4F35DEAD207E5C5A00867D8F /* IPlugPluginBase.cpp in Sources */,
 				4FF0A83221BE708700B2C9D1 /* swell-gdi.mm in Sources */,
 				4F78D91813B63BA50032E0F3 /* IPlugParameter.cpp in Sources */,

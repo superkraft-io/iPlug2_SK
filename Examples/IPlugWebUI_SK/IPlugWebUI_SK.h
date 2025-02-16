@@ -27,10 +27,6 @@ enum EMsgTags
 class IPlugWebUI_SK final : public Plugin
 {
 public:
-  SK::Superkraft _sk;
-  SK::Superkraft* sk() override { return &_sk; }
-
-
   IPlugWebUI_SK(const InstanceInfo& info);
   
   void ProcessBlock(sample** inputs, sample** outputs, int nFrames) override;

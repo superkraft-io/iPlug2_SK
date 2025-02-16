@@ -5,127 +5,12 @@
 
 #include "../../skxx/core/sk_common.hpp"
 
-//using namespace SK;
+using namespace SK;
 
 IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
   : Plugin(info, MakeConfig(kNumParams, kNumPresets))
 {
-  /**** SK START ****/
-  SK_Common::getMainWindowSize = [&]() {
-    SK_Point size{GetEditorWidth(), GetEditorHeight()};
-    return size;
-  };
-
-  SK_Common::setMainWindowSize = [&](int w, int h) {
-    SetEditorSize(w, h);
-    OnParentWindowResize(w, h);
-
-
-    SK_Common::resizeAllMianWindowView(0, 0, w, h, 1);
-
-    #if defined(SK_OS_windows)
-      float scale = getHWNDScale(SK_Common::mainWindowHWND);
-      SetWindowPos(SK_Common::mainWindowHWND, NULL, 0, 0, w * scale, h * scale, SWP_NOMOVE | SWP_NOZORDER);
-      SendMessage(SK_Common::mainWindowHWND, WM_SIZE, SIZE_RESTORED, MAKELPARAM(w * scale, h * scale));
-    #endif
-  };
-
-    
-#if defined(SK_OS_windows)
-    SK_Common::onMainWindowHWNDAcquired = [&](HWND hwnd) {
-#elif defined(SK_OS_macos) || defined(SK_OS_ios)
-    SK_Common::onMainWindowHWNDAcquired = [&](HWND hwnd) {
-#endif
-    SK_Window* wnd = sk()->wndMngr.newWindow([&](SK_Window* wnd) {
-      wnd->config["width"] = GetEditorWidth();
-      wnd->config["height"] = GetEditorHeight();
-
-      wnd->tag = "sb";
-      wnd->config["visible"] = true;
-      wnd->hwnd = SK_Common::mainWindowHWND;
-      #if defined(SK_OS_windows)
-        SK_Common::updateWebViewHWNDListForView(wnd->windowClassName);
-      #endif
-        
-      SK_Common::sb_ipc = &wnd->ipc;
-
-      sk()->comm.sb_ipc = &wnd->ipc;
-
-      SK_Common::sb_ipc->on("valid_event_id", [](nlohmann::json data, SK_Communication_Packet* packet) {
-        nlohmann::json json;
-
-        std::string frontend_message = std::string(data["key"]);
-
-        json["backend_said"] = "hello frontend :)";
-        packet->response()->JSON(json);
-      });
-
-      SK_Common::sb_ipc->once("valid_event_id_once", [](nlohmann::json data, SK_Communication_Packet* packet) {
-        nlohmann::json json;
-
-        SK_String frontend_message = data["key"];
-
-        json["backend_said"] = "hello frontend :) deleting this event now";
-        packet->response()->JSON(json);
-      });
-
-
-      SK_Common::sb_ipc->onMessage = [this](const SK_String& sender, SK_Communication_Packet* packet) {
-        SK_String action = packet->data["action"];
-
-        if (action == "reqFromBE")
-        {
-          nlohmann::json be_data;
-          be_data["this_is"] = "a backend request :)";
-
-          SK_Common::sb_ipc->request("sk.hb", "sk.sb", "requestFromBackend", be_data, [](const SK_String& sender, SK_Communication_Packet* packet) {
-            SK_String key = packet->data["key"];
-            DBGMSG("key = %s\n", key.c_str());
-          });
-        }
-        else if (action == "msgFromBE")
-        {
-          nlohmann::json be_data;
-          be_data["this_is"] = "a message from backend :)";
-
-          SK_Common::sb_ipc->message(be_data);
-        }
-        else
-        {
-          DBGMSG("data = %s\n", packet->data.dump().c_str());
-        }
-      };
-    });
-  };
-
-    
-    
-    
-    
-
-
-  SK_Common::onWebViewReady = [&](void* webview, bool isHardBackend) {
-    sk()->wvinit.init(webview, isHardBackend);
-  };
-
-
-  SK_IPC_v2::onSendToFrontend = [&](const SK_String& target, const SK_String& data) {
-    SK_String str = "sk_api.ipc.handleIncoming(" + data + ")";
-
-    if (target == "sk.sb")
-    {
-      EvaluateJavaScript(str.c_str());
-    }
-    else
-    {
-      SK_Window* view = sk()->wndMngr.findWindowByTag(target);
-      //view->webview.evaluateScript(str, NULL);
-    }
-  };
-
-   
-  /**** SK END ****/
-
+  
 
   GetParam(kGain)->InitGain("Gain", -70., -70, 0.);
   
@@ -136,7 +21,7 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
   mEditorInitFunc = [&]()
   {
     //LoadIndexHtml(__FILE__, GetBundleID());
-    LoadFile("https://sk.sb/sk_sb.html");
+    LoadFile("sk://sk.sb/sk_sb.html");
     EnableScroll(false);
   };
   

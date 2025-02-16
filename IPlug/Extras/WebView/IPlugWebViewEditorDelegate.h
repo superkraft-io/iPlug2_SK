@@ -36,6 +36,7 @@
 #include <functional>
 #include <filesystem>
 
+#include "../../skxx/core/sk_common.hpp"
 using namespace SK;
 
 /**
@@ -137,10 +138,10 @@ public:
     {
       SK_Communication_Config config{"sk.sb", SK_Communication_Packet_Type::sk_comm_pt_ipc, &json};
 
-      SK_Common::onCommunicationRequest(&config, [&](const SK_String& ipcResponseData) {
+      SK_Global::onCommunicationRequest(&config, [&](const SK_String& ipcResponseData) {
         SK_String data = "sk_api.ipc.handleIncoming(" + ipcResponseData + ")";
         EvaluateJavaScript(data.c_str());
-      });
+      }, NULL);
 
       return;
     }

@@ -76,7 +76,23 @@ using namespace SK;
 
 - (void) webView:(WKWebView *)webView startURLSchemeTask:(id<WKURLSchemeTask>)urlSchemeTask  API_AVAILABLE(macos(10.13)){
 
-  NSString* customUrlScheme = [NSString stringWithUTF8String:mIWebView->GetCustomUrlScheme()];
+    SK_Communication_Config config{"sk.sb", SK_Communication_Packet_Type::sk_comm_pt_web, (__bridge void *)urlSchemeTask.request};
+    SK_Global::onCommunicationRequest(&config, NULL, [&](SK_Communication_Packet* packet) {
+        if (packet == nullptr){
+            return SK_Communication_Packet::packetFromWebRequest(urlSchemeTask.request, config.sender);
+        }
+        
+        
+        SK_Communication_Response_Web* responseObj = static_cast<SK_Communication_Response_Web*>(packet->response());
+        SK_Communicaton_Response_Apple res = responseObj->getWebResponse();
+        [urlSchemeTask didReceiveResponse:res.response];
+        [urlSchemeTask didReceiveData:res.data];
+        [urlSchemeTask didFinish];
+    });
+    
+    return;
+    
+  /*NSString* customUrlScheme = [NSString stringWithUTF8String:mIWebView->GetCustomUrlScheme()];
   const BOOL useCustomUrlScheme = [customUrlScheme length];
   
   NSString* urlScheme = @"file:";
@@ -88,12 +104,7 @@ using namespace SK;
   
   if (useCustomUrlScheme && [urlSchemeTask.request.URL.absoluteString containsString: urlScheme])
   {
-      SK_Communication_Config config{"sk.sb", SK_Communication_Packet_Type::sk_comm_pt_web, (__bridge void *)urlSchemeTask.request};
-      SK_Common::onCommunicationRequest(&config, NULL);
       
-      [urlSchemeTask didFinish];
-      
-      return;
       
     NSURL* customFileURL = urlSchemeTask.request.URL;
     NSURL* fileURL = [self changeURLScheme:customFileURL toScheme:@"file"];
@@ -124,7 +135,7 @@ using namespace SK;
       [urlSchemeTask didReceiveResponse:response];
     }
     [urlSchemeTask didFinish];
-  }
+  }*/
 }
 
 - (void) webView:(WKWebView *)webView stopURLSchemeTask:(id<WKURLSchemeTask>)urlSchemeTask  API_AVAILABLE(macos(10.13)){

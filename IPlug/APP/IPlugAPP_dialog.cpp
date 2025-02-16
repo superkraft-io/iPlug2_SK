@@ -794,11 +794,11 @@ WDL_DLGRET IPlugAPPHost::MainDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPA
     case WM_ACTIVATE:
       if (wParam == WA_INACTIVE)
       {
-        //SK_Common::onWindowFocusChanged(nullptr, false);
+        //SK_Global::onWindowFocusChanged(nullptr, false);
       }
       else
       {
-        //SK_Common::onWindowFocusChanged(nullptr, true);
+        //SK_Global::onWindowFocusChanged(nullptr, true);
       }
       return 0;
     }

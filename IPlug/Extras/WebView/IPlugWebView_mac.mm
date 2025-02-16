@@ -41,6 +41,8 @@
 #include "IPlugWebView.h"
 #include "IPlugPaths.h"
 
+#include "../../../skxx/core/utils/sk_string/sk_string.h"
+
 namespace iplug {
 extern bool GetResourcePathFromBundle(const char* fileName, const char* searchExt, WDL_String& fullPath, const char* bundleID);
 }
@@ -50,9 +52,13 @@ BEGIN_IPLUG_NAMESPACE
 class IWebViewImpl
 {
 public:
+  //SK::Superkraft _sk;
+    
   IWebViewImpl(IWebView* owner);
   ~IWebViewImpl();
-  
+    
+  //SK::Superkraft* sk();
+    
   void* OpenWebView(void* pParent, float x, float y, float w, float h, float scale);
   void CloseWebView();
   void HideWebView(bool hide);
@@ -85,6 +91,8 @@ using namespace iplug;
 
 #pragma mark - Impl
 
+
+
 IWebViewImpl::IWebViewImpl(IWebView* owner)
 : mIWebView(owner)
 , mWebConfig(nil)
@@ -98,6 +106,10 @@ IWebViewImpl::~IWebViewImpl()
 {
   CloseWebView();
 }
+
+/*SK::Superkraft* IWebViewImpl::sk(){
+    return &_sk;
+};*/
 
 void* IWebViewImpl::OpenWebView(void* pParent, float x, float y, float w, float h, float scale)
 {
@@ -130,6 +142,10 @@ void* IWebViewImpl::OpenWebView(void* pParent, float x, float y, float w, float 
       [webConfig setURLSchemeHandler:scriptMessageHandler forURLScheme:[NSString stringWithUTF8String:mIWebView->GetCustomUrlScheme()]];
     }
   }
+    
+  //[webConfig setURLSchemeHandler:scriptMessageHandler forURLScheme: @"http"];
+  [webConfig setURLSchemeHandler:scriptMessageHandler forURLScheme: @"sk"];
+
   
   // this script adds a function IPlugSendMsg that is used to call the platform webview messaging function in JS
   [controller addUserScript:[[WKUserScript alloc] initWithSource:
@@ -193,7 +209,13 @@ void* IWebViewImpl::OpenWebView(void* pParent, float x, float y, float w, float 
   mUIDelegate = uiDelegate;
   
   mIWebView->OnWebViewReady();
+    
+  SK::SK_Global::showSoftBackendDevTools = [&]() {
+      //mIWebView->OpenDevToolsWindow(); //apparently now available on Apple
+  };
 
+  SK::Superkraft::sk()->wvinit.init((__bridge void*)mWKWebView, true);
+    
   return (__bridge void*) wkWebView;
 }
 
@@ -230,7 +252,7 @@ void IWebViewImpl::LoadFile(const char* fileName, const char* _Nullable bundleID
     NSURLRequest *request = [NSURLRequest requestWithURL:urlToLoad];
     [mWKWebView loadRequest:request];
     return;
-    
+    /*
   WDL_String fullPath;
   
   if (bundleID != nullptr && strlen(bundleID) != 0)
@@ -238,8 +260,8 @@ void IWebViewImpl::LoadFile(const char* fileName, const char* _Nullable bundleID
     WDL_String fileNameWeb("web/");
     fileNameWeb.Append(fileName);
     
-    GetResourcePathFromBundle(fileNameWeb.Get(), fileNameWeb.get_fileext() + 1 /* remove . */, fullPath, bundleID);
-  }
+    GetResourcePathFromBundle(fileNameWeb.Get(), fileNameWeb.get_fileext() + 1 /* remove . *///, fullPath, bundleID);
+/*  }
   else
   {
     fullPath.Set(fileName);
@@ -287,6 +309,7 @@ void IWebViewImpl::LoadFile(const char* fileName, const char* _Nullable bundleID
       NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"sk_sb" withExtension:@"html"];
     [mWKWebView loadFileURL:fileURL allowingReadAccessToURL:fileURL];
   }
+ */
 }
 
 void IWebViewImpl::ReloadPageContent()

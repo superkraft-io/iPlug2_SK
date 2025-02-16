@@ -43,6 +43,10 @@ IWebView::IWebView(bool opaque, bool enableDevTools, const char* customUrlScheme
 
 IWebView::~IWebView() = default;
 
+/*SK::Superkraft* IWebView::sk(){
+    return mpImpl->sk();
+};*/
+
 void* IWebView::OpenWebView(void* pParent, float x, float y, float w, float h, float scale)
 {
   return mpImpl->OpenWebView(pParent, x, y, w, h, scale);

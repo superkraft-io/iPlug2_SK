@@ -26,20 +26,22 @@ dependencies: \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/superkraft.hpp \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/sk_common.hpp \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/sk_include.h \
+  /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/sk_include_core.h \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/../../sk_project_includes.hpp \
   ../../../IPlug/IPlugSWELL.h \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/WDL/swell/swell.h \
   ../../../WDL/swell/swell-types.h ../../../WDL/swell/swell-functions.h \
+  /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/../.././iPlug2_SK/IPlug/IPlugConstants.h \
+  /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/config.h \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/../libs/general/debugbreak.h \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/sk_var.hpp \
-  /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../iPlug2_SK/IPlug/IPlugConstants.h \
-  /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/config.h \
   ../../../Dependencies/Extras/nlohmann/json.hpp \
-  /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/utils/sk_string/sk_string_apple.h \
-  /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/utils/sk_string/../../sk_var.hpp \
+  /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/utils/sk_string/sk_string.h \
+  /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/utils/sk_string/../../sk_include_core.h \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/utils/sk_number.hpp \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/utils/../sk_common.hpp \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/utils/sk_path_utils.hpp \
+  /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/utils/../utils/sk_string/sk_string.h \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/utils/sk_array.hpp \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/utils/sk_datetime.hpp \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/utils/sk_str_utils.hpp \
@@ -74,14 +76,16 @@ dependencies: \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/sk_ipc/sk_ipc_v2.hpp \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/sk_ipc/../sk_common.hpp \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/sk_webview/sk_webview.h \
+  /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/sk_webview/macos/sk_webview_macos.h \
+  /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/sk_webview/macos/../../sk_common.hpp \
+  /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/sk_window_mngr/sk_window_mngr.hpp \
+  /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/sk_window_mngr/../sk_common.hpp \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/sk_window_mngr/root/sk_window_root.hpp \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/sk_window_mngr/root/../../sk_common.hpp \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/sk_window_mngr/macos/sk_window_macos.hpp \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/sk_window_mngr/macos/../../sk_common.hpp \
-  /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/sk_window_mngr/sk_window_mngr.hpp \
-  /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/sk_window_mngr/../sk_common.hpp \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/../../sk_project_binarydata.hpp \
-  /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/../../skxx/core/sk_common.hpp \
+  /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/../.././skxx/core/sk_common.hpp \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/../module_system/cpp/modules/sk/vfs/sk_ms_vfs_file.hpp \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/../module_system/cpp/modules/sk/vfs/../../../../../core/sk_common.hpp \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/../module_system/cpp/modules/nodejs/sk_ms_nodejs_os.hpp \
@@ -97,7 +101,10 @@ dependencies: \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/../module_system/cpp/modules/sk/nativeActions/../../../../../core/sk_common.hpp \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/../module_system/cpp/modules/sk/nativeActions/sk_ms_nativeActions.hpp \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/../module_system/cpp/modules/sk/nativeActions/../../../../../../sk_app_nativeActions/sk_app_nativeActions.hpp \
-  /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/../module_system/cpp/modules/sk/nativeActions/../../../../../../sk_app_nativeActions/../skxx/core/sk_common.hpp \
+  /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/../module_system/cpp/modules/sk/nativeActions/../../../../../../sk_app_nativeActions/../skxx/core/sk_include.h \
+  /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/../module_system/cpp/modules/sk/nativeActions/../../../../../../sk_app_nativeActions/../skxx/core/utils/sk_string/sk_string.h \
+  /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/../module_system/cpp/modules/sk/nativeActions/../../../../../../sk_app_nativeActions/../skxx/core/sk_communication/sk_communication_response.hpp \
+  /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/../module_system/cpp/modules/sk/nativeActions/../../../../../../sk_app_nativeActions/../skxx/module_system/cpp/modules/sk/nativeActions/sk_nativeAction_root.hpp \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/../module_system/cpp/modules/sk/nativeActions/../../../../../../sk_app_nativeActions/test/test.hpp \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/../module_system/cpp/modules/sk/nativeActions/../../../../../../sk_app_nativeActions/test/../../skxx/core/sk_common.hpp \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/../module_system/cpp/modules/sk/nativeActions/core/sk_ms_cNA_handleParamMouseEvent.hpp \
@@ -114,7 +121,8 @@ dependencies: \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/sk_webview_initializer/../sk_common.hpp \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Examples/IPlugWebUI_SK/../../../skxx/core/sk_communication/sk_communication.hpp \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/WDL/wdl_base64.h \
-  ../../../IPlug/IPlugQueue.h ../../../IPlug/IPlugTimer.h \
+  ../../../WDL/../../skxx/core/sk_common.hpp ../../../IPlug/IPlugQueue.h \
+  ../../../IPlug/IPlugTimer.h \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/IPlug/IPlugProcessor.h \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/IPlug/Extras/NChanDelay.h \
   /Users/splitterai/Desktop/repos/superkraft-io/skxx_iplug2_demo/iPlug2_SK/Dependencies/IPlug/RTAudio/RtAudio.h \
