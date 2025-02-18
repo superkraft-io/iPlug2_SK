@@ -327,14 +327,14 @@ INT_PTR SWELLAppMain(int msg, INT_PTR parm1, INT_PTR parm2)
       };
 
 
-      SK_Global::onMainWindowHWNDAcquired = [&](HWND hwnd) {
+      SK_Global::onMainWindowHWNDAcquired = [&](void* handle) {
         SK_Window* wnd = Superkraft::sk()->wndMngr.newWindow([&](SK_Window* wnd) {
           wnd->config["width"] = pAppHost->sInstance->GetPlug()->GetEditorWidth();
           wnd->config["height"] = pAppHost->sInstance->GetPlug()->GetEditorHeight();
 
           wnd->tag = "sb";
           wnd->config["visible"] = true;
-          wnd->hwnd = SK_Global::mainWindowHWND;
+          wnd->wndHandle = (__bridge NSWindow*) SK_Global::mainWindowHandle;
           #if defined(SK_OS_windows)
             SK_Common::updateWebViewHWNDListForView(wnd->windowClassName);
           #endif
@@ -418,7 +418,7 @@ INT_PTR SWELLAppMain(int msg, INT_PTR parm1, INT_PTR parm2)
        
       /**** SK END ****/
 
-      SK_Global::mainWindowHWND = gHWND;
+      SK_Global::mainWindowHandle = gHWND;
       SK_Global::onMainWindowHWNDAcquired(gHWND);
 
       

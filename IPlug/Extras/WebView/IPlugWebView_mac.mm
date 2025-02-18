@@ -122,6 +122,7 @@ void* IWebViewImpl::OpenWebView(void* pParent, float x, float y, float w, float 
   [webConfig setValue:@YES forKey:@"allowUniversalAccessFromFileURLs"];
   auto* scriptMessageHandler = [[IPLUG_WKSCRIPTMESSAGEHANDLER alloc] initWithIWebView: mIWebView];
   [controller addScriptMessageHandler: scriptMessageHandler name:@"callback"];
+  [controller addScriptMessageHandler: scriptMessageHandler name:@"SK_IPC_Handler"];
 
   if (mIWebView->GetEnableDevTools())
   {
@@ -152,9 +153,14 @@ void* IWebViewImpl::OpenWebView(void* pParent, float x, float y, float w, float 
                              @"function IPlugSendMsg(m) { webkit.messageHandlers.callback.postMessage(m); }"
                              injectionTime:WKUserScriptInjectionTimeAtDocumentStart
                              forMainFrameOnly:YES]];
+    
+  [controller addUserScript:[[WKUserScript alloc] initWithSource:
+                               @"function __SK_IPC_Send(opt) { webkit.messageHandlers.SK_IPC_Handler.postMessage(opt); }"
+                               injectionTime:WKUserScriptInjectionTimeAtDocumentStart
+                               forMainFrameOnly:YES]];
 
   // this script prevents view scaling on iOS
-  [controller addUserScript:[[WKUserScript alloc] initWithSource:
+  /*[controller addUserScript:[[WKUserScript alloc] initWithSource:
                              @"var meta = document.createElement('meta'); meta.name = 'viewport'; \
                                meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=YES'; \
                                var head = document.getElementsByTagName('head')[0]; \
@@ -173,6 +179,7 @@ void* IWebViewImpl::OpenWebView(void* pParent, float x, float y, float w, float 
                              @"document.addEventListener('keyup', function(e) { if(document.activeElement.type != \"text\") { IPlugSendMsg({'msg': 'SKPFUI', 'keyCode': e.keyCode, 'utf8': e.key, 'S': e.shiftKey, 'C': e.ctrlKey, 'A': e.altKey, 'isUp': true}); e.preventDefault(); }});"
                              injectionTime:WKUserScriptInjectionTimeAtDocumentStart
                              forMainFrameOnly:YES]];
+   */
   
   IPLUG_WKWEBVIEW* wkWebView = [[IPLUG_WKWEBVIEW alloc] initWithFrame: CGRectMake(x, y, w, h) configuration:webConfig];
   

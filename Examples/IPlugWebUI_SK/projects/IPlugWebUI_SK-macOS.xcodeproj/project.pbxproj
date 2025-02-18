@@ -437,12 +437,12 @@
 		44FF9F7A2D536223003B1A0C /* sk_ms_vfs_file.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_vfs_file.hpp; sourceTree = "<group>"; };
 		44FF9F7B2D536223003B1A0C /* sk_ms_vfs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_vfs.hpp; sourceTree = "<group>"; };
 		44FF9F7D2D536223003B1A0C /* sk_ms_view.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_view.hpp; sourceTree = "<group>"; };
-		44FF9F7E2D536223003B1A0C /* sk_ms_viewMngr.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_viewMngr.hpp; sourceTree = "<group>"; };
+		44FF9F7E2D536223003B1A0C /* sk_ms_viewMngr.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = sk_ms_viewMngr.hpp; sourceTree = "<group>"; };
 		44FF9F802D536223003B1A0C /* sk_ms_application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_application.hpp; sourceTree = "<group>"; };
 		44FF9F812D536223003B1A0C /* sk_ms_bdfs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_bdfs.hpp; sourceTree = "<group>"; };
 		44FF9F822D536223003B1A0C /* sk_ms_debugMngr.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_debugMngr.hpp; sourceTree = "<group>"; };
 		44FF9F832D536223003B1A0C /* sk_ms_web.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_web.hpp; sourceTree = "<group>"; };
-		44FF9F862D536223003B1A0C /* sk_module_base_class.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_module_base_class.hpp; sourceTree = "<group>"; };
+		44FF9F862D536223003B1A0C /* sk_module_base_class.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = sk_module_base_class.hpp; sourceTree = "<group>"; };
 		44FF9F882D536223003B1A0C /* child_process.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = child_process.js; sourceTree = "<group>"; };
 		44FF9F892D536223003B1A0C /* fs.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = fs.js; sourceTree = "<group>"; };
 		44FF9F8A2D536223003B1A0C /* os.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = os.js; sourceTree = "<group>"; };
@@ -459,7 +459,7 @@
 		44FF9F972D536223003B1A0C /* web.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = web.js; sourceTree = "<group>"; };
 		44FF9F992D536223003B1A0C /* sk_module_root.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sk_module_root.js; sourceTree = "<group>"; };
 		44FF9F9A2D536223003B1A0C /* sk_module.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sk_module.js; sourceTree = "<group>"; };
-		44FF9F9C2D536223003B1A0C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		44FF9F9C2D536223003B1A0C /* README.md */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = README.md; sourceTree = "<group>"; };
 		44FF9F9D2D536223003B1A0C /* sk_module_system.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_module_system.hpp; sourceTree = "<group>"; };
 		44FF9FB02D536248003B1A0C /* sk_global_js_core.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sk_global_js_core.js; sourceTree = "<group>"; };
 		44FF9FB12D536248003B1A0C /* sk_ipc.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sk_ipc.js; sourceTree = "<group>"; };

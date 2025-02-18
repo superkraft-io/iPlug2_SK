@@ -58,6 +58,35 @@ using namespace SK;
 
 - (void) userContentController:(WKUserContentController*) userContentController didReceiveScriptMessage:(WKScriptMessage*) message
 {
+    SK_String _name = message.name;
+    //SK_String _body = message.body;
+  if ([[message name] isEqualToString:@"SK_IPC_Handler"])
+  {
+    NSDictionary* dict = (NSDictionary*) message.body;
+    NSData* data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
+    NSString* jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    //mIWebView->OnMessageFromWebView([jsonString UTF8String]);
+      
+    nlohmann::json json = nlohmann::json::parse([jsonString UTF8String], nullptr, false);
+
+    /**** SK START ****/
+
+    bool isSK_IPC_call = json.contains("isSK_IPC_call");
+    if (isSK_IPC_call)
+    {
+      SK_Communication_Config config{"sk.sb", SK_Communication_Packet_Type::sk_comm_pt_ipc, &json};
+
+      SK_Global::onCommunicationRequest(&config, [&](const SK_String& ipcResponseData) {
+        SK_String data = "sk_api.ipc.handleIncoming(" + ipcResponseData + ")";
+        mIWebView->EvaluateJavaScript(data.c_str());
+      }, NULL);
+ 
+    return;
+  }
+
+  /**** SK END ****/
+  }
+/*
   if ([[message name] isEqualToString:@"callback"])
   {
     NSDictionary* dict = (NSDictionary*) message.body;
@@ -65,6 +94,7 @@ using namespace SK;
     NSString* jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     mIWebView->OnMessageFromWebView([jsonString UTF8String]);
   }
+ */
 }
 
 - (NSURL*) changeURLScheme:(NSURL*) url toScheme:(NSString*) newScheme
