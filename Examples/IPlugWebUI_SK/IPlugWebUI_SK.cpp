@@ -21,7 +21,7 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
   mEditorInitFunc = [&]()
   {
     //LoadIndexHtml(__FILE__, GetBundleID());
-    LoadFile("sk://sk.sb/sk_sb.html");
+    LoadFile(SK_String(SK_Base_URL + "/sk:sb/sk_sb.html").c_str());
     EnableScroll(false);
   };
   

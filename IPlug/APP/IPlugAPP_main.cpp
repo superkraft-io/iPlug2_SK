@@ -21,6 +21,8 @@
 
 #include "../../skxx/core/sk_common.hpp"
 #include "../../skxx/core/superkraft.hpp"
+#include "../../sk_project.hpp"
+
 
 using namespace iplug;
 using namespace SK;
@@ -56,8 +58,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
 {
   std::string args(lpszCmdParam);
   
-  SK::SK_Machine::cpuInfo = SK::SK_Machine::getCPUInformation();
-  Superkraft::_sk = new Superkraft();
 
   try
   {
@@ -83,6 +83,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
     pAppHost->Init();
     pAppHost->TryToChangeAudio();
 
+    
+    SK_Project::init(pAppHost);
+    
     HACCEL hAccel = LoadAccelerators(gHINSTANCE, MAKEINTRESOURCE(IDR_ACCELERATOR1));
 
     static UINT(WINAPI *__SetProcessDpiAwarenessContext)(DPI_AWARENESS_CONTEXT);
@@ -102,6 +105,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
     CreateDialog(gHINSTANCE, MAKEINTRESOURCE(IDD_DIALOG_MAIN), GetDesktopWindow(), IPlugAPPHost::MainDlgProc
     );
 
+    
     SK_Global::mainWindowHWND = gHWND;
     SK_Global::onMainWindowHWNDAcquired(gHWND);
 
@@ -201,9 +205,6 @@ int main(int argc, char *argv[])
 {
   
   args = parseArguments(argc, argv);
-  
-  SK::SK_Machine::cpuInfo = SK::SK_Machine::getCPUInformation();
-  Superkraft::_sk = new Superkraft();
 
   
 #if APP_COPY_AUV3
@@ -302,126 +303,15 @@ INT_PTR SWELLAppMain(int msg, INT_PTR parm1, INT_PTR parm2)
       SetMenuItemModifier(menu, ID_SHOW_BOUNDS, MF_BYCOMMAND, 'B', FCONTROL);
       SetMenuItemModifier(menu, ID_SHOW_FPS, MF_BYCOMMAND, 'F', FCONTROL);
 #endif
-
+      
+      SK_Project::init(pAppHost);
+      
       HWND hwnd = CreateDialog(gHINST, MAKEINTRESOURCE(IDD_DIALOG_MAIN), NULL, IPlugAPPHost::MainDlgProc);
-
       
-      /**** SK START ****/
-      SK_Global::getMainWindowSize = [&]() {
-        SK_Point size{pAppHost->sInstance->GetPlug()->GetEditorWidth(), pAppHost->sInstance->GetPlug()->GetEditorHeight()};
-        return size;
-      };
-
-      SK_Global::setMainWindowSize = [&](int w, int h) {
-        pAppHost->sInstance->GetPlug()->SetEditorSize(w, h);
-        pAppHost->sInstance->GetPlug()->OnParentWindowResize(w, h);
-
-
-        SK_Global::resizeAllMianWindowView(0, 0, w, h, 1);
-
-        #if defined(SK_OS_windows)
-          float scale = getHWNDScale(SK_Global::mainWindowHWND);
-          SetWindowPos(SK_Global::mainWindowHWND, NULL, 0, 0, w * scale, h * scale, SWP_NOMOVE | SWP_NOZORDER);
-          SendMessage(SK_Global::mainWindowHWND, WM_SIZE, SIZE_RESTORED, MAKELPARAM(w * scale, h * scale));
-        #endif
-      };
-
-
-      SK_Global::onMainWindowHWNDAcquired = [&](void* handle) {
-        SK_Window* wnd = Superkraft::sk()->wndMngr.newWindow([&](SK_Window* wnd) {
-          wnd->config["width"] = pAppHost->sInstance->GetPlug()->GetEditorWidth();
-          wnd->config["height"] = pAppHost->sInstance->GetPlug()->GetEditorHeight();
-
-          wnd->tag = "sb";
-          wnd->config["visible"] = true;
-          wnd->wndHandle = (__bridge NSWindow*) SK_Global::mainWindowHandle;
-          #if defined(SK_OS_windows)
-            SK_Common::updateWebViewHWNDListForView(wnd->windowClassName);
-          #endif
-            
-          SK_Global::sb_ipc = &wnd->ipc;
-
-          Superkraft::sk()->comm.sb_ipc = &wnd->ipc;
-
-          SK_Global::sb_ipc->on("valid_event_id", [](nlohmann::json data, SK_Communication_Packet* packet) {
-            nlohmann::json json;
-
-            std::string frontend_message = std::string(data["key"]);
-
-            json["backend_said"] = "hello frontend :)";
-            packet->response()->JSON(json);
-          });
-
-          SK_Global::sb_ipc->once("valid_event_id_once", [](nlohmann::json data, SK_Communication_Packet* packet) {
-            nlohmann::json json;
-
-            SK_String frontend_message = data["key"];
-
-            json["backend_said"] = "hello frontend :) deleting this event now";
-            packet->response()->JSON(json);
-          });
-
-
-          SK_Global::sb_ipc->onMessage = [&](const SK_String& sender, SK_Communication_Packet* packet) {
-            SK_String action = packet->data["action"];
-
-            if (action == "reqFromBE")
-            {
-              nlohmann::json be_data;
-              be_data["this_is"] = "a backend request :)";
-
-              SK_Global::sb_ipc->request("sk.hb", "sk.sb", "requestFromBackend", be_data, [](const SK_String& sender, SK_Communication_Packet* packet) {
-                SK_String key = packet->data["key"];
-                DBGMSG("key = %s\n", key.c_str());
-              });
-            }
-            else if (action == "msgFromBE")
-            {
-              nlohmann::json be_data;
-              be_data["this_is"] = "a message from backend :)";
-
-              SK_Global::sb_ipc->message(be_data);
-            }
-            else
-            {
-              DBGMSG("data = %s\n", packet->data.dump().c_str());
-            }
-          };
-        });
-      };
-
-        
-        
-        
-        
-
-      #if defined(SK_OS_windows)
-        SK_Common::onWebViewReady = [&](void* webview, bool isHardBackend) {
-          sk()->wvinit.init(webview, isHardBackend);
-        };
-      #endif
-
-      SK_IPC_v2::onSendToFrontend = [&](const SK_String& target, const SK_String& data) {
-        SK_String str = "sk_api.ipc.handleIncoming(" + data + ")";
-
-        if (target == "sk.sb")
-        {
-          pAppHost->sInstance->GetPlug()->EvaluateJavaScript(str.c_str());
-        }
-        else
-        {
-          SK_Window* view = Superkraft::sk()->wndMngr.findWindowByTag(target);
-          //view->webview.evaluateScript(str, NULL);
-        }
-      };
-
-       
-      /**** SK END ****/
-
-      SK_Global::mainWindowHandle = gHWND;
-      SK_Global::onMainWindowHWNDAcquired(gHWND);
-
-      
+      NSView*  view = (__bridge NSView*)gHWND;
+      NSWindow* window = view.window;
+      SK_Global::mainWindowHandle = (__bridge void*)window;
+      SK_Global::onMainWindowHWNDAcquired(SK_Global::mainWindowHandle);
       
       if (menu)
       {

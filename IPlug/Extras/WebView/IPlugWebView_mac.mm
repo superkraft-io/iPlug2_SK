@@ -41,7 +41,7 @@
 #include "IPlugWebView.h"
 #include "IPlugPaths.h"
 
-#include "../../../skxx/core/utils/sk_string/sk_string.h"
+#include "../../../skxx/core/sk_common.hpp"
 
 namespace iplug {
 extern bool GetResourcePathFromBundle(const char* fileName, const char* searchExt, WDL_String& fullPath, const char* bundleID);
@@ -218,7 +218,7 @@ void* IWebViewImpl::OpenWebView(void* pParent, float x, float y, float w, float 
   mIWebView->OnWebViewReady();
     
   SK::SK_Global::showSoftBackendDevTools = [&]() {
-      //mIWebView->OpenDevToolsWindow(); //apparently now available on Apple
+      //mIWebView->OpenDevToolsWindow(); //apparently not available on Apple
   };
 
   SK::Superkraft::sk()->wvinit.init((__bridge void*)mWKWebView, true);
@@ -353,13 +353,15 @@ void IWebViewImpl::EnableInteraction(bool enable)
 
 void IWebViewImpl::SetWebViewBounds(float x, float y, float w, float h, float scale)
 {
-  [mWKWebView setFrame: CGRectMake(x, y, w, h) ];
+  [mWKWebView setFrame: CGRectMake(0, 0, 200, 200) ];
 
 #ifdef OS_MAC
   if (@available(macOS 11.0, *)) {
     [mWKWebView setPageZoom:scale ];
   }
 #endif
+      
+  SK::SK_Global::resizeAllMainWindowView(x, y, w, h, scale);
 }
 
 void IWebViewImpl::GetLocalDownloadPathForFile(const char* fileName, WDL_String& localPath)

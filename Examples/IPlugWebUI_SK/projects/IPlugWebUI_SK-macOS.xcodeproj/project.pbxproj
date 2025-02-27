@@ -25,6 +25,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		445B129C2D6E49A700A07E20 /* sk_project.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 445B129B2D6E49A700A07E20 /* sk_project.hpp */; };
+		445B12A32D6F8A8A00A07E20 /* sk_window_macos_delegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 445B12A02D6F87D300A07E20 /* sk_window_macos_delegate.mm */; };
+		445B12A42D6F8A9200A07E20 /* sk_window_macos_delegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 445B129F2D6F87D300A07E20 /* sk_window_macos_delegate.h */; };
 		44F0E05E2D60A4C000D5CC4B /* sk_webview_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44F0E05D2D60A4C000D5CC4B /* sk_webview_macos.mm */; };
 		44F8BA172D5559A3003B9C09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F8BA162D5559A3003B9C09 /* Foundation.framework */; };
 		44F8BA1D2D567F54003B9C09 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FF9DE62D5361EB003B1A0C /* libcurl.a */; };
@@ -371,6 +374,9 @@
 /* Begin PBXFileReference section */
 		442CAE0C2D57F94A001BB2C6 /* sk_project_includes.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = sk_project_includes.hpp; path = ../../../../sk_project_includes.hpp; sourceTree = "<group>"; };
 		442CAE0F2D58A626001BB2C6 /* sk_common.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_common.hpp; sourceTree = "<group>"; };
+		445B129B2D6E49A700A07E20 /* sk_project.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sk_project.hpp; path = ../../../../sk_project.hpp; sourceTree = "<group>"; };
+		445B129F2D6F87D300A07E20 /* sk_window_macos_delegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_window_macos_delegate.h; sourceTree = "<group>"; };
+		445B12A02D6F87D300A07E20 /* sk_window_macos_delegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = sk_window_macos_delegate.mm; sourceTree = "<group>"; };
 		44F0E05B2D609D6500D5CC4B /* sk_include_core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sk_include_core.h; sourceTree = "<group>"; };
 		44F0E05C2D60A4C000D5CC4B /* sk_webview_macos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_webview_macos.h; sourceTree = "<group>"; };
 		44F0E05D2D60A4C000D5CC4B /* sk_webview_macos.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = sk_webview_macos.mm; sourceTree = "<group>"; };
@@ -863,6 +869,7 @@
 		089C166AFE841209C02AAC07 /* IPlugExample */ = {
 			isa = PBXGroup;
 			children = (
+				445B129B2D6E49A700A07E20 /* sk_project.hpp */,
 				44FF9B3D2D5229B4003B1A0C /* sk_project_binarydata.hpp */,
 				442CAE0C2D57F94A001BB2C6 /* sk_project_includes.hpp */,
 				44FF9B3C2D5229A6003B1A0C /* sk_app_nativeActions */,
@@ -1022,6 +1029,8 @@
 		44FF9D8F2D522A30003B1A0C /* macos */ = {
 			isa = PBXGroup;
 			children = (
+				445B129F2D6F87D300A07E20 /* sk_window_macos_delegate.h */,
+				445B12A02D6F87D300A07E20 /* sk_window_macos_delegate.mm */,
 				44FF9D8E2D522A30003B1A0C /* sk_window_macos.hpp */,
 			);
 			path = macos;
@@ -1949,11 +1958,13 @@
 			files = (
 				4FC3EFF02086CE5700BD11FA /* eventlist.h in Headers */,
 				4FC3EFF42086CE5700BD11FA /* module.h in Headers */,
+				445B129C2D6E49A700A07E20 /* sk_project.hpp in Headers */,
 				44FF9B3E2D5229B4003B1A0C /* sk_project_binarydata.hpp in Headers */,
 				4FC3EFF82086CE5700BD11FA /* optional.h in Headers */,
 				4FC3F0012086CE5700BD11FA /* uid.h in Headers */,
 				4FC3EFF22086CE5700BD11FA /* hostclasses.h in Headers */,
 				4FF3205820B2BFAB00269268 /* IPlugPaths.h in Headers */,
+				445B12A42D6F8A9200A07E20 /* sk_window_macos_delegate.h in Headers */,
 				4FC3EFFE2086CE5700BD11FA /* processdata.h in Headers */,
 				4FC3F0002086CE5700BD11FA /* stringconvert.h in Headers */,
 				4FC3EFFA2086CE5700BD11FA /* parameterchanges.h in Headers */,
@@ -2735,6 +2746,7 @@
 				4FD16D3C13B6358C001D0217 /* swell-miscdlg.mm in Sources */,
 				4FD16D3E13B63595001D0217 /* swell-menu.mm in Sources */,
 				4F5C5F6B21BED08700E024A7 /* swell-appstub.mm in Sources */,
+				445B12A32D6F8A8A00A07E20 /* sk_window_macos_delegate.mm in Sources */,
 				4FD16D4013B635A0001D0217 /* swell-misc.mm in Sources */,
 				4FD16D4213B635AB001D0217 /* swell-wnd.mm in Sources */,
 				4FD16D4413B635B2001D0217 /* swell.cpp in Sources */,
