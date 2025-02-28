@@ -9,7 +9,7 @@
 	<key>CFBundleGetInfoString</key>
 	<string>IPlugWebUI_SK v1.0.0 Copyright 2020 Acme Inc</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.superkraft-io.app.IPlugWebUI_SK.AUv3</string>
+	<string>com.superkraft.io.app.IPlugWebUI_SK.AUv3</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -27,7 +27,7 @@
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>AudioComponentBundle</key>
-			<string>com.superkraft-io.app.IPlugWebUI_SK.AUv3Framework</string>
+			<string>com.superkraft.io.app.IPlugWebUI_SK.AUv3Framework</string>
 			<key>AudioComponents</key>
 			<array>
 				<dict>
@@ -36,11 +36,11 @@
 					<key>manufacturer</key>
 					<string>Acme</string>
 					<key>name</key>
-					<string>superkraft-io: IPlugWebUI_SK</string>
+					<string>superkraft.io: IPlugWebUI_SK</string>
 					<key>sandboxSafe</key>
 					<true/>
 					<key>subtype</key>
-					<string>gU7D</string>
+					<string>bDro</string>
 					<key>tags</key>
 					<array>
 						<string>Effects</string>

@@ -11,7 +11,7 @@
 	<key>CFBundleIconFile</key>
 	<string>IPlugWebUI_SK.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.superkraft-io.app.IPlugWebUI_SK</string>
+	<string>com.superkraft.io.app.IPlugWebUI_SK</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -21,7 +21,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0.0</string>
 	<key>CFBundleSignature</key>
-	<string>gU7D</string>
+	<string>bDro</string>
 	<key>CFBundleVersion</key>
 	<string>1.0.0</string>
 	<key>CSResourcesFileMapped</key>

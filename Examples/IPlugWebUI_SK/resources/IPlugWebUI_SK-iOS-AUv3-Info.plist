@@ -36,7 +36,7 @@
 					<key>manufacturer</key>
 					<string>Acme</string>
 					<key>name</key>
-					<string>superkraft-io: IPlugWebUI_SK</string>
+					<string>superkraft.io: IPlugWebUI_SK</string>
 					<key>sandboxSafe</key>
 					<true/>
 					<key>subtype</key>

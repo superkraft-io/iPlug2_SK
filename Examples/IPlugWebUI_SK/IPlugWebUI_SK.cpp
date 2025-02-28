@@ -1,20 +1,18 @@
 #include "IPlugWebUI_SK.h"
 #include "IPlug_include_in_plug_src.h"
 #include "IPlugPaths.h"
-#include "../APP/IPlugAPP_host.h"
 
 #include "../../skxx/core/sk_common.hpp"
 
 using namespace SK;
 
-IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
-  : Plugin(info, MakeConfig(kNumParams, kNumPresets))
-{
-  
 
+IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
+: Plugin(info, MakeConfig(kNumParams, kNumPresets))
+{
   GetParam(kGain)->InitGain("Gain", -70., -70, 0.);
   
-#if defined DEBUG || defined _DEBUG
+#ifdef DEBUG
   SetEnableDevTools(true);
 #endif
   

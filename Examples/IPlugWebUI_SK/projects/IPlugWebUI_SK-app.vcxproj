@@ -160,15 +160,13 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>$(APP_DEFS);$(DEBUG_DEFS);$(EXTRA_DEBUG_DEFS);%(PreprocessorDefinitions);CURL_STATICLIB</PreprocessorDefinitions>
+      <PreprocessorDefinitions>$(APP_DEFS);$(DEBUG_DEFS);$(EXTRA_DEBUG_DEFS);%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(APP_INC_PATHS);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>$(APP_LIBS);Ws2_32.lib;Crypt32.lib;$(SolutionDir)\..\..\..\skxx\libs\general\curl\libcurl.lib;$(SolutionDir)\..\..\..\skxx\libs\general\curl\curlu.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(APP_LIBS);%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
-      <ShowProgress>LinkVerbose</ShowProgress>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ResourceCompile />
     <ResourceCompile>
@@ -202,7 +200,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>$(APP_DEFS);$(RELEASE_DEFS);$(EXTRA_RELEASE_DEFS);%(PreprocessorDefinitions);CURL_STATICLIB</PreprocessorDefinitions>
+      <PreprocessorDefinitions>$(APP_DEFS);$(RELEASE_DEFS);$(EXTRA_RELEASE_DEFS);%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(APP_INC_PATHS);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
@@ -210,10 +208,8 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>$(APP_LIBS);Ws2_32.lib;Crypt32.lib;$(SolutionDir)\..\..\..\skxx\libs\general\curl\libcurl.lib;$(SolutionDir)\..\..\..\skxx\libs\general\curl\curlu.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(APP_LIBS);%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
-      <ShowProgress>LinkVerbose</ShowProgress>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ResourceCompile>
       <PreprocessorDefinitions>SA_API</PreprocessorDefinitions>
@@ -245,17 +241,15 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>$(APP_DEFS);$(TRACER_DEFS);$(EXTRA_TRACER_DEFS);%(PreprocessorDefinitions);CURL_STATICLIB</PreprocessorDefinitions>
+      <PreprocessorDefinitions>$(APP_DEFS);$(TRACER_DEFS);$(EXTRA_TRACER_DEFS);%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(APP_INC_PATHS);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>$(APP_LIBS);Ws2_32.lib;Crypt32.lib;$(SolutionDir)\..\..\..\skxx\libs\general\curl\libcurl.lib;$(SolutionDir)\..\..\..\skxx\libs\general\curl\curlu.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(APP_LIBS);%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
-      <ShowProgress>LinkVerbose</ShowProgress>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ResourceCompile>
       <PreprocessorDefinitions>SA_API</PreprocessorDefinitions>
@@ -263,99 +257,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="../config.h" />
-    <ClInclude Include="..\..\..\..\skxx\core\sk_callbacks.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\sk_common.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\sk_communication\sk_communication.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\sk_communication\sk_communication_packet.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\sk_communication\sk_communication_response.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\sk_include.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\sk_ipc\sk_ipc_v2.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\sk_json\sk_json_callback.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\sk_profiler\sk_profiler.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\sk_threads\sk_thread_pool.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\sk_var.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\sk_webview\sk_webview.h" />
-    <ClInclude Include="..\..\..\..\skxx\core\sk_webview\windows\sk_webview_windows.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\sk_webview_initializer\os\sk_webview_initializer_windows.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\sk_webview_initializer\sk_webview_initializer.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\sk_web\sk_curl.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\sk_web\sk_web_utils.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\sk_window_mngr\root\sk_window_root.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\sk_window_mngr\sk_window_mngr.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\sk_window_mngr\windows\sk_window_windows.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\superkraft.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_array.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_datetime.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_file.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_json.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_machine.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_number.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_path_utils.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_string.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_str_utils.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\libs\general\curl\curl.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\general\curl\curlver.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\general\curl\easy.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\general\curl\header.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\general\curl\mprintf.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\general\curl\multi.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\general\curl\options.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\general\curl\stdcheaders.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\general\curl\system.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\general\curl\typecheck-gcc.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\general\curl\urlapi.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\general\curl\websockets.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\general\yyjson\yyjson.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\com.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\common.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\com_apartment_variable.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\coroutine.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\cppwinrt.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\cppwinrt_authoring.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\cppwinrt_helpers.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\cppwinrt_notifiable_module_lock.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\cppwinrt_register_com_server.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\cppwinrt_wrl.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\filesystem.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\nt_result_macros.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\registry.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\registry_helpers.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\resource.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\result.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\result_macros.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\result_originate.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\rpc_helpers.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\safecast.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\stl.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\token_helpers.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\Tracelogging.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\traceloggingconfig.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\win32_helpers.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\win32_result_macros.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\windowing.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\winrt.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\wistd_config.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\wistd_functional.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\wistd_memory.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\wistd_type_traits.h" />
-    <ClInclude Include="..\..\..\..\skxx\libs\windows\wil\include\wil\wrl.h" />
-    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\nodejs\sk_ms_nodejs_fs.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\nodejs\sk_ms_nodejs_os.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\core\sk_ms_cNA_handleParamMouseEvent.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\sk_ms_nativeActions.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\sk_nativeAction_root.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs_native_image.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_application.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_bdfs.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_debugMngr.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_web.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\vfs\sk_ms_vfs.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\vfs\sk_ms_vfs_file.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\viewMngr\sk_ms_view.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\viewMngr\sk_ms_viewMngr.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\sk_module_base_class.hxx" />
-    <ClInclude Include="..\..\..\..\skxx\module_system\sk_module_system.hxx" />
     <ClInclude Include="..\..\..\Dependencies\IPlug\RTAudio\include\asio.h" />
     <ClInclude Include="..\..\..\Dependencies\IPlug\RTAudio\include\asiodrivers.h" />
     <ClInclude Include="..\..\..\Dependencies\IPlug\RTAudio\include\asiodrvr.h" />
@@ -393,7 +294,6 @@
     <ClInclude Include="..\resources\resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\skxx\libs\general\yyjson\yyjson.c" />
     <ClCompile Include="..\..\..\Dependencies\IPlug\RTAudio\include\asio.cpp" />
     <ClCompile Include="..\..\..\Dependencies\IPlug\RTAudio\include\asiodrivers.cpp" />
     <ClCompile Include="..\..\..\Dependencies\IPlug\RTAudio\include\asiolist.cpp" />
@@ -421,30 +321,6 @@
     <Image Include="..\resources\IPlugWebUI_SK.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\skxx\core\sk_communication\README.md" />
-    <None Include="..\..\..\..\skxx\module_system\README.md" />
-    <None Include="..\..\..\..\skxx\module_system\web\node\child_process.js" />
-    <None Include="..\..\..\..\skxx\module_system\web\node\fs.js" />
-    <None Include="..\..\..\..\skxx\module_system\web\node\os.js" />
-    <None Include="..\..\..\..\skxx\module_system\web\node\path.js" />
-    <None Include="..\..\..\..\skxx\module_system\web\node\process.js" />
-    <None Include="..\..\..\..\skxx\module_system\web\npm\electron.js" />
-    <None Include="..\..\..\..\skxx\module_system\web\npm\fs-extra.js" />
-    <None Include="..\..\..\..\skxx\module_system\web\sk\application.js" />
-    <None Include="..\..\..\..\skxx\module_system\web\sk\debugMngr.js" />
-    <None Include="..\..\..\..\skxx\module_system\web\sk\nativeActions.js" />
-    <None Include="..\..\..\..\skxx\module_system\web\sk\proton.js" />
-    <None Include="..\..\..\..\skxx\module_system\web\sk\vfs.js" />
-    <None Include="..\..\..\..\skxx\module_system\web\sk\viewMngr.js" />
-    <None Include="..\..\..\..\skxx\module_system\web\sk\web.js" />
-    <None Include="..\..\..\..\skxx\module_system\web\sk_module.js" />
-    <None Include="..\..\..\..\skxx\module_system\web\sk_module_root.js" />
-    <None Include="..\..\..\..\skxx\README.md" />
-    <None Include="..\..\..\..\skxx\web\global_js_core\sk_global_js_core.js" />
-    <None Include="..\..\..\..\skxx\web\global_js_core\sk_ipc.js" />
-    <None Include="..\..\..\..\skxx\web\README.md" />
-    <None Include="..\..\..\..\skxx\web\soft_backend\sk_sb.html" />
-    <None Include="..\..\..\..\skxx\web\soft_backend\sk_sb.js" />
     <None Include="..\config\IPlugWebUI_SK-ios.xcconfig" />
     <None Include="..\config\IPlugWebUI_SK-web.mk" />
     <None Include="..\config\IPlugWebUI_SK-win.props">

@@ -478,7 +478,7 @@
 				<key>CONCLUSION_ACTION</key>
 				<integer>0</integer>
 				<key>IDENTIFIER</key>
-				<string>com.superkraft-io.app.pkg.IPlugWebUI_SK</string>
+				<string>com.superkraft.io.app.pkg.IPlugWebUI_SK</string>
 				<key>NAME</key>
 				<string>Application</string>
 				<key>OVERWRITE_PERMISSIONS</key>
@@ -1014,7 +1014,7 @@
 				<key>CONCLUSION_ACTION</key>
 				<integer>0</integer>
 				<key>IDENTIFIER</key>
-				<string>com.superkraft-io.vst.pkg.IPlugWebUI_SK</string>
+				<string>com.superkraft.io.vst.pkg.IPlugWebUI_SK</string>
 				<key>LOCATION</key>
 				<integer>0</integer>
 				<key>NAME</key>
@@ -1554,7 +1554,7 @@
 				<key>CONCLUSION_ACTION</key>
 				<integer>0</integer>
 				<key>IDENTIFIER</key>
-				<string>com.superkraft-io.vst3.pkg.IPlugWebUI_SK</string>
+				<string>com.superkraft.io.vst3.pkg.IPlugWebUI_SK</string>
 				<key>LOCATION</key>
 				<integer>0</integer>
 				<key>NAME</key>
@@ -2094,7 +2094,7 @@
 				<key>CONCLUSION_ACTION</key>
 				<integer>0</integer>
 				<key>IDENTIFIER</key>
-				<string>com.superkraft-io.au.pkg.IPlugWebUI_SK</string>
+				<string>com.superkraft.io.au.pkg.IPlugWebUI_SK</string>
 				<key>LOCATION</key>
 				<integer>0</integer>
 				<key>NAME</key>
@@ -2634,7 +2634,7 @@
 				<key>CONCLUSION_ACTION</key>
 				<integer>0</integer>
 				<key>IDENTIFIER</key>
-				<string>com.superkraft-io.aax.pkg.IPlugWebUI_SK</string>
+				<string>com.superkraft.io.aax.pkg.IPlugWebUI_SK</string>
 				<key>LOCATION</key>
 				<integer>0</integer>
 				<key>NAME</key>

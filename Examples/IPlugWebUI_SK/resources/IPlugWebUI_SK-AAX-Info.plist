@@ -9,7 +9,7 @@
 	<key>CFBundleGetInfoString</key>
 	<string>IPlugWebUI_SK v1.0.0 Copyright 2020 Acme Inc</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.superkraft-io.aax.IPlugWebUI_SK</string>
+	<string>com.superkraft.io.aax.IPlugWebUI_SK</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
