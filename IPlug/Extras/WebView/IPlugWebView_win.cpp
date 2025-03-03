@@ -385,6 +385,7 @@ void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
             SK_Global::onWebViewReady(static_cast<void*>(mCoreWebView.get()), true);
             mIWebView->OnWebViewReady();
 
+
             mCoreWebView->OpenDevToolsWindow();
             return S_OK;
           })
@@ -504,7 +505,7 @@ void evaluateScript_mainThread(wil::com_ptr<ICoreWebView2> mCoreWebView, const S
     UTF8ToUTF16(scriptWide.data(), scriptStr, bufSize);
     */
 
-    mCoreWebView->ExecuteScript(scriptStr, Callback<ICoreWebView2ExecuteScriptCompletedHandler>([func](HRESULT errorCode, LPCWSTR resultObjectAsJson) -> HRESULT {
+    mCoreWebView->ExecuteScript(scriptStr.toWString().c_str(), Callback<ICoreWebView2ExecuteScriptCompletedHandler>([func](HRESULT errorCode, LPCWSTR resultObjectAsJson) -> HRESULT {
       if (func && resultObjectAsJson)
       {
         WDL_String str;

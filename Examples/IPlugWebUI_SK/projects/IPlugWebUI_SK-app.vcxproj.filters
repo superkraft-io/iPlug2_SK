@@ -160,6 +160,153 @@
       <Filter>IPlug\Extras\WebView</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\IPlug\ISender.h" />
+    <ClInclude Include="..\..\..\..\skxx\core\sk_callbacks.hpp">
+      <Filter>project\skxx\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\sk_common.hpp">
+      <Filter>project\skxx\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\sk_include.h">
+      <Filter>project\skxx\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\sk_include_core.h">
+      <Filter>project\skxx\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\sk_var.hpp">
+      <Filter>project\skxx\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\superkraft.hpp">
+      <Filter>project\skxx\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\sk_communication\sk_communication.hpp">
+      <Filter>project\skxx\core\sk_communication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\sk_communication\sk_communication_packet.hpp">
+      <Filter>project\skxx\core\sk_communication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\sk_communication\sk_communication_response.hpp">
+      <Filter>project\skxx\core\sk_communication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\sk_ipc\sk_ipc_v2.hpp">
+      <Filter>project\skxx\core\sk_ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\sk_json\sk_json_callback.hpp">
+      <Filter>project\skxx\core\sk_json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\sk_profiler\sk_profiler.hpp">
+      <Filter>project\skxx\core\sk_profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\sk_threads\sk_thread_pool.hpp">
+      <Filter>project\skxx\core\sk_threads</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\sk_web\sk_curl.hpp">
+      <Filter>project\skxx\core\sk_web</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\sk_web\sk_web_utils.hpp">
+      <Filter>project\skxx\core\sk_web</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\sk_webview\sk_webview.h">
+      <Filter>project\skxx\core\sk_webview</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\sk_webview\windows\sk_webview_windows.hpp">
+      <Filter>project\skxx\core\sk_webview\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\sk_webview_initializer\sk_webview_initializer.hpp">
+      <Filter>project\skxx\core\sk_webview_initializer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\sk_window_mngr\sk_window_mngr.hpp">
+      <Filter>project\skxx\core\sk_window_mngr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\sk_window_mngr\root\sk_window_root.hpp">
+      <Filter>project\skxx\core\sk_window_mngr\root</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\sk_window_mngr\windows\sk_window_windows.hpp">
+      <Filter>project\skxx\core\sk_window_mngr\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_array.hpp">
+      <Filter>project\skxx\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_color.hpp">
+      <Filter>project\skxx\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_datetime.hpp">
+      <Filter>project\skxx\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_file.hpp">
+      <Filter>project\skxx\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_json.hpp">
+      <Filter>project\skxx\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_machine.hpp">
+      <Filter>project\skxx\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_number.hpp">
+      <Filter>project\skxx\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_path_utils.hpp">
+      <Filter>project\skxx\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_point.hpp">
+      <Filter>project\skxx\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_str_utils.hpp">
+      <Filter>project\skxx\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_string.h">
+      <Filter>project\skxx\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\module_system\sk_module_system.hpp">
+      <Filter>project\skxx\module_system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\sk_module_base_class.hpp">
+      <Filter>project\skxx\module_system\cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\nodejs\sk_ms_nodejs_fs.hpp">
+      <Filter>project\skxx\module_system\cpp\modules\nodejs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\nodejs\sk_ms_nodejs_os.hpp">
+      <Filter>project\skxx\module_system\cpp\modules\nodejs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_application.hpp">
+      <Filter>project\skxx\module_system\cpp\modules\sk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_bdfs.hpp">
+      <Filter>project\skxx\module_system\cpp\modules\sk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_debugMngr.hpp">
+      <Filter>project\skxx\module_system\cpp\modules\sk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_web.hpp">
+      <Filter>project\skxx\module_system\cpp\modules\sk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\sk_ms_nativeActions.hpp">
+      <Filter>project\skxx\module_system\cpp\modules\sk\nativeActions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\sk_nativeAction_root.hpp">
+      <Filter>project\skxx\module_system\cpp\modules\sk\nativeActions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\core\sk_ms_cNA_handleParamMouseEvent.hpp">
+      <Filter>project\skxx\module_system\cpp\modules\sk\nativeActions\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs.hpp">
+      <Filter>project\skxx\module_system\cpp\modules\sk\protonjs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs_native_image.hpp">
+      <Filter>project\skxx\module_system\cpp\modules\sk\protonjs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\vfs\sk_ms_vfs.hpp">
+      <Filter>project\skxx\module_system\cpp\modules\sk\vfs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\vfs\sk_ms_vfs_file.hpp">
+      <Filter>project\skxx\module_system\cpp\modules\sk\vfs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\viewMngr\sk_ms_viewMngr.hpp">
+      <Filter>project\skxx\module_system\cpp\modules\sk\viewMngr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\viewMngr\sk_ms_view.hpp">
+      <Filter>project\skxx\module_system\cpp\modules\sk\viewMngr</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="resources">
@@ -186,6 +333,105 @@
     <Filter Include="IPlug\Extras\WebView">
       <UniqueIdentifier>{e6e2b8b9-5c3a-49f8-9588-0e9f32686cbe}</UniqueIdentifier>
     </Filter>
+    <Filter Include="project">
+      <UniqueIdentifier>{be55eafa-5d99-4bdb-8e4c-0954db0021e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx">
+      <UniqueIdentifier>{88ab8b76-02a4-44ed-8155-6bb201883a7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\core">
+      <UniqueIdentifier>{66e9d97f-b4b2-4cd0-9fbf-67dca8a3bebf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\core\sk_communication">
+      <UniqueIdentifier>{8d921203-ebe2-481d-8c89-bfad17fe08c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\core\sk_ipc">
+      <UniqueIdentifier>{b7a7d837-491e-403c-8a67-c8dda83f2cbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\core\sk_json">
+      <UniqueIdentifier>{7916d228-a70c-4638-9287-82bb971c988c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\core\sk_profiler">
+      <UniqueIdentifier>{8926d1ae-9e2a-42b8-9f54-33e7ad6d2b4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\core\sk_threads">
+      <UniqueIdentifier>{605e81d4-97c0-4cf7-9179-e460d6c1cad8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\core\sk_web">
+      <UniqueIdentifier>{350d625d-72ce-4425-a342-a63b3fef0ba8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\core\sk_webview">
+      <UniqueIdentifier>{50a54181-beff-42f3-8e53-458f253363aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\core\sk_webview\windows">
+      <UniqueIdentifier>{d0163985-4b71-4c09-9cd6-b78273485019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\core\sk_webview_initializer">
+      <UniqueIdentifier>{58503e22-5b12-42a2-a85f-6f381fa7ff6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\core\sk_window_mngr">
+      <UniqueIdentifier>{e5142304-1ab9-4b99-b24a-0d8c1143699f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\core\sk_window_mngr\root">
+      <UniqueIdentifier>{5adaecc6-5608-411d-a440-66ade39032fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\core\sk_window_mngr\windows">
+      <UniqueIdentifier>{954d2cbf-ec6d-49a6-be5a-beaae4ac2725}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\core\utils">
+      <UniqueIdentifier>{86561402-4487-4bcf-a479-55b2a0e7a697}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\module_system">
+      <UniqueIdentifier>{6bc8fb99-e168-41bd-9120-d5bed4dbdda1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\module_system\cpp">
+      <UniqueIdentifier>{4ff9d560-37b1-487a-9a73-4abe21df3221}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\module_system\cpp\modules">
+      <UniqueIdentifier>{55c6a720-7f3d-4f66-a4be-153fd47bb766}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\module_system\cpp\modules\nodejs">
+      <UniqueIdentifier>{fb4a7787-eaa2-4b84-aa9c-847b56ae5d74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\module_system\cpp\modules\sk">
+      <UniqueIdentifier>{6cb29961-34dd-4c67-a7c2-e289fa3d6334}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\module_system\cpp\modules\sk\nativeActions">
+      <UniqueIdentifier>{a79feadc-a0d2-4d77-8b44-a2789aef2ef8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\module_system\cpp\modules\sk\nativeActions\core">
+      <UniqueIdentifier>{27ec1221-7765-4d7b-81f0-e7f40d87c3da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\module_system\cpp\modules\sk\protonjs">
+      <UniqueIdentifier>{23917c84-449b-4d93-b430-d3b88bc48111}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\module_system\cpp\modules\sk\vfs">
+      <UniqueIdentifier>{8f2a8019-c733-4ec8-bab4-fe2ce9d65a86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\module_system\cpp\modules\sk\viewMngr">
+      <UniqueIdentifier>{6a63305f-53ec-479e-824d-73423600712f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\module_system\web">
+      <UniqueIdentifier>{df657105-fe49-40d0-bd22-84c0f41bb37e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\module_system\web\node">
+      <UniqueIdentifier>{10871805-b6a6-491d-abe6-206a4b02467d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\module_system\web\npm">
+      <UniqueIdentifier>{16c4afd7-fbdc-4ef1-977e-bc13d4100f0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\module_system\web\sk">
+      <UniqueIdentifier>{1e577bef-e755-40bd-8688-1554c1e42a03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\web">
+      <UniqueIdentifier>{308578bc-526d-48ba-bbb8-2bf13e86cf9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\web\global_js_core">
+      <UniqueIdentifier>{3417f8d7-dc37-499a-9f76-8665bc9932e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\web\soft_backend">
+      <UniqueIdentifier>{17c23445-7831-486b-abcc-b1fa665581ca}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\resources\main.rc">
@@ -206,6 +452,75 @@
       <Filter>config</Filter>
     </None>
     <None Include="packages.config" />
+    <None Include="..\..\..\..\skxx\core\sk_communication\README.md">
+      <Filter>project\skxx\core\sk_communication</Filter>
+    </None>
+    <None Include="..\..\..\..\skxx\module_system\README.md">
+      <Filter>project\skxx\module_system</Filter>
+    </None>
+    <None Include="..\..\..\..\skxx\module_system\web\sk_module.js">
+      <Filter>project\skxx\module_system\web</Filter>
+    </None>
+    <None Include="..\..\..\..\skxx\module_system\web\sk_module_root.js">
+      <Filter>project\skxx\module_system\web</Filter>
+    </None>
+    <None Include="..\..\..\..\skxx\module_system\web\node\child_process.js">
+      <Filter>project\skxx\module_system\web\node</Filter>
+    </None>
+    <None Include="..\..\..\..\skxx\module_system\web\node\fs.js">
+      <Filter>project\skxx\module_system\web\node</Filter>
+    </None>
+    <None Include="..\..\..\..\skxx\module_system\web\node\os.js">
+      <Filter>project\skxx\module_system\web\node</Filter>
+    </None>
+    <None Include="..\..\..\..\skxx\module_system\web\node\path.js">
+      <Filter>project\skxx\module_system\web\node</Filter>
+    </None>
+    <None Include="..\..\..\..\skxx\module_system\web\node\process.js">
+      <Filter>project\skxx\module_system\web\node</Filter>
+    </None>
+    <None Include="..\..\..\..\skxx\module_system\web\npm\electron.js">
+      <Filter>project\skxx\module_system\web\npm</Filter>
+    </None>
+    <None Include="..\..\..\..\skxx\module_system\web\npm\fs-extra.js">
+      <Filter>project\skxx\module_system\web\npm</Filter>
+    </None>
+    <None Include="..\..\..\..\skxx\module_system\web\sk\application.js">
+      <Filter>project\skxx\module_system\web\sk</Filter>
+    </None>
+    <None Include="..\..\..\..\skxx\module_system\web\sk\debugMngr.js">
+      <Filter>project\skxx\module_system\web\sk</Filter>
+    </None>
+    <None Include="..\..\..\..\skxx\module_system\web\sk\nativeActions.js">
+      <Filter>project\skxx\module_system\web\sk</Filter>
+    </None>
+    <None Include="..\..\..\..\skxx\module_system\web\sk\proton.js">
+      <Filter>project\skxx\module_system\web\sk</Filter>
+    </None>
+    <None Include="..\..\..\..\skxx\module_system\web\sk\vfs.js">
+      <Filter>project\skxx\module_system\web\sk</Filter>
+    </None>
+    <None Include="..\..\..\..\skxx\module_system\web\sk\viewMngr.js">
+      <Filter>project\skxx\module_system\web\sk</Filter>
+    </None>
+    <None Include="..\..\..\..\skxx\module_system\web\sk\web.js">
+      <Filter>project\skxx\module_system\web\sk</Filter>
+    </None>
+    <None Include="..\..\..\..\skxx\web\README.md">
+      <Filter>project\skxx\web</Filter>
+    </None>
+    <None Include="..\..\..\..\skxx\web\global_js_core\sk_global_js_core.js">
+      <Filter>project\skxx\web\global_js_core</Filter>
+    </None>
+    <None Include="..\..\..\..\skxx\web\global_js_core\sk_ipc.js">
+      <Filter>project\skxx\web\global_js_core</Filter>
+    </None>
+    <None Include="..\..\..\..\skxx\web\soft_backend\sk_sb.html">
+      <Filter>project\skxx\web\soft_backend</Filter>
+    </None>
+    <None Include="..\..\..\..\skxx\web\soft_backend\sk_sb.js">
+      <Filter>project\skxx\web\soft_backend</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\resources\IPlugWebUI_SK.ico">

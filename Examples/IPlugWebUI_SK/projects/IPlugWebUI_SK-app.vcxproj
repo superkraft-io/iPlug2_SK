@@ -161,12 +161,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>$(APP_DEFS);$(DEBUG_DEFS);$(EXTRA_DEBUG_DEFS);%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(APP_INC_PATHS);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(APP_INC_PATHS);%(AdditionalLibraryDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>$(APP_LIBS);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(APP_LIBS);Ws2_32.lib;Crypt32.lib;C:\Users\Aid\Desktop\repos\superkraft-io\skxx_iplug2_demo\skxx\libs\general\curl\libcurl.lib;C:\Users\Aid\Desktop\repos\superkraft-io\skxx_iplug2_demo\skxx\libs\general\curl\curlu.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ResourceCompile />
     <ResourceCompile>
@@ -201,15 +202,16 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>$(APP_DEFS);$(RELEASE_DEFS);$(EXTRA_RELEASE_DEFS);%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(APP_INC_PATHS);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(APP_INC_PATHS);%(AdditionalLibraryDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>$(APP_LIBS);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(APP_LIBS);Ws2_32.lib;Crypt32.lib;C:\Users\Aid\Desktop\repos\superkraft-io\skxx_iplug2_demo\skxx\libs\general\curl\libcurl.lib;C:\Users\Aid\Desktop\repos\superkraft-io\skxx_iplug2_demo\skxx\libs\general\curl\curlu.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ResourceCompile>
       <PreprocessorDefinitions>SA_API</PreprocessorDefinitions>
@@ -242,14 +244,15 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>$(APP_DEFS);$(TRACER_DEFS);$(EXTRA_TRACER_DEFS);%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(APP_INC_PATHS);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(APP_INC_PATHS);%(AdditionalLibraryDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>$(APP_LIBS);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(APP_LIBS);Ws2_32.lib;Crypt32.lib;C:\Users\Aid\Desktop\repos\superkraft-io\skxx_iplug2_demo\skxx\libs\general\curl\libcurl.lib;C:\Users\Aid\Desktop\repos\superkraft-io\skxx_iplug2_demo\skxx\libs\general\curl\curlu.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ResourceCompile>
       <PreprocessorDefinitions>SA_API</PreprocessorDefinitions>
@@ -257,6 +260,55 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="../config.h" />
+    <ClInclude Include="..\..\..\..\skxx\core\sk_callbacks.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\sk_common.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\sk_communication\sk_communication.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\sk_communication\sk_communication_packet.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\sk_communication\sk_communication_response.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\sk_include.h" />
+    <ClInclude Include="..\..\..\..\skxx\core\sk_include_core.h" />
+    <ClInclude Include="..\..\..\..\skxx\core\sk_ipc\sk_ipc_v2.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\sk_json\sk_json_callback.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\sk_profiler\sk_profiler.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\sk_threads\sk_thread_pool.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\sk_var.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\sk_webview\sk_webview.h" />
+    <ClInclude Include="..\..\..\..\skxx\core\sk_webview\windows\sk_webview_windows.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\sk_webview_initializer\sk_webview_initializer.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\sk_web\sk_curl.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\sk_web\sk_web_utils.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\sk_window_mngr\root\sk_window_root.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\sk_window_mngr\sk_window_mngr.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\sk_window_mngr\windows\sk_window_windows.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\superkraft.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_array.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_color.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_datetime.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_file.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_json.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_machine.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_number.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_path_utils.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_point.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_string.h" />
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_str_utils.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\nodejs\sk_ms_nodejs_fs.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\nodejs\sk_ms_nodejs_os.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\core\sk_ms_cNA_handleParamMouseEvent.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\sk_ms_nativeActions.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\sk_nativeAction_root.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs_native_image.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_application.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_bdfs.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_debugMngr.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_web.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\vfs\sk_ms_vfs.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\vfs\sk_ms_vfs_file.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\viewMngr\sk_ms_view.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\viewMngr\sk_ms_viewMngr.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\sk_module_base_class.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\module_system\sk_module_system.hpp" />
     <ClInclude Include="..\..\..\Dependencies\IPlug\RTAudio\include\asio.h" />
     <ClInclude Include="..\..\..\Dependencies\IPlug\RTAudio\include\asiodrivers.h" />
     <ClInclude Include="..\..\..\Dependencies\IPlug\RTAudio\include\asiodrvr.h" />
@@ -321,6 +373,29 @@
     <Image Include="..\resources\IPlugWebUI_SK.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\..\..\skxx\core\sk_communication\README.md" />
+    <None Include="..\..\..\..\skxx\module_system\README.md" />
+    <None Include="..\..\..\..\skxx\module_system\web\node\child_process.js" />
+    <None Include="..\..\..\..\skxx\module_system\web\node\fs.js" />
+    <None Include="..\..\..\..\skxx\module_system\web\node\os.js" />
+    <None Include="..\..\..\..\skxx\module_system\web\node\path.js" />
+    <None Include="..\..\..\..\skxx\module_system\web\node\process.js" />
+    <None Include="..\..\..\..\skxx\module_system\web\npm\electron.js" />
+    <None Include="..\..\..\..\skxx\module_system\web\npm\fs-extra.js" />
+    <None Include="..\..\..\..\skxx\module_system\web\sk\application.js" />
+    <None Include="..\..\..\..\skxx\module_system\web\sk\debugMngr.js" />
+    <None Include="..\..\..\..\skxx\module_system\web\sk\nativeActions.js" />
+    <None Include="..\..\..\..\skxx\module_system\web\sk\proton.js" />
+    <None Include="..\..\..\..\skxx\module_system\web\sk\vfs.js" />
+    <None Include="..\..\..\..\skxx\module_system\web\sk\viewMngr.js" />
+    <None Include="..\..\..\..\skxx\module_system\web\sk\web.js" />
+    <None Include="..\..\..\..\skxx\module_system\web\sk_module.js" />
+    <None Include="..\..\..\..\skxx\module_system\web\sk_module_root.js" />
+    <None Include="..\..\..\..\skxx\web\global_js_core\sk_global_js_core.js" />
+    <None Include="..\..\..\..\skxx\web\global_js_core\sk_ipc.js" />
+    <None Include="..\..\..\..\skxx\web\README.md" />
+    <None Include="..\..\..\..\skxx\web\soft_backend\sk_sb.html" />
+    <None Include="..\..\..\..\skxx\web\soft_backend\sk_sb.js" />
     <None Include="..\config\IPlugWebUI_SK-ios.xcconfig" />
     <None Include="..\config\IPlugWebUI_SK-web.mk" />
     <None Include="..\config\IPlugWebUI_SK-win.props">
