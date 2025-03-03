@@ -347,6 +347,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		44111D922D75DA4A00A2BBC8 /* sk_string.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sk_string.h; sourceTree = "<group>"; };
 		44B589D42D71CFA300928FA4 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../../../skxx/libs/general/curl/libcurl.a; sourceTree = "<group>"; };
 		44B589D62D71CFF300928FA4 /* sk_project.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sk_project.hpp; path = ../../../../sk_project.hpp; sourceTree = "<group>"; };
 		44B589D72D71CFF300928FA4 /* test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = test.hpp; sourceTree = "<group>"; };
@@ -370,7 +371,6 @@
 		44B58A0B2D71CFF300928FA4 /* sk_window_macos.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_window_macos.hpp; sourceTree = "<group>"; };
 		44B58A0D2D71CFF300928FA4 /* sk_window_root.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_window_root.hpp; sourceTree = "<group>"; };
 		44B58A112D71CFF300928FA4 /* sk_window_mngr.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_window_mngr.hpp; sourceTree = "<group>"; };
-		44B58A172D71CFF300928FA4 /* sk_string.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_string.h; sourceTree = "<group>"; };
 		44B58A192D71CFF300928FA4 /* sk_array.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_array.hpp; sourceTree = "<group>"; };
 		44B58A1A2D71CFF300928FA4 /* sk_color.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_color.hpp; sourceTree = "<group>"; };
 		44B58A1B2D71CFF300928FA4 /* sk_datetime.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_datetime.hpp; sourceTree = "<group>"; };
@@ -1048,18 +1048,10 @@
 			path = sk_window_mngr;
 			sourceTree = "<group>";
 		};
-		44B58A182D71CFF300928FA4 /* sk_string */ = {
-			isa = PBXGroup;
-			children = (
-				44B58A172D71CFF300928FA4 /* sk_string.h */,
-			);
-			path = sk_string;
-			sourceTree = "<group>";
-		};
 		44B58A232D71CFF300928FA4 /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				44B58A182D71CFF300928FA4 /* sk_string */,
+				44111D922D75DA4A00A2BBC8 /* sk_string.h */,
 				44B58A192D71CFF300928FA4 /* sk_array.hpp */,
 				44B58A1A2D71CFF300928FA4 /* sk_color.hpp */,
 				44B58A1B2D71CFF300928FA4 /* sk_datetime.hpp */,
