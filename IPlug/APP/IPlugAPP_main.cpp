@@ -106,7 +106,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
     );
 
     
-    SK_Global::mainWindowHWND = gHWND;
+    SK_Global::mainWindowHandle = gHWND;
     SK_Global::onMainWindowHWNDAcquired(gHWND);
 
   #if !defined _DEBUG || defined NO_IGRAPHICS

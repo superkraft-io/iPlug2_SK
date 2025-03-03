@@ -31,7 +31,7 @@
 
 #include "IPlugWebViewEditorDelegate.h"
 
-#include "../../../skxx/core/superkraft.hxx"
+#include "../../../skxx/core/superkraft.hpp"
 
 using namespace iplug;
 

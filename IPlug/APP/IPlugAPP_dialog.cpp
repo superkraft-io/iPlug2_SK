@@ -12,7 +12,6 @@
 #include "config.h"
 #include "resource.h"
 
-//#include "../../skxx/core/sk_common.hpp"
 
 #ifdef OS_WIN
 #include "asio.h"

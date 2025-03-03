@@ -41,7 +41,7 @@
 #include "WebView2EnvironmentOptions.h"
 #include "wdlstring.h"
 
-#include "../../../../skxx/core/sk_common.hxx"
+#include "../../../../skxx/core/sk_common.hpp"
 
 using namespace SK;
 
@@ -150,7 +150,7 @@ void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
               return S_OK;
             }
 
-            SK_Common::showSoftBackendDevTools = [&]() {
+            SK_Global::showSoftBackendDevTools = [&]() {
               mCoreWebView->OpenDevToolsWindow();
             };
 
@@ -173,7 +173,7 @@ void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
 
             mCoreWebView->add_WebResourceRequested(Callback<ICoreWebView2WebResourceRequestedEventHandler>([&](ICoreWebView2* sender, ICoreWebView2WebResourceRequestedEventArgs* args) -> HRESULT {
               SK_Communication_Config config{"sk.sb", SK_Communication_Packet_Type::sk_comm_pt_web, args, mWebViewEnvironment};
-              SK_Common::onCommunicationRequest(&config, NULL);
+              SK_Global::onCommunicationRequest(&config, NULL, NULL);
               return S_OK;
             }).Get(),
             nullptr);
@@ -382,7 +382,7 @@ void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
             mWebViewCtrlr->put_Bounds(mWebViewBounds);
 
 
-            SK_Common::onWebViewReady(static_cast<void*>(mCoreWebView.get()), true);
+            SK_Global::onWebViewReady(static_cast<void*>(mCoreWebView.get()), true);
             mIWebView->OnWebViewReady();
 
             mCoreWebView->OpenDevToolsWindow();
@@ -526,7 +526,7 @@ void IWebViewImpl::EvaluateJavaScript(const SK_String& scriptStr, IWebView::comp
 
   wil::com_ptr<ICoreWebView2> _webview = mCoreWebView;
 
-  SK_Common::threadPool->queueOnMainThread([this, scriptStr, func, _webview]() mutable {
+  SK_Global::threadPool->queueOnMainThread([this, scriptStr, func, _webview]() mutable {
     evaluateScript_mainThread(_webview, scriptStr, func);
   });
 }
@@ -549,7 +549,7 @@ void IWebViewImpl::SetWebViewBounds(float x, float y, float w, float h, float sc
     mWebViewCtrlr->SetBoundsAndZoomFactor(soft_backend_rect, scale);
   }
 
-  SK_Common::resizeAllMianWindowView(x, y, w, h, scale);
+  SK_Global::resizeAllMainWindowView(x, y, w, h, scale);
 }
 
 void IWebViewImpl::GetLocalDownloadPathForFile(const char* fileName, WDL_String& downloadPath)
