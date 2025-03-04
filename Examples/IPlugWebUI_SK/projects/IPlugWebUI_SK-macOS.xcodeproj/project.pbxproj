@@ -25,6 +25,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		443D64282D762D570057BF05 /* sk_debug_mode.js in Resources */ = {isa = PBXBuildFile; fileRef = 443D64272D762D570057BF05 /* sk_debug_mode.js */; };
 		44B589D52D71CFA300928FA4 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B589D42D71CFA300928FA4 /* libcurl.a */; };
 		44B58BB22D71CFF300928FA4 /* sk_webview_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44B589F82D71CFF300928FA4 /* sk_webview_macos.mm */; };
 		44B58BB62D71CFF300928FA4 /* sk_window_macos_delegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44B58A0A2D71CFF300928FA4 /* sk_window_macos_delegate.mm */; };
@@ -348,6 +349,8 @@
 
 /* Begin PBXFileReference section */
 		44111D922D75DA4A00A2BBC8 /* sk_string.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sk_string.h; sourceTree = "<group>"; };
+		443D64272D762D570057BF05 /* sk_debug_mode.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sk_debug_mode.js; sourceTree = "<group>"; };
+		443D64292D7630B90057BF05 /* sk_logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_logger.h; sourceTree = "<group>"; };
 		44B589D42D71CFA300928FA4 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../../../skxx/libs/general/curl/libcurl.a; sourceTree = "<group>"; };
 		44B589D62D71CFF300928FA4 /* sk_project.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sk_project.hpp; path = ../../../../sk_project.hpp; sourceTree = "<group>"; };
 		44B589D72D71CFF300928FA4 /* test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = test.hpp; sourceTree = "<group>"; };
@@ -1051,6 +1054,7 @@
 		44B58A232D71CFF300928FA4 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				443D64292D7630B90057BF05 /* sk_logger.h */,
 				44111D922D75DA4A00A2BBC8 /* sk_string.h */,
 				44B58A192D71CFF300928FA4 /* sk_array.hpp */,
 				44B58A1A2D71CFF300928FA4 /* sk_color.hpp */,
@@ -1276,6 +1280,7 @@
 		44B58BA12D71CFF300928FA4 /* global_js_core */ = {
 			isa = PBXGroup;
 			children = (
+				443D64272D762D570057BF05 /* sk_debug_mode.js */,
 				44B58B9F2D71CFF300928FA4 /* sk_global_js_core.js */,
 				44B58BA02D71CFF300928FA4 /* sk_ipc.js */,
 			);
@@ -2303,6 +2308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				443D64282D762D570057BF05 /* sk_debug_mode.js in Resources */,
 				4F78D88613B6382B0032E0F3 /* IPlugWebUI_SK.icns in Resources */,
 				4F1B4AE42014D33600BC64D4 /* IPlugWebUI_SK-macOS-MainMenu.xib in Resources */,
 			);
