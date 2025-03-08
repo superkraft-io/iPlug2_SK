@@ -18,7 +18,6 @@
 #include "config.h"
 #include "resource.h"
 
-
 #include "../../skxx/core/sk_common.hpp"
 #include "../../skxx/core/superkraft.hpp"
 #include "../../sk_project.hpp"
@@ -223,6 +222,12 @@ int main(int argc, char *argv[])
   if(AppIsSandboxed())
     DBGMSG("App is sandboxed, file system access etc restricted!\n");
   
+  SK_Global::appInitializer = new SK_App_Initializer(
+    nlohmann::json{
+      {"applicationWillFinishLaunching", true}
+    }
+  );
+  
   return NSApplicationMain(argc,  (const char **) argv);
 }
 
@@ -318,7 +323,7 @@ INT_PTR SWELLAppMain(int msg, INT_PTR parm1, INT_PTR parm2)
         SetMenu(hwnd, menu); // set the menu for the dialog to our menu (on Windows that menu is set from the .rc, but on SWELL
         SWELL_SetDefaultModalWindowMenu(menu); // other windows will get the stock (bundle) menus
       }
-
+      
       break;
     }
     case SWELLAPP_ONCOMMAND:

@@ -349,8 +349,11 @@
 
 /* Begin PBXFileReference section */
 		44111D922D75DA4A00A2BBC8 /* sk_string.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sk_string.h; sourceTree = "<group>"; };
+		4423B2B92D7AFBB500B3415B /* sk_ms_protonjs_app.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_protonjs_app.hpp; sourceTree = "<group>"; };
+		4423B2BA2D7AFC4400B3415B /* sk_ms_protonjs_window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_protonjs_window.hpp; sourceTree = "<group>"; };
 		443D64272D762D570057BF05 /* sk_debug_mode.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sk_debug_mode.js; sourceTree = "<group>"; };
 		443D64292D7630B90057BF05 /* sk_logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_logger.h; sourceTree = "<group>"; };
+		443D642A2D79BD7B0057BF05 /* sk_app_initializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_app_initializer.h; sourceTree = "<group>"; };
 		44B589D42D71CFA300928FA4 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../../../skxx/libs/general/curl/libcurl.a; sourceTree = "<group>"; };
 		44B589D62D71CFF300928FA4 /* sk_project.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sk_project.hpp; path = ../../../../sk_project.hpp; sourceTree = "<group>"; };
 		44B589D72D71CFF300928FA4 /* test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = test.hpp; sourceTree = "<group>"; };
@@ -927,6 +930,22 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		443D642C2D79BD7B0057BF05 /* macos */ = {
+			isa = PBXGroup;
+			children = (
+				443D642A2D79BD7B0057BF05 /* sk_app_initializer.h */,
+			);
+			path = macos;
+			sourceTree = "<group>";
+		};
+		443D642D2D79BD7B0057BF05 /* sk_app */ = {
+			isa = PBXGroup;
+			children = (
+				443D642C2D79BD7B0057BF05 /* macos */,
+			);
+			path = sk_app;
+			sourceTree = "<group>";
+		};
 		44B589D82D71CFF300928FA4 /* test */ = {
 			isa = PBXGroup;
 			children = (
@@ -1073,6 +1092,7 @@
 		44B58A2B2D71CFF300928FA4 /* core */ = {
 			isa = PBXGroup;
 			children = (
+				443D642D2D79BD7B0057BF05 /* sk_app */,
 				44B589DF2D71CFF300928FA4 /* sk_communication */,
 				44B589E12D71CFF300928FA4 /* sk_ipc */,
 				44B589E42D71CFF300928FA4 /* sk_json */,
@@ -1162,6 +1182,8 @@
 		44B58B792D71CFF300928FA4 /* protonjs */ = {
 			isa = PBXGroup;
 			children = (
+				4423B2B92D7AFBB500B3415B /* sk_ms_protonjs_app.hpp */,
+				4423B2BA2D7AFC4400B3415B /* sk_ms_protonjs_window.hpp */,
 				44B58B772D71CFF300928FA4 /* sk_ms_protonjs_native_image.hpp */,
 				44B58B782D71CFF300928FA4 /* sk_ms_protonjs.hpp */,
 			);
