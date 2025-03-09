@@ -324,19 +324,44 @@ void IWebViewImpl::ReloadPageContent()
   [mWKWebView reload];
 }
 
+
+void evaluateScript_mainThread(IPLUG_WKWEBVIEW* _Nullable mCoreWebView, SK::SK_String scriptStr, IWebView::completionHandlerFunc func)
+{
+    if (mCoreWebView && ![mCoreWebView isLoading])
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [mCoreWebView evaluateJavaScript:@"console.log('Message from C++');" completionHandler:^(id _Nullable result, NSError * _Nullable error) {
+                if (error) {
+                    NSLog(@"Failed to evaluate JavaScript on B: %@", error);
+                }
+            }];
+        });
+        
+        NSString* dataToSend = [NSString stringWithUTF8String:scriptStr.c_str()];
+      [mCoreWebView evaluateJavaScript:dataToSend completionHandler:^(NSString *result, NSError *error) {
+        if (error != nil)
+          NSLog(@"Error %@",error);
+        else if(func)
+        {
+          func([result UTF8String]);
+        }
+      }];
+    }
+};
+
 void IWebViewImpl::EvaluateJavaScript(const char* scriptStr, IWebView::completionHandlerFunc func)
 {
-  if (mWKWebView && ![mWKWebView isLoading])
+  if (SK::SK_Thread_Pool::thisFunctionRunningInMainThread())
   {
-    [mWKWebView evaluateJavaScript:[NSString stringWithUTF8String:scriptStr] completionHandler:^(NSString *result, NSError *error) {
-      if (error != nil)
-        NSLog(@"Error %@",error);
-      else if(func)
-      {
-        func([result UTF8String]);
-      }
-    }];
+    evaluateScript_mainThread(mWKWebView, scriptStr, func);
+    return;
   }
+
+  IPLUG_WKWEBVIEW* _Nullable _webview = mWKWebView;
+
+  SK::SK_Global::threadPool->queueOnMainThread([this, scriptStr, func, _webview]() mutable {
+    evaluateScript_mainThread(_webview, scriptStr, func);
+  });
 }
 
 void IWebViewImpl::EnableScroll(bool enable)

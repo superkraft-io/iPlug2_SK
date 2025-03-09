@@ -35,6 +35,7 @@
 #include <functional>
 #include <memory>
 
+#include "../../../skxx/core/sk_common.hpp"
 #include "../../../skxx/core/superkraft.hpp"
 
 BEGIN_IPLUG_NAMESPACE

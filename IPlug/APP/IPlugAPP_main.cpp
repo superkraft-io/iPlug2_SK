@@ -200,6 +200,12 @@ std::vector<std::string> parseArguments(int argc, char *argv[])
 
 static inline std::vector<std::string> args{};
 
+
+void runLoopCallback(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info) {
+    SK_Global::threadPool_processMainThreadTasks();
+}
+
+
 int main(int argc, char *argv[])
 {
   
@@ -227,6 +233,20 @@ int main(int argc, char *argv[])
       {"applicationWillFinishLaunching", true}
     }
   );
+  
+  CFRunLoopObserverContext context = {0, nullptr, nullptr, nullptr, nullptr};
+  CFRunLoopObserverRef observer = CFRunLoopObserverCreate(
+      kCFAllocatorDefault,
+      kCFRunLoopAllActivities, // Listen to all states
+      true, // Repeats
+      0,
+      runLoopCallback,
+      &context
+  );
+
+  CFRunLoopAddObserver(CFRunLoopGetCurrent(), observer, kCFRunLoopCommonModes);
+  CFRelease(observer);
+  
   
   return NSApplicationMain(argc,  (const char **) argv);
 }
