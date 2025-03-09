@@ -418,8 +418,6 @@
 		44B58B782D71CFF300928FA4 /* sk_ms_protonjs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_protonjs.hpp; sourceTree = "<group>"; };
 		44B58B7A2D71CFF300928FA4 /* sk_ms_vfs_file.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_vfs_file.hpp; sourceTree = "<group>"; };
 		44B58B7B2D71CFF300928FA4 /* sk_ms_vfs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_vfs.hpp; sourceTree = "<group>"; };
-		44B58B7D2D71CFF300928FA4 /* sk_ms_view.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_view.hpp; sourceTree = "<group>"; };
-		44B58B7E2D71CFF300928FA4 /* sk_ms_viewMngr.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_viewMngr.hpp; sourceTree = "<group>"; };
 		44B58B802D71CFF300928FA4 /* sk_ms_application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_application.hpp; sourceTree = "<group>"; };
 		44B58B812D71CFF300928FA4 /* sk_ms_bdfs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_bdfs.hpp; sourceTree = "<group>"; };
 		44B58B822D71CFF300928FA4 /* sk_ms_debugMngr.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_debugMngr.hpp; sourceTree = "<group>"; };
@@ -1199,22 +1197,12 @@
 			path = vfs;
 			sourceTree = "<group>";
 		};
-		44B58B7F2D71CFF300928FA4 /* viewMngr */ = {
-			isa = PBXGroup;
-			children = (
-				44B58B7D2D71CFF300928FA4 /* sk_ms_view.hpp */,
-				44B58B7E2D71CFF300928FA4 /* sk_ms_viewMngr.hpp */,
-			);
-			path = viewMngr;
-			sourceTree = "<group>";
-		};
 		44B58B842D71CFF300928FA4 /* sk */ = {
 			isa = PBXGroup;
 			children = (
 				44B58B762D71CFF300928FA4 /* nativeActions */,
 				44B58B792D71CFF300928FA4 /* protonjs */,
 				44B58B7C2D71CFF300928FA4 /* vfs */,
-				44B58B7F2D71CFF300928FA4 /* viewMngr */,
 				44B58B802D71CFF300928FA4 /* sk_ms_application.hpp */,
 				44B58B812D71CFF300928FA4 /* sk_ms_bdfs.hpp */,
 				44B58B822D71CFF300928FA4 /* sk_ms_debugMngr.hpp */,

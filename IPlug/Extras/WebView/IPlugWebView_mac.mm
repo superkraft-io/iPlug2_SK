@@ -327,26 +327,18 @@ void IWebViewImpl::ReloadPageContent()
 
 void evaluateScript_mainThread(IPLUG_WKWEBVIEW* _Nullable mCoreWebView, SK::SK_String scriptStr, IWebView::completionHandlerFunc func)
 {
-    if (mCoreWebView && ![mCoreWebView isLoading])
-    {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [mCoreWebView evaluateJavaScript:@"console.log('Message from C++');" completionHandler:^(id _Nullable result, NSError * _Nullable error) {
-                if (error) {
-                    NSLog(@"Failed to evaluate JavaScript on B: %@", error);
-                }
-            }];
-        });
-        
-        NSString* dataToSend = [NSString stringWithUTF8String:scriptStr.c_str()];
-      [mCoreWebView evaluateJavaScript:dataToSend completionHandler:^(NSString *result, NSError *error) {
-        if (error != nil)
-          NSLog(@"Error %@",error);
-        else if(func)
-        {
-          func([result UTF8String]);
-        }
-      }];
-    }
+  if (mCoreWebView && ![mCoreWebView isLoading])
+  {
+      NSString* dataToSend = [NSString stringWithUTF8String:scriptStr.c_str()];
+    [mCoreWebView evaluateJavaScript:dataToSend completionHandler:^(NSString *result, NSError *error) {
+      if (error != nil)
+        NSLog(@"Error %@",error);
+      else if(func)
+      {
+        func([result UTF8String]);
+      }
+    }];
+  }
 };
 
 void IWebViewImpl::EvaluateJavaScript(const char* scriptStr, IWebView::completionHandlerFunc func)
