@@ -549,12 +549,15 @@ static void ClientResize(HWND hWnd, int width, int height)
 //static
 WDL_DLGRET IPlugAPPHost::MainDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
-  int wndEventReturnVal = -1;
-  if (SK_Global::mainWindow)
-    wndEventReturnVal = SK_Window::handleWndEvents(SK_Global::mainWindow, hwndDlg, uMsg, wParam, lParam);
+  
+  #if defined(SK_OS_windows)
+    int wndEventReturnVal = -1;
+    if (SK_Global::mainWindow)
+      wndEventReturnVal = SK_Window::handleWndEvents(SK_Global::mainWindow, hwndDlg, uMsg, wParam, lParam);
 
-  if (wndEventReturnVal > -1)
-    return wndEventReturnVal;
+    if (wndEventReturnVal > -1)
+      return wndEventReturnVal;
+  #endif
 
 
 
