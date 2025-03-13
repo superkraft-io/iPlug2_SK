@@ -301,11 +301,20 @@
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\vfs\sk_ms_vfs_file.hpp">
       <Filter>project\skxx\module_system\cpp\modules\sk\vfs</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\viewMngr\sk_ms_viewMngr.hpp">
-      <Filter>project\skxx\module_system\cpp\modules\sk\viewMngr</Filter>
+    <ClInclude Include="..\..\..\..\skxx\core\sk_app\sk_app_initializer.h">
+      <Filter>project\skxx\core\sk_app</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\viewMngr\sk_ms_view.hpp">
-      <Filter>project\skxx\module_system\cpp\modules\sk\viewMngr</Filter>
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_logger.h">
+      <Filter>project\skxx\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\sk_project.hpp" />
+    <ClInclude Include="..\..\..\..\sk_project_binarydata.hpp" />
+    <ClInclude Include="..\..\..\..\sk_project_includes.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs_app.hpp">
+      <Filter>project\skxx\module_system\cpp\modules\sk\protonjs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs_window.hpp">
+      <Filter>project\skxx\module_system\cpp\modules\sk\protonjs</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -408,9 +417,6 @@
     <Filter Include="project\skxx\module_system\cpp\modules\sk\vfs">
       <UniqueIdentifier>{8f2a8019-c733-4ec8-bab4-fe2ce9d65a86}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\module_system\cpp\modules\sk\viewMngr">
-      <UniqueIdentifier>{6a63305f-53ec-479e-824d-73423600712f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="project\skxx\module_system\web">
       <UniqueIdentifier>{df657105-fe49-40d0-bd22-84c0f41bb37e}</UniqueIdentifier>
     </Filter>
@@ -431,6 +437,9 @@
     </Filter>
     <Filter Include="project\skxx\web\soft_backend">
       <UniqueIdentifier>{17c23445-7831-486b-abcc-b1fa665581ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project\skxx\core\sk_app">
+      <UniqueIdentifier>{140c4c3e-4b90-4636-9a40-6d94489f8f78}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

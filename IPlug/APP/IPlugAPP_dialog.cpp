@@ -12,6 +12,7 @@
 #include "config.h"
 #include "resource.h"
 
+#include "../../skxx/core/sk_common.hpp"
 
 #ifdef OS_WIN
 #include "asio.h"
@@ -548,6 +549,17 @@ static void ClientResize(HWND hWnd, int width, int height)
 //static
 WDL_DLGRET IPlugAPPHost::MainDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
+  int wndEventReturnVal = -1;
+  if (SK_Global::mainWindow)
+    wndEventReturnVal = SK_Window::handleWndEvents(SK_Global::mainWindow, hwndDlg, uMsg, wParam, lParam);
+
+  if (wndEventReturnVal > -1)
+    return wndEventReturnVal;
+
+
+
+
+
   IPlugAPPHost* pAppHost = IPlugAPPHost::sInstance.get();
 
   switch (uMsg)
@@ -782,6 +794,7 @@ WDL_DLGRET IPlugAPPHost::MainDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPA
         scale = GetScaleForHWND(hwndDlg);
         #endif
         //pPlug->OnParentWindowResize(static_cast<int>(r.right / scale), static_cast<int>(r.bottom / scale));
+        SK_Global::resizeAllMainWindowView(r.left, r.top, r.right, r.bottom, scale);
         return 1;
       }
       default:
@@ -793,11 +806,11 @@ WDL_DLGRET IPlugAPPHost::MainDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPA
     case WM_ACTIVATE:
       if (wParam == WA_INACTIVE)
       {
-        //SK_Global::onWindowFocusChanged(nullptr, false);
+        SK_Global::onWindowFocusChanged(nullptr, false);
       }
       else
       {
-        //SK_Global::onWindowFocusChanged(nullptr, true);
+        SK_Global::onWindowFocusChanged(nullptr, true);
       }
       return 0;
     }

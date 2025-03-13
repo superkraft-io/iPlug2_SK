@@ -56,7 +56,9 @@ UINT gScrollMessage;
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdParam, int nShowCmd)
 {
   std::string args(lpszCmdParam);
-  
+
+
+  SK_Global::appInitializer = new SK_App_Initializer(nlohmann::json{{"applicationWillFinishLaunching", true}});
 
   try
   {
@@ -104,8 +106,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
     CreateDialog(gHINSTANCE, MAKEINTRESOURCE(IDD_DIALOG_MAIN), GetDesktopWindow(), IPlugAPPHost::MainDlgProc
     );
 
-    
-    SK_Global::mainWindowHandle = gHWND;
     SK_Global::onMainWindowHWNDAcquired(gHWND);
 
   #if !defined _DEBUG || defined NO_IGRAPHICS
@@ -335,8 +335,8 @@ INT_PTR SWELLAppMain(int msg, INT_PTR parm1, INT_PTR parm2)
       
       NSView*  view = (__bridge NSView*)gHWND;
       NSWindow* window = view.window;
-      SK_Global::mainWindowHandle = (__bridge void*)window;
-      SK_Global::onMainWindowHWNDAcquired(SK_Global::mainWindowHandle);
+      //SK_Global::mainWindowHandle = (__bridge void*)window;
+      SK_Global::onMainWindowHWNDAcquired((__bridge void*)window);
       
       if (menu)
       {
