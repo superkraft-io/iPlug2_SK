@@ -85,7 +85,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
     pAppHost->TryToChangeAudio();
 
     
-    SK_Project::init(pAppHost);
+    SK_Project::init(pAppHost->sInstance->GetPlug());
     
     HACCEL hAccel = LoadAccelerators(gHINSTANCE, MAKEINTRESOURCE(IDR_ACCELERATOR1));
 
@@ -201,9 +201,7 @@ std::vector<std::string> parseArguments(int argc, char *argv[])
 static inline std::vector<std::string> args{};
 
 
-void runLoopCallback(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info) {
-    SK_Global::threadPool_processMainThreadTasks();
-}
+
 
 
 int main(int argc, char *argv[])
@@ -233,20 +231,6 @@ int main(int argc, char *argv[])
       {"applicationWillFinishLaunching", true}
     }
   );
-  
-  CFRunLoopObserverContext context = {0, nullptr, nullptr, nullptr, nullptr};
-  CFRunLoopObserverRef observer = CFRunLoopObserverCreate(
-      kCFAllocatorDefault,
-      kCFRunLoopAllActivities, // Listen to all states
-      true, // Repeats
-      0,
-      runLoopCallback,
-      &context
-  );
-
-  CFRunLoopAddObserver(CFRunLoopGetCurrent(), observer, kCFRunLoopCommonModes);
-  CFRelease(observer);
-  
   
   return NSApplicationMain(argc,  (const char **) argv);
 }
@@ -329,7 +313,7 @@ INT_PTR SWELLAppMain(int msg, INT_PTR parm1, INT_PTR parm2)
       SetMenuItemModifier(menu, ID_SHOW_FPS, MF_BYCOMMAND, 'F', FCONTROL);
 #endif
       
-      SK_Project::init(pAppHost);
+      SK_Project::init(pAppHost->sInstance->GetPlug());
       
       HWND hwnd = CreateDialog(gHINST, MAKEINTRESOURCE(IDD_DIALOG_MAIN), NULL, IPlugAPPHost::MainDlgProc);
       

@@ -15,6 +15,11 @@
 #include "config.h"   // This is your plugin's config.h.
 #include "IPlugAPIBase.h"
 
+
+#include "../../skxx/core/sk_common.hpp"
+#include "../../skxx/core/superkraft.hpp"
+#include "../../sk_project.hpp"
+
 using namespace iplug;
 
 static const AudioUnitPropertyID kIPlugObjectPropertyID = UINT32_MAX-100;
@@ -35,6 +40,8 @@ static const AudioUnitPropertyID kIPlugObjectPropertyID = UINT32_MAX-100;
 {
   TRACE  
   mPlug = nullptr;
+  
+  
   return [super init];
 }
 
@@ -54,11 +61,28 @@ static const AudioUnitPropertyID kIPlugObjectPropertyID = UINT32_MAX-100;
     {
       if (mPlug->HasUI())
       {
+        SK_Global::appInitializer = new SK_App_Initializer(
+          nlohmann::json{
+            {"applicationWillFinishLaunching", true}
+          }
+        );
+        
+        SK_Project::init(self->mPlug);
+        
 #if __has_feature(objc_arc)
         NSView* pView = (__bridge NSView*) mPlug->OpenWindow(nullptr);
 #else
         NSView* pView = (NSView*) mPlug->OpenWindow(nullptr);
 #endif
+        
+        if (pView) {
+          dispatch_async(dispatch_get_main_queue(), ^{
+            if (pView.window) {
+              SK_Global::onMainWindowHWNDAcquired((__bridge void*)pView.window);
+            }
+          });
+        }
+        
         return pView;
       }
     }

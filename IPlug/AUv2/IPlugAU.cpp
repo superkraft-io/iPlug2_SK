@@ -19,6 +19,7 @@
 
 using namespace iplug;
 
+
 #pragma mark - CFString and CString Utilities
 
 static inline CFStringRef MakeCFString(const char* cStr)
@@ -200,6 +201,7 @@ OSStatus IPlugAU::IPlugAUEntry(ComponentParameters *params, void* pPlug)
   }
 
   IPlugAU* _this = (IPlugAU*) pPlug;
+  
   
   if (select == kComponentCloseSelect)
   {

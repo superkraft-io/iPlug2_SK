@@ -117,6 +117,8 @@ using namespace SK;
         [urlSchemeTask didReceiveResponse:res.response];
         [urlSchemeTask didReceiveData:res.data];
         [urlSchemeTask didFinish];
+        
+        return packet;
     });
     
     return;

@@ -30,6 +30,10 @@
 		44B58BB22D71CFF300928FA4 /* sk_webview_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44B589F82D71CFF300928FA4 /* sk_webview_macos.mm */; };
 		44B58BB62D71CFF300928FA4 /* sk_window_macos_delegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44B58A0A2D71CFF300928FA4 /* sk_window_macos_delegate.mm */; };
 		44B58BBA2D71CFF300928FA4 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B58A312D71CFF300928FA4 /* libcurl.a */; };
+		44FABF812D843457009B8A25 /* sk_webview_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44B589F82D71CFF300928FA4 /* sk_webview_macos.mm */; };
+		44FABF822D8434C3009B8A25 /* sk_window_macos_delegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44B58A0A2D71CFF300928FA4 /* sk_window_macos_delegate.mm */; };
+		44FABF832D8434C7009B8A25 /* sk_webview_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44B589F82D71CFF300928FA4 /* sk_webview_macos.mm */; };
+		44FABF842D86DC94009B8A25 /* sk_window_macos_delegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44B58A0A2D71CFF300928FA4 /* sk_window_macos_delegate.mm */; };
 		4F0848292015129A00F9E881 /* IPlugAAX_Parameters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0848252015129300F9E881 /* IPlugAAX_Parameters.cpp */; };
 		4F0AB11B259C04BB00653315 /* web in Resources */ = {isa = PBXBuildFile; fileRef = 4FC46E57231440B4000045E7 /* web */; };
 		4F0AB11C259C050300653315 /* web in Resources */ = {isa = PBXBuildFile; fileRef = 4FC46E57231440B4000045E7 /* web */; };
@@ -353,7 +357,6 @@
 		4423B2BA2D7AFC4400B3415B /* sk_ms_protonjs_window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_protonjs_window.hpp; sourceTree = "<group>"; };
 		443D64272D762D570057BF05 /* sk_debug_mode.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sk_debug_mode.js; sourceTree = "<group>"; };
 		443D64292D7630B90057BF05 /* sk_logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_logger.h; sourceTree = "<group>"; };
-		443D642A2D79BD7B0057BF05 /* sk_app_initializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_app_initializer.h; sourceTree = "<group>"; };
 		44B589D42D71CFA300928FA4 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../../../skxx/libs/general/curl/libcurl.a; sourceTree = "<group>"; };
 		44B589D62D71CFF300928FA4 /* sk_project.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sk_project.hpp; path = ../../../../sk_project.hpp; sourceTree = "<group>"; };
 		44B589D72D71CFF300928FA4 /* test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = test.hpp; sourceTree = "<group>"; };
@@ -435,7 +438,6 @@
 		44B58B932D71CFF300928FA4 /* nativeActions.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = nativeActions.js; sourceTree = "<group>"; };
 		44B58B942D71CFF300928FA4 /* proton.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = proton.js; sourceTree = "<group>"; };
 		44B58B952D71CFF300928FA4 /* vfs.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = vfs.js; sourceTree = "<group>"; };
-		44B58B962D71CFF300928FA4 /* viewMngr.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = viewMngr.js; sourceTree = "<group>"; };
 		44B58B972D71CFF300928FA4 /* web.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = web.js; sourceTree = "<group>"; };
 		44B58B992D71CFF300928FA4 /* sk_module_root.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sk_module_root.js; sourceTree = "<group>"; };
 		44B58B9A2D71CFF300928FA4 /* sk_module.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sk_module.js; sourceTree = "<group>"; };
@@ -451,6 +453,7 @@
 		44B58BA92D71CFF300928FA4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		44B58BAB2D71CFF300928FA4 /* sk_project_includes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sk_project_includes.hpp; path = ../../../../sk_project_includes.hpp; sourceTree = "<group>"; };
 		44B58BAC2D71CFF300928FA4 /* sk_project_binarydata.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sk_project_binarydata.hpp; path = ../../../../sk_project_binarydata.hpp; sourceTree = "<group>"; };
+		44FABF7C2D8428F2009B8A25 /* sk_app_initializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_app_initializer.h; sourceTree = "<group>"; };
 		4F05C5A82082424400DD1621 /* IPlugWAM.h */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = IPlugWAM.h; path = ../../../IPlug/WEB/IPlugWAM.h; sourceTree = "<group>"; tabWidth = 2; };
 		4F05C5A92082424400DD1621 /* IPlugWAM.cpp */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugWAM.cpp; path = ../../../IPlug/WEB/IPlugWAM.cpp; sourceTree = "<group>"; tabWidth = 2; };
 		4F0848252015129300F9E881 /* IPlugAAX_Parameters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugAAX_Parameters.cpp; path = ../../../IPlug/AAX/IPlugAAX_Parameters.cpp; sourceTree = "<group>"; tabWidth = 2; };
@@ -928,18 +931,10 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
-		443D642C2D79BD7B0057BF05 /* macos */ = {
-			isa = PBXGroup;
-			children = (
-				443D642A2D79BD7B0057BF05 /* sk_app_initializer.h */,
-			);
-			path = macos;
-			sourceTree = "<group>";
-		};
 		443D642D2D79BD7B0057BF05 /* sk_app */ = {
 			isa = PBXGroup;
 			children = (
-				443D642C2D79BD7B0057BF05 /* macos */,
+				44FABF7C2D8428F2009B8A25 /* sk_app_initializer.h */,
 			);
 			path = sk_app;
 			sourceTree = "<group>";
@@ -1258,7 +1253,6 @@
 				44B58B932D71CFF300928FA4 /* nativeActions.js */,
 				44B58B942D71CFF300928FA4 /* proton.js */,
 				44B58B952D71CFF300928FA4 /* vfs.js */,
-				44B58B962D71CFF300928FA4 /* viewMngr.js */,
 				44B58B972D71CFF300928FA4 /* web.js */,
 			);
 			path = sk;
@@ -2551,6 +2545,8 @@
 				4F35DEB0207E5C5A00867D8F /* IPlugPluginBase.cpp in Sources */,
 				4F78D95C13B63BA50032E0F3 /* IPlugParameter.cpp in Sources */,
 				4F3862F22014BBEC0009F402 /* IPlugWebUI_SK.cpp in Sources */,
+				44FABF812D843457009B8A25 /* sk_webview_macos.mm in Sources */,
+				44FABF842D86DC94009B8A25 /* sk_window_macos_delegate.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2591,6 +2587,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44FABF822D8434C3009B8A25 /* sk_window_macos_delegate.mm in Sources */,
 				4F3F6E4F2CCBDFF700C41C6D /* IPlugWebView_mac.mm in Sources */,
 				4F78BE1422E7406D00AD537E /* IPlugWebUI_SK.h in Sources */,
 				4F0D965C23099F6900BFDED0 /* IPlugProcessor.cpp in Sources */,
@@ -2604,6 +2601,7 @@
 				4F78BE2822E7406D00AD537E /* IPlugParameter.cpp in Sources */,
 				4F78BE2922E7406D00AD537E /* IPlugTimer.cpp in Sources */,
 				4F78BE2A22E7406D00AD537E /* IPlugPaths.mm in Sources */,
+				44FABF832D8434C7009B8A25 /* sk_webview_macos.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2698,9 +2696,7 @@
 				4F3F6E512CCBDFF700C41C6D /* IPlugWebView_mac.mm in Sources */,
 				4F5C5F6921BED05B00E024A7 /* swellappmain.mm in Sources */,
 				4FD16D3A13B63582001D0217 /* swell-kb.mm in Sources */,
-				4FA0FB18247D4D2B00E25C73 /* IPlugWebViewEditorDelegate.mm in Sources */,
 				4F5F344120C0226200487201 /* IPlugPaths.mm in Sources */,
-				44B58BB62D71CFF300928FA4 /* sk_window_macos_delegate.mm in Sources */,
 				4FD16D3C13B6358C001D0217 /* swell-miscdlg.mm in Sources */,
 				4FD16D3E13B63595001D0217 /* swell-menu.mm in Sources */,
 				4F5C5F6B21BED08700E024A7 /* swell-appstub.mm in Sources */,
@@ -2715,6 +2711,8 @@
 				4F3862EF2014BBEC0009F402 /* IPlugWebUI_SK.cpp in Sources */,
 				4F78D90B13B63BA50032E0F3 /* IPlugAPIBase.cpp in Sources */,
 				4F35DEAD207E5C5A00867D8F /* IPlugPluginBase.cpp in Sources */,
+				4FA0FB18247D4D2B00E25C73 /* IPlugWebViewEditorDelegate.mm in Sources */,
+				44B58BB62D71CFF300928FA4 /* sk_window_macos_delegate.mm in Sources */,
 				44B58BB22D71CFF300928FA4 /* sk_webview_macos.mm in Sources */,
 				4FF0A83221BE708700B2C9D1 /* swell-gdi.mm in Sources */,
 				4F78D91813B63BA50032E0F3 /* IPlugParameter.cpp in Sources */,
@@ -3060,7 +3058,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.superkraft.io.app.IPlugWebUI_SK.AUv3;
@@ -3100,7 +3098,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.superkraft.io.app.IPlugWebUI_SK.AUv3;
@@ -3140,7 +3138,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.superkraft.io.app.IPlugWebUI_SK.AUv3;
@@ -3356,7 +3354,7 @@
 					"$(inherited)",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = (
@@ -3413,7 +3411,7 @@
 					"$(inherited)",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = (
@@ -3470,7 +3468,7 @@
 					"$(inherited)",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = (

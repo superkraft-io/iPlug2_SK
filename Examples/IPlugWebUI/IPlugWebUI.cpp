@@ -44,9 +44,9 @@ void IPlugWebUI::OnReset()
 
 bool IPlugWebUI::OnMessage(int msgTag, int ctrlTag, int dataSize, const void* pData)
 {
-  if (msgTag == kMsgTagButton1)
+  /*if (msgTag == kMsgTagButton1)
   {
-    EditorResize(300, 300);
+      EditorResize(300, 300);
   }
   else if (msgTag == kMsgTagButton2)
   {
@@ -62,7 +62,7 @@ bool IPlugWebUI::OnMessage(int msgTag, int ctrlTag, int dataSize, const void* pD
     DBGMSG("Data Size %i bytes\n",  dataSize);
     DBGMSG("Byte values: %i, %i, %i, %i\n", uint8Data[0], uint8Data[1], uint8Data[2], uint8Data[3]);
   }
-
+   */
   return false;
 }
 
