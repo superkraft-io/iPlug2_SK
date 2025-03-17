@@ -378,7 +378,7 @@ void IWebViewImpl::SetWebViewBounds(float x, float y, float w, float h, float sc
   }
 #endif
       
-  SK::SK_Global::resizeAllMainWindowView(x, y, w, h, scale);
+  SK::SK_Global::resizeAllMainWindowViews(x, y, w, h, scale);
 }
 
 void IWebViewImpl::GetLocalDownloadPathForFile(const char* fileName, WDL_String& localPath)

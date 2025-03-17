@@ -106,7 +106,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
     CreateDialog(gHINSTANCE, MAKEINTRESOURCE(IDD_DIALOG_MAIN), GetDesktopWindow(), IPlugAPPHost::MainDlgProc
     );
 
-    SK_Global::onMainWindowHWNDAcquired(gHWND);
+    SK_Global::onMainWindowHWNDAcquired(gHWND, false);
 
   #if !defined _DEBUG || defined NO_IGRAPHICS
     HMENU menu = GetMenu(gHWND);
@@ -320,7 +320,7 @@ INT_PTR SWELLAppMain(int msg, INT_PTR parm1, INT_PTR parm2)
       NSView*  view = (__bridge NSView*)gHWND;
       NSWindow* window = view.window;
       //SK_Global::mainWindowHandle = (__bridge void*)window;
-      SK_Global::onMainWindowHWNDAcquired((__bridge void*)window);
+      SK_Global::onMainWindowHWNDAcquired((__bridge void*)window, false);
       
       if (menu)
       {

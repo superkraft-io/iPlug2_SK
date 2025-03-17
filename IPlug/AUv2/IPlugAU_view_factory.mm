@@ -74,11 +74,10 @@ static const AudioUnitPropertyID kIPlugObjectPropertyID = UINT32_MAX-100;
 #else
         NSView* pView = (NSView*) mPlug->OpenWindow(nullptr);
 #endif
-        
         if (pView) {
           dispatch_async(dispatch_get_main_queue(), ^{
             if (pView.window) {
-              SK_Global::onMainWindowHWNDAcquired((__bridge void*)pView.window);
+              SK_Global::onMainWindowHWNDAcquired((__bridge void*)pView, true);
             }
           });
         }
