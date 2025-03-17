@@ -550,7 +550,7 @@ void IWebViewImpl::SetWebViewBounds(float x, float y, float w, float h, float sc
     mWebViewCtrlr->SetBoundsAndZoomFactor(soft_backend_rect, scale);
   }
 
-  SK_Global::resizeAllMainWindowView(x, y, w, h, scale);
+  SK_Global::resizeAllMainWindowViews(x, y, w, h, scale);
 }
 
 void IWebViewImpl::GetLocalDownloadPathForFile(const char* fileName, WDL_String& downloadPath)
