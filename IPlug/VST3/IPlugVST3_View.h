@@ -114,12 +114,15 @@ public:
 #ifdef OS_WIN
       if (strcmp(type, Steinberg::kPlatformTypeHWND) == 0)
         pView = mOwner.OpenWindow(pParent);
+
+        SK_Global::GetInstance().onMainWindowHWNDAcquired(pView, false);
+
 #elif defined OS_MAC
       if (strcmp(type, Steinberg::kPlatformTypeNSView) == 0)
         pView = mOwner.OpenWindow(pParent);
       else // Carbon
         return Steinberg::kResultFalse;
-#endif
+#endif 
       return Steinberg::kResultTrue;
     }
     

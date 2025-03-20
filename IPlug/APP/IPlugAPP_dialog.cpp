@@ -552,8 +552,9 @@ WDL_DLGRET IPlugAPPHost::MainDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPA
   
   #if defined(SK_OS_windows)
     int wndEventReturnVal = -1;
-    if (SK_Global::mainWindow)
-      wndEventReturnVal = SK_Window::handleWndEvents(SK_Global::mainWindow, hwndDlg, uMsg, wParam, lParam);
+    SK_Window* mainWnd = SK_Global::GetInstance().mainWindow;
+    if (mainWnd)
+      wndEventReturnVal = mainWnd->handleWndEvents(mainWnd, hwndDlg, uMsg, wParam, lParam);
 
     if (wndEventReturnVal > -1)
       return wndEventReturnVal;
@@ -797,7 +798,7 @@ WDL_DLGRET IPlugAPPHost::MainDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPA
         scale = GetScaleForHWND(hwndDlg);
         #endif
         //pPlug->OnParentWindowResize(static_cast<int>(r.right / scale), static_cast<int>(r.bottom / scale));
-        SK_Global::resizeAllMainWindowViews(r.left, r.top, r.right, r.bottom, scale);
+        SK_Global::GetInstance().resizeAllMainWindowViews(r.left, r.top, r.right, r.bottom, scale);
         return 1;
       }
       default:
@@ -809,11 +810,11 @@ WDL_DLGRET IPlugAPPHost::MainDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPA
     case WM_ACTIVATE:
       if (wParam == WA_INACTIVE)
       {
-        SK_Global::onWindowFocusChanged(nullptr, false);
+        SK_Global::GetInstance().onWindowFocusChanged(nullptr, false);
       }
       else
       {
-        SK_Global::onWindowFocusChanged(nullptr, true);
+        SK_Global::GetInstance().onWindowFocusChanged(nullptr, true);
       }
       return 0;
     }

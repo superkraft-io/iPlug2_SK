@@ -58,7 +58,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
   std::string args(lpszCmdParam);
 
 
-  SK_Global::appInitializer = new SK_App_Initializer(nlohmann::json{{"applicationWillFinishLaunching", true}});
+  SK_Global::GetInstance().appInitializer = new SK_App_Initializer(nlohmann::json{{"applicationWillFinishLaunching", true}}, []() {
+    void* ptr = SK_Global::GetInstance().sb_ipc;
+    return static_cast<SK_IPC_v2*>(ptr);
+  });
 
   try
   {
@@ -84,8 +87,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
     pAppHost->Init();
     pAppHost->TryToChangeAudio();
 
-    
-    SK_Project::init(pAppHost->sInstance->GetPlug());
+    SK_Global::GetInstance().project = new SK_Project();
+    (static_cast<SK_Project*>(SK_Global::GetInstance().project))->init(pAppHost->sInstance->GetPlug());
     
     HACCEL hAccel = LoadAccelerators(gHINSTANCE, MAKEINTRESOURCE(IDR_ACCELERATOR1));
 
@@ -106,7 +109,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
     CreateDialog(gHINSTANCE, MAKEINTRESOURCE(IDD_DIALOG_MAIN), GetDesktopWindow(), IPlugAPPHost::MainDlgProc
     );
 
-    SK_Global::onMainWindowHWNDAcquired(gHWND, false);
+    SK_Global::GetInstance().onMainWindowHWNDAcquired(gHWND, false);
 
   #if !defined _DEBUG || defined NO_IGRAPHICS
     HMENU menu = GetMenu(gHWND);
@@ -116,7 +119,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
 
     for(;;)
     {
-      SK_Global::threadPool_processMainThreadTasks();
+      SK_Global::GetInstance().threadPool_processMainThreadTasks();
 
       MSG msg= {0,};
       int vvv = GetMessage(&msg, NULL, 0, 0);
@@ -226,7 +229,7 @@ int main(int argc, char *argv[])
   if(AppIsSandboxed())
     DBGMSG("App is sandboxed, file system access etc restricted!\n");
   
-  SK_Global::appInitializer = new SK_App_Initializer(
+  SK_Global::GetInstance().appInitializer = new SK_App_Initializer(
     nlohmann::json{
       {"applicationWillFinishLaunching", true}
     }
@@ -319,8 +322,8 @@ INT_PTR SWELLAppMain(int msg, INT_PTR parm1, INT_PTR parm2)
       
       NSView*  view = (__bridge NSView*)gHWND;
       NSWindow* window = view.window;
-      //SK_Global::mainWindowHandle = (__bridge void*)window;
-      SK_Global::onMainWindowHWNDAcquired((__bridge void*)window, false);
+      //SK_Global::GetInstance().mainWindowHandle = (__bridge void*)window;
+      SK_Global::GetInstance().onMainWindowHWNDAcquired((__bridge void*)window, false);
       
       if (menu)
       {
