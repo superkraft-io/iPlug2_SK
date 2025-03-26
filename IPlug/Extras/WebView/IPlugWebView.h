@@ -35,7 +35,6 @@
 #include <functional>
 #include <memory>
 
-#include "../../../skxx/core/sk_common.hpp"
 #include "../../../skxx/core/superkraft.hpp"
 
 BEGIN_IPLUG_NAMESPACE
@@ -46,9 +45,9 @@ class IWebViewImpl;
 class IWebView
 {
 public:
-  using completionHandlerFunc = std::function<void(const char* result)>;
+  SK::Superkraft* getSK();
 
-  //SK::Superkraft* sk();
+  using completionHandlerFunc = std::function<void(const char* result)>;
 
   /** Constructs an IWebView
   * @param opaque. Is the WebView opaque or does it have a transparent background
@@ -137,6 +136,7 @@ public:
 
   /** Override to handle file download progress */
   virtual void OnReceivedData(size_t numBytesReceived, size_t totalNumBytes) {}
+
 
 private:
   std::unique_ptr<IWebViewImpl> mpImpl;

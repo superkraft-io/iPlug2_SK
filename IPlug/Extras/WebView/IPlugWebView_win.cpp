@@ -41,7 +41,7 @@
 #include "WebView2EnvironmentOptions.h"
 #include "wdlstring.h"
 
-#include "../../../../skxx/core/sk_common.hpp"
+#include "../../../../skxx/core/superkraft.hpp"
 
 using namespace SK;
 
@@ -52,6 +52,8 @@ BEGIN_IPLUG_NAMESPACE
 class IWebViewImpl
 {
 public:
+  SK::Superkraft* sk = new SK::Superkraft();
+
   IWebViewImpl(IWebView* owner);
   ~IWebViewImpl();
 
@@ -68,6 +70,8 @@ public:
   void SetWebViewBounds(float x, float y, float w, float h, float scale);
   void GetWebRoot(WDL_String& path) const { path.Set(mWebRoot.Get()); }
   void GetLocalDownloadPathForFile(const char* fileName, WDL_String& downloadPath);
+
+  Superkraft* IWebViewImpl::getSK();
 
 private:
   RECT GetScaledRect(float x, float y, float w, float h, float scale)
@@ -115,6 +119,14 @@ IWebViewImpl::~IWebViewImpl()
 
 void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
 {
+
+  HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
+  if (FAILED(hr))
+  {
+    return nullptr;
+  }
+
+
   mParentWnd = (HWND)pParent;
 
   WDL_String cachePath;
@@ -150,7 +162,7 @@ void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
               return S_OK;
             }
 
-            SK_Global::GetInstance().showSoftBackendDevTools = [&]() {
+            getSK()->skg->showSoftBackendDevTools = [&]() {
               mCoreWebView->OpenDevToolsWindow();
             };
 
@@ -173,7 +185,7 @@ void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
 
             mCoreWebView->add_WebResourceRequested(Callback<ICoreWebView2WebResourceRequestedEventHandler>([&](ICoreWebView2* sender, ICoreWebView2WebResourceRequestedEventArgs* args) -> HRESULT {
               SK_Communication_Config config{"sk.sb", SK_Communication_Packet_Type::sk_comm_pt_web, args, mWebViewEnvironment};
-              SK_Global::GetInstance().onCommunicationRequest(&config, NULL, NULL);
+              getSK()->skg->onCommunicationRequest(&config, NULL, NULL);
               return S_OK;
             }).Get(),
             nullptr);
@@ -382,7 +394,7 @@ void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
             mWebViewCtrlr->put_Bounds(mWebViewBounds);
 
 
-            SK_Global::GetInstance().onWebViewReady(static_cast<void*>(mCoreWebView.get()), true);
+            sk->skg->onWebViewReady(static_cast<void*>(mCoreWebView.get()), true);
             mIWebView->OnWebViewReady();
 
 
@@ -519,7 +531,7 @@ void evaluateScript_mainThread(wil::com_ptr<ICoreWebView2> mCoreWebView, const S
 
 void IWebViewImpl::EvaluateJavaScript(const SK_String& scriptStr, IWebView::completionHandlerFunc func)
 {
-  if (SK_Global::GetInstance().threadPool->thisFunctionRunningInMainThread())
+  if (sk->skg->threadPool->thisFunctionRunningInMainThread())
   {
     evaluateScript_mainThread(mCoreWebView, scriptStr, func);
     return;
@@ -527,7 +539,7 @@ void IWebViewImpl::EvaluateJavaScript(const SK_String& scriptStr, IWebView::comp
 
   wil::com_ptr<ICoreWebView2> _webview = mCoreWebView;
 
-  SK_Global::GetInstance().threadPool->queueOnMainThread([this, scriptStr, func, _webview]() mutable {
+  sk->skg->threadPool->queueOnMainThread([this, scriptStr, func, _webview]() mutable {
     evaluateScript_mainThread(_webview, scriptStr, func);
   });
 }
@@ -550,13 +562,18 @@ void IWebViewImpl::SetWebViewBounds(float x, float y, float w, float h, float sc
     mWebViewCtrlr->SetBoundsAndZoomFactor(soft_backend_rect, scale);
   }
 
-  SK_Global::GetInstance().resizeAllMainWindowViews(x, y, w, h, scale);
+  sk->skg->resizeAllMainWindowViews(x, y, w, h, scale);
 }
 
 void IWebViewImpl::GetLocalDownloadPathForFile(const char* fileName, WDL_String& downloadPath)
 {
   DesktopPath(downloadPath);
   downloadPath.Append(fileName);
+}
+
+
+Superkraft* IWebViewImpl::getSK(){
+  return sk;
 }
 
 #include "IPlugWebView.cpp"

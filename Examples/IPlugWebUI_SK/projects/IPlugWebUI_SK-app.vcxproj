@@ -351,6 +351,7 @@
     <ClInclude Include="..\resources\resource.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\skxx\core\utils\sk_machine.cpp" />
     <ClCompile Include="..\..\..\Dependencies\IPlug\RTAudio\include\asio.cpp" />
     <ClCompile Include="..\..\..\Dependencies\IPlug\RTAudio\include\asiodrivers.cpp" />
     <ClCompile Include="..\..\..\Dependencies\IPlug\RTAudio\include\asiolist.cpp" />

@@ -549,10 +549,14 @@ static void ClientResize(HWND hWnd, int width, int height)
 //static
 WDL_DLGRET IPlugAPPHost::MainDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
-  
+
+  IPlugAPPHost* pAppHost = IPlugAPPHost::sInstance.get();
+  Superkraft* sk = pAppHost->GetPlug()->getSK();
+
+
   #if defined(SK_OS_windows)
     int wndEventReturnVal = -1;
-    SK_Window* mainWnd = SK_Global::GetInstance().mainWindow;
+    SK_Window* mainWnd = sk->skg->mainWindow;
     if (mainWnd)
       wndEventReturnVal = mainWnd->handleWndEvents(mainWnd, hwndDlg, uMsg, wParam, lParam);
 
@@ -564,7 +568,6 @@ WDL_DLGRET IPlugAPPHost::MainDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPA
 
 
 
-  IPlugAPPHost* pAppHost = IPlugAPPHost::sInstance.get();
 
   switch (uMsg)
   {
@@ -798,7 +801,7 @@ WDL_DLGRET IPlugAPPHost::MainDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPA
         scale = GetScaleForHWND(hwndDlg);
         #endif
         //pPlug->OnParentWindowResize(static_cast<int>(r.right / scale), static_cast<int>(r.bottom / scale));
-        SK_Global::GetInstance().resizeAllMainWindowViews(r.left, r.top, r.right, r.bottom, scale);
+        sk->skg->resizeAllMainWindowViews(r.left, r.top, r.right, r.bottom, scale);
         return 1;
       }
       default:
@@ -808,13 +811,17 @@ WDL_DLGRET IPlugAPPHost::MainDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPA
 
 
     case WM_ACTIVATE:
+      IPlugAPP* pPlug = pAppHost->GetPlug();
+
+      Superkraft* sk = pPlug->getSK();
+
       if (wParam == WA_INACTIVE)
       {
-        SK_Global::GetInstance().onWindowFocusChanged(nullptr, false);
+        sk->skg->onWindowFocusChanged(nullptr, false);
       }
       else
       {
-        SK_Global::GetInstance().onWindowFocusChanged(nullptr, true);
+        sk->skg->onWindowFocusChanged(nullptr, true);
       }
       return 0;
     }

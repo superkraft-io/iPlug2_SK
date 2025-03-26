@@ -61,16 +61,16 @@ tresult PLUGIN_API IPlugVST3::initialize(FUnknown* context)
     IPlugVST3ProcessorBase::Initialize(this);
     IPlugVST3ControllerBase::Initialize(this, IsInstrument(), DoesMIDIIn());
 
-    SK_Global* skg = &SK_Global::GetInstance();
 
-    skg->appInitializer = new SK_App_Initializer(nlohmann::json{{"applicationWillFinishLaunching", true}}, []() {
-      void* ptr = SK_Global::GetInstance().sb_ipc;
+    SK_Global* skg = this->getSK()->skg;
+
+    skg->appInitializer = new SK_App_Initializer(nlohmann::json{{"applicationWillFinishLaunching", true}}, [skg]() {
+      void* ptr = skg->sb_ipc;
       return static_cast<SK_IPC_v2*>(ptr);
     });
 
-    skg->project = new SK_Project();    
-    (static_cast<SK_Project*>(skg->project))->init(this);
-
+    skg->project = new SK_Project(skg);
+    (static_cast<SK_Project*>(skg->project))->instance = this;
 
     IPlugVST3GetHost(this, context);
     OnHostIdentified();

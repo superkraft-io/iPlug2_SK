@@ -37,6 +37,7 @@
 #include <filesystem>
 
 #include "../../skxx/core/sk_common.hpp"
+
 using namespace SK;
 
 /**
@@ -64,7 +65,7 @@ public:
   
   void CloseWindow() override
   {
-    Superkraft::sk()->wndMngr.destroyAllWindows();
+    getSK()->wndMngr->destroyAllWindows();
     CloseWebView();
   }
 
@@ -139,10 +140,13 @@ public:
     {
       SK_Communication_Config config{"sk:sb", SK_Communication_Packet_Type::sk_comm_pt_ipc, &json};
 
-      SK_Global::GetInstance().onCommunicationRequest(&config, [&](const SK_String& ipcResponseData) {
+      getSK()->skg->onCommunicationRequest(
+        &config,
+        [&](const SK_String& ipcResponseData) {
         SK_String data = "sk_api.ipc.handleIncoming(" + ipcResponseData + ")";
         EvaluateJavaScript(data.c_str());
       }, NULL);
+
 
       return;
     }
