@@ -16,6 +16,10 @@
 #include "IPlugVST3_Parameter.h"
 #include "IPlugVST3_ControllerBase.h"
 
+
+
+
+
 BEGIN_IPLUG_NAMESPACE
 
 /** Shared VST3 State management code */

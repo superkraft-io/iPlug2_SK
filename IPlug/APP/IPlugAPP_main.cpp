@@ -58,7 +58,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
   std::string args(lpszCmdParam);
 
 
-  SK_Global::appInitializer = new SK_App_Initializer(nlohmann::json{{"applicationWillFinishLaunching", true}});
+  
 
   try
   {
@@ -84,8 +84,15 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
     pAppHost->Init();
     pAppHost->TryToChangeAudio();
 
-    
-    SK_Project::init(pAppHost->sInstance->GetPlug());
+    Superkraft* sk = pAppHost->sInstance->GetPlug()->getSK();
+
+    sk->skg->appInitializer = new SK_App_Initializer(nlohmann::json{{"applicationWillFinishLaunching", true}}, [sk]() {
+      void* ptr = sk->skg->sb_ipc;
+      return static_cast<SK_IPC_v2*>(ptr);
+    });
+
+    sk->skg->project = new SK_Project(sk->skg);
+    (static_cast<SK_Project*>(sk->skg->project))->init(pAppHost->sInstance->GetPlug());
     
     HACCEL hAccel = LoadAccelerators(gHINSTANCE, MAKEINTRESOURCE(IDR_ACCELERATOR1));
 
@@ -103,10 +110,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
       __SetProcessDpiAwarenessContext(DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2);
     }
 
-    CreateDialog(gHINSTANCE, MAKEINTRESOURCE(IDD_DIALOG_MAIN), GetDesktopWindow(), IPlugAPPHost::MainDlgProc
-    );
+    CreateDialog(gHINSTANCE, MAKEINTRESOURCE(IDD_DIALOG_MAIN), GetDesktopWindow(), IPlugAPPHost::MainDlgProc);
 
-    SK_Global::onMainWindowHWNDAcquired(gHWND, false);
+    sk->skg->onMainWindowHWNDAcquired(gHWND, false);
 
   #if !defined _DEBUG || defined NO_IGRAPHICS
     HMENU menu = GetMenu(gHWND);
@@ -116,7 +122,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
 
     for(;;)
     {
-      SK_Global::threadPool_processMainThreadTasks();
+      sk->skg->threadPool_processMainThreadTasks();
 
       MSG msg= {0,};
       int vvv = GetMessage(&msg, NULL, 0, 0);
@@ -226,7 +232,7 @@ int main(int argc, char *argv[])
   if(AppIsSandboxed())
     DBGMSG("App is sandboxed, file system access etc restricted!\n");
   
-  SK_Global::appInitializer = new SK_App_Initializer(
+  skg->appInitializer = new SK_App_Initializer(
     nlohmann::json{
       {"applicationWillFinishLaunching", true}
     }
@@ -319,8 +325,8 @@ INT_PTR SWELLAppMain(int msg, INT_PTR parm1, INT_PTR parm2)
       
       NSView*  view = (__bridge NSView*)gHWND;
       NSWindow* window = view.window;
-      //SK_Global::mainWindowHandle = (__bridge void*)window;
-      SK_Global::onMainWindowHWNDAcquired((__bridge void*)window, false);
+      //skg->mainWindowHandle = (__bridge void*)window;
+      skg->onMainWindowHWNDAcquired((__bridge void*)window, false);
       
       if (menu)
       {

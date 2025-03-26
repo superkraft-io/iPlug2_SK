@@ -48,6 +48,7 @@ BEGIN_IPLUG_NAMESPACE
 class IEditorDelegate
 {
 public:
+
   IEditorDelegate(int nParams)
   {
     for (int i = 0; i < nParams; i++)
