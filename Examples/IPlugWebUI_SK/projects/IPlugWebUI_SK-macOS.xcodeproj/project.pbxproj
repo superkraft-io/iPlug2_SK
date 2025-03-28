@@ -377,9 +377,9 @@
 		44B589FE2D71CFF300928FA4 /* sk_webview_initializer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_webview_initializer.hpp; sourceTree = "<group>"; };
 		44B58A092D71CFF300928FA4 /* sk_window_macos_delegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_window_macos_delegate.h; sourceTree = "<group>"; };
 		44B58A0A2D71CFF300928FA4 /* sk_window_macos_delegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = sk_window_macos_delegate.mm; sourceTree = "<group>"; };
-		44B58A0B2D71CFF300928FA4 /* sk_window_macos.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_window_macos.hpp; sourceTree = "<group>"; };
+		44B58A0B2D71CFF300928FA4 /* sk_window_macos.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = sk_window_macos.hpp; sourceTree = "<group>"; };
 		44B58A0D2D71CFF300928FA4 /* sk_window_root.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_window_root.hpp; sourceTree = "<group>"; };
-		44B58A112D71CFF300928FA4 /* sk_window_mngr.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_window_mngr.hpp; sourceTree = "<group>"; };
+		44B58A112D71CFF300928FA4 /* sk_window_mngr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = sk_window_mngr.h; sourceTree = "<group>"; };
 		44B58A192D71CFF300928FA4 /* sk_array.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_array.hpp; sourceTree = "<group>"; };
 		44B58A1A2D71CFF300928FA4 /* sk_color.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_color.hpp; sourceTree = "<group>"; };
 		44B58A1B2D71CFF300928FA4 /* sk_datetime.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_datetime.hpp; sourceTree = "<group>"; };
@@ -1058,7 +1058,7 @@
 			children = (
 				44B58A0C2D71CFF300928FA4 /* macos */,
 				44B58A0E2D71CFF300928FA4 /* root */,
-				44B58A112D71CFF300928FA4 /* sk_window_mngr.hpp */,
+				44B58A112D71CFF300928FA4 /* sk_window_mngr.h */,
 			);
 			path = sk_window_mngr;
 			sourceTree = "<group>";

@@ -231,13 +231,7 @@ int main(int argc, char *argv[])
   
   if(AppIsSandboxed())
     DBGMSG("App is sandboxed, file system access etc restricted!\n");
-  
-  skg->appInitializer = new SK_App_Initializer(
-    nlohmann::json{
-      {"applicationWillFinishLaunching", true}
-    }
-  );
-  
+    
   return NSApplicationMain(argc,  (const char **) argv);
 }
 
@@ -247,11 +241,27 @@ INT_PTR SWELLAppMain(int msg, INT_PTR parm1, INT_PTR parm2)
   
   switch (msg)
   {
-    case SWELLAPP_ONLOAD:
+    case SWELLAPP_ONLOAD: {
       pAppHost = IPlugAPPHost::Create(args);
       pAppHost->Init();
       pAppHost->TryToChangeAudio();
+      
+      
+      
+      Superkraft* sk = pAppHost->sInstance->GetPlug()->getSK();
+      
+      sk->skg->appInitializer = new SK_App_Initializer(nlohmann::json{{"applicationWillFinishLaunching", true}}, [sk]() {
+        void* ptr = sk->skg->sb_ipc;
+        return static_cast<SK_IPC_v2*>(ptr);
+      });
+      
+      sk->skg->project = new SK_Project(sk->skg);
+      (static_cast<SK_Project*>(sk->skg->project))->init(pAppHost->sInstance->GetPlug());
+      
+      
       break;
+    }
+      
     case SWELLAPP_LOADED:
     {
       pAppHost = IPlugAPPHost::sInstance.get();
@@ -319,14 +329,16 @@ INT_PTR SWELLAppMain(int msg, INT_PTR parm1, INT_PTR parm2)
       SetMenuItemModifier(menu, ID_SHOW_FPS, MF_BYCOMMAND, 'F', FCONTROL);
 #endif
       
-      SK_Project::init(pAppHost->sInstance->GetPlug());
+      Superkraft* sk = pAppHost->sInstance->GetPlug()->getSK();
+
+      (static_cast<SK_Project*>(sk->skg->project))->init(pAppHost->sInstance->GetPlug());
       
       HWND hwnd = CreateDialog(gHINST, MAKEINTRESOURCE(IDD_DIALOG_MAIN), NULL, IPlugAPPHost::MainDlgProc);
       
       NSView*  view = (__bridge NSView*)gHWND;
       NSWindow* window = view.window;
       //skg->mainWindowHandle = (__bridge void*)window;
-      skg->onMainWindowHWNDAcquired((__bridge void*)window, false);
+      sk->skg->onMainWindowHWNDAcquired((__bridge void*)window, false);
       
       if (menu)
       {

@@ -41,7 +41,7 @@
 #include "IPlugWebView.h"
 #include "IPlugPaths.h"
 
-#include "../../../skxx/core/sk_common.hpp"
+#include "../../../../skxx/core/superkraft.hpp"
 
 namespace iplug {
 extern bool GetResourcePathFromBundle(const char* fileName, const char* searchExt, WDL_String& fullPath, const char* bundleID);
@@ -52,7 +52,7 @@ BEGIN_IPLUG_NAMESPACE
 class IWebViewImpl
 {
 public:
-  //SK::Superkraft _sk;
+  SK::Superkraft* sk = new SK::Superkraft();
     
   IWebViewImpl(IWebView* owner);
   ~IWebViewImpl();
@@ -75,6 +75,7 @@ public:
 
   void GetLocalDownloadPathForFile(const char* fileName, WDL_String& localPath);
 
+  SK::Superkraft* getSK();
 private:
   IWebView* mIWebView;
   WDL_String mWebRoot;
@@ -217,11 +218,11 @@ void* IWebViewImpl::OpenWebView(void* pParent, float x, float y, float w, float 
   
   mIWebView->OnWebViewReady();
     
-  SK::SK_Global::showSoftBackendDevTools = [&]() {
+  getSK()->skg->showSoftBackendDevTools = [&]() {
       //mIWebView->OpenDevToolsWindow(); //apparently not available on Apple
   };
 
-  SK::Superkraft::sk()->wvinit.init((__bridge void*)mWKWebView, true);
+  getSK()->wvinit.init((__bridge void*)mWKWebView, true);
     
   return (__bridge void*) wkWebView;
 }
@@ -343,7 +344,7 @@ void evaluateScript_mainThread(IPLUG_WKWEBVIEW* _Nullable mCoreWebView, SK::SK_S
 
 void IWebViewImpl::EvaluateJavaScript(const char* scriptStr, IWebView::completionHandlerFunc func)
 {
-  if (SK::SK_Thread_Pool::thisFunctionRunningInMainThread())
+  if (getSK()->skg->threadPool->thisFunctionRunningInMainThread())
   {
     evaluateScript_mainThread(mWKWebView, scriptStr, func);
     return;
@@ -351,7 +352,7 @@ void IWebViewImpl::EvaluateJavaScript(const char* scriptStr, IWebView::completio
 
   IPLUG_WKWEBVIEW* _Nullable _webview = mWKWebView;
 
-  SK::SK_Global::threadPool->queueOnMainThread([this, scriptStr, func, _webview]() mutable {
+  getSK()->skg->threadPool->queueOnMainThread([this, scriptStr, func, _webview]() mutable {
     evaluateScript_mainThread(_webview, scriptStr, func);
   });
 }
@@ -378,7 +379,7 @@ void IWebViewImpl::SetWebViewBounds(float x, float y, float w, float h, float sc
   }
 #endif
       
-  SK::SK_Global::resizeAllMainWindowViews(x, y, w, h, scale);
+  getSK()->skg->resizeAllMainWindowViews(x, y, w, h, scale);
 }
 
 void IWebViewImpl::GetLocalDownloadPathForFile(const char* fileName, WDL_String& localPath)
@@ -393,6 +394,11 @@ void IWebViewImpl::GetLocalDownloadPathForFile(const char* fileName, WDL_String&
   {
     NSLog(@"Error %@",error);
   }
+}
+
+
+SK::Superkraft* IWebViewImpl::getSK(){
+    return sk;
 }
 
 #include "IPlugWebView.cpp"

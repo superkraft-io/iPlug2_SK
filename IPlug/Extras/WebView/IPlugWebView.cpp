@@ -113,4 +113,4 @@ void IWebView::GetWebRoot(WDL_String& path) const
   mpImpl->GetWebRoot(path);
 }
 
-Superkraft* IWebView::getSK() { return mpImpl->getSK(); }
+SK::Superkraft* IWebView::getSK() { return mpImpl->getSK(); }

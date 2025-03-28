@@ -78,7 +78,25 @@ using namespace iplug;
 {
 #ifdef AU_API
   //For AUv2 this is where we know about the window being closed, close via delegate
+  #ifdef __OBJC__
+    int x = 0;
+
+    SK_Window_Mngr* wndMngr = mDelegate->getSK()->wndMngr;
+
+    if (wndMngr->list.size() > 0) {
+
+      for (std::unordered_map<std::string, SK_Window*>::iterator it = wndMngr->list.begin(); it != wndMngr->list.end(); ++it) {
+        SK_Window* wnd = it->second;
+
+        delete wnd;
+
+        it->second = nullptr;
+      }
+    }
+  #endif
+    
   mDelegate->CloseWindow();
+    
 #endif
   [super removeFromSuperview];
 }
