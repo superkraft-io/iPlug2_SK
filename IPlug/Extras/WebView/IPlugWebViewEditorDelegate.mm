@@ -78,10 +78,12 @@ using namespace iplug;
 {
 #ifdef AU_API
   //For AUv2 this is where we know about the window being closed, close via delegate
-  #ifdef __OBJC__
+  
+   #ifdef __OBJC__
     int x = 0;
 
-    SK_Window_Mngr* wndMngr = mDelegate->getSK()->wndMngr;
+    SK::Superkraft* sk = mDelegate->getSK();
+    SK_Window_Mngr* wndMngr = sk->wndMngr;
 
     if (wndMngr->list.size() > 0) {
 

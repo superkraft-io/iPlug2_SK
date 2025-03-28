@@ -229,6 +229,10 @@ void* IWebViewImpl::OpenWebView(void* pParent, float x, float y, float w, float 
 
 void IWebViewImpl::CloseWebView()
 {
+    if (getSK()->skg->mainWindow->onDestroyed){
+        getSK()->skg->mainWindow->onDestroyed();
+    }
+    
   [mWKWebView removeFromSuperview];
   
   mWebConfig = nil;
@@ -344,7 +348,9 @@ void evaluateScript_mainThread(IPLUG_WKWEBVIEW* _Nullable mCoreWebView, SK::SK_S
 
 void IWebViewImpl::EvaluateJavaScript(const char* scriptStr, IWebView::completionHandlerFunc func)
 {
-  if (getSK()->skg->threadPool->thisFunctionRunningInMainThread())
+  SK::Superkraft* sk = getSK();
+    
+  if (sk && sk->skg->threadPool->thisFunctionRunningInMainThread())
   {
     evaluateScript_mainThread(mWKWebView, scriptStr, func);
     return;
@@ -398,7 +404,21 @@ void IWebViewImpl::GetLocalDownloadPathForFile(const char* fileName, WDL_String&
 
 
 SK::Superkraft* IWebViewImpl::getSK(){
-    return sk;
+    SK::Superkraft* _sk = nullptr;
+    
+    if (sk == NULL){
+        int x = 0;
+    }
+    
+    if (sk == nullptr){
+        int x = 0;
+    }
+    
+    if (sk != nullptr){
+        _sk = sk;
+    }
+    
+    return _sk;
 }
 
 #include "IPlugWebView.cpp"

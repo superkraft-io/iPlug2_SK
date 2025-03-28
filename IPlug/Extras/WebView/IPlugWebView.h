@@ -46,6 +46,7 @@ class IWebView
 {
 public:
   SK::Superkraft* getSK();
+  SK::SK_Window* sb_wnd;
 
   using completionHandlerFunc = std::function<void(const char* result)>;
 
