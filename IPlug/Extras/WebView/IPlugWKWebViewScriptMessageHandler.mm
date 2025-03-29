@@ -70,12 +70,13 @@ using namespace SK;
     nlohmann::json json = nlohmann::json::parse([jsonString UTF8String], nullptr, false);
 
     /**** SK START ****/
-
+ 
     bool isSK_IPC_call = json.contains("isSK_IPC_call");
     if (isSK_IPC_call) {
       SK_Communication_Config config{"sk:sb", SK_Communication_Packet_Type::sk_comm_pt_ipc, &json};
 
-      SK_Global::onCommunicationRequest(&config, [&](const SK_String& ipcResponseData) {
+      SK_Communication_onRequest ocr = self->mIWebView->getSK()->skg->onCommunicationRequest;
+      ocr(&config, [&](const SK_String& ipcResponseData) {
         SK_String data = "sk_api.ipc.handleIncoming(" + ipcResponseData + ")";
         mIWebView->EvaluateJavaScript(data.c_str());
       }, NULL);
@@ -106,9 +107,10 @@ using namespace SK;
 - (void) webView:(WKWebView *)webView startURLSchemeTask:(id<WKURLSchemeTask>)urlSchemeTask  API_AVAILABLE(macos(10.13)){
 
     SK_Communication_Config config{"sk.sb", SK_Communication_Packet_Type::sk_comm_pt_web, (__bridge void *)urlSchemeTask.request};
-    SK_Global::onCommunicationRequest(&config, NULL, [&](SK_Communication_Packet* packet) {
+    SK_Communication_onRequest ocr = self->mIWebView->getSK()->skg->onCommunicationRequest;
+    ocr(&config, NULL, [&](SK_Communication_Packet* packet) {
         if (packet == nullptr){
-            return SK_Communication_Packet::packetFromWebRequest(urlSchemeTask.request, config.sender);
+            return self->mIWebView->getSK()->comm->packetFromWebRequest(urlSchemeTask.request, config.sender);
         }
         
         

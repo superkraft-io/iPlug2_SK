@@ -31,6 +31,8 @@
 
 #import <WebKit/WebKit.h>
 
+#include "../../../../skxx/core/sk_common.hpp"
+
 namespace iplug {
 class IWebView;
 }

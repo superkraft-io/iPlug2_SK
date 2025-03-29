@@ -57,17 +57,22 @@ static const AudioUnitPropertyID kIPlugObjectPropertyID = UINT32_MAX-100;
   {
     mPlug = (IPlugAPIBase*) pointers[0];
     
+    Superkraft* sk = mPlug->getSK();
+    
     if (mPlug)
     {
       if (mPlug->HasUI())
       {
-        SK_Global::appInitializer = new SK_App_Initializer(
-          nlohmann::json{
-            {"applicationWillFinishLaunching", true}
-          }
-        );
         
-        SK_Project::init(self->mPlug);
+        
+        sk->skg->appInitializer = new SK_App_Initializer(nlohmann::json{{"applicationWillFinishLaunching", true}}, [sk]() {
+          void* ptr = sk->skg->sb_ipc;
+          return static_cast<SK_IPC_v2*>(ptr);
+        });
+        
+        sk->skg->project = new SK_Project(sk->skg);
+        (static_cast<SK_Project*>(sk->skg->project))->init(mPlug);
+        
         
 #if __has_feature(objc_arc)
         NSView* pView = (__bridge NSView*) mPlug->OpenWindow(nullptr);
@@ -77,7 +82,7 @@ static const AudioUnitPropertyID kIPlugObjectPropertyID = UINT32_MAX-100;
         if (pView) {
           dispatch_async(dispatch_get_main_queue(), ^{
             if (pView.window) {
-              SK_Global::onMainWindowHWNDAcquired((__bridge void*)pView, true);
+              sk->skg->onMainWindowHWNDAcquired((__bridge void*)pView, true);
             }
           });
         }
