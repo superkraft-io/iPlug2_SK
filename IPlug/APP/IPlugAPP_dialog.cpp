@@ -551,18 +551,25 @@ WDL_DLGRET IPlugAPPHost::MainDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPA
 {
 
   IPlugAPPHost* pAppHost = IPlugAPPHost::sInstance.get();
-  Superkraft* sk = pAppHost->GetPlug()->getSK();
+
+  Superkraft* sk;
+  SK_Window* mainWnd;
+
+  if (pAppHost)
+  {
+     sk = pAppHost->GetPlug()->getSK();
 
 
-  #if defined(SK_OS_windows)
-    int wndEventReturnVal = -1;
-    SK_Window* mainWnd = sk->skg->mainWindow;
-    if (mainWnd)
-      wndEventReturnVal = mainWnd->handleWndEvents(mainWnd, hwndDlg, uMsg, wParam, lParam);
+    #if defined(SK_OS_windows)
+      int wndEventReturnVal = -1;
+      mainWnd = sk->skg->mainWindow;
+      if (mainWnd)
+        wndEventReturnVal = mainWnd->handleWndEvents(mainWnd, hwndDlg, uMsg, wParam, lParam);
 
-    if (wndEventReturnVal > -1)
-      return wndEventReturnVal;
-  #endif
+      if (wndEventReturnVal > -1)
+        return wndEventReturnVal;
+    #endif
+  }
 
 
 
@@ -599,6 +606,7 @@ WDL_DLGRET IPlugAPPHost::MainDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPA
 
       return 0;
     case WM_CLOSE:
+      sk->wndMngr->destroyAllWindows();
       DestroyWindow(hwndDlg);
       return 0;
     case WM_COMMAND:
