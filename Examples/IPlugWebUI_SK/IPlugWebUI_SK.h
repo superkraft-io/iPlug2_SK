@@ -4,8 +4,6 @@
 #include "Oscillator.h"
 #include "Smoothers.h"
 
-#include "../../../skxx/core/superkraft.hpp"
-
 using namespace iplug;
 
 const int kNumPresets = 3;
@@ -13,6 +11,13 @@ const int kNumPresets = 3;
 enum EParams
 {
   kGain = 0,
+  kBoolean,
+  kInteger,
+  kDouble,
+  kList,
+  kFrequency,
+  kPercent,
+  kMilliseconds,
   kNumParams
 };
 

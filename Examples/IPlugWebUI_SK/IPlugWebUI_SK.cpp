@@ -11,7 +11,21 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
 : Plugin(info, MakeConfig(kNumParams, kNumPresets))
 {
   GetParam(kGain)->InitGain("Gain", -70., -70, 0.);
+  GetParam(kBoolean)->InitBool("Boolean", false);
+  GetParam(kInteger)->InitInt("Integer", 5, 1, 16);
+  GetParam(kDouble)->InitDouble("Double", 50.0, 0.0, 100.0, 0.1);
+    
+  GetParam(kList)->InitEnum("List", 0, 3);
+    GetParam(kList)->SetDisplayText(0, "Option 1");
+    GetParam(kList)->SetDisplayText(1, "Option 2");
+    GetParam(kList)->SetDisplayText(2, "Option 3");
+
+  GetParam(kFrequency)->InitFrequency("Frequency", 0.0, 20.0, 22000.0);
+
+  GetParam(kPercent)->InitPercentage("Percent", 50.0);
   
+  GetParam(kMilliseconds)->InitMilliseconds("Milliseconds Time", 500.0, 1.0, 2000.0);
+    
 #ifdef DEBUG
   SetEnableDevTools(true);
 #endif
