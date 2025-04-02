@@ -414,7 +414,6 @@
 		44B58AE42D71CFF300928FA4 /* debugbreak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debugbreak.h; sourceTree = "<group>"; };
 		44B58B6F2D71CFF300928FA4 /* sk_ms_nodejs_fs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_nodejs_fs.hpp; sourceTree = "<group>"; };
 		44B58B702D71CFF300928FA4 /* sk_ms_nodejs_os.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_nodejs_os.hpp; sourceTree = "<group>"; };
-		44B58B722D71CFF300928FA4 /* sk_ms_cNA_handleParamMouseEvent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_cNA_handleParamMouseEvent.hpp; sourceTree = "<group>"; };
 		44B58B742D71CFF300928FA4 /* sk_ms_nativeActions.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_nativeActions.hpp; sourceTree = "<group>"; };
 		44B58B752D71CFF300928FA4 /* sk_nativeAction_root.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_nativeAction_root.hpp; sourceTree = "<group>"; };
 		44B58B772D71CFF300928FA4 /* sk_ms_protonjs_native_image.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_protonjs_native_image.hpp; sourceTree = "<group>"; };
@@ -1157,7 +1156,6 @@
 		44B58B732D71CFF300928FA4 /* core */ = {
 			isa = PBXGroup;
 			children = (
-				44B58B722D71CFF300928FA4 /* sk_ms_cNA_handleParamMouseEvent.hpp */,
 			);
 			path = core;
 			sourceTree = "<group>";
