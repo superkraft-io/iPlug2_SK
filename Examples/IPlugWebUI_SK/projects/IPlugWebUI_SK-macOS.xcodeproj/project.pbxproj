@@ -452,6 +452,7 @@
 		44B58BA92D71CFF300928FA4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		44B58BAB2D71CFF300928FA4 /* sk_project_includes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sk_project_includes.hpp; path = ../../../../sk_project_includes.hpp; sourceTree = "<group>"; };
 		44B58BAC2D71CFF300928FA4 /* sk_project_binarydata.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sk_project_binarydata.hpp; path = ../../../../sk_project_binarydata.hpp; sourceTree = "<group>"; };
+		44BBCEB62DBD9C2700AE782D /* sk_ms_cNA_handlePluginParamMouseEvent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_cNA_handlePluginParamMouseEvent.hpp; sourceTree = "<group>"; };
 		44FABF7C2D8428F2009B8A25 /* sk_app_initializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_app_initializer.h; sourceTree = "<group>"; };
 		4F05C5A82082424400DD1621 /* IPlugWAM.h */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = IPlugWAM.h; path = ../../../IPlug/WEB/IPlugWAM.h; sourceTree = "<group>"; tabWidth = 2; };
 		4F05C5A92082424400DD1621 /* IPlugWAM.cpp */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugWAM.cpp; path = ../../../IPlug/WEB/IPlugWAM.cpp; sourceTree = "<group>"; tabWidth = 2; };
@@ -1156,6 +1157,7 @@
 		44B58B732D71CFF300928FA4 /* core */ = {
 			isa = PBXGroup;
 			children = (
+				44BBCEB62DBD9C2700AE782D /* sk_ms_cNA_handlePluginParamMouseEvent.hpp */,
 			);
 			path = core;
 			sourceTree = "<group>";

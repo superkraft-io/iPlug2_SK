@@ -12,7 +12,7 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
 {
   GetParam(kGain)->InitGain("Gain", -70., -70, 0.);
   GetParam(kBoolean)->InitBool("Boolean", false);
-  GetParam(kInteger)->InitInt("Integer", 5, 1, 16);
+  GetParam(kInteger)->InitInt("Integer", 5, 1, 9);
   GetParam(kDouble)->InitDouble("Double", 50.0, 0.0, 100.0, 0.1);
     
   GetParam(kList)->InitEnum("List", 0, 3);
