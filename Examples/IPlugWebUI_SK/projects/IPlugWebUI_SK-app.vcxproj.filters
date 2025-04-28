@@ -461,7 +461,6 @@
     <None Include="..\config\IPlugWebUI_SK-win.props">
       <Filter>config</Filter>
     </None>
-    <None Include="packages.config" />
     <None Include="..\..\..\..\skxx\core\sk_communication\README.md">
       <Filter>project\skxx\core\sk_communication</Filter>
     </None>
@@ -536,8 +535,5 @@
     <Image Include="..\resources\IPlugWebUI_SK.ico">
       <Filter>resources</Filter>
     </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
   </ItemGroup>
 </Project>

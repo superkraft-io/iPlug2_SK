@@ -397,9 +397,6 @@
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\sk_nativeAction_root.hpp">
       <Filter>project\skxx\module_system\cpp\modules\sk\nativeActions</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\core\sk_ms_cNA_handleParamMouseEvent.hpp">
-      <Filter>project\skxx\module_system\cpp\modules\sk\nativeActions\core</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs.hpp">
       <Filter>project\skxx\module_system\cpp\modules\sk\protonjs</Filter>
     </ClInclude>
@@ -549,9 +546,6 @@
     <Filter Include="project\skxx\module_system\cpp\modules\sk\nativeActions">
       <UniqueIdentifier>{5fe4890f-97f6-4448-8e77-cfbee1a2f04b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\module_system\cpp\modules\sk\nativeActions\core">
-      <UniqueIdentifier>{e0c05528-f3a5-4dcb-ad44-afc722299696}</UniqueIdentifier>
-    </Filter>
     <Filter Include="project\skxx\module_system\cpp\modules\sk\protonjs">
       <UniqueIdentifier>{29fe624b-a826-49f6-beb9-6e43ebc66d3f}</UniqueIdentifier>
     </Filter>
@@ -589,7 +583,6 @@
     <None Include="..\config\IPlugWebUI_SK-mac.xcconfig">
       <Filter>config</Filter>
     </None>
-    <None Include="packages.config" />
     <None Include="..\..\..\..\skxx\web\README.md">
       <Filter>project\skxx\web</Filter>
     </None>
@@ -659,6 +652,7 @@
     <None Include="..\..\..\..\skxx\module_system\web\sk\web.js">
       <Filter>project\skxx\module_system\web\sk</Filter>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />

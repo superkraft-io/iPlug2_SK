@@ -90,6 +90,12 @@ bool IPlugWebUI_SK::OnMessage(int msgTag, int ctrlTag, int dataSize, const void*
 void IPlugWebUI_SK::OnParamChange(int paramIdx)
 {
   DBGMSG("gain %f\n", GetParam(paramIdx)->Value());
+
+
+
+  SK_Project* proj = static_cast<SK_Project*>(getSK()->skg->project);
+  proj->updateParamValue(paramIdx, GetParam(paramIdx)->Value());
+
 }
 
 void IPlugWebUI_SK::ProcessMidiMsg(const IMidiMsg& msg)

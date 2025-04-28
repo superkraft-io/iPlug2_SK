@@ -4,6 +4,8 @@
 #include "Oscillator.h"
 #include "Smoothers.h"
 
+#include "../../sk_project.hpp"
+
 using namespace iplug;
 
 const int kNumPresets = 3;
