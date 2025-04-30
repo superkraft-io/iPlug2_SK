@@ -46,6 +46,8 @@ public:
   void OnFailedToDownloadFile(const char* path) override;
   void OnDownloadedFile(const char* path) override;
   void OnGetLocalDownloadPathForFile(const char* fileName, WDL_String& localPath) override;
+  void OnIdle() override;
+
 private:
   float mLastPeak = 0.;
   FastSinOscillator<sample> mOscillator {0., 440.};

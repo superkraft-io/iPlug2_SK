@@ -15,10 +15,7 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
   GetParam(kInteger)->InitInt("Integer", 5, 1, 9);
   GetParam(kDouble)->InitDouble("Double", 50.0, 0.0, 100.0, 0.1);
     
-  GetParam(kList)->InitEnum("List", 0, 3);
-    GetParam(kList)->SetDisplayText(0, "Option 1");
-    GetParam(kList)->SetDisplayText(1, "Option 2");
-    GetParam(kList)->SetDisplayText(2, "Option 3");
+  GetParam(kList)->InitEnum("List", 0, 3, "", IParam::kFlagsNone, "", "Option 1", "Option 2", "Option 3");
 
   GetParam(kFrequency)->InitFrequency("Frequency", 0.0, 20.0, 22000.0);
 
@@ -90,12 +87,6 @@ bool IPlugWebUI_SK::OnMessage(int msgTag, int ctrlTag, int dataSize, const void*
 void IPlugWebUI_SK::OnParamChange(int paramIdx)
 {
   DBGMSG("gain %f\n", GetParam(paramIdx)->Value());
-
-
-
-  SK_Project* proj = static_cast<SK_Project*>(getSK()->skg->project);
-  proj->updateParamValue(paramIdx, GetParam(paramIdx)->Value());
-
 }
 
 void IPlugWebUI_SK::ProcessMidiMsg(const IMidiMsg& msg)
@@ -136,4 +127,15 @@ void IPlugWebUI_SK::OnGetLocalDownloadPathForFile(const char* fileName, WDL_Stri
 {
   DesktopPath(localPath);
   localPath.AppendFormatted(MAX_WIN32_PATH_LEN, "/%s", fileName);
+}
+
+void IPlugWebUI_SK::OnIdle()
+{
+  SK_Global* skg = getSK()->skg;
+  SK_Project* proj = static_cast<SK_Project*>(skg->project);
+
+  proj->updateParamValues();
+
+  bool isRunningInMainThread = skg->threadPool->thisFunctionRunningInMainThread();
+  if (isRunningInMainThread) skg->threadPool_processMainThreadTasks();
 }

@@ -35,6 +35,9 @@ uint64_t GetAPIBusTypeForChannelIOConfig(int configIdx, ERoute dir, int busIdx, 
 class IPlugVST3ProcessorBase : public IPlugProcessor
 {
 public:
+  bool param4_firstChange = false;
+  float param4_value = 0.0f;
+
   IPlugVST3ProcessorBase(Config c, IPlugAPIBase& plug);
   
   template <class T>
