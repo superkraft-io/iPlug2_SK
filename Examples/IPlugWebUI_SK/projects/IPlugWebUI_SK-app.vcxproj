@@ -311,6 +311,7 @@
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\vfs\sk_ms_vfs_file.hpp" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\sk_module_base_class.hpp" />
     <ClInclude Include="..\..\..\..\skxx\module_system\sk_module_system.hpp" />
+    <ClInclude Include="..\..\..\..\sk_plugin_contextMenu.hpp" />
     <ClInclude Include="..\..\..\..\sk_project.hpp" />
     <ClInclude Include="..\..\..\..\sk_project_binarydata.hpp" />
     <ClInclude Include="..\..\..\..\sk_project_includes.hpp" />
@@ -351,7 +352,6 @@
     <ClInclude Include="..\resources\resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\skxx\core\utils\sk_machine.cpp" />
     <ClCompile Include="..\..\..\Dependencies\IPlug\RTAudio\include\asio.cpp" />
     <ClCompile Include="..\..\..\Dependencies\IPlug\RTAudio\include\asiodrivers.cpp" />
     <ClCompile Include="..\..\..\Dependencies\IPlug\RTAudio\include\asiolist.cpp" />
