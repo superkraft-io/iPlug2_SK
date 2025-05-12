@@ -61,46 +61,27 @@ using namespace iplug;
 
 - (id) initWithEditorDelegate: (WebViewEditorDelegate*) pDelegate;
 {
-  mDelegate = pDelegate;
-  CGFloat w = pDelegate->GetEditorWidth();
-  CGFloat h = pDelegate->GetEditorHeight();
-  CGRect r = CGRectMake(0, 0, w, h);
-  self = [super initWithFrame:r];
-  
-  void* pWebView = pDelegate->OpenWebView(self, 0, 0, w, h, 1.0f);
-
-  [self addSubview: (PLATFORM_VIEW*) pWebView];
-
-  return self;
+    mDelegate = pDelegate;
+    CGFloat w = pDelegate->GetEditorWidth();
+    CGFloat h = pDelegate->GetEditorHeight();
+    CGRect r = CGRectMake(0, 0, w, h);
+    self = [super initWithFrame:r];
+    
+    void* pWebView = pDelegate->OpenWebView(self, 0, 0, w, h, 1.0f);
+    
+    [self addSubview: (PLATFORM_VIEW*) pWebView];
+    
+    return self;
 }
 
 - (void) removeFromSuperview
 {
 #ifdef AU_API
-  //For AUv2 this is where we know about the window being closed, close via delegate
-  
-   #ifdef __OBJC__
-    int x = 0;
-
-    SK::Superkraft* sk = mDelegate->getSK();
-    SK_Window_Mngr* wndMngr = sk->wndMngr;
-
-    if (wndMngr->list.size() > 0) {
-
-      for (std::unordered_map<std::string, SK_Window*>::iterator it = wndMngr->list.begin(); it != wndMngr->list.end(); ++it) {
-        SK_Window* wnd = it->second;
-
-        delete wnd;
-
-        it->second = nullptr;
-      }
-    }
-  #endif
-    
-  mDelegate->CloseWindow();
-    
+    //For AUv2 this is where we know about the window being closed, close via delegate
+    mDelegate->CloseWindow();
 #endif
-  [super removeFromSuperview];
+    
+    [super removeFromSuperview];
 }
 
 @end

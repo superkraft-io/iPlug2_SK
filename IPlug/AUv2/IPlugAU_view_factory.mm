@@ -55,7 +55,6 @@ using namespace iplug;
   {
     mPlug = (IPlugAPIBase*) pointers[0];
     
-    Superkraft* sk = mPlug->getSK();
     
     if (mPlug)
     {
@@ -63,27 +62,21 @@ using namespace iplug;
       {
         
         
-        sk->skg->appInitializer = new SK_App_Initializer(nlohmann::json{{"applicationWillFinishLaunching", true}}, [sk]() {
-          void* ptr = sk->skg->sb_ipc;
-          return static_cast<SK_IPC_v2*>(ptr);
-        });
-        
-        sk->skg->project = new SK_Project(sk->skg);
-        (static_cast<SK_Project*>(sk->skg->project))->init(mPlug);
+        #if __has_feature(objc_arc)
+          NSView* pView = (__bridge NSView*) mPlug->OpenWindow(nullptr);
+        #else
+          NSView* pView = (NSView*) mPlug->OpenWindow(nullptr);
+        #endif
         
         
-#if __has_feature(objc_arc)
-        NSView* pView = (__bridge NSView*) mPlug->OpenWindow(nullptr);
-#else
-        NSView* pView = (NSView*) mPlug->OpenWindow(nullptr);
-#endif
-        if (pView) {
+        /*if (pView) {
           dispatch_async(dispatch_get_main_queue(), ^{
             if (pView.window) {
-              sk->skg->onMainWindowHWNDAcquired((__bridge void*)pView, true);
+              Superkraft* sk = mPlug->getSK();
+              sk->skg->initSK();
             }
           });
-        }
+        }*/
         
         return pView;
       }

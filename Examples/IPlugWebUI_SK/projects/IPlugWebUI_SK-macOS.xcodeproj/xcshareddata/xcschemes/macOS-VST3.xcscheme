@@ -29,8 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -46,6 +44,7 @@
       allowLocationSimulation = "YES">
       <PathRunnable
          runnableDebuggingMode = "0"
+         BundleIdentifier = "com.cockos.reaper"
          FilePath = "/Applications/REAPER.app">
       </PathRunnable>
       <MacroExpansion>
@@ -64,6 +63,26 @@
          </CommandLineArgument>
       </CommandLineArguments>
       <AdditionalOptions>
+         <AdditionalOption
+            key = "DYLD_INSERT_LIBRARIES"
+            value = "/usr/lib/libgmalloc.dylib"
+            isEnabled = "YES">
+         </AdditionalOption>
+         <AdditionalOption
+            key = "NSZombieEnabled"
+            value = "YES"
+            isEnabled = "YES">
+         </AdditionalOption>
+         <AdditionalOption
+            key = "MallocGuardEdges"
+            value = ""
+            isEnabled = "YES">
+         </AdditionalOption>
+         <AdditionalOption
+            key = "MallocScribble"
+            value = ""
+            isEnabled = "YES">
+         </AdditionalOption>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
@@ -74,6 +93,7 @@
       debugDocumentVersioning = "YES">
       <PathRunnable
          runnableDebuggingMode = "0"
+         BundleIdentifier = "com.cockos.reaper"
          FilePath = "/Applications/REAPER.app">
       </PathRunnable>
    </ProfileAction>

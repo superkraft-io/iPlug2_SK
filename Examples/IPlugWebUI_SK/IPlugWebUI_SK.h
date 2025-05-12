@@ -34,6 +34,7 @@ enum EMsgTags
 class IPlugWebUI_SK final : public Plugin
 {
 public:
+    
   IPlugWebUI_SK(const InstanceInfo& info);
   
   void ProcessBlock(sample** inputs, sample** outputs, int nFrames) override;
@@ -48,6 +49,7 @@ public:
   void OnGetLocalDownloadPathForFile(const char* fileName, WDL_String& localPath) override;
   void OnIdle() override;
 
+  void initSK();
 private:
   float mLastPeak = 0.;
   FastSinOscillator<sample> mOscillator {0., 440.};

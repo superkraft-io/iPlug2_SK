@@ -10,6 +10,16 @@ using namespace SK;
 IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
 : Plugin(info, MakeConfig(kNumParams, kNumPresets))
 {
+
+  //Superkraft* sk = getSK();
+  //sk->skg->initSK = [&](){
+  //    initSK();
+  //};
+    
+  //sk->skg->destroySK = [&](){
+  //  destroySK();
+  //};
+    
   GetParam(kGain)->InitGain("Gain", -70., -70, 0.);
   GetParam(kBoolean)->InitBool("Boolean", false);
   GetParam(kInteger)->InitInt("Integer", 5, 1, 9);
@@ -30,7 +40,7 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info)
   mEditorInitFunc = [&]()
   {
     //LoadIndexHtml(__FILE__, GetBundleID());
-    LoadFile(SK_String(SK_Base_URL + "/sk:sb/sk_sb.html").c_str());
+    
     EnableScroll(false);
   };
   
@@ -131,11 +141,89 @@ void IPlugWebUI_SK::OnGetLocalDownloadPathForFile(const char* fileName, WDL_Stri
 
 void IPlugWebUI_SK::OnIdle()
 {
-  SK_Global* skg = getSK()->skg;
+    
+  if (!getAcceptsTick()) {
+    return;
+  }
+    
+  Superkraft* sk = getSK();
+  if (!sk) {
+    return;
+  }
+
+  SK_Global* skg = sk->skg;
+  if (!skg) {
+    return;
+  }
+    
   SK_Project* proj = static_cast<SK_Project*>(skg->project);
 
-  proj->updateParamValues();
+    
+  if (!proj){
+    initSK();
+    return;
+  }
+    
+    
+  if (!sk->isReady) {
+    return;
+  }
+    
+  #if defined(SK_OS_windows)
+    proj->updateParamValues();
 
-  bool isRunningInMainThread = skg->threadPool->thisFunctionRunningInMainThread();
-  if (isRunningInMainThread) skg->threadPool_processMainThreadTasks();
+    bool isRunningInMainThread = skg->threadPool->thisFunctionRunningInMainThread();
+    if (isRunningInMainThread) skg->threadPool_processMainThreadTasks();
+  #elif defined(SK_OS_apple)
+    if (skg->OBJCPPSafeTicker) skg->OBJCPPSafeTicker();
+  #endif
 }
+
+void IPlugWebUI_SK::initSK(){
+  
+    
+    
+    Superkraft* sk = getSK();
+    SK_Global* skg = sk->skg;
+    
+    skg->OBJCPPSafeTicker = [&, sk, skg](){
+        bool isRunningInMainThread = skg->threadPool->thisFunctionRunningInMainThread();
+        if (isRunningInMainThread) skg->threadPool_processMainThreadTasks();
+        
+        SK_Project* proj = static_cast<SK_Project*>(skg->project);
+        if (!sk || !proj) return;
+        
+        proj->updateParamValues();
+    };
+    
+    
+    
+    skg->appInitializer = new SK_App_Initializer(nlohmann::json{{"applicationWillFinishLaunching", true}}, [skg]() {
+      void* ptr = skg->sb_ipc;
+      return static_cast<SK_IPC_v2*>(ptr);
+    });
+    
+    
+    skg->project = new SK_Project(skg);
+    SK_Project* project = static_cast<SK_Project*>(skg->project);
+    project->init(this);
+
+    
+
+    #if defined(SK_APP_TYPE_au)
+        void* pView = mView;
+    #elif defined(SK_APP_TYPE_vst)
+        #if defined(SK_OS_apple)
+            void* pView = getMView();
+        #elif
+            void* pView = (void*)GetView();
+        #endif
+    #endif
+
+    skg->onMainWindowHWNDAcquired(pView, true);
+
+    LoadFile(SK_String(SK_Base_URL + "/sk:sb/sk_sb.html").c_str());
+
+
+    sk->isReady = true;
+};

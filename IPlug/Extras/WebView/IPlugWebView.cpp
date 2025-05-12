@@ -113,4 +113,8 @@ void IWebView::GetWebRoot(WDL_String& path) const
   mpImpl->GetWebRoot(path);
 }
 
+void IWebView::setAcceptsTick(bool value) { mpImpl->setAcceptsTick(value); }
+bool IWebView::getAcceptsTick() { return mpImpl->getAcceptsTick(); }
+void IWebView::createSK() { mpImpl->createSK(); }
+void IWebView::destroySK() { mpImpl->destroySK(); }
 SK::Superkraft* IWebView::getSK() { return mpImpl->getSK(); }

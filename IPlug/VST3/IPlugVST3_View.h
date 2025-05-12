@@ -110,21 +110,20 @@ public:
   {
     if (mOwner.HasUI())
     {
+      
+      
       void* pView = nullptr;
 #ifdef OS_WIN
       if (strcmp(type, Steinberg::kPlatformTypeHWND) == 0)
         pView = mOwner.OpenWindow(pParent);
-
-        Superkraft* sk = mOwner.getSK();      
-        SK_Global* skg = sk->skg;
-        (static_cast<SK_Project*>(skg->project))->init();
-        skg->onMainWindowHWNDAcquired(pView, false);
 #elif defined OS_MAC
       if (strcmp(type, Steinberg::kPlatformTypeNSView) == 0)
         pView = mOwner.OpenWindow(pParent);
       else // Carbon
         return Steinberg::kResultFalse;
 #endif 
+      
+      
       return Steinberg::kResultTrue;
     }
     

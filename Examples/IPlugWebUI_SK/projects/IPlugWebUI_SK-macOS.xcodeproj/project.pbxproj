@@ -30,6 +30,8 @@
 		44B58BB22D71CFF300928FA4 /* sk_webview_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44B589F82D71CFF300928FA4 /* sk_webview_macos.mm */; };
 		44B58BB62D71CFF300928FA4 /* sk_window_macos_delegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44B58A0A2D71CFF300928FA4 /* sk_window_macos_delegate.mm */; };
 		44B58BBA2D71CFF300928FA4 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B58A312D71CFF300928FA4 /* libcurl.a */; };
+		44B67D602DCA3D6F00CD35F3 /* sk_webview_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44B589F82D71CFF300928FA4 /* sk_webview_macos.mm */; };
+		44B67D612DCA3D7200CD35F3 /* sk_window_macos_delegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44B58A0A2D71CFF300928FA4 /* sk_window_macos_delegate.mm */; };
 		44FABF812D843457009B8A25 /* sk_webview_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44B589F82D71CFF300928FA4 /* sk_webview_macos.mm */; };
 		44FABF822D8434C3009B8A25 /* sk_window_macos_delegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44B58A0A2D71CFF300928FA4 /* sk_window_macos_delegate.mm */; };
 		44FABF832D8434C7009B8A25 /* sk_webview_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44B589F82D71CFF300928FA4 /* sk_webview_macos.mm */; };
@@ -352,11 +354,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		440C06D62DC4F8D40062FF5C /* sk_dawPluginMngr.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = sk_dawPluginMngr.js; sourceTree = "<group>"; };
 		44111D922D75DA4A00A2BBC8 /* sk_string.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sk_string.h; sourceTree = "<group>"; };
 		4423B2B92D7AFBB500B3415B /* sk_ms_protonjs_app.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_protonjs_app.hpp; sourceTree = "<group>"; };
 		4423B2BA2D7AFC4400B3415B /* sk_ms_protonjs_window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_protonjs_window.hpp; sourceTree = "<group>"; };
 		443D64272D762D570057BF05 /* sk_debug_mode.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sk_debug_mode.js; sourceTree = "<group>"; };
 		443D64292D7630B90057BF05 /* sk_logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_logger.h; sourceTree = "<group>"; };
+		447ED5EC2DC3FE8F00CE1981 /* sk_plugin_contextMenu.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sk_plugin_contextMenu.hpp; path = ../../../../sk_plugin_contextMenu.hpp; sourceTree = "<group>"; };
 		44B589D42D71CFA300928FA4 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../../../skxx/libs/general/curl/libcurl.a; sourceTree = "<group>"; };
 		44B589D62D71CFF300928FA4 /* sk_project.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sk_project.hpp; path = ../../../../sk_project.hpp; sourceTree = "<group>"; };
 		44B589D72D71CFF300928FA4 /* test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = test.hpp; sourceTree = "<group>"; };
@@ -485,7 +489,7 @@
 		4F2EA977203A50E9008E4850 /* IPlugAPP_dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugAPP_dialog.cpp; path = ../../../IPlug/APP/IPlugAPP_dialog.cpp; sourceTree = "<group>"; tabWidth = 2; };
 		4F35DEAB207E5C5A00867D8F /* IPlugPluginBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugPluginBase.cpp; path = ../../../IPlug/IPlugPluginBase.cpp; sourceTree = "<group>"; tabWidth = 2; };
 		4F35DEAC207E5C5A00867D8F /* IPlugPluginBase.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = IPlugPluginBase.h; path = ../../../IPlug/IPlugPluginBase.h; sourceTree = "<group>"; tabWidth = 2; };
-		4F3862ED2014BBEC0009F402 /* IPlugWebUI_SK.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugWebUI_SK.cpp; path = ../IPlugWebUI_SK.cpp; sourceTree = "<group>"; };
+		4F3862ED2014BBEC0009F402 /* IPlugWebUI_SK.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = IPlugWebUI_SK.cpp; path = ../IPlugWebUI_SK.cpp; sourceTree = "<group>"; };
 		4F3862EE2014BBEC0009F402 /* IPlugWebUI_SK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugWebUI_SK.h; path = ../IPlugWebUI_SK.h; sourceTree = "<group>"; };
 		4F3862FF2014BCC70009F402 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = scripts; path = ../scripts; sourceTree = "<group>"; };
 		4F3907602013EBA300DDA490 /* IPlugWebUI_SK.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = IPlugWebUI_SK.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -852,6 +856,7 @@
 				44B58BAC2D71CFF300928FA4 /* sk_project_binarydata.hpp */,
 				44B58BAB2D71CFF300928FA4 /* sk_project_includes.hpp */,
 				44B589D62D71CFF300928FA4 /* sk_project.hpp */,
+				447ED5EC2DC3FE8F00CE1981 /* sk_plugin_contextMenu.hpp */,
 				44B589DA2D71CFF300928FA4 /* sk_app_nativeActions */,
 				44B58BAA2D71CFF300928FA4 /* skxx */,
 				52FBBED30D0CF143001C8B8A /* config.h */,
@@ -1286,6 +1291,7 @@
 			children = (
 				443D64272D762D570057BF05 /* sk_debug_mode.js */,
 				44B58B9F2D71CFF300928FA4 /* sk_global_js_core.js */,
+				440C06D62DC4F8D40062FF5C /* sk_dawPluginMngr.js */,
 				44B58BA02D71CFF300928FA4 /* sk_ipc.js */,
 			);
 			path = global_js_core;
@@ -2650,6 +2656,8 @@
 				4F1A527E205D911A00CF2908 /* IPlugVST3.cpp in Sources */,
 				4F815988205D50EB00393585 /* coreiids.cpp in Sources */,
 				4F815993205D51F000393585 /* vstnoteexpressiontypes.cpp in Sources */,
+				44B67D602DCA3D6F00CD35F3 /* sk_webview_macos.mm in Sources */,
+				44B67D612DCA3D7200CD35F3 /* sk_window_macos_delegate.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

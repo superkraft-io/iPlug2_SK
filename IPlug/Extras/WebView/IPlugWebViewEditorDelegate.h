@@ -65,7 +65,6 @@ public:
   
   void CloseWindow() override
   {
-    getSK()->wndMngr->destroyAllWindows();
     CloseWebView();
   }
 
@@ -265,6 +264,9 @@ public:
 #endif
   }
 
+    void* getMView(){
+        return mView;
+    }
 protected:
   int mMaxJSStringLength = kDefaultMaxJSStringLength;
   std::function<void()> mEditorInitFunc = nullptr;

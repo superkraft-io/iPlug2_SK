@@ -45,6 +45,10 @@ class IWebViewImpl;
 class IWebView
 {
 public:
+  void setAcceptsTick(bool value);
+  bool getAcceptsTick();
+  void createSK();
+  void destroySK();
   SK::Superkraft* getSK();
   SK::SK_Window* sb_wnd;
 

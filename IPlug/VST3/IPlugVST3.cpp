@@ -24,14 +24,6 @@ using namespace Vst;
 
 #include "IPlugVST3_Parameter.h"
 
-
-
-#include "../../../skxx/core/sk_common.hpp"
-#include "../../../skxx/core/superkraft.hpp"
-#include "../../sk_project.hpp"
-
-
-
 #pragma mark - IPlugVST3 Constructor/Destructor
 
 IPlugVST3::IPlugVST3(const InstanceInfo& info, const Config& config)
@@ -60,18 +52,7 @@ tresult PLUGIN_API IPlugVST3::initialize(FUnknown* context)
   {
     IPlugVST3ProcessorBase::Initialize(this);
     IPlugVST3ControllerBase::Initialize(this, IsInstrument(), DoesMIDIIn());
-
-
-    SK_Global* skg = this->getSK()->skg;
-
-    skg->appInitializer = new SK_App_Initializer(nlohmann::json{{"applicationWillFinishLaunching", true}}, [skg]() {
-      void* ptr = skg->sb_ipc;
-      return static_cast<SK_IPC_v2*>(ptr);
-    });
-
-    skg->project = new SK_Project(skg);
-    (static_cast<SK_Project*>(skg->project))->instance = this;
-
+    
     IPlugVST3GetHost(this, context);
     OnHostIdentified();
     OnParamReset(kReset);
