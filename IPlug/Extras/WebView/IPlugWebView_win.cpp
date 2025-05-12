@@ -41,7 +41,9 @@
 #include "WebView2EnvironmentOptions.h"
 #include "wdlstring.h"
 
-#include "../../../../skxx/core/superkraft.hpp"
+#include "../../../skxx/core/sk_common.hpp"
+#include "../../../skxx/core/superkraft.hpp"
+#include "../../sk_project.hpp"
 
 using namespace SK;
 
@@ -71,6 +73,13 @@ public:
   void GetWebRoot(WDL_String& path) const { path.Set(mWebRoot.Get()); }
   void GetLocalDownloadPathForFile(const char* fileName, WDL_String& downloadPath);
 
+  
+  bool acceptsTick = false;
+  void setAcceptsTick(bool value);
+  bool getAcceptsTick();
+
+  void createSK();
+  void destroySK();
   Superkraft* IWebViewImpl::getSK();
 
 private:
@@ -162,9 +171,6 @@ void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
               return S_OK;
             }
 
-            getSK()->skg->showSoftBackendDevTools = [&]() {
-              mCoreWebView->OpenDevToolsWindow();
-            };
 
             mWebViewCtrlr->put_IsVisible(mShowOnLoad);
 
@@ -394,11 +400,15 @@ void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
             mWebViewCtrlr->put_Bounds(mWebViewBounds);
 
 
-            sk->skg->onWebViewReady(sk->skg->mainWindow, static_cast<void*>(mCoreWebView.get()), true);
             mIWebView->OnWebViewReady();
 
+            createSK();
 
-            mCoreWebView->OpenDevToolsWindow();
+            if (sk) {
+              getSK()->skg->showSoftBackendDevTools = [&]() { mCoreWebView->OpenDevToolsWindow(); };
+              sk->wvinit->init(static_cast<void*>(mCoreWebView.get()), true);
+            }
+
             return S_OK;
           })
           .Get());
@@ -417,7 +427,10 @@ void IWebViewImpl::CloseWebView()
     mWebViewCtrlr = nullptr;
     mCoreWebView = nullptr;
     mWebViewEnvironment = nullptr;
+
   }
+
+  destroySK();
 }
 
 void IWebViewImpl::HideWebView(bool hide)
@@ -531,13 +544,19 @@ void evaluateScript_mainThread(wil::com_ptr<ICoreWebView2> mCoreWebView, const S
 
 void IWebViewImpl::EvaluateJavaScript(const SK_String& scriptStr, IWebView::completionHandlerFunc func)
 {
-  if (sk->skg->threadPool->thisFunctionRunningInMainThread())
+  SK::Superkraft* sk = getSK();
+
+  if (!sk) return;
+  if (!sk->skg) return;
+
+  if (sk->skg && sk->skg->threadPool->thisFunctionRunningInMainThread())
   {
     evaluateScript_mainThread(mCoreWebView, scriptStr, func);
     return;
   }
 
   wil::com_ptr<ICoreWebView2> _webview = mCoreWebView;
+
 
   sk->skg->threadPool->queueOnMainThread([this, scriptStr, func, _webview]() mutable {
     evaluateScript_mainThread(_webview, scriptStr, func);
@@ -569,6 +588,41 @@ void IWebViewImpl::GetLocalDownloadPathForFile(const char* fileName, WDL_String&
 {
   DesktopPath(downloadPath);
   downloadPath.Append(fileName);
+}
+
+
+
+void IWebViewImpl::setAcceptsTick(bool value) { acceptsTick = value; }
+
+bool IWebViewImpl::getAcceptsTick() { return acceptsTick; }
+
+void IWebViewImpl::createSK()
+{
+  sk = new Superkraft();
+  acceptsTick = true;
+}
+
+void IWebViewImpl::destroySK()
+{
+  if (!sk)
+    return;
+
+  acceptsTick = false;
+
+  sk->isReady = false;
+
+  SK_Global* skg = sk->skg;
+
+  SK_App_Initializer* appInitializer = static_cast<SK_App_Initializer*>(skg->appInitializer);
+  delete appInitializer;
+
+  SK_Project* project = static_cast<SK_Project*>(skg->project);
+  delete project;
+
+  SK_Window_Mngr* wndMngr = sk->wndMngr;
+  wndMngr->destroyAllWindows();
+  delete sk;
+  sk = nullptr;
 }
 
 

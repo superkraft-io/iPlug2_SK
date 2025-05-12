@@ -213,11 +213,7 @@ void IPlugWebUI_SK::initSK(){
     #if defined(SK_APP_TYPE_au)
         void* pView = mView;
     #elif defined(SK_APP_TYPE_vst)
-        #if defined(SK_OS_apple)
-            void* pView = getMView();
-        #elif
-            void* pView = (void*)GetView();
-        #endif
+        void* pView = getMView();
     #endif
 
     skg->onMainWindowHWNDAcquired(pView, true);
