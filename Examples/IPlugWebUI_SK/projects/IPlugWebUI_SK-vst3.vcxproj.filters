@@ -319,9 +319,6 @@
     <ClInclude Include="..\..\..\..\skxx\core\sk_webview_initializer\sk_webview_initializer.hpp">
       <Filter>project\skxx\core\sk_webview_initializer</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\skxx\core\sk_window_mngr\sk_window_mngr.hpp">
-      <Filter>project\skxx\core\sk_window_mngr</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\sk_window_mngr\root\sk_window_root.hpp">
       <Filter>project\skxx\core\sk_window_mngr\root</Filter>
     </ClInclude>
@@ -414,6 +411,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\vfs\sk_ms_vfs_file.hpp">
       <Filter>project\skxx\module_system\cpp\modules\sk\vfs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\sk_window_mngr\sk_window_mngr.h">
+      <Filter>project\skxx\core\sk_window_mngr</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -656,5 +656,6 @@
   </ItemGroup>
   <ItemGroup>
     <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
+    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natstepfilter" />
   </ItemGroup>
 </Project>
