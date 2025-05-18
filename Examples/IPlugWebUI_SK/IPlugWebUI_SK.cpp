@@ -209,8 +209,9 @@ void IPlugWebUI_SK::initSK(){
     project->init(this);
 
     
-
-    #if defined(SK_APP_TYPE_au)
+    #if defined(SK_APP_TYPE_app)
+      void* pView = mView;
+    #elif defined(SK_APP_TYPE_au)
         void* pView = mView;
     #elif defined(SK_APP_TYPE_vst)
         void* pView = getMView();
