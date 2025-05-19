@@ -29,9 +29,16 @@
 		44B589D52D71CFA300928FA4 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B589D42D71CFA300928FA4 /* libcurl.a */; };
 		44B58BB22D71CFF300928FA4 /* sk_webview_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44B589F82D71CFF300928FA4 /* sk_webview_macos.mm */; };
 		44B58BB62D71CFF300928FA4 /* sk_window_macos_delegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44B58A0A2D71CFF300928FA4 /* sk_window_macos_delegate.mm */; };
-		44B58BBA2D71CFF300928FA4 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B58A312D71CFF300928FA4 /* libcurl.a */; };
 		44B67D602DCA3D6F00CD35F3 /* sk_webview_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44B589F82D71CFF300928FA4 /* sk_webview_macos.mm */; };
 		44B67D612DCA3D7200CD35F3 /* sk_window_macos_delegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44B58A0A2D71CFF300928FA4 /* sk_window_macos_delegate.mm */; };
+		44E3C8942DDB812300C1ADE2 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B589D42D71CFA300928FA4 /* libcurl.a */; };
+		44E3C8952DDB812700C1ADE2 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B589D42D71CFA300928FA4 /* libcurl.a */; };
+		44E3C8962DDB812A00C1ADE2 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B589D42D71CFA300928FA4 /* libcurl.a */; };
+		44E3C8972DDB812E00C1ADE2 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B589D42D71CFA300928FA4 /* libcurl.a */; };
+		44E3C8982DDB813100C1ADE2 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B589D42D71CFA300928FA4 /* libcurl.a */; };
+		44E3C8992DDB813400C1ADE2 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B589D42D71CFA300928FA4 /* libcurl.a */; };
+		44E3C89A2DDB813700C1ADE2 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B589D42D71CFA300928FA4 /* libcurl.a */; };
+		44E3C89B2DDB813A00C1ADE2 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B589D42D71CFA300928FA4 /* libcurl.a */; };
 		44FABF812D843457009B8A25 /* sk_webview_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44B589F82D71CFF300928FA4 /* sk_webview_macos.mm */; };
 		44FABF822D8434C3009B8A25 /* sk_window_macos_delegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44B58A0A2D71CFF300928FA4 /* sk_window_macos_delegate.mm */; };
 		44FABF832D8434C7009B8A25 /* sk_webview_macos.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44B589F82D71CFF300928FA4 /* sk_webview_macos.mm */; };
@@ -776,7 +783,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				44B589D52D71CFA300928FA4 /* libcurl.a in Frameworks */,
-				44B58BBA2D71CFF300928FA4 /* libcurl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,6 +790,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44E3C8942DDB812300C1ADE2 /* libcurl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -792,6 +799,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F32AE7C231427EC00710734 /* AUv3Framework.framework in Frameworks */,
+				44E3C8992DDB813400C1ADE2 /* libcurl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -800,6 +808,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F3EE1E7231438D000004786 /* AUv3Framework.framework in Frameworks */,
+				44E3C89B2DDB813A00C1ADE2 /* libcurl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,6 +823,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44E3C8952DDB812700C1ADE2 /* libcurl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -822,6 +832,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F815999205D525A00393585 /* libAAXLibrary_libcpp.a in Frameworks */,
+				44E3C8972DDB812E00C1ADE2 /* libcurl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -829,6 +840,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44E3C8962DDB812A00C1ADE2 /* libcurl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -836,6 +848,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44E3C89A2DDB813700C1ADE2 /* libcurl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -844,6 +857,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FC3EFD42086C49D00BD11FA /* IPlugWebUI_SKVST3Controller.a in Frameworks */,
+				44E3C8982DDB813100C1ADE2 /* libcurl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

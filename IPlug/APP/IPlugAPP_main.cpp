@@ -231,7 +231,11 @@ int main(int argc, char *argv[])
   
   if(AppIsSandboxed())
     DBGMSG("App is sandboxed, file system access etc restricted!\n");
-    
+  
+  //if it crashes here somewher, run this command in the terminal: tccutil reset All com.superkraft.io.app.IPlugWebUI_SK
+  //this crash happens most likely due to the app not being able to access the filesystem.
+  //usually you get a popup dialog asking you to allow access to the filesystem where you have to press "Allow"
+  
   return NSApplicationMain(argc,  (const char **) argv);
 }
 
@@ -245,19 +249,6 @@ INT_PTR SWELLAppMain(int msg, INT_PTR parm1, INT_PTR parm2)
       pAppHost = IPlugAPPHost::Create(args);
       pAppHost->Init();
       pAppHost->TryToChangeAudio();
-      
-      
-      
-      Superkraft* sk = pAppHost->sInstance->GetPlug()->getSK();
-      
-      sk->skg->appInitializer = new SK_App_Initializer(nlohmann::json{{"applicationWillFinishLaunching", true}}, [sk]() {
-        void* ptr = sk->skg->sb_ipc;
-        return static_cast<SK_IPC_v2*>(ptr);
-      });
-      
-      sk->skg->project = new SK_Project(sk->skg);
-      (static_cast<SK_Project*>(sk->skg->project))->init(pAppHost->sInstance->GetPlug());
-      
       
       break;
     }
@@ -328,17 +319,8 @@ INT_PTR SWELLAppMain(int msg, INT_PTR parm1, INT_PTR parm2)
       SetMenuItemModifier(menu, ID_SHOW_BOUNDS, MF_BYCOMMAND, 'B', FCONTROL);
       SetMenuItemModifier(menu, ID_SHOW_FPS, MF_BYCOMMAND, 'F', FCONTROL);
 #endif
-      
-      Superkraft* sk = pAppHost->sInstance->GetPlug()->getSK();
 
-      (static_cast<SK_Project*>(sk->skg->project))->init(pAppHost->sInstance->GetPlug());
-      
       HWND hwnd = CreateDialog(gHINST, MAKEINTRESOURCE(IDD_DIALOG_MAIN), NULL, IPlugAPPHost::MainDlgProc);
-      
-      NSView*  view = (__bridge NSView*)gHWND;
-      NSWindow* window = view.window;
-      //skg->mainWindowHandle = (__bridge void*)window;
-      sk->skg->onMainWindowHWNDAcquired((__bridge void*)window, false);
       
       if (menu)
       {
