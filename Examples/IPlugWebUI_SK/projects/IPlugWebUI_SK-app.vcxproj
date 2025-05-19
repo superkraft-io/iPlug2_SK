@@ -165,7 +165,7 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>$(APP_LIBS);Ws2_32.lib;Crypt32.lib;C:\Users\Aid\Desktop\repos\superkraft-io\skxx_iplug2_demo\skxx\libs\general\curl\libcurl.lib;C:\Users\Aid\Desktop\repos\superkraft-io\skxx_iplug2_demo\skxx\libs\general\curl\curlu.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(APP_LIBS);Ws2_32.lib;Crypt32.lib;$(ProjectDir)..\..\..\..\skxx\libs\general\curl\libcurl.lib;$(ProjectDir)..\..\..\..\skxx\libs\general\curl\curlu.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
