@@ -463,6 +463,9 @@
 		44B58BA92D71CFF300928FA4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		44B58BAB2D71CFF300928FA4 /* sk_project_includes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sk_project_includes.hpp; path = ../../../../sk_project_includes.hpp; sourceTree = "<group>"; };
 		44BBCEB62DBD9C2700AE782D /* sk_ms_cNA_handlePluginParamMouseEvent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_cNA_handlePluginParamMouseEvent.hpp; sourceTree = "<group>"; };
+		44F94CC82DF0A57E003E84F8 /* sk_soft_backend_bundle_group_root.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_soft_backend_bundle_group_root.h; sourceTree = "<group>"; };
+		44F94CC92DF0A57E003E84F8 /* sk_soft_backend_bundle_library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_soft_backend_bundle_library.h; sourceTree = "<group>"; };
+		44F94CCB2DF0A685003E84F8 /* sk_target_build_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sk_target_build_defs.h; path = ../../../../sk_target_build_defs.h; sourceTree = "<group>"; };
 		44FABF7C2D8428F2009B8A25 /* sk_app_initializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_app_initializer.h; sourceTree = "<group>"; };
 		4F05C5A82082424400DD1621 /* IPlugWAM.h */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = IPlugWAM.h; path = ../../../IPlug/WEB/IPlugWAM.h; sourceTree = "<group>"; tabWidth = 2; };
 		4F05C5A92082424400DD1621 /* IPlugWAM.cpp */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugWAM.cpp; path = ../../../IPlug/WEB/IPlugWAM.cpp; sourceTree = "<group>"; tabWidth = 2; };
@@ -869,6 +872,8 @@
 				44B58BAB2D71CFF300928FA4 /* sk_project_includes.hpp */,
 				44B589D62D71CFF300928FA4 /* sk_project.hpp */,
 				447ED5EC2DC3FE8F00CE1981 /* sk_plugin_contextMenu.hpp */,
+				44F94CCB2DF0A685003E84F8 /* sk_target_build_defs.h */,
+				44F94CCA2DF0A57E003E84F8 /* sk_soft_backend_bundle */,
 				44B589DA2D71CFF300928FA4 /* sk_app_nativeActions */,
 				44B58BAA2D71CFF300928FA4 /* skxx */,
 				52FBBED30D0CF143001C8B8A /* config.h */,
@@ -1341,6 +1346,16 @@
 			);
 			name = skxx;
 			path = ../../../../skxx;
+			sourceTree = "<group>";
+		};
+		44F94CCA2DF0A57E003E84F8 /* sk_soft_backend_bundle */ = {
+			isa = PBXGroup;
+			children = (
+				44F94CC82DF0A57E003E84F8 /* sk_soft_backend_bundle_group_root.h */,
+				44F94CC92DF0A57E003E84F8 /* sk_soft_backend_bundle_library.h */,
+			);
+			name = sk_soft_backend_bundle;
+			path = ../../../../sk_soft_backend_bundle;
 			sourceTree = "<group>";
 		};
 		4F05C5A72082422300DD1621 /* WAM_SDK */ = {
