@@ -317,6 +317,7 @@
       <Filter>project\skxx\module_system\cpp\modules\sk\protonjs</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\sk_plugin_contextMenu.hpp" />
+    <ClInclude Include="..\..\..\..\sk_target_build_defs.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="resources">
