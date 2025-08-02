@@ -367,6 +367,8 @@
 		4423B2BA2D7AFC4400B3415B /* sk_ms_protonjs_window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_protonjs_window.hpp; sourceTree = "<group>"; };
 		443D64272D762D570057BF05 /* sk_debug_mode.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sk_debug_mode.js; sourceTree = "<group>"; };
 		443D64292D7630B90057BF05 /* sk_logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_logger.h; sourceTree = "<group>"; };
+		44439FA62E3D22C100901421 /* sk_soft_backend_bundle_group_root.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sk_soft_backend_bundle_group_root.h; sourceTree = "<group>"; };
+		44439FA72E3D22C100901421 /* sk_soft_backend_bundle_library.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sk_soft_backend_bundle_library.h; sourceTree = "<group>"; };
 		447ED5EC2DC3FE8F00CE1981 /* sk_plugin_contextMenu.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sk_plugin_contextMenu.hpp; path = ../../../../sk_plugin_contextMenu.hpp; sourceTree = "<group>"; };
 		44B589D42D71CFA300928FA4 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../../../skxx/libs/general/curl/libcurl.a; sourceTree = "<group>"; };
 		44B589D62D71CFF300928FA4 /* sk_project.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sk_project.hpp; path = ../../../../sk_project.hpp; sourceTree = "<group>"; };
@@ -375,7 +377,7 @@
 		44B589DB2D71CFF300928FA4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		44B589DC2D71CFF300928FA4 /* sk_communication_packet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_communication_packet.hpp; sourceTree = "<group>"; };
 		44B589DD2D71CFF300928FA4 /* sk_communication_response.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_communication_response.hpp; sourceTree = "<group>"; };
-		44B589DE2D71CFF300928FA4 /* sk_communication.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_communication.hpp; sourceTree = "<group>"; };
+		44B589DE2D71CFF300928FA4 /* sk_communication.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = sk_communication.hpp; sourceTree = "<group>"; };
 		44B589E02D71CFF300928FA4 /* sk_ipc_v2.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ipc_v2.hpp; sourceTree = "<group>"; };
 		44B589E22D71CFF300928FA4 /* sk_json_callback.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_json_callback.hpp; sourceTree = "<group>"; };
 		44B589E52D71CFF300928FA4 /* sk_profiler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_profiler.hpp; sourceTree = "<group>"; };
@@ -463,8 +465,6 @@
 		44B58BA92D71CFF300928FA4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		44B58BAB2D71CFF300928FA4 /* sk_project_includes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sk_project_includes.hpp; path = ../../../../sk_project_includes.hpp; sourceTree = "<group>"; };
 		44BBCEB62DBD9C2700AE782D /* sk_ms_cNA_handlePluginParamMouseEvent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_cNA_handlePluginParamMouseEvent.hpp; sourceTree = "<group>"; };
-		44F94CC82DF0A57E003E84F8 /* sk_soft_backend_bundle_group_root.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_soft_backend_bundle_group_root.h; sourceTree = "<group>"; };
-		44F94CC92DF0A57E003E84F8 /* sk_soft_backend_bundle_library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_soft_backend_bundle_library.h; sourceTree = "<group>"; };
 		44F94CCB2DF0A685003E84F8 /* sk_target_build_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sk_target_build_defs.h; path = ../../../../sk_target_build_defs.h; sourceTree = "<group>"; };
 		44FABF7C2D8428F2009B8A25 /* sk_app_initializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_app_initializer.h; sourceTree = "<group>"; };
 		4F05C5A82082424400DD1621 /* IPlugWAM.h */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = IPlugWAM.h; path = ../../../IPlug/WEB/IPlugWAM.h; sourceTree = "<group>"; tabWidth = 2; };
@@ -1351,8 +1351,8 @@
 		44F94CCA2DF0A57E003E84F8 /* sk_soft_backend_bundle */ = {
 			isa = PBXGroup;
 			children = (
-				44F94CC82DF0A57E003E84F8 /* sk_soft_backend_bundle_group_root.h */,
-				44F94CC92DF0A57E003E84F8 /* sk_soft_backend_bundle_library.h */,
+				44439FA62E3D22C100901421 /* sk_soft_backend_bundle_group_root.h */,
+				44439FA72E3D22C100901421 /* sk_soft_backend_bundle_library.h */,
 			);
 			name = sk_soft_backend_bundle;
 			path = ../../../../sk_soft_backend_bundle;
