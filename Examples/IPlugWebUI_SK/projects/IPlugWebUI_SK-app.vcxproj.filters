@@ -531,6 +531,7 @@
     <None Include="..\..\..\..\skxx\web\soft_backend\sk_sb.js">
       <Filter>project\skxx\web\soft_backend</Filter>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\resources\IPlugWebUI_SK.ico">
