@@ -308,7 +308,6 @@
       <Filter>project\skxx\core\utils</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\sk_project.hpp" />
-    <ClInclude Include="..\..\..\..\sk_project_binarydata.hpp" />
     <ClInclude Include="..\..\..\..\sk_project_includes.hpp" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs_app.hpp">
       <Filter>project\skxx\module_system\cpp\modules\sk\protonjs</Filter>
