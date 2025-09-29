@@ -423,6 +423,19 @@
       <AdditionalDependencies>Ws2_32.lib;Crypt32.lib;$(ProjectDir)..\..\..\..\skxx\libs\general\curl\libcurl.lib;$(ProjectDir)..\..\..\..\skxx\libs\general\curl\curlu.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent />
+    <PreBuildEvent>
+      <Command>IF "$(ConfigurationName)"=="Debug (NO BUNDLING)" (
+  CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_none.bat"
+) ELSE IF "$(ConfigurationName)"=="Debug (Shallow Bundling)" (
+  CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_shallow.bat"
+) ELSE IF "$(ConfigurationName)"=="Debug (Deep Bundling)" (
+    CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_deep.bat"
+) ELSE IF "$(ConfigurationName)"=="Release" (
+    CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_deep.bat"
+)
+
+CALL "$(SolutionDir)scripts\prebuild-win.bat" "$(TargetExt)" "$(BINARY_NAME)" "$(Platform)" "$(TargetPath)" "$(OutDir)"</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (Shallow Bundling)|x64'">
     <ClCompile>
@@ -437,6 +450,19 @@
       <AdditionalDependencies>Ws2_32.lib;Crypt32.lib;$(ProjectDir)..\..\..\..\skxx\libs\general\curl\libcurl.lib;$(ProjectDir)..\..\..\..\skxx\libs\general\curl\curlu.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent />
+    <PreBuildEvent>
+      <Command>IF "$(ConfigurationName)"=="Debug (NO BUNDLING)" (
+  CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_none.bat"
+) ELSE IF "$(ConfigurationName)"=="Debug (Shallow Bundling)" (
+  CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_shallow.bat"
+) ELSE IF "$(ConfigurationName)"=="Debug (Deep Bundling)" (
+    CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_deep.bat"
+) ELSE IF "$(ConfigurationName)"=="Release" (
+    CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_deep.bat"
+)
+
+CALL "$(SolutionDir)scripts\prebuild-win.bat" "$(TargetExt)" "$(BINARY_NAME)" "$(Platform)" "$(TargetPath)" "$(OutDir)"</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (Deep Bundling)|x64'">
     <ClCompile>
@@ -451,6 +477,19 @@
       <AdditionalDependencies>Ws2_32.lib;Crypt32.lib;$(ProjectDir)..\..\..\..\skxx\libs\general\curl\libcurl.lib;$(ProjectDir)..\..\..\..\skxx\libs\general\curl\curlu.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent />
+    <PreBuildEvent>
+      <Command>IF "$(ConfigurationName)"=="Debug (NO BUNDLING)" (
+  CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_none.bat"
+) ELSE IF "$(ConfigurationName)"=="Debug (Shallow Bundling)" (
+  CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_shallow.bat"
+) ELSE IF "$(ConfigurationName)"=="Debug (Deep Bundling)" (
+    CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_deep.bat"
+) ELSE IF "$(ConfigurationName)"=="Release" (
+    CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_deep.bat"
+)
+
+CALL "$(SolutionDir)scripts\prebuild-win.bat" "$(TargetExt)" "$(BINARY_NAME)" "$(Platform)" "$(TargetPath)" "$(OutDir)"</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debig (Deep Bundling)|x64'">
     <ClCompile>
@@ -504,6 +543,19 @@
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent />
+    <PreBuildEvent>
+      <Command>IF "$(ConfigurationName)"=="Debug (NO BUNDLING)" (
+  CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_none.bat"
+) ELSE IF "$(ConfigurationName)"=="Debug (Shallow Bundling)" (
+  CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_shallow.bat"
+) ELSE IF "$(ConfigurationName)"=="Debug (Deep Bundling)" (
+    CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_deep.bat"
+) ELSE IF "$(ConfigurationName)"=="Release" (
+    CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_deep.bat"
+)
+
+CALL "$(SolutionDir)scripts\prebuild-win.bat" "$(TargetExt)" "$(BINARY_NAME)" "$(Platform)" "$(TargetPath)" "$(OutDir)"</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Tracer|Win32'">
     <ClCompile>

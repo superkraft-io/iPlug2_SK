@@ -473,14 +473,12 @@ CALL "$(SolutionDir)scripts\prebuild-win.bat" "$(TargetExt)" "$(BINARY_NAME)" "$
     <PreBuildEvent>
       <Command>IF "$(ConfigurationName)"=="Debug (NO BUNDLING)" (
   CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_none.bat"
-)
-
-IF "$(ConfigurationName)"=="Debug (Shallow Bundling)" (
+) ELSE IF "$(ConfigurationName)"=="Debug (Shallow Bundling)" (
   CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_shallow.bat"
-)
-
-IF "$(ConfigurationName)"=="Debug (Deep Bundling)" (
-  CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_deep.bat"
+) ELSE IF "$(ConfigurationName)"=="Debug (Deep Bundling)" (
+    CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_deep.bat"
+) ELSE IF "$(ConfigurationName)"=="Release" (
+    CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_deep.bat"
 )
 
 CALL "$(SolutionDir)scripts\prebuild-win.bat" "$(TargetExt)" "$(BINARY_NAME)" "$(Platform)" "$(TargetPath)" "$(OutDir)"</Command>
@@ -508,14 +506,12 @@ CALL "$(SolutionDir)scripts\prebuild-win.bat" "$(TargetExt)" "$(BINARY_NAME)" "$
     <PreBuildEvent>
       <Command>IF "$(ConfigurationName)"=="Debug (NO BUNDLING)" (
   CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_none.bat"
-)
-
-IF "$(ConfigurationName)"=="Debug (Shallow Bundling)" (
+) ELSE IF "$(ConfigurationName)"=="Debug (Shallow Bundling)" (
   CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_shallow.bat"
-)
-
-IF "$(ConfigurationName)"=="Debug (Deep Bundling)" (
-  CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_deep.bat"
+) ELSE IF "$(ConfigurationName)"=="Debug (Deep Bundling)" (
+    CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_deep.bat"
+) ELSE IF "$(ConfigurationName)"=="Release" (
+    CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_deep.bat"
 )
 
 CALL "$(SolutionDir)scripts\prebuild-win.bat" "$(TargetExt)" "$(BINARY_NAME)" "$(Platform)" "$(TargetPath)" "$(OutDir)"</Command>
@@ -543,14 +539,12 @@ CALL "$(SolutionDir)scripts\prebuild-win.bat" "$(TargetExt)" "$(BINARY_NAME)" "$
     <PreBuildEvent>
       <Command>IF "$(ConfigurationName)"=="Debug (NO BUNDLING)" (
   CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_none.bat"
-)
-
-IF "$(ConfigurationName)"=="Debug (Shallow Bundling)" (
+) ELSE IF "$(ConfigurationName)"=="Debug (Shallow Bundling)" (
   CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_shallow.bat"
-)
-
-IF "$(ConfigurationName)"=="Debug (Deep Bundling)" (
-  CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_deep.bat"
+) ELSE IF "$(ConfigurationName)"=="Debug (Deep Bundling)" (
+    CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_deep.bat"
+) ELSE IF "$(ConfigurationName)"=="Release" (
+    CALL "$(SolutionDir)..\..\..\skxx\scripts\pre-build\windows\dbg_bundle_deep.bat"
 )
 
 CALL "$(SolutionDir)scripts\prebuild-win.bat" "$(TargetExt)" "$(BINARY_NAME)" "$(Platform)" "$(TargetPath)" "$(OutDir)"</Command>
