@@ -388,6 +388,7 @@
       <PreprocessorDefinitions>$(APP_DEFS);$(DEBUG_DEFS);$(EXTRA_DEBUG_DEFS);%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(APP_INC_PATHS);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(APP_LIBS);%(AdditionalDependencies)</AdditionalDependencies>
@@ -524,7 +525,6 @@ CALL "$(SolutionDir)scripts\prebuild-win.bat" "$(TargetExt)" "$(BINARY_NAME)" "$
       <PreprocessorDefinitions>$(APP_DEFS);$(DEBUG_DEFS);$(EXTRA_DEBUG_DEFS);CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(APP_INC_PATHS);%(AdditionalLibraryDirectories);$(SolutionDir)\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\include;$(SolutionDir)\packages\Microsoft.Web.WebView2.1.0.3179.45\build\native\include;%(AdditionalIncludeDirectories);$(NuGetPackageRoot)visualleakdetector\*\build\native\include</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalOptions>/bigobj /Zm200 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(APP_LIBS);Ws2_32.lib;Crypt32.lib;$(ProjectDir)..\..\..\..\skxx\libs\general\curl\libcurl.lib;$(ProjectDir)..\..\..\..\skxx\libs\general\curl\curlu.lib</AdditionalDependencies>
