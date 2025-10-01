@@ -213,7 +213,7 @@ CALL "$(SolutionDir)scripts\prebuild-win.bat" "$(TargetExt)" "$(BINARY_NAME)" "$
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>$(APP_DEFS);$(rls-deep_bundle_DEFS);$(EXTRA_rls-deep_bundle_DEFS);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>$(APP_DEFS);$(EXTRA_DEBUG_DEFS);CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(APP_INC_PATHS);%(AdditionalLibraryDirectories);$(SolutionDir)\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\include;$(SolutionDir)\packages\Microsoft.Web.WebView2.1.0.3179.45\build\native\include;%(AdditionalIncludeDirectories);$(NuGetPackageRoot)visualleakdetector\*\build\native\include</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
@@ -242,7 +242,7 @@ CALL "$(SolutionDir)scripts\prebuild-win.bat" "$(TargetExt)" "$(BINARY_NAME)" "$
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>$(APP_DEFS);$(TRACER_DEFS);$(EXTRA_TRACER_DEFS);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>$(APP_DEFS);$(DEBUG_DEFS);$(EXTRA_DEBUG_DEFS);CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(APP_INC_PATHS);%(AdditionalLibraryDirectories);$(SolutionDir)\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\include;$(SolutionDir)\packages\Microsoft.Web.WebView2.1.0.3179.45\build\native\include;%(AdditionalIncludeDirectories);$(NuGetPackageRoot)visualleakdetector\*\build\native\include</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
