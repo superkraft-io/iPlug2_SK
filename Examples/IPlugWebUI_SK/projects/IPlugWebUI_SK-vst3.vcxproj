@@ -58,6 +58,7 @@
   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='rls-deep_bundle|x64'">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <PlatformToolset>ClangCL</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='dbg-none_bundle|x64'" Label="PropertySheets">
@@ -137,7 +138,8 @@
     </Link>
     <PostBuildEvent />
     <PreBuildEvent>
-      <Command>node "$(SolutionDir)..\..\..\skxx\bundler\sk_prebuild_script.js" --config "$(ConfigurationName)" --platform "$(Platform)" --target "$(TargetPath)" || exit /b %ERRORLEVEL%
+      <Command>node "$(SolutionDir)..\..\..\skxx\bundler\sk_prebuild_script.js" --ide "visual_studio" --config "$(ConfigurationName)" --platform "$(Platform)" --target "$(TargetPath)" || exit /b 1
+
 
 CALL "$(SolutionDir)scripts\prebuild-win.bat" "$(TargetExt)" "$(BINARY_NAME)" "$(Platform)" "$(TargetPath)" "$(OutDir)"</Command>
     </PreBuildEvent>
@@ -157,7 +159,8 @@ CALL "$(SolutionDir)scripts\prebuild-win.bat" "$(TargetExt)" "$(BINARY_NAME)" "$
     </Link>
     <PostBuildEvent />
     <PreBuildEvent>
-      <Command>node "$(SolutionDir)..\..\..\skxx\bundler\sk_prebuild_script.js" --config "$(ConfigurationName)" --platform "$(Platform)" --target "$(TargetPath)" || exit /b %ERRORLEVEL%
+      <Command>node "$(SolutionDir)..\..\..\skxx\bundler\sk_prebuild_script.js" --ide "visual_studio" --config "$(ConfigurationName)" --platform "$(Platform)" --target "$(TargetPath)" || exit /b 1
+
 
 CALL "$(SolutionDir)scripts\prebuild-win.bat" "$(TargetExt)" "$(BINARY_NAME)" "$(Platform)" "$(TargetPath)" "$(OutDir)"</Command>
     </PreBuildEvent>
@@ -177,7 +180,8 @@ CALL "$(SolutionDir)scripts\prebuild-win.bat" "$(TargetExt)" "$(BINARY_NAME)" "$
     </Link>
     <PostBuildEvent />
     <PreBuildEvent>
-      <Command>node "$(SolutionDir)..\..\..\skxx\bundler\sk_prebuild_script.js" --config "$(ConfigurationName)" --platform "$(Platform)" --target "$(TargetPath)" || exit /b %ERRORLEVEL%
+      <Command>node "$(SolutionDir)..\..\..\skxx\bundler\sk_prebuild_script.js" --ide "visual_studio" --config "$(ConfigurationName)" --platform "$(Platform)" --target "$(TargetPath)" || exit /b 1
+
 
 CALL "$(SolutionDir)scripts\prebuild-win.bat" "$(TargetExt)" "$(BINARY_NAME)" "$(Platform)" "$(TargetPath)" "$(OutDir)"</Command>
     </PreBuildEvent>
@@ -207,7 +211,8 @@ CALL "$(SolutionDir)scripts\prebuild-win.bat" "$(TargetExt)" "$(BINARY_NAME)" "$
     </Link>
     <PostBuildEvent />
     <PreBuildEvent>
-      <Command>node "$(SolutionDir)..\..\..\skxx\bundler\sk_prebuild_script.js" --config "$(ConfigurationName)" --platform "$(Platform)" --target "$(TargetPath)" || exit /b %ERRORLEVEL%
+      <Command>node "$(SolutionDir)..\..\..\skxx\bundler\sk_prebuild_script.js" --ide "visual_studio" --config "$(ConfigurationName)" --platform "$(Platform)" --target "$(TargetPath)" || exit /b 1
+
 
 CALL "$(SolutionDir)scripts\prebuild-win.bat" "$(TargetExt)" "$(BINARY_NAME)" "$(Platform)" "$(TargetPath)" "$(OutDir)"</Command>
     </PreBuildEvent>
@@ -232,7 +237,8 @@ CALL "$(SolutionDir)scripts\prebuild-win.bat" "$(TargetExt)" "$(BINARY_NAME)" "$
     </Link>
     <PostBuildEvent />
     <PreBuildEvent>
-      <Command>node "$(SolutionDir)..\..\..\skxx\bundler\sk_prebuild_script.js" --config "$(ConfigurationName)" --platform "$(Platform)" --target "$(TargetPath)" || exit /b %ERRORLEVEL%
+      <Command>node "$(SolutionDir)..\..\..\skxx\bundler\sk_prebuild_script.js" --ide "visual_studio" --config "$(ConfigurationName)" --platform "$(Platform)" --target "$(TargetPath)" || exit /b 1
+
 
 CALL "$(SolutionDir)scripts\prebuild-win.bat" "$(TargetExt)" "$(BINARY_NAME)" "$(Platform)" "$(TargetPath)" "$(OutDir)"</Command>
     </PreBuildEvent>

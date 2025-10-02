@@ -577,12 +577,13 @@ void IWebViewImpl::EnableInteraction(bool enable)
 
 void IWebViewImpl::SetWebViewBounds(float x, float y, float w, float h, float scale)
 {
+  /*
   RECT soft_backend_rect = GetScaledRect(0, 0, 32, 32, GetScaleForHWND(mParentWnd));
   if (mWebViewCtrlr)
   {
     mWebViewCtrlr->SetBoundsAndZoomFactor(soft_backend_rect, scale);
   }
-
+  */
   if (sk) sk->skg->resizeAllMainWindowViews(x, y, w, h, scale);
 }
 
