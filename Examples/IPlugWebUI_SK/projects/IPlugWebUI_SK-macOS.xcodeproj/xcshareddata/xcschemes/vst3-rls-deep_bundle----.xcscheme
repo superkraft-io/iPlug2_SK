@@ -14,16 +14,16 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4F20EEC8132C69FE0030E34C"
-               BuildableName = "IPlugWebUI_SK.vst"
-               BlueprintName = "VST2"
+               BlueprintIdentifier = "4FFBB8F820863B0E00DDD0E7"
+               BuildableName = "IPlugWebUI_SK.vst3"
+               BlueprintName = "VST3P"
                ReferencedContainer = "container:IPlugWebUI_SK-macOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
@@ -31,7 +31,7 @@
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -44,15 +44,15 @@
       allowLocationSimulation = "YES">
       <PathRunnable
          runnableDebuggingMode = "0"
-         BundleIdentifier = "com.cockos.reaper"
+         BundleIdentifier = "com.steinberg.vst3.plugintesthost"
          FilePath = "/Applications/REAPER.app">
       </PathRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4F20EEC8132C69FE0030E34C"
-            BuildableName = "IPlugWebUI_SK.vst"
-            BlueprintName = "VST2"
+            BlueprintIdentifier = "4FFBB8F820863B0E00DDD0E7"
+            BuildableName = "IPlugWebUI_SK.vst3"
+            BlueprintName = "VST3P"
             ReferencedContainer = "container:IPlugWebUI_SK-macOS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -69,13 +69,18 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <PathRunnable
-         runnableDebuggingMode = "0"
-         FilePath = "/Applications/REAPER.app">
-      </PathRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4FFBB8F820863B0E00DDD0E7"
+            BuildableName = "IPlugWebUI_SK.vst3"
+            BlueprintName = "VST3P"
+            ReferencedContainer = "container:IPlugWebUI_SK-macOS.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "Debug">
+      buildConfiguration = "Release">
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"

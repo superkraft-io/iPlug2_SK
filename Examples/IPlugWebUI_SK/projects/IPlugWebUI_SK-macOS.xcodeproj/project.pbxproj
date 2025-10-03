@@ -3224,6 +3224,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "../resources/IPlugWebUI_SK-AU-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"$(AU_FRAMEWORKS)",
 					"$(inherited)",

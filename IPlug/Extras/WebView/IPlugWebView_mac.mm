@@ -390,8 +390,12 @@ void IWebViewImpl::EnableInteraction(bool enable)
 
 void IWebViewImpl::SetWebViewBounds(float x, float y, float w, float h, float scale)
 {
-  [mWKWebView setFrame: CGRectMake(0, 0, 32, 32) ];
-
+    #if defined(SK_MODE_DEBUG)
+        [mWKWebView setFrame: CGRectMake(0, 0, 32, 32) ];
+    #else
+        [mWKWebView setFrame: CGRectMake(0, 0, 0, 0) ];
+    #endif
+    
     #ifdef OS_MAC
       if (@available(macOS 11.0, *)) {
         [mWKWebView setPageZoom:scale ];
