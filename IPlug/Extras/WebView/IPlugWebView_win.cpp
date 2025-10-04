@@ -406,7 +406,7 @@ void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
 
             if (sk) {
               getSK()->skg->showSoftBackendDevTools = [&]() { mCoreWebView->OpenDevToolsWindow(); };
-              sk->wvinit->init(static_cast<void*>(mCoreWebView.get()), true);
+              sk->wvinit->init(static_cast<void*>(mCoreWebView.get()), NULL);
             }
 
             //mCoreWebView->OpenDevToolsWindow();
