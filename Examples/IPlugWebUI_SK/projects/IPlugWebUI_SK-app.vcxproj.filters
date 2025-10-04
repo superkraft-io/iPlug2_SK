@@ -214,7 +214,7 @@
     <ClInclude Include="..\..\..\..\skxx\core\sk_webview_initializer\sk_webview_initializer.hpp">
       <Filter>project\skxx\core\sk_webview_initializer</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\skxx\core\sk_window_mngr\sk_window_mngr.hpp">
+    <ClInclude Include="..\..\..\..\skxx\core\sk_window_mngr\sk_window_mngr.h">
       <Filter>project\skxx\core\sk_window_mngr</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\sk_window_mngr\root\sk_window_root.hpp">
@@ -536,9 +536,5 @@
     <Image Include="..\resources\IPlugWebUI_SK.ico">
       <Filter>resources</Filter>
     </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
-    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natstepfilter" />
   </ItemGroup>
 </Project>

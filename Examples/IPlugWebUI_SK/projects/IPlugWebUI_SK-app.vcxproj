@@ -282,7 +282,7 @@
     <ClInclude Include="..\..\..\..\skxx\core\sk_web\sk_curl.hpp" />
     <ClInclude Include="..\..\..\..\skxx\core\sk_web\sk_web_utils.hpp" />
     <ClInclude Include="..\..\..\..\skxx\core\sk_window_mngr\root\sk_window_root.hpp" />
-    <ClInclude Include="..\..\..\..\skxx\core\sk_window_mngr\sk_window_mngr.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\sk_window_mngr\sk_window_mngr.h" />
     <ClInclude Include="..\..\..\..\skxx\core\sk_window_mngr\windows\sk_window_windows.hpp" />
     <ClInclude Include="..\..\..\..\skxx\core\superkraft.hpp" />
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_array.hpp" />
