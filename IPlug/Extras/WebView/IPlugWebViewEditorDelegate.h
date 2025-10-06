@@ -137,6 +137,7 @@ public:
     bool isSK_IPC_call = json.contains("isSK_IPC_call");
     if (isSK_IPC_call)
     {
+      if (getSK()->skg->terminating) return;
       SK_Communication_Config config{"sk:sb", SK_Communication_Packet_Type::sk_comm_pt_ipc, &json};
 
       getSK()->skg->onCommunicationRequest(&config, [&](const SK_String& ipcResponseData) {
