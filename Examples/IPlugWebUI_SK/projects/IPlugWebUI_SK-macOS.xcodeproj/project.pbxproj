@@ -363,8 +363,10 @@
 /* Begin PBXFileReference section */
 		440C06D62DC4F8D40062FF5C /* sk_dawPluginMngr.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = sk_dawPluginMngr.js; sourceTree = "<group>"; };
 		44111D922D75DA4A00A2BBC8 /* sk_string.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sk_string.h; sourceTree = "<group>"; };
-		4423B2B92D7AFBB500B3415B /* sk_ms_protonjs_app.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_protonjs_app.hpp; sourceTree = "<group>"; };
-		4423B2BA2D7AFC4400B3415B /* sk_ms_protonjs_window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_protonjs_window.hpp; sourceTree = "<group>"; };
+		4423B2B92D7AFBB500B3415B /* sk_ms_protonjs_app.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = sk_ms_protonjs_app.hpp; sourceTree = "<group>"; };
+		4423B2BA2D7AFC4400B3415B /* sk_ms_protonjs_window.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = sk_ms_protonjs_window.hpp; sourceTree = "<group>"; };
+		4438D0452E9AC151005789D6 /* sk_timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sk_timer.h; sourceTree = "<group>"; };
+		4438D0472E9AC159005789D6 /* sk_displayUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = sk_displayUtils.h; sourceTree = "<group>"; };
 		443D64272D762D570057BF05 /* sk_debug_mode.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sk_debug_mode.js; sourceTree = "<group>"; };
 		443D64292D7630B90057BF05 /* sk_logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_logger.h; sourceTree = "<group>"; };
 		44439FA62E3D22C100901421 /* sk_soft_backend_bundle_group_root.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sk_soft_backend_bundle_group_root.h; sourceTree = "<group>"; };
@@ -429,15 +431,15 @@
 		44B58B702D71CFF300928FA4 /* sk_ms_nodejs_os.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_nodejs_os.hpp; sourceTree = "<group>"; };
 		44B58B742D71CFF300928FA4 /* sk_ms_nativeActions.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_nativeActions.hpp; sourceTree = "<group>"; };
 		44B58B752D71CFF300928FA4 /* sk_nativeAction_root.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_nativeAction_root.hpp; sourceTree = "<group>"; };
-		44B58B772D71CFF300928FA4 /* sk_ms_protonjs_native_image.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_protonjs_native_image.hpp; sourceTree = "<group>"; };
-		44B58B782D71CFF300928FA4 /* sk_ms_protonjs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_protonjs.hpp; sourceTree = "<group>"; };
+		44B58B772D71CFF300928FA4 /* sk_ms_protonjs_native_image.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = sk_ms_protonjs_native_image.hpp; sourceTree = "<group>"; };
+		44B58B782D71CFF300928FA4 /* sk_ms_protonjs.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = sk_ms_protonjs.hpp; sourceTree = "<group>"; };
 		44B58B7A2D71CFF300928FA4 /* sk_ms_vfs_file.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_vfs_file.hpp; sourceTree = "<group>"; };
 		44B58B7B2D71CFF300928FA4 /* sk_ms_vfs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_vfs.hpp; sourceTree = "<group>"; };
 		44B58B802D71CFF300928FA4 /* sk_ms_application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_application.hpp; sourceTree = "<group>"; };
 		44B58B812D71CFF300928FA4 /* sk_ms_bdfs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_bdfs.hpp; sourceTree = "<group>"; };
 		44B58B822D71CFF300928FA4 /* sk_ms_debugMngr.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_debugMngr.hpp; sourceTree = "<group>"; };
 		44B58B832D71CFF300928FA4 /* sk_ms_web.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_web.hpp; sourceTree = "<group>"; };
-		44B58B862D71CFF300928FA4 /* sk_module_base_class.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_module_base_class.hpp; sourceTree = "<group>"; };
+		44B58B862D71CFF300928FA4 /* sk_module_base_class.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = sk_module_base_class.hpp; sourceTree = "<group>"; };
 		44B58B882D71CFF300928FA4 /* child_process.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = child_process.js; sourceTree = "<group>"; };
 		44B58B892D71CFF300928FA4 /* fs.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = fs.js; sourceTree = "<group>"; };
 		44B58B8A2D71CFF300928FA4 /* os.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = os.js; sourceTree = "<group>"; };
@@ -454,7 +456,7 @@
 		44B58B992D71CFF300928FA4 /* sk_module_root.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sk_module_root.js; sourceTree = "<group>"; };
 		44B58B9A2D71CFF300928FA4 /* sk_module.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sk_module.js; sourceTree = "<group>"; };
 		44B58B9C2D71CFF300928FA4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		44B58B9D2D71CFF300928FA4 /* sk_module_system.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_module_system.hpp; sourceTree = "<group>"; };
+		44B58B9D2D71CFF300928FA4 /* sk_module_system.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = sk_module_system.hpp; sourceTree = "<group>"; };
 		44B58B9F2D71CFF300928FA4 /* sk_global_js_core.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sk_global_js_core.js; sourceTree = "<group>"; };
 		44B58BA02D71CFF300928FA4 /* sk_ipc.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sk_ipc.js; sourceTree = "<group>"; };
 		44B58BA22D71CFF300928FA4 /* sk_sb.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sk_sb.html; sourceTree = "<group>"; };
@@ -953,6 +955,22 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		4438D0462E9AC151005789D6 /* sk_timer */ = {
+			isa = PBXGroup;
+			children = (
+				4438D0452E9AC151005789D6 /* sk_timer.h */,
+			);
+			path = sk_timer;
+			sourceTree = "<group>";
+		};
+		4438D0482E9AC159005789D6 /* sk_displayUtils */ = {
+			isa = PBXGroup;
+			children = (
+				4438D0472E9AC159005789D6 /* sk_displayUtils.h */,
+			);
+			path = sk_displayUtils;
+			sourceTree = "<group>";
+		};
 		443D642D2D79BD7B0057BF05 /* sk_app */ = {
 			isa = PBXGroup;
 			children = (
@@ -1088,6 +1106,7 @@
 		44B58A232D71CFF300928FA4 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				4438D0482E9AC159005789D6 /* sk_displayUtils */,
 				443D64292D7630B90057BF05 /* sk_logger.h */,
 				44111D922D75DA4A00A2BBC8 /* sk_string.h */,
 				44B58A192D71CFF300928FA4 /* sk_array.hpp */,
@@ -1107,6 +1126,7 @@
 		44B58A2B2D71CFF300928FA4 /* core */ = {
 			isa = PBXGroup;
 			children = (
+				4438D0462E9AC151005789D6 /* sk_timer */,
 				443D642D2D79BD7B0057BF05 /* sk_app */,
 				44B589DF2D71CFF300928FA4 /* sk_communication */,
 				44B589E12D71CFF300928FA4 /* sk_ipc */,

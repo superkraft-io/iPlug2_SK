@@ -232,7 +232,7 @@ void* IWebViewImpl::OpenWebView(void* pParent, float x, float y, float w, float 
       //mIWebView->OpenDevToolsWindow(); //apparently not available on Apple
     };
         
-    sk->wvinit->init((__bridge void*)mWKWebView, true);
+    sk->wvinit->init((__bridge void*)mWKWebView, (SK_Window*)pParent);
   }
   return (__bridge void*) wkWebView;
 }

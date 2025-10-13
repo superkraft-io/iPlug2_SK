@@ -168,15 +168,6 @@ void IPlugWebUI_SK::OnIdle()
   if (!sk->isReady) {
     return;
   }
-    
-  #if defined(SK_OS_windows)
-    proj->updateParamValues();
-
-    bool isRunningInMainThread = skg->threadPool->thisFunctionRunningInMainThread();
-    if (isRunningInMainThread) skg->threadPool_processMainThreadTasks();
-  #elif defined(SK_OS_apple)
-    if (skg->OBJCPPSafeTicker) skg->OBJCPPSafeTicker();
-  #endif
 }
 
 void IPlugWebUI_SK::initSK(){
