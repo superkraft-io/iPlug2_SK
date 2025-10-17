@@ -77,7 +77,7 @@ using namespace SK;
       SK_Communication_Config config{"sk:sb", SK_Communication_Packet_Type::sk_comm_pt_ipc, &json};
 
       SK_Communication_onRequest ocr = self->mIWebView->getSK()->skg->onCommunicationRequest;
-      ocr(&config, [&](const SK_String& ipcResponseData) {
+      ocr(config, [&](const SK_String& ipcResponseData) {
         SK_String data = "sk_api.ipc.handleIncoming(" + ipcResponseData + ")";
         mIWebView->EvaluateJavaScript(data.c_str());
       }, NULL);
@@ -109,7 +109,7 @@ using namespace SK;
 
     SK_Communication_Config config{"sk.sb", SK_Communication_Packet_Type::sk_comm_pt_web, (__bridge void *)urlSchemeTask.request};
     SK_Communication_onRequest ocr = self->mIWebView->getSK()->skg->onCommunicationRequest;
-    ocr(&config, NULL, [&](SK_Communication_Packet* packet) {
+    ocr(config, NULL, [&](SK_Communication_Packet* packet) {
         if (packet == nullptr){
             return self->mIWebView->getSK()->comm->packetFromWebRequest(urlSchemeTask.request, config.sender);
         }

@@ -607,7 +607,7 @@ WDL_DLGRET IPlugAPPHost::MainDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPA
       return 0;
     case WM_CLOSE:
       sk->skg->terminating = true;
-      sk->wndMngr->destroyAllWindows();
+      //sk->wndMngr->destroyAllWindows();
       DestroyWindow(hwndDlg);
       return 0;
     case WM_COMMAND:

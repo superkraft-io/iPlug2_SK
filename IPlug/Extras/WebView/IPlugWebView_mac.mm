@@ -447,7 +447,7 @@ void IWebViewImpl::destroySK(){
   delete project;
     
   SK_Window_Mngr* wndMngr = sk->wndMngr;
-  wndMngr->destroyAllWindows();
+  //wndMngr->destroyAllWindows();
   delete sk;
   sk = nullptr;
 }
