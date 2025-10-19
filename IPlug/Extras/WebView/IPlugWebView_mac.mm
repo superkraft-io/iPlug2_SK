@@ -229,9 +229,12 @@ void* IWebViewImpl::OpenWebView(void* pParent, float x, float y, float w, float 
 
   if (sk){
     sk->skg->showSoftBackendDevTools = [&]() {
-      //mIWebView->OpenDevToolsWindow(); //apparently not available on Apple
+        //mIWebView->OpenDevToolsWindow(); //apparently not available on Apple
+        if (@available(macOS 13.3, *)) {
+            mWKWebView.inspectable = YES;
+        }
     };
-        
+        	
     sk->wvinit->init((__bridge void*)mWKWebView, (SK_Window*)pParent);
   }
   return (__bridge void*) wkWebView;
