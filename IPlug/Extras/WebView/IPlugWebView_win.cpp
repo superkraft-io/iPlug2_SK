@@ -181,8 +181,8 @@ void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
             Settings->put_IsScriptEnabled(TRUE);
             Settings->put_AreDefaultScriptDialogsEnabled(TRUE);
             Settings->put_IsWebMessageEnabled(TRUE);
-            Settings->put_AreDefaultContextMenusEnabled(enableDevTools);
-            Settings->put_AreDevToolsEnabled(enableDevTools);
+            Settings->put_AreDefaultContextMenusEnabled(true);
+            Settings->put_AreDevToolsEnabled(true);
 
 
             /**** SK START ****/
@@ -410,7 +410,7 @@ void* IWebViewImpl::OpenWebView(void* pParent, float,float,float,float,float)
               sk->wvinit->init(static_cast<void*>(mCoreWebView.get()), NULL);
             }
 
-            mCoreWebView->OpenDevToolsWindow();
+            //mCoreWebView->OpenDevToolsWindow();
 
             return S_OK;
           })
