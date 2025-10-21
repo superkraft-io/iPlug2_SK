@@ -300,7 +300,7 @@
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_str_utils.hpp" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\nodejs\sk_ms_nodejs_fs.hpp" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\nodejs\sk_ms_nodejs_os.hpp" />
-    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\core\sk_ms_cNA_handleParamMouseEvent.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\core\sk_ms_cNA_handlePluginParamMouseEvent.hpp" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\sk_ms_nativeActions.hpp" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\sk_nativeAction_root.hpp" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs.hpp" />

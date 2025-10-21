@@ -286,9 +286,6 @@
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\sk_nativeAction_root.hpp">
       <Filter>project\skxx\module_system\cpp\modules\sk\nativeActions</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\core\sk_ms_cNA_handleParamMouseEvent.hpp">
-      <Filter>project\skxx\module_system\cpp\modules\sk\nativeActions\core</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs.hpp">
       <Filter>project\skxx\module_system\cpp\modules\sk\protonjs</Filter>
     </ClInclude>
@@ -317,6 +314,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\..\sk_plugin_contextMenu.hpp" />
     <ClInclude Include="..\..\..\..\sk_target_build_defs.h" />
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\core\sk_ms_cNA_handlePluginParamMouseEvent.hpp">
+      <Filter>project\skxx\module_system\cpp\modules\sk\nativeActions\core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="resources">

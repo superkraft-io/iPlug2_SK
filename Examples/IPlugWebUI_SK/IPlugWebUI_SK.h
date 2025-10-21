@@ -4,7 +4,7 @@
 #include "Oscillator.h"
 #include "Smoothers.h"
 
-#include "../../sk_project.hpp"
+#include "../../skxx/frameworks/iPlug2/sk_project.hpp"
 
 using namespace iplug;
 
