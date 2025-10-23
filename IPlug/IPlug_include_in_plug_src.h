@@ -18,6 +18,14 @@
  * Depending on the API macro defined, a different entry point and helper methods are activated
 */
 
+#if __has_include("IPlugWebUI_SK.h")
+  //no-op
+#else
+  #include "../../../../sk_daw_plugin.hpp"
+#endif
+
+
+
 #pragma mark - OS_WIN
 
 // clang-format off
@@ -396,8 +404,13 @@ Plugin* MakePlug(const iplug::InstanceInfo& info)
   // From VST3 - is this necessary?
   static WDL_Mutex sMutex;
   WDL_MutexLock lock(&sMutex);
+
+  #if __has_include("IPlugWebUI_SK.h")
+    return new PLUG_CLASS_NAME(info);
+  #else
+    return new SK_DAW_Plugin(info);//PLUG_CLASS_NAME(info);
+  #endif
   
-  return new PLUG_CLASS_NAME(info);
 }
 
 #pragma mark - AUv2

@@ -20,7 +20,7 @@
 
 #include "../../skxx/core/sk_common.hpp"
 #include "../../skxx/core/superkraft.hpp"
-#include "../../skxx/frameworks/iPlug2/sk_project.hpp"
+#include "../../skxx/frameworks/iPlug2/sk_framework_iplug2.hpp"
 
 
 using namespace iplug;
@@ -55,6 +55,17 @@ UINT gScrollMessage;
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdParam, int nShowCmd)
 {
+
+  /***********************        EXTREMELY IMPORTANT SK NOTE        ************************
+  
+      If the app for some reason silently crashes right as you run it in shallow or deep bundle mode, it's most likely because the soft backend config fails to load.
+      Go to superkraft.hpp and set a breakpoint at the line that says: configFile.data = bundle_library->findByPath("/config.json")->dataAs_SKString().data;
+
+  /******************************************************************************************/
+
+
+
+
   std::string args(lpszCmdParam);
 
 
@@ -91,8 +102,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
       return static_cast<SK_IPC_v2*>(ptr);
     });
 
-    sk->skg->project = new SK_Project(sk->skg);
-    (static_cast<SK_Project*>(sk->skg->project))->init(pAppHost->sInstance->GetPlug());
+    sk->skg->framework_base = new SK_Framework_iPlug2_Base(sk->skg);
+    (static_cast<SK_Framework_iPlug2_Base*>(sk->skg->framework_base))->init(pAppHost->sInstance->GetPlug());
     
     HACCEL hAccel = LoadAccelerators(gHINSTANCE, MAKEINTRESOURCE(IDR_ACCELERATOR1));
 
