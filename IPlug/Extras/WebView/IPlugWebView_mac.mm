@@ -45,7 +45,7 @@
 
 #include "../../../skxx/core/sk_common.hpp"
 #include "../../../skxx/core/superkraft.hpp"
-#include "../../sk_project.hpp"
+#include "../../skxx/frameworks/iPlug2/sk_framework_iplug2.hpp"
 
 namespace iplug {
 extern bool GetResourcePathFromBundle(const char* fileName, const char* searchExt, WDL_String& fullPath, const char* bundleID);
@@ -446,8 +446,8 @@ void IWebViewImpl::destroySK(){
   SK_App_Initializer* appInitializer = static_cast<SK_App_Initializer*>(skg->appInitializer);
   delete appInitializer;
   
-  SK_Project* project = static_cast<SK_Project* >(skg->project);
-  delete project;
+  SK_Framework_iPlug2_Base* framework_base = static_cast<SK_Framework_iPlug2_Base* >(skg->framework_base);
+  delete framework_base;
     
   SK_Window_Mngr* wndMngr = sk->wndMngr;
   //wndMngr->destroyAllWindows();

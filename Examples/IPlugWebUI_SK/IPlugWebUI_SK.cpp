@@ -96,7 +96,7 @@ void IPlugWebUI_SK::initSK(){
     
     skg->appInitializer = new SK_App_Initializer(nlohmann::json{{"applicationWillFinishLaunching", true}}, [skg]() {
         void* ptr = skg->sb_ipc;
-        return static_cast<SK_IPC_v2*>(ptr);
+        return static_cast<SK_IPC*>(ptr);
     });
     
     
