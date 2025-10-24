@@ -99,7 +99,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
 
     sk->skg->appInitializer = new SK_App_Initializer(nlohmann::json{{"applicationWillFinishLaunching", true}}, [sk]() {
       void* ptr = sk->skg->sb_ipc;
-      return static_cast<SK_IPC_v2*>(ptr);
+      return static_cast<SK_IPC*>(ptr);
     });
 
     sk->skg->framework_base = new SK_Framework_iPlug2_Base(sk->skg);
