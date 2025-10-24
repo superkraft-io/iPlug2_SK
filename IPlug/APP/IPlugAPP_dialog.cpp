@@ -810,7 +810,7 @@ WDL_DLGRET IPlugAPPHost::MainDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPA
         scale = GetScaleForHWND(hwndDlg);
         #endif
         //pPlug->OnParentWindowResize(static_cast<int>(r.right / scale), static_cast<int>(r.bottom / scale));
-        sk->skg->resizeAllMainWindowViews(r.left, r.top, r.right, r.bottom, scale);
+        //sk->skg->resizeAllMainWindowViews(r.left, r.top, r.right, r.bottom, scale);
         return 1;
       }
       default:

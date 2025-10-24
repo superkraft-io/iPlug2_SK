@@ -369,20 +369,13 @@
 		4438D0472E9AC159005789D6 /* sk_displayUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = sk_displayUtils.h; sourceTree = "<group>"; };
 		443D64272D762D570057BF05 /* sk_debug_mode.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sk_debug_mode.js; sourceTree = "<group>"; };
 		443D64292D7630B90057BF05 /* sk_logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_logger.h; sourceTree = "<group>"; };
-		44439FA62E3D22C100901421 /* sk_soft_backend_bundle_group_root.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sk_soft_backend_bundle_group_root.h; sourceTree = "<group>"; };
-		44439FA72E3D22C100901421 /* sk_soft_backend_bundle_library.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sk_soft_backend_bundle_library.h; sourceTree = "<group>"; };
-		447ED5EC2DC3FE8F00CE1981 /* sk_plugin_contextMenu.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sk_plugin_contextMenu.hpp; path = ../../../../sk_plugin_contextMenu.hpp; sourceTree = "<group>"; };
 		44B589D42D71CFA300928FA4 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../../../skxx/libs/general/curl/libcurl.a; sourceTree = "<group>"; };
-		44B589D62D71CFF300928FA4 /* sk_project.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sk_project.hpp; path = ../../../../sk_project.hpp; sourceTree = "<group>"; };
-		44B589D72D71CFF300928FA4 /* test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = test.hpp; sourceTree = "<group>"; };
-		44B589D92D71CFF300928FA4 /* sk_app_nativeActions.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_app_nativeActions.hpp; sourceTree = "<group>"; };
 		44B589DB2D71CFF300928FA4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		44B589DC2D71CFF300928FA4 /* sk_communication_packet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_communication_packet.hpp; sourceTree = "<group>"; };
 		44B589DD2D71CFF300928FA4 /* sk_communication_response.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_communication_response.hpp; sourceTree = "<group>"; };
 		44B589DE2D71CFF300928FA4 /* sk_communication.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = sk_communication.hpp; sourceTree = "<group>"; };
 		44B589E02D71CFF300928FA4 /* sk_ipc_v2.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_ipc_v2.hpp; sourceTree = "<group>"; };
 		44B589E22D71CFF300928FA4 /* sk_json_callback.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_json_callback.hpp; sourceTree = "<group>"; };
-		44B589E52D71CFF300928FA4 /* sk_profiler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_profiler.hpp; sourceTree = "<group>"; };
 		44B589E72D71CFF300928FA4 /* sk_thread_pool.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_thread_pool.hpp; sourceTree = "<group>"; };
 		44B589E92D71CFF300928FA4 /* sk_curl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_curl.hpp; sourceTree = "<group>"; };
 		44B589EA2D71CFF300928FA4 /* sk_web_utils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sk_web_utils.hpp; sourceTree = "<group>"; };
@@ -465,10 +458,7 @@
 		44B58BA72D71CFF300928FA4 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		44B58BA82D71CFF300928FA4 /* .gitmodules */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitmodules; sourceTree = "<group>"; };
 		44B58BA92D71CFF300928FA4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		44B58BAB2D71CFF300928FA4 /* sk_project_includes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sk_project_includes.hpp; path = ../../../../sk_project_includes.hpp; sourceTree = "<group>"; };
 		44BBCEB62DBD9C2700AE782D /* sk_ms_cNA_handlePluginParamMouseEvent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sk_ms_cNA_handlePluginParamMouseEvent.hpp; sourceTree = "<group>"; };
-		44F94CCB2DF0A685003E84F8 /* sk_target_build_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sk_target_build_defs.h; path = ../../../../sk_target_build_defs.h; sourceTree = "<group>"; };
-		44FABF7C2D8428F2009B8A25 /* sk_app_initializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sk_app_initializer.h; sourceTree = "<group>"; };
 		4F05C5A82082424400DD1621 /* IPlugWAM.h */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = IPlugWAM.h; path = ../../../IPlug/WEB/IPlugWAM.h; sourceTree = "<group>"; tabWidth = 2; };
 		4F05C5A92082424400DD1621 /* IPlugWAM.cpp */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugWAM.cpp; path = ../../../IPlug/WEB/IPlugWAM.cpp; sourceTree = "<group>"; tabWidth = 2; };
 		4F0848252015129300F9E881 /* IPlugAAX_Parameters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugAAX_Parameters.cpp; path = ../../../IPlug/AAX/IPlugAAX_Parameters.cpp; sourceTree = "<group>"; tabWidth = 2; };
@@ -871,12 +861,6 @@
 		089C166AFE841209C02AAC07 /* IPlugExample */ = {
 			isa = PBXGroup;
 			children = (
-				44B58BAB2D71CFF300928FA4 /* sk_project_includes.hpp */,
-				44B589D62D71CFF300928FA4 /* sk_project.hpp */,
-				447ED5EC2DC3FE8F00CE1981 /* sk_plugin_contextMenu.hpp */,
-				44F94CCB2DF0A685003E84F8 /* sk_target_build_defs.h */,
-				44F94CCA2DF0A57E003E84F8 /* sk_soft_backend_bundle */,
-				44B589DA2D71CFF300928FA4 /* sk_app_nativeActions */,
 				44B58BAA2D71CFF300928FA4 /* skxx */,
 				52FBBED30D0CF143001C8B8A /* config.h */,
 				4F3862EE2014BBEC0009F402 /* IPlugWebUI_SK.h */,
@@ -971,32 +955,6 @@
 			path = sk_displayUtils;
 			sourceTree = "<group>";
 		};
-		443D642D2D79BD7B0057BF05 /* sk_app */ = {
-			isa = PBXGroup;
-			children = (
-				44FABF7C2D8428F2009B8A25 /* sk_app_initializer.h */,
-			);
-			path = sk_app;
-			sourceTree = "<group>";
-		};
-		44B589D82D71CFF300928FA4 /* test */ = {
-			isa = PBXGroup;
-			children = (
-				44B589D72D71CFF300928FA4 /* test.hpp */,
-			);
-			path = test;
-			sourceTree = "<group>";
-		};
-		44B589DA2D71CFF300928FA4 /* sk_app_nativeActions */ = {
-			isa = PBXGroup;
-			children = (
-				44B589D82D71CFF300928FA4 /* test */,
-				44B589D92D71CFF300928FA4 /* sk_app_nativeActions.hpp */,
-			);
-			name = sk_app_nativeActions;
-			path = ../../../../sk_app_nativeActions;
-			sourceTree = "<group>";
-		};
 		44B589DF2D71CFF300928FA4 /* sk_communication */ = {
 			isa = PBXGroup;
 			children = (
@@ -1022,14 +980,6 @@
 				44B589E22D71CFF300928FA4 /* sk_json_callback.hpp */,
 			);
 			path = sk_json;
-			sourceTree = "<group>";
-		};
-		44B589E62D71CFF300928FA4 /* sk_profiler */ = {
-			isa = PBXGroup;
-			children = (
-				44B589E52D71CFF300928FA4 /* sk_profiler.hpp */,
-			);
-			path = sk_profiler;
 			sourceTree = "<group>";
 		};
 		44B589E82D71CFF300928FA4 /* sk_threads */ = {
@@ -1127,11 +1077,9 @@
 			isa = PBXGroup;
 			children = (
 				4438D0462E9AC151005789D6 /* sk_timer */,
-				443D642D2D79BD7B0057BF05 /* sk_app */,
 				44B589DF2D71CFF300928FA4 /* sk_communication */,
 				44B589E12D71CFF300928FA4 /* sk_ipc */,
 				44B589E42D71CFF300928FA4 /* sk_json */,
-				44B589E62D71CFF300928FA4 /* sk_profiler */,
 				44B589E82D71CFF300928FA4 /* sk_threads */,
 				44B589EB2D71CFF300928FA4 /* sk_web */,
 				44B589FD2D71CFF300928FA4 /* sk_webview */,
@@ -1366,16 +1314,6 @@
 			);
 			name = skxx;
 			path = ../../../../skxx;
-			sourceTree = "<group>";
-		};
-		44F94CCA2DF0A57E003E84F8 /* sk_soft_backend_bundle */ = {
-			isa = PBXGroup;
-			children = (
-				44439FA62E3D22C100901421 /* sk_soft_backend_bundle_group_root.h */,
-				44439FA72E3D22C100901421 /* sk_soft_backend_bundle_library.h */,
-			);
-			name = sk_soft_backend_bundle;
-			path = ../../../../sk_soft_backend_bundle;
 			sourceTree = "<group>";
 		};
 		4F05C5A72082422300DD1621 /* WAM_SDK */ = {

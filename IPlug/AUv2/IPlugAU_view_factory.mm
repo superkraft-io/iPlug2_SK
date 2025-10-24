@@ -18,7 +18,7 @@
 
 #include "../../skxx/core/sk_common.hpp"
 #include "../../skxx/core/superkraft.hpp"
-#include "../../sk_project.hpp"
+#include "../../skxx/frameworks/iPlug2/sk_framework_iplug2.hpp"
 
 using namespace iplug;
 
