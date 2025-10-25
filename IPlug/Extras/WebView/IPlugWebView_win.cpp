@@ -623,6 +623,7 @@ void IWebViewImpl::destroySK()
 
   SK_Framework_iPlug2_Base* framework_base = static_cast<SK_Framework_iPlug2_Base*>(skg->framework_base);
   delete framework_base;
+  framework_base = nullptr;
 
   SK_Window_Mngr* wndMngr = sk->wndMngr;
   wndMngr->destroyAllWindows();

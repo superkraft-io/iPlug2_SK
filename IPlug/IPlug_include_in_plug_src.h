@@ -408,7 +408,7 @@ Plugin* MakePlug(const iplug::InstanceInfo& info)
   #if __has_include("IPlugWebUI_SK.h")
     return new PLUG_CLASS_NAME(info);
   #else
-    return new SK_DAW_Plugin(info);//PLUG_CLASS_NAME(info);
+    return new SK_DAW_Plugin(info);
   #endif
   
 }
