@@ -421,10 +421,19 @@ Plugin* MakePlug(void* pMemory)
   iplug::InstanceInfo info;
   info.mCocoaViewFactoryClassName.Set(AUV2_VIEW_CLASS_STR);
    
+
   if (pMemory)
-    return new(pMemory) PLUG_CLASS_NAME(info);
+    #if __has_include("IPlugWebUI_SK.h")
+      return new(pMemory) PLUG_CLASS_NAME(info);
+    #else
+      return new(pMemory) SK_DAW_Plugin(info);
+    #endif
   else
-    return new PLUG_CLASS_NAME(info);
+    #if __has_include("IPlugWebUI_SK.h")
+      return new PLUG_CLASS_NAME(info);
+    #else
+      return new SK_DAW_Plugin(info);
+    #endif
 }
 
 #pragma mark - VST3 Controller

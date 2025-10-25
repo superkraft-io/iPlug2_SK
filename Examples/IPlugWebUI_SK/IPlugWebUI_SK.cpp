@@ -55,18 +55,15 @@ void IPlugWebUI_SK::OnGetLocalDownloadPathForFile(const char* fileName, WDL_Stri
 }
 
 void IPlugWebUI_SK::OnIdle() {
-    
     if (!getAcceptsTick()) return;
 
     Superkraft* sk = getSK();
     if (!sk) return;
 
     SK_Global* _skg = sk->skg;
-    if (!_skg) return;
-    if (!skg) skg = _skg;
+    if (!sk->skg) return;
 
-    SK_Framework_iPlug2_Base* framework_base = static_cast<SK_Framework_iPlug2_Base*>(skg->framework_base);
-    if (!framework_base){
+    if (!sk->skg->framework_base){
         initSK();
         return;
     }
