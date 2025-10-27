@@ -9,11 +9,16 @@
 using namespace iplug;
 
 
+using SK_onPluginInitialized_CB = std::function<void()>;
+
 class IPlugWebUI_SK : public Plugin {
 public:
     SK_Global* skg = nullptr;
 
+    SK_onPluginInitialized_CB onPluginInitialized = nullptr;
+
     IPlugWebUI_SK(const InstanceInfo& info, int paramCount = 0, int presetCount = 0);
+    ~IPlugWebUI_SK();
   
     bool OnMessage(int msgTag, int ctrlTag, int dataSize, const void* pData) override;
     bool CanNavigateToURL(const char* url);

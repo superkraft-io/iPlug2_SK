@@ -20,6 +20,10 @@ IPlugWebUI_SK::IPlugWebUI_SK(const InstanceInfo& info, int paramCount, int prese
 }
 
 
+IPlugWebUI_SK::~IPlugWebUI_SK() {
+    skg = nullptr;
+}
+
 
 bool IPlugWebUI_SK::OnMessage(int msgTag, int ctrlTag, int dataSize, const void* pData) {
     return false;
@@ -59,6 +63,7 @@ void IPlugWebUI_SK::OnIdle() {
 
     Superkraft* sk = getSK();
     if (!sk) return;
+    skg = sk->skg;
 
     SK_Global* _skg = sk->skg;
     if (!sk->skg) return;
@@ -72,6 +77,8 @@ void IPlugWebUI_SK::OnIdle() {
     if (!sk->isReady) {
         return;
     }
+
+    if (onPluginInitialized) onPluginInitialized();
 }
 
 void IPlugWebUI_SK::initSK(){

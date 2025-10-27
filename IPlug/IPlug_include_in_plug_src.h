@@ -21,7 +21,7 @@
 #if __has_include("IPlugWebUI_SK.h")
   //no-op
 #else
-  #include "../../../../sk_daw_plugin.hpp"
+  #include "../../../../rezonant_plugin.hpp"
 #endif
 
 
@@ -408,7 +408,7 @@ Plugin* MakePlug(const iplug::InstanceInfo& info)
   #if __has_include("IPlugWebUI_SK.h")
     return new PLUG_CLASS_NAME(info);
   #else
-    return new SK_DAW_Plugin(info);
+    return new Rezonant_Plugin(info);
   #endif
   
 }
@@ -426,13 +426,13 @@ Plugin* MakePlug(void* pMemory)
     #if __has_include("IPlugWebUI_SK.h")
       return new(pMemory) PLUG_CLASS_NAME(info);
     #else
-      return new(pMemory) SK_DAW_Plugin(info);
+      return new(pMemory) Rezonant_Plugin(info);
     #endif
   else
     #if __has_include("IPlugWebUI_SK.h")
       return new PLUG_CLASS_NAME(info);
     #else
-      return new SK_DAW_Plugin(info);
+      return new Rezonant_Plugin(info);
     #endif
 }
 

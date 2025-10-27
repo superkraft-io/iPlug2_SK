@@ -1,540 +1,588 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="..\IPlugWebUI_SK.cpp" />
     <ClCompile Include="..\..\..\IPlug\IPlugAPIBase.cpp">
-      <Filter>IPlug</Filter>
+      <Filter>dependencies\IPlug</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\IPlug\IPlugParameter.cpp">
-      <Filter>IPlug</Filter>
+      <Filter>dependencies\IPlug</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\IPlug\IPlugPluginBase.cpp">
-      <Filter>IPlug</Filter>
+      <Filter>dependencies\IPlug</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\IPlug\IPlugProcessor.cpp">
-      <Filter>IPlug</Filter>
+      <Filter>dependencies\IPlug</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\IPlug\IPlugTimer.cpp">
-      <Filter>IPlug</Filter>
+      <Filter>dependencies\IPlug</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\IPlug\APP\IPlugAPP.cpp">
-      <Filter>IPlug\APP</Filter>
+      <Filter>dependencies\IPlug\APP</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\IPlug\APP\IPlugAPP_dialog.cpp">
-      <Filter>IPlug\APP</Filter>
+      <Filter>dependencies\IPlug\APP</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\IPlug\APP\IPlugAPP_host.cpp">
-      <Filter>IPlug\APP</Filter>
+      <Filter>dependencies\IPlug\APP</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\IPlug\APP\IPlugAPP_main.cpp">
-      <Filter>IPlug\APP</Filter>
+      <Filter>dependencies\IPlug\APP</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Dependencies\IPlug\RTAudio\RtAudio.cpp">
-      <Filter>IPlug\APP\RTAudioMidi</Filter>
+      <Filter>dependencies\IPlug\APP\RTAudioMidi</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Dependencies\IPlug\RTMidi\RtMidi.cpp">
-      <Filter>IPlug\APP\RTAudioMidi</Filter>
+      <Filter>dependencies\IPlug\APP\RTAudioMidi</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Dependencies\IPlug\RTAudio\include\asio.cpp">
-      <Filter>IPlug\APP\RTAudioMidi\include</Filter>
+      <Filter>dependencies\IPlug\APP\RTAudioMidi\include</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Dependencies\IPlug\RTAudio\include\asiodrivers.cpp">
-      <Filter>IPlug\APP\RTAudioMidi\include</Filter>
+      <Filter>dependencies\IPlug\APP\RTAudioMidi\include</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Dependencies\IPlug\RTAudio\include\asiolist.cpp">
-      <Filter>IPlug\APP\RTAudioMidi\include</Filter>
+      <Filter>dependencies\IPlug\APP\RTAudioMidi\include</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Dependencies\IPlug\RTAudio\include\iasiothiscallresolver.cpp">
-      <Filter>IPlug\APP\RTAudioMidi\include</Filter>
+      <Filter>dependencies\IPlug\APP\RTAudioMidi\include</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\IPlug\IPlugPaths.cpp">
-      <Filter>IPlug</Filter>
+      <Filter>dependencies\IPlug</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\IPlug\Extras\WebView\IPlugWebViewEditorDelegate.cpp">
-      <Filter>IPlug\Extras\WebView</Filter>
+      <Filter>dependencies\IPlug\Extras\WebView</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\IPlug\Extras\WebView\IPlugWebView_win.cpp">
-      <Filter>IPlug\Extras\WebView</Filter>
+      <Filter>dependencies\IPlug\Extras\WebView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\IPlugWebUI_SK.cpp">
+      <Filter>dependencies</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\IPlugWebUI_SK.h" />
     <ClInclude Include="..\resources\resource.h">
-      <Filter>resources</Filter>
+      <Filter>dependencies\resources</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\IPlug\IPlugAPIBase.h">
-      <Filter>IPlug</Filter>
+      <Filter>dependencies\IPlug</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\IPlug\IPlugConstants.h">
-      <Filter>IPlug</Filter>
+      <Filter>dependencies\IPlug</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\IPlug\IPlugEditorDelegate.h">
-      <Filter>IPlug</Filter>
+      <Filter>dependencies\IPlug</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\IPlug\IPlugLogger.h">
-      <Filter>IPlug</Filter>
+      <Filter>dependencies\IPlug</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\IPlug\IPlugMidi.h">
-      <Filter>IPlug</Filter>
+      <Filter>dependencies\IPlug</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\IPlug\IPlugPlatform.h">
-      <Filter>IPlug</Filter>
+      <Filter>dependencies\IPlug</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\IPlug\IPlugParameter.h">
-      <Filter>IPlug</Filter>
+      <Filter>dependencies\IPlug</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\IPlug\IPlugProcessor.h">
-      <Filter>IPlug</Filter>
+      <Filter>dependencies\IPlug</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\IPlug\IPlugStructs.h">
-      <Filter>IPlug</Filter>
+      <Filter>dependencies\IPlug</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\IPlug\IPlugTimer.h">
-      <Filter>IPlug</Filter>
+      <Filter>dependencies\IPlug</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\IPlug\IPlugUtilities.h">
-      <Filter>IPlug</Filter>
+      <Filter>dependencies\IPlug</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\IPlug\IPlug_include_in_plug_hdr.h">
-      <Filter>IPlug</Filter>
+      <Filter>dependencies\IPlug</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\IPlug\IPlug_include_in_plug_src.h">
-      <Filter>IPlug</Filter>
+      <Filter>dependencies\IPlug</Filter>
     </ClInclude>
-    <ClInclude Include="../config.h" />
     <ClInclude Include="..\..\..\IPlug\APP\IPlugAPP.h">
-      <Filter>IPlug\APP</Filter>
+      <Filter>dependencies\IPlug\APP</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\IPlug\APP\IPlugAPP_host.h">
-      <Filter>IPlug\APP</Filter>
+      <Filter>dependencies\IPlug\APP</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Dependencies\IPlug\RTAudio\RtAudio.h">
-      <Filter>IPlug\APP\RTAudioMidi</Filter>
+      <Filter>dependencies\IPlug\APP\RTAudioMidi</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Dependencies\IPlug\RTMidi\RtMidi.h">
-      <Filter>IPlug\APP\RTAudioMidi</Filter>
+      <Filter>dependencies\IPlug\APP\RTAudioMidi</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Dependencies\IPlug\RTAudio\include\asio.h">
-      <Filter>IPlug\APP\RTAudioMidi\include</Filter>
+      <Filter>dependencies\IPlug\APP\RTAudioMidi\include</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Dependencies\IPlug\RTAudio\include\asiodrivers.h">
-      <Filter>IPlug\APP\RTAudioMidi\include</Filter>
+      <Filter>dependencies\IPlug\APP\RTAudioMidi\include</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Dependencies\IPlug\RTAudio\include\asiodrvr.h">
-      <Filter>IPlug\APP\RTAudioMidi\include</Filter>
+      <Filter>dependencies\IPlug\APP\RTAudioMidi\include</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Dependencies\IPlug\RTAudio\include\asiolist.h">
-      <Filter>IPlug\APP\RTAudioMidi\include</Filter>
+      <Filter>dependencies\IPlug\APP\RTAudioMidi\include</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Dependencies\IPlug\RTAudio\include\asiosys.h">
-      <Filter>IPlug\APP\RTAudioMidi\include</Filter>
+      <Filter>dependencies\IPlug\APP\RTAudioMidi\include</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Dependencies\IPlug\RTAudio\include\dsound.h">
-      <Filter>IPlug\APP\RTAudioMidi\include</Filter>
+      <Filter>dependencies\IPlug\APP\RTAudioMidi\include</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Dependencies\IPlug\RTAudio\include\functiondiscoverykeys_devpkey.h">
-      <Filter>IPlug\APP\RTAudioMidi\include</Filter>
+      <Filter>dependencies\IPlug\APP\RTAudioMidi\include</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Dependencies\IPlug\RTAudio\include\ginclude.h">
-      <Filter>IPlug\APP\RTAudioMidi\include</Filter>
+      <Filter>dependencies\IPlug\APP\RTAudioMidi\include</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Dependencies\IPlug\RTAudio\include\iasiodrv.h">
-      <Filter>IPlug\APP\RTAudioMidi\include</Filter>
+      <Filter>dependencies\IPlug\APP\RTAudioMidi\include</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Dependencies\IPlug\RTAudio\include\iasiothiscallresolver.h">
-      <Filter>IPlug\APP\RTAudioMidi\include</Filter>
+      <Filter>dependencies\IPlug\APP\RTAudioMidi\include</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Dependencies\IPlug\RTAudio\include\soundcard.h">
-      <Filter>IPlug\APP\RTAudioMidi\include</Filter>
+      <Filter>dependencies\IPlug\APP\RTAudioMidi\include</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\IPlug\IPlugPaths.h">
-      <Filter>IPlug</Filter>
+      <Filter>dependencies\IPlug</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\IPlug\IPlugPluginBase.h">
-      <Filter>IPlug</Filter>
+      <Filter>dependencies\IPlug</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\IPlug\Extras\WebView\IPlugWebViewEditorDelegate.h">
-      <Filter>IPlug\Extras\WebView</Filter>
+      <Filter>dependencies\IPlug\Extras\WebView</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\IPlug\Extras\WebView\IPlugWebView.h">
-      <Filter>IPlug\Extras\WebView</Filter>
+      <Filter>dependencies\IPlug\Extras\WebView</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\IPlug\ISender.h" />
     <ClInclude Include="..\..\..\..\skxx\core\sk_callbacks.hpp">
-      <Filter>project\skxx\core</Filter>
+      <Filter>dependencies\skxx\core</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\sk_common.hpp">
-      <Filter>project\skxx\core</Filter>
+      <Filter>dependencies\skxx\core</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\sk_include.h">
-      <Filter>project\skxx\core</Filter>
+      <Filter>dependencies\skxx\core</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\sk_include_core.h">
-      <Filter>project\skxx\core</Filter>
+      <Filter>dependencies\skxx\core</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\sk_var.hpp">
-      <Filter>project\skxx\core</Filter>
+      <Filter>dependencies\skxx\core</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\superkraft.hpp">
-      <Filter>project\skxx\core</Filter>
+      <Filter>dependencies\skxx\core</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\sk_communication\sk_communication.hpp">
-      <Filter>project\skxx\core\sk_communication</Filter>
+      <Filter>dependencies\skxx\core\sk_communication</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\sk_communication\sk_communication_packet.hpp">
-      <Filter>project\skxx\core\sk_communication</Filter>
+      <Filter>dependencies\skxx\core\sk_communication</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\sk_communication\sk_communication_response.hpp">
-      <Filter>project\skxx\core\sk_communication</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\skxx\core\sk_ipc\sk_ipc_v2.hpp">
-      <Filter>project\skxx\core\sk_ipc</Filter>
+      <Filter>dependencies\skxx\core\sk_communication</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\sk_json\sk_json_callback.hpp">
-      <Filter>project\skxx\core\sk_json</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\skxx\core\sk_profiler\sk_profiler.hpp">
-      <Filter>project\skxx\core\sk_profiler</Filter>
+      <Filter>dependencies\skxx\core\sk_json</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\sk_threads\sk_thread_pool.hpp">
-      <Filter>project\skxx\core\sk_threads</Filter>
+      <Filter>dependencies\skxx\core\sk_threads</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\sk_web\sk_curl.hpp">
-      <Filter>project\skxx\core\sk_web</Filter>
+      <Filter>dependencies\skxx\core\sk_web</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\sk_web\sk_web_utils.hpp">
-      <Filter>project\skxx\core\sk_web</Filter>
+      <Filter>dependencies\skxx\core\sk_web</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\sk_webview\sk_webview.h">
-      <Filter>project\skxx\core\sk_webview</Filter>
+      <Filter>dependencies\skxx\core\sk_webview</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\sk_webview\windows\sk_webview_windows.hpp">
-      <Filter>project\skxx\core\sk_webview\windows</Filter>
+      <Filter>dependencies\skxx\core\sk_webview\windows</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\sk_webview_initializer\sk_webview_initializer.hpp">
-      <Filter>project\skxx\core\sk_webview_initializer</Filter>
+      <Filter>dependencies\skxx\core\sk_webview_initializer</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\sk_window_mngr\sk_window_mngr.h">
-      <Filter>project\skxx\core\sk_window_mngr</Filter>
+      <Filter>dependencies\skxx\core\sk_window_mngr</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\sk_window_mngr\root\sk_window_root.hpp">
-      <Filter>project\skxx\core\sk_window_mngr\root</Filter>
+      <Filter>dependencies\skxx\core\sk_window_mngr\root</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\sk_window_mngr\windows\sk_window_windows.hpp">
-      <Filter>project\skxx\core\sk_window_mngr\windows</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_array.hpp">
-      <Filter>project\skxx\core\utils</Filter>
+      <Filter>dependencies\skxx\core\sk_window_mngr\windows</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_color.hpp">
-      <Filter>project\skxx\core\utils</Filter>
+      <Filter>dependencies\skxx\core\utils</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_datetime.hpp">
-      <Filter>project\skxx\core\utils</Filter>
+      <Filter>dependencies\skxx\core\utils</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_file.hpp">
-      <Filter>project\skxx\core\utils</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_json.hpp">
-      <Filter>project\skxx\core\utils</Filter>
+      <Filter>dependencies\skxx\core\utils</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_machine.hpp">
-      <Filter>project\skxx\core\utils</Filter>
+      <Filter>dependencies\skxx\core\utils</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_number.hpp">
-      <Filter>project\skxx\core\utils</Filter>
+      <Filter>dependencies\skxx\core\utils</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_path_utils.hpp">
-      <Filter>project\skxx\core\utils</Filter>
+      <Filter>dependencies\skxx\core\utils</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_point.hpp">
-      <Filter>project\skxx\core\utils</Filter>
+      <Filter>dependencies\skxx\core\utils</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_str_utils.hpp">
-      <Filter>project\skxx\core\utils</Filter>
+      <Filter>dependencies\skxx\core\utils</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_string.h">
-      <Filter>project\skxx\core\utils</Filter>
+      <Filter>dependencies\skxx\core\utils</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\module_system\sk_module_system.hpp">
-      <Filter>project\skxx\module_system</Filter>
+      <Filter>dependencies\skxx\module_system</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\sk_module_base_class.hpp">
-      <Filter>project\skxx\module_system\cpp</Filter>
+      <Filter>dependencies\skxx\module_system\cpp</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\nodejs\sk_ms_nodejs_fs.hpp">
-      <Filter>project\skxx\module_system\cpp\modules\nodejs</Filter>
+      <Filter>dependencies\skxx\module_system\cpp\modules\nodejs</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\nodejs\sk_ms_nodejs_os.hpp">
-      <Filter>project\skxx\module_system\cpp\modules\nodejs</Filter>
+      <Filter>dependencies\skxx\module_system\cpp\modules\nodejs</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_application.hpp">
-      <Filter>project\skxx\module_system\cpp\modules\sk</Filter>
+      <Filter>dependencies\skxx\module_system\cpp\modules\sk</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_bdfs.hpp">
-      <Filter>project\skxx\module_system\cpp\modules\sk</Filter>
+      <Filter>dependencies\skxx\module_system\cpp\modules\sk</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_debugMngr.hpp">
-      <Filter>project\skxx\module_system\cpp\modules\sk</Filter>
+      <Filter>dependencies\skxx\module_system\cpp\modules\sk</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_web.hpp">
-      <Filter>project\skxx\module_system\cpp\modules\sk</Filter>
+      <Filter>dependencies\skxx\module_system\cpp\modules\sk</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\sk_ms_nativeActions.hpp">
-      <Filter>project\skxx\module_system\cpp\modules\sk\nativeActions</Filter>
+      <Filter>dependencies\skxx\module_system\cpp\modules\sk\nativeActions</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\sk_nativeAction_root.hpp">
-      <Filter>project\skxx\module_system\cpp\modules\sk\nativeActions</Filter>
+      <Filter>dependencies\skxx\module_system\cpp\modules\sk\nativeActions</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs.hpp">
-      <Filter>project\skxx\module_system\cpp\modules\sk\protonjs</Filter>
+      <Filter>dependencies\skxx\module_system\cpp\modules\sk\protonjs</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs_native_image.hpp">
-      <Filter>project\skxx\module_system\cpp\modules\sk\protonjs</Filter>
+      <Filter>dependencies\skxx\module_system\cpp\modules\sk\protonjs</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\vfs\sk_ms_vfs.hpp">
-      <Filter>project\skxx\module_system\cpp\modules\sk\vfs</Filter>
+      <Filter>dependencies\skxx\module_system\cpp\modules\sk\vfs</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\vfs\sk_ms_vfs_file.hpp">
-      <Filter>project\skxx\module_system\cpp\modules\sk\vfs</Filter>
+      <Filter>dependencies\skxx\module_system\cpp\modules\sk\vfs</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\sk_app\sk_app_initializer.h">
-      <Filter>project\skxx\core\sk_app</Filter>
+      <Filter>dependencies\skxx\core\sk_app_initializer</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_logger.h">
-      <Filter>project\skxx\core\utils</Filter>
+      <Filter>dependencies\skxx\core\utils</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\sk_project.hpp" />
-    <ClInclude Include="..\..\..\..\sk_project_includes.hpp" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs_app.hpp">
-      <Filter>project\skxx\module_system\cpp\modules\sk\protonjs</Filter>
+      <Filter>dependencies\skxx\module_system\cpp\modules\sk\protonjs</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs_window.hpp">
-      <Filter>project\skxx\module_system\cpp\modules\sk\protonjs</Filter>
+      <Filter>dependencies\skxx\module_system\cpp\modules\sk\protonjs</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\sk_plugin_contextMenu.hpp" />
-    <ClInclude Include="..\..\..\..\sk_target_build_defs.h" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\core\sk_ms_cNA_handlePluginParamMouseEvent.hpp">
-      <Filter>project\skxx\module_system\cpp\modules\sk\nativeActions\core</Filter>
+      <Filter>dependencies\skxx\module_system\cpp\modules\sk\nativeActions\core</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\sk_ipc\sk_ipc.hpp">
+      <Filter>dependencies\skxx\core\sk_ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_displayUtils\sk_displayUtils.h">
+      <Filter>dependencies\skxx\core\utils\sk_displayUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs_shell.hpp">
+      <Filter>dependencies\skxx\module_system\cpp\modules\sk\protonjs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\frameworks\iPlug2\sk_framework_iplug2.hpp">
+      <Filter>dependencies\skxx\frameworks\iPlug2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\frameworks\iPlug2\sk_framework_iplug2_base.hpp">
+      <Filter>dependencies\skxx\frameworks\iPlug2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\frameworks\iPlug2\sk_framework_iplug2_includes.hpp">
+      <Filter>dependencies\skxx\frameworks\iPlug2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\skxx\frameworks\iPlug2\sk_framework_iplug2_plugin_contextMenu.hpp">
+      <Filter>dependencies\skxx\frameworks\iPlug2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\IPlugWebUI_SK.h">
+      <Filter>dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\IPlug\ISender.h">
+      <Filter>dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\sk_plugin_contextMenu.hpp">
+      <Filter>dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\sk_project.hpp">
+      <Filter>dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\sk_project_includes.hpp">
+      <Filter>dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\sk_target_build_defs.h">
+      <Filter>dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="../config.h" />
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="resources">
-      <UniqueIdentifier>{c6ab0357-34f0-4ae8-8b4f-225dc387b2db}</UniqueIdentifier>
+    <Filter Include="dependencies">
+      <UniqueIdentifier>{a95bbb43-df03-4ab0-ae46-863ebbc7eec4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="config">
+    <Filter Include="dependencies\config">
       <UniqueIdentifier>{ece5417b-4823-4518-9381-2660a4319318}</UniqueIdentifier>
     </Filter>
-    <Filter Include="IPlug">
+    <Filter Include="dependencies\IPlug">
       <UniqueIdentifier>{3bd7f71b-e8ed-4d62-8e22-06c09c5c15a1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="IPlug\APP">
+    <Filter Include="dependencies\IPlug\APP">
       <UniqueIdentifier>{13b3737b-7ecf-435c-8da0-08ccf8e2fb84}</UniqueIdentifier>
     </Filter>
-    <Filter Include="IPlug\APP\RTAudioMidi">
+    <Filter Include="dependencies\IPlug\APP\RTAudioMidi">
       <UniqueIdentifier>{e7841f62-a97d-41b6-93d1-ecca8a512d93}</UniqueIdentifier>
     </Filter>
-    <Filter Include="IPlug\APP\RTAudioMidi\include">
+    <Filter Include="dependencies\IPlug\APP\RTAudioMidi\include">
       <UniqueIdentifier>{649c5de3-b4c2-4de9-8d57-3b1762646259}</UniqueIdentifier>
     </Filter>
-    <Filter Include="IPlug\Extras">
+    <Filter Include="dependencies\IPlug\Extras">
       <UniqueIdentifier>{f642f197-2c01-4101-8a40-0ac493949171}</UniqueIdentifier>
     </Filter>
-    <Filter Include="IPlug\Extras\WebView">
+    <Filter Include="dependencies\IPlug\Extras\WebView">
       <UniqueIdentifier>{e6e2b8b9-5c3a-49f8-9588-0e9f32686cbe}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project">
-      <UniqueIdentifier>{be55eafa-5d99-4bdb-8e4c-0954db0021e9}</UniqueIdentifier>
+    <Filter Include="dependencies\resources">
+      <UniqueIdentifier>{c6ab0357-34f0-4ae8-8b4f-225dc387b2db}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx">
+    <Filter Include="dependencies\skxx">
       <UniqueIdentifier>{88ab8b76-02a4-44ed-8155-6bb201883a7f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\core">
+    <Filter Include="dependencies\skxx\core">
       <UniqueIdentifier>{66e9d97f-b4b2-4cd0-9fbf-67dca8a3bebf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\core\sk_communication">
+    <Filter Include="dependencies\skxx\core\sk_communication">
       <UniqueIdentifier>{8d921203-ebe2-481d-8c89-bfad17fe08c8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\core\sk_ipc">
+    <Filter Include="dependencies\skxx\core\sk_ipc">
       <UniqueIdentifier>{b7a7d837-491e-403c-8a67-c8dda83f2cbf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\core\sk_json">
+    <Filter Include="dependencies\skxx\core\sk_json">
       <UniqueIdentifier>{7916d228-a70c-4638-9287-82bb971c988c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\core\sk_profiler">
-      <UniqueIdentifier>{8926d1ae-9e2a-42b8-9f54-33e7ad6d2b4a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="project\skxx\core\sk_threads">
+    <Filter Include="dependencies\skxx\core\sk_threads">
       <UniqueIdentifier>{605e81d4-97c0-4cf7-9179-e460d6c1cad8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\core\sk_web">
+    <Filter Include="dependencies\skxx\core\sk_web">
       <UniqueIdentifier>{350d625d-72ce-4425-a342-a63b3fef0ba8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\core\sk_webview">
+    <Filter Include="dependencies\skxx\core\sk_webview">
       <UniqueIdentifier>{50a54181-beff-42f3-8e53-458f253363aa}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\core\sk_webview\windows">
+    <Filter Include="dependencies\skxx\core\sk_webview\windows">
       <UniqueIdentifier>{d0163985-4b71-4c09-9cd6-b78273485019}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\core\sk_webview_initializer">
+    <Filter Include="dependencies\skxx\core\sk_webview_initializer">
       <UniqueIdentifier>{58503e22-5b12-42a2-a85f-6f381fa7ff6d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\core\sk_window_mngr">
+    <Filter Include="dependencies\skxx\core\sk_window_mngr">
       <UniqueIdentifier>{e5142304-1ab9-4b99-b24a-0d8c1143699f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\core\sk_window_mngr\root">
+    <Filter Include="dependencies\skxx\core\sk_window_mngr\root">
       <UniqueIdentifier>{5adaecc6-5608-411d-a440-66ade39032fe}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\core\sk_window_mngr\windows">
+    <Filter Include="dependencies\skxx\core\sk_window_mngr\windows">
       <UniqueIdentifier>{954d2cbf-ec6d-49a6-be5a-beaae4ac2725}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\core\utils">
+    <Filter Include="dependencies\skxx\core\utils">
       <UniqueIdentifier>{86561402-4487-4bcf-a479-55b2a0e7a697}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\module_system">
+    <Filter Include="dependencies\skxx\core\utils\sk_displayUtils">
+      <UniqueIdentifier>{dc5137a1-4075-430e-bce1-b7c34b20f67a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\skxx\core\sk_app_initializer">
+      <UniqueIdentifier>{140c4c3e-4b90-4636-9a40-6d94489f8f78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\skxx\module_system">
       <UniqueIdentifier>{6bc8fb99-e168-41bd-9120-d5bed4dbdda1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\module_system\cpp">
+    <Filter Include="dependencies\skxx\module_system\cpp">
       <UniqueIdentifier>{4ff9d560-37b1-487a-9a73-4abe21df3221}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\module_system\cpp\modules">
+    <Filter Include="dependencies\skxx\module_system\cpp\modules">
       <UniqueIdentifier>{55c6a720-7f3d-4f66-a4be-153fd47bb766}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\module_system\cpp\modules\nodejs">
+    <Filter Include="dependencies\skxx\module_system\cpp\modules\nodejs">
       <UniqueIdentifier>{fb4a7787-eaa2-4b84-aa9c-847b56ae5d74}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\module_system\cpp\modules\sk">
+    <Filter Include="dependencies\skxx\module_system\cpp\modules\sk">
       <UniqueIdentifier>{6cb29961-34dd-4c67-a7c2-e289fa3d6334}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\module_system\cpp\modules\sk\nativeActions">
+    <Filter Include="dependencies\skxx\module_system\cpp\modules\sk\nativeActions">
       <UniqueIdentifier>{a79feadc-a0d2-4d77-8b44-a2789aef2ef8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\module_system\cpp\modules\sk\nativeActions\core">
+    <Filter Include="dependencies\skxx\module_system\cpp\modules\sk\nativeActions\core">
       <UniqueIdentifier>{27ec1221-7765-4d7b-81f0-e7f40d87c3da}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\module_system\cpp\modules\sk\protonjs">
+    <Filter Include="dependencies\skxx\module_system\cpp\modules\sk\protonjs">
       <UniqueIdentifier>{23917c84-449b-4d93-b430-d3b88bc48111}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\module_system\cpp\modules\sk\vfs">
+    <Filter Include="dependencies\skxx\module_system\cpp\modules\sk\vfs">
       <UniqueIdentifier>{8f2a8019-c733-4ec8-bab4-fe2ce9d65a86}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\module_system\web">
+    <Filter Include="dependencies\skxx\module_system\web">
       <UniqueIdentifier>{df657105-fe49-40d0-bd22-84c0f41bb37e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\module_system\web\node">
+    <Filter Include="dependencies\skxx\module_system\web\node">
       <UniqueIdentifier>{10871805-b6a6-491d-abe6-206a4b02467d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\module_system\web\npm">
+    <Filter Include="dependencies\skxx\module_system\web\npm">
       <UniqueIdentifier>{16c4afd7-fbdc-4ef1-977e-bc13d4100f0f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\module_system\web\sk">
+    <Filter Include="dependencies\skxx\module_system\web\sk">
       <UniqueIdentifier>{1e577bef-e755-40bd-8688-1554c1e42a03}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\web">
+    <Filter Include="dependencies\skxx\web">
       <UniqueIdentifier>{308578bc-526d-48ba-bbb8-2bf13e86cf9a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\web\global_js_core">
+    <Filter Include="dependencies\skxx\web\global_js_core">
       <UniqueIdentifier>{3417f8d7-dc37-499a-9f76-8665bc9932e2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\web\soft_backend">
+    <Filter Include="dependencies\skxx\web\soft_backend">
       <UniqueIdentifier>{17c23445-7831-486b-abcc-b1fa665581ca}</UniqueIdentifier>
     </Filter>
-    <Filter Include="project\skxx\core\sk_app">
-      <UniqueIdentifier>{140c4c3e-4b90-4636-9a40-6d94489f8f78}</UniqueIdentifier>
+    <Filter Include="dependencies\skxx\frameworks">
+      <UniqueIdentifier>{173c7810-9d61-4c09-a3e8-0c743776d084}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\skxx\frameworks\iPlug2">
+      <UniqueIdentifier>{ba1e635f-470f-4d78-b5c4-72c7015faa13}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\resources\main.rc">
-      <Filter>resources</Filter>
+      <Filter>dependencies\resources</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\config\IPlugWebUI_SK-ios.xcconfig">
-      <Filter>config</Filter>
+      <Filter>dependencies\config</Filter>
     </None>
     <None Include="..\config\IPlugWebUI_SK-web.mk">
-      <Filter>config</Filter>
+      <Filter>dependencies\config</Filter>
     </None>
     <None Include="..\config\IPlugWebUI_SK-mac.xcconfig">
-      <Filter>config</Filter>
+      <Filter>dependencies\config</Filter>
     </None>
     <None Include="..\config\IPlugWebUI_SK-win.props">
-      <Filter>config</Filter>
+      <Filter>dependencies\config</Filter>
     </None>
     <None Include="..\..\..\..\skxx\core\sk_communication\README.md">
-      <Filter>project\skxx\core\sk_communication</Filter>
+      <Filter>dependencies\skxx\core\sk_communication</Filter>
     </None>
     <None Include="..\..\..\..\skxx\module_system\README.md">
-      <Filter>project\skxx\module_system</Filter>
+      <Filter>dependencies\skxx\module_system</Filter>
     </None>
     <None Include="..\..\..\..\skxx\module_system\web\sk_module.js">
-      <Filter>project\skxx\module_system\web</Filter>
+      <Filter>dependencies\skxx\module_system\web</Filter>
     </None>
     <None Include="..\..\..\..\skxx\module_system\web\sk_module_root.js">
-      <Filter>project\skxx\module_system\web</Filter>
+      <Filter>dependencies\skxx\module_system\web</Filter>
     </None>
     <None Include="..\..\..\..\skxx\module_system\web\node\child_process.js">
-      <Filter>project\skxx\module_system\web\node</Filter>
+      <Filter>dependencies\skxx\module_system\web\node</Filter>
     </None>
     <None Include="..\..\..\..\skxx\module_system\web\node\fs.js">
-      <Filter>project\skxx\module_system\web\node</Filter>
+      <Filter>dependencies\skxx\module_system\web\node</Filter>
     </None>
     <None Include="..\..\..\..\skxx\module_system\web\node\os.js">
-      <Filter>project\skxx\module_system\web\node</Filter>
+      <Filter>dependencies\skxx\module_system\web\node</Filter>
     </None>
     <None Include="..\..\..\..\skxx\module_system\web\node\path.js">
-      <Filter>project\skxx\module_system\web\node</Filter>
+      <Filter>dependencies\skxx\module_system\web\node</Filter>
     </None>
     <None Include="..\..\..\..\skxx\module_system\web\node\process.js">
-      <Filter>project\skxx\module_system\web\node</Filter>
+      <Filter>dependencies\skxx\module_system\web\node</Filter>
     </None>
     <None Include="..\..\..\..\skxx\module_system\web\npm\electron.js">
-      <Filter>project\skxx\module_system\web\npm</Filter>
+      <Filter>dependencies\skxx\module_system\web\npm</Filter>
     </None>
     <None Include="..\..\..\..\skxx\module_system\web\npm\fs-extra.js">
-      <Filter>project\skxx\module_system\web\npm</Filter>
+      <Filter>dependencies\skxx\module_system\web\npm</Filter>
     </None>
     <None Include="..\..\..\..\skxx\module_system\web\sk\application.js">
-      <Filter>project\skxx\module_system\web\sk</Filter>
+      <Filter>dependencies\skxx\module_system\web\sk</Filter>
     </None>
     <None Include="..\..\..\..\skxx\module_system\web\sk\debugMngr.js">
-      <Filter>project\skxx\module_system\web\sk</Filter>
+      <Filter>dependencies\skxx\module_system\web\sk</Filter>
     </None>
     <None Include="..\..\..\..\skxx\module_system\web\sk\nativeActions.js">
-      <Filter>project\skxx\module_system\web\sk</Filter>
+      <Filter>dependencies\skxx\module_system\web\sk</Filter>
     </None>
     <None Include="..\..\..\..\skxx\module_system\web\sk\proton.js">
-      <Filter>project\skxx\module_system\web\sk</Filter>
+      <Filter>dependencies\skxx\module_system\web\sk</Filter>
     </None>
     <None Include="..\..\..\..\skxx\module_system\web\sk\vfs.js">
-      <Filter>project\skxx\module_system\web\sk</Filter>
+      <Filter>dependencies\skxx\module_system\web\sk</Filter>
     </None>
     <None Include="..\..\..\..\skxx\module_system\web\sk\viewMngr.js">
-      <Filter>project\skxx\module_system\web\sk</Filter>
+      <Filter>dependencies\skxx\module_system\web\sk</Filter>
     </None>
     <None Include="..\..\..\..\skxx\module_system\web\sk\web.js">
-      <Filter>project\skxx\module_system\web\sk</Filter>
+      <Filter>dependencies\skxx\module_system\web\sk</Filter>
     </None>
     <None Include="..\..\..\..\skxx\web\README.md">
-      <Filter>project\skxx\web</Filter>
+      <Filter>dependencies\skxx\web</Filter>
     </None>
     <None Include="..\..\..\..\skxx\web\global_js_core\sk_global_js_core.js">
-      <Filter>project\skxx\web\global_js_core</Filter>
+      <Filter>dependencies\skxx\web\global_js_core</Filter>
     </None>
     <None Include="..\..\..\..\skxx\web\global_js_core\sk_ipc.js">
-      <Filter>project\skxx\web\global_js_core</Filter>
+      <Filter>dependencies\skxx\web\global_js_core</Filter>
     </None>
     <None Include="..\..\..\..\skxx\web\soft_backend\sk_sb.html">
-      <Filter>project\skxx\web\soft_backend</Filter>
+      <Filter>dependencies\skxx\web\soft_backend</Filter>
     </None>
     <None Include="..\..\..\..\skxx\web\soft_backend\sk_sb.js">
-      <Filter>project\skxx\web\soft_backend</Filter>
+      <Filter>dependencies\skxx\web\soft_backend</Filter>
     </None>
-    <None Include="packages.config" />
+    <None Include="..\..\..\..\skxx\web\global_js_core\sk_dawPluginMngr.js">
+      <Filter>dependencies\skxx\web\global_js_core</Filter>
+    </None>
+    <None Include="..\..\..\..\skxx\web\global_js_core\sk_debug_mode.js">
+      <Filter>dependencies\skxx\web\global_js_core</Filter>
+    </None>
+    <None Include="..\..\..\..\skxx\web\global_js_core\sk_window_control.js">
+      <Filter>dependencies\skxx\web\global_js_core</Filter>
+    </None>
+    <None Include="packages.config">
+      <Filter>dependencies</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\resources\IPlugWebUI_SK.ico">
-      <Filter>resources</Filter>
+      <Filter>dependencies\resources</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis">
+      <Filter>dependencies</Filter>
+    </Natvis>
+    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natstepfilter">
+      <Filter>dependencies</Filter>
+    </Natvis>
   </ItemGroup>
 </Project>

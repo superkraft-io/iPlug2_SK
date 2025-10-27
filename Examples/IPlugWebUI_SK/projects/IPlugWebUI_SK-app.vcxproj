@@ -272,9 +272,8 @@
     <ClInclude Include="..\..\..\..\skxx\core\sk_communication\sk_communication_response.hpp" />
     <ClInclude Include="..\..\..\..\skxx\core\sk_include.h" />
     <ClInclude Include="..\..\..\..\skxx\core\sk_include_core.h" />
-    <ClInclude Include="..\..\..\..\skxx\core\sk_ipc\sk_ipc_v2.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\sk_ipc\sk_ipc.hpp" />
     <ClInclude Include="..\..\..\..\skxx\core\sk_json\sk_json_callback.hpp" />
-    <ClInclude Include="..\..\..\..\skxx\core\sk_profiler\sk_profiler.hpp" />
     <ClInclude Include="..\..\..\..\skxx\core\sk_threads\sk_thread_pool.hpp" />
     <ClInclude Include="..\..\..\..\skxx\core\sk_var.hpp" />
     <ClInclude Include="..\..\..\..\skxx\core\sk_webview\sk_webview.h" />
@@ -286,11 +285,10 @@
     <ClInclude Include="..\..\..\..\skxx\core\sk_window_mngr\sk_window_mngr.h" />
     <ClInclude Include="..\..\..\..\skxx\core\sk_window_mngr\windows\sk_window_windows.hpp" />
     <ClInclude Include="..\..\..\..\skxx\core\superkraft.hpp" />
-    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_array.hpp" />
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_color.hpp" />
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_datetime.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_displayUtils\sk_displayUtils.h" />
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_file.hpp" />
-    <ClInclude Include="..\..\..\..\skxx\core\utils\sk_json.hpp" />
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_logger.h" />
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_machine.hpp" />
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_number.hpp" />
@@ -298,6 +296,10 @@
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_point.hpp" />
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_string.h" />
     <ClInclude Include="..\..\..\..\skxx\core\utils\sk_str_utils.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\frameworks\iPlug2\sk_framework_iplug2.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\frameworks\iPlug2\sk_framework_iplug2_base.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\frameworks\iPlug2\sk_framework_iplug2_includes.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\frameworks\iPlug2\sk_framework_iplug2_plugin_contextMenu.hpp" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\nodejs\sk_ms_nodejs_fs.hpp" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\nodejs\sk_ms_nodejs_os.hpp" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\nativeActions\core\sk_ms_cNA_handlePluginParamMouseEvent.hpp" />
@@ -306,6 +308,7 @@
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs.hpp" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs_app.hpp" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs_native_image.hpp" />
+    <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs_shell.hpp" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\protonjs\sk_ms_protonjs_window.hpp" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_application.hpp" />
     <ClInclude Include="..\..\..\..\skxx\module_system\cpp\modules\sk\sk_ms_bdfs.hpp" />
@@ -401,8 +404,11 @@
     <None Include="..\..\..\..\skxx\module_system\web\sk\web.js" />
     <None Include="..\..\..\..\skxx\module_system\web\sk_module.js" />
     <None Include="..\..\..\..\skxx\module_system\web\sk_module_root.js" />
+    <None Include="..\..\..\..\skxx\web\global_js_core\sk_dawPluginMngr.js" />
+    <None Include="..\..\..\..\skxx\web\global_js_core\sk_debug_mode.js" />
     <None Include="..\..\..\..\skxx\web\global_js_core\sk_global_js_core.js" />
     <None Include="..\..\..\..\skxx\web\global_js_core\sk_ipc.js" />
+    <None Include="..\..\..\..\skxx\web\global_js_core\sk_window_control.js" />
     <None Include="..\..\..\..\skxx\web\README.md" />
     <None Include="..\..\..\..\skxx\web\soft_backend\sk_sb.html" />
     <None Include="..\..\..\..\skxx\web\soft_backend\sk_sb.js" />
