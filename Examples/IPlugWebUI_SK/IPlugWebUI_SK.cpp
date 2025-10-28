@@ -77,8 +77,6 @@ void IPlugWebUI_SK::OnIdle() {
     if (!sk->isReady) {
         return;
     }
-
-    if (onPluginInitialized) onPluginInitialized();
 }
 
 void IPlugWebUI_SK::initSK(){
@@ -121,6 +119,8 @@ void IPlugWebUI_SK::initSK(){
 
     LoadFile(SK_String(SK_Base_URL + "/sk:sb/sk_sb.html").c_str());
 
+
+    if (onPluginInitialized) onPluginInitialized();
 
     sk->isReady = true;
 };
