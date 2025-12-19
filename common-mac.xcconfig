@@ -17,7 +17,7 @@ CLANG_WARN_DOCUMENTATION_COMMENTS = NO
 CLANG_ENABLE_OBJC_WEAK = YES
 
 // the minimum OS to support
-MACOSX_DEPLOYMENT_TARGET = 10.13
+MACOSX_DEPLOYMENT_TARGET = 11.3
 
 SHARED_PRECOMPS_DIR = $(TARGET_BUILD_DIR)/PCH
 
@@ -149,3 +149,4 @@ AU_PATH = $(HOME)/Library/Audio/Plug-Ins/Components
 AAX_PATH = /Library/Application Support/Avid/Audio/Plug-Ins
 APP_PATH = $(HOME)/Applications
 REAPER_EXT_PATH = $(HOME)/Library/Application Support/REAPER/UserPlugins
+
